@@ -18,6 +18,8 @@ Mit `npm install` wird automatisch auch Gulp installiert, siehe `gulpfile.js`.
 Mit `gulp` startet automatisch der watch Task, der bei einer Änderung in den CSS-Files automatisch kompiliert.
 
 ## Styleguide
+Wir verwenden [postcss styleguide](https://github.com/morishitter/postcss-style-guide).  
+
 In den Stylesheets kann zwischen
 ```
 /*
