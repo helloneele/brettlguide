@@ -1,0 +1,38 @@
+/*
+@styleguide
+
+@title Button
+
+Use the button classes on and `<a>`, `<button>`, `<input>` elements.
+
+<button class="button button--large button--dark-blue">Red Button</button>
+
+    <button class="button button--large button--dark-blue">Red Button</button>
+
+<button class="button button--large button--sky-blue">Red Button</button>
+
+    <button class="button button--large button--sky-blue">Red Button</button>
+*/
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button--large {
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+}
+
+.button--dark-blue {
+    color: #fff;
+    background-color: var(--dark-blue);
+}
+
+.button--sky-blue {
+    color: #fff;
+    background-color: var(--sky-blue);
+}
