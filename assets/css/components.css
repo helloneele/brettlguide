@@ -1,6 +1,20 @@
 /*
 @styleguide
 
+@title Components
+
+## Form Elememnts
+## Navigation
+
+*/
+
+form{
+
+}
+
+/*
+@styleguide
+
 @title Button
 
 Use the button classes on and `<a>`, `<button>`, `<input>` elements.
@@ -12,6 +26,12 @@ Use the button classes on and `<a>`, `<button>`, `<input>` elements.
 <button class="button button--large button--sky-blue">Red Button</button>
 
     <button class="button button--large button--sky-blue">Red Button</button>
+
+```javascript
+function hello (para){
+
+}
+```
 */
 .button {
     display: flex;
