@@ -2,7 +2,12 @@ var gulp = require('gulp'),
 watch = require('gulp-watch');
 
 // define the default task and add the watch task to it
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'copyfonts']);
+
+gulp.task('copyfonts', function() {
+   gulp.src('./assets/fonts/**/*.{ttf,woff,eof,svg}')
+   .pipe(gulp.dest('./build/fonts'));
+});
 
 gulp.task('build:css', function () {
     var concat = require('gulp-concat')
