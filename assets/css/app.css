@@ -13,6 +13,21 @@ Inline-style:
 
 */
 
-@import "color"; 
+
+
+@import "color";
 @import "typo";
-@import "button";
+
+/*
+@styleguide
+
+@title Methodology
+### Code style rules
+### Class naming conventions
+
+Inline-style:
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+
+*/
+@import "components";
