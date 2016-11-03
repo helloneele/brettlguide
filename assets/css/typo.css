@@ -54,18 +54,37 @@ h3{
 
 @title Paragraphs, Lists and Blockquotes
 
-## Paragraph
-<p>Lorem ipsum dolor</p>
+## Paragraphs
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+<p> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
 
 ## Unordered List
 <ul>
-<li>liste</li>
-<li>liste</li>
+<li>a list item</li>
+<li>another list item</li>
+<li>and another one</li>
 </ul>
 
-## Tabelle
+## Ordered List
+<ol>
+<li>a list item</li>
+<li>another list item</li>
+<li>and another one</li>
+</ol>
+
+## Blockquote
+<blockquote>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</blockquote>
+
+## Table
 <table>
 <tr>
+<th>field 1</th>
+<th>field 2</th>
+<th>field 3</th>
+<th>field 4</th>
+</tr>
+<tr>
+  <td>hello</td>
   <td>hello</td>
   <td>hello</td>
   <td>hello</td>
@@ -74,8 +93,10 @@ h3{
   <td>hello</td>
   <td>hello</td>
   <td>hello</td>
+  <td>hello</td>
 </tr>
 <tr>
+  <td>hello</td>
   <td>hello</td>
   <td>hello</td>
   <td>hello</td>
@@ -84,16 +105,59 @@ h3{
 
 */
 
-ul{
-  list-style: circle;
+p {
+  
+  
 }
+
+ul{
+  list-style: square;
+  list-style-position: inside;
+}
+
+ol {
+  list-style: upper-roman;
+  list-style-position: inside;
+}
+
+blockquote {
+  background-color: #f9f9f9;
+  border-left: 10px solid #4bb4ca;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #4bb4ca;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+  blockquote p {
+    display: inline;
+}
+
 
 table{
 
 }
 
+td {
+  padding: 5px 10px;
+}
+
+th{
+  border-bottom: 3px solid #4bb4ca;
+  color: #4bb4ca;
+  padding: 5px 10px;
+}
+
 tr:nth-child(even){
-  background: #ccc;
+  background: #f9f9f9;
 }
 
 tr:nth-child(odd){
