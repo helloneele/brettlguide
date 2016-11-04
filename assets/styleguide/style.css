@@ -573,6 +573,7 @@ p[id] {
   color: #444;
   line-height: 1.5;
   background: #f8f8f8;
+  padding-top: 100px;
 }
 
 /*
@@ -639,8 +640,9 @@ p[id] {
   background-color: #fff;
   display: block;
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 10
+  position: fixed;
+  z-index: 10;
+  min-height: 100px;
 }
 
 .psg-title:after {
