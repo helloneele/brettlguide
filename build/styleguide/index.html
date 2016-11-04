@@ -214,7 +214,14 @@
                     <div class="psg-contents">
                       <h3 id="code-style-rules">Code style rules</h3>
 <h3 id="class-naming-conventions">Class naming conventions</h3>
-<p>Inline-style:
+<p>Um eine einheitliche Bennenung zu erreichen, wird BEM verwendet.. Dabei wird zwischen Blöcken, Elementen und Modifiern unterschieden. <br>
+Blöcke sind unabhängige Einheiten, die mit einem kurzen Klassennamen versehen werden:</p>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"site-search"</span>&gt;...&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre><p>Elemente sind Teil eines Blocks und können nicht alleine verwendet werden:</p>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"site-search site-search__field"</span>&gt;...&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre><p>Modifier verändern beispielsweise das Aussehen von Blöcken oder Elementen:</p>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"site search site-search__full"</span>&gt;...&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre><p>Inline-style:
 <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1"></p>
                     </div>
                 </section>

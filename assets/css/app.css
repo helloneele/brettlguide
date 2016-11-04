@@ -23,7 +23,21 @@ Inline-style:
 
 @title Methodology
 ### Code style rules
+
 ### Class naming conventions
+Um eine einheitliche Bennenung zu erreichen, wird BEM verwendet.. Dabei wird zwischen Blöcken, Elementen und Modifiern unterschieden. <br>
+Blöcke sind unabhängige Einheiten, die mit einem kurzen Klassennamen versehen werden:
+
+	<div class="site-search">...</div>
+
+Elemente sind Teil eines Blocks und können nicht alleine verwendet werden:
+
+	<div class="site-search site-search__field">...</div>
+
+Modifier verändern beispielsweise das Aussehen von Blöcken oder Elementen:
+
+	<div class="site search site-search__full">...</div>
+
 
 Inline-style:
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
