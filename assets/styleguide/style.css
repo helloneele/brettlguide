@@ -589,7 +589,7 @@ p[id] {
   padding: 2rem 3.2rem;
   border-right: 1px solid #ddd;
   overflow-y: scroll;
-  background: #fff;
+  background: #fcfcfc;
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
