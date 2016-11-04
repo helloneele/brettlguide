@@ -580,11 +580,17 @@ p[id] {
  */
 
 .psg-menu {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 25%;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
   width: 240px;
   height: 100%;
   padding: 2rem 3.2rem;
   border-right: 1px solid #ddd;
   overflow-y: scroll;
+  background: #fff;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .psg-logo {
@@ -597,12 +603,19 @@ p[id] {
 
 .psg-ComponentList__item {
   display: block;
-  color: #3f526b;
+  color: var(--dark-blue);
   padding: 12px 8px;
+  list-style: none;
 }
 
 .psg-ComponentList__item:hover {
   background-color: #eee;
+}
+
+.psg-ComponentList a{
+  text-decoration: none;
+  /*background: #fff;*/
+  text-align: right;
 }
 
 /*
@@ -610,10 +623,10 @@ p[id] {
  */
 
 .psg-main {
-  /*-webkit-box-flex: 1;
-  -webkit-flex: 1 1 0%;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%;*/
+  -webkit-box-flex: 3;
+  -webkit-flex: 1 1 75%;
+      -ms-flex: 1 1 75%;
+          flex: 1 1 75%;
   height: 100%;
   overflow-y: scroll;
 }
