@@ -3,36 +3,133 @@
 
 @title Components
 
-## Form Elememnts
+## Buttons
+
+Use the button classes on `<a>`, `<button>`, `<input>` elements.
+
+<button class="button button--large button--dark-blue">dark-blue Button</button>
+
+    <button class="button button--large button--dark-blue">dark-blue Button</button>
+
+<button class="button button--large button--sky-blue">sky-blue Button</button>
+
+    <button class="button button--large button--sky-blue">sky-blue Button</button>
+
 ## Navigation
 
+### Vertical Navigation
+
+<ul class="nav nav--vertical">
+  <li><a href="">Nav-Link 1</a></li>
+  <li><a href="">Nav-Link 2</a></li>
+  <li><a href="">Nav-Link 3</a></li>
+  <li><a href="">Nav-Link 4</a></li>
+</ul>
+
+    <ul class="nav nav--vertical">
+        <li><a href="">Nav-Link 1</a></li>
+        <li><a href="">Nav-Link 2</a></li>
+        <li><a href="">Nav-Link 3</a></li>
+        <li><a href="">Nav-Link 4</a></li>
+    </ul>
+
+### Vertical Navigation
+
+<ul class="nav nav--horizontal">
+  <li><a href="">Nav-Link 1</a></li>
+  <li><a href="">Nav-Link 2</a></li>
+  <li><a href="">Nav-Link 3</a></li>
+  <li><a href="">Nav-Link 4</a></li>
+</ul>
+
+    <ul class="nav nav--horizontal">
+        <li><a href="">Nav-Link 1</a></li>
+        <li><a href="">Nav-Link 2</a></li>
+        <li><a href="">Nav-Link 3</a></li>
+        <li><a href="">Nav-Link 4</a></li>
+    </ul>
+
+## Form Elements
+
+### Select Box
+
+<form action="">
+  <select name="Values">
+    <option selected disabled>Choose your Value</option>
+    <option value="value1">Value 1</option>
+    <option value="value2">Value 2</option>
+    <option value="value3">Value 3</option>
+    <option value="value4">Value 4</option>
+  </select>
+</form>
+
+### Inputfield
+
+<form action="">
+    <input class="inputfield" type="text" name="input1" value="Your text here">
+</form>
+
+    <input class="inputfield" type="text" name="input1" value="Your text here">
 */
 
-form{
-
+select
+{
+    background-color: var(--sky-blue);
+    color: #fff;
+    border: 1px solid var(--dark-blue);
+    font-weight: 100;
 }
 
-/*
-@styleguide
-
-@title Button
-
-Use the button classes on and `<a>`, `<button>`, `<input>` elements.
-
-<button class="button button--large button--dark-blue">Red Button</button>
-
-    <button class="button button--large button--dark-blue">Red Button</button>
-
-<button class="button button--large button--sky-blue">Red Button</button>
-
-    <button class="button button--large button--sky-blue">Red Button</button>
-
-```javascript
-function hello (para){
-
+option
+{
+    background: #3f526b;
 }
-```
-*/
+
+.inputfield
+{
+    background-color: lightgrey;
+    color: var(--sky-blue);
+    border: 1px solid var(--dark-blue);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 100;
+    padding: 3px;
+}
+
+.nav{
+    list-style: none;
+    overflow: hidden;
+}
+
+.nav li a{
+    display: block;
+    background-color: var(--sky-blue);
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav li a:hover{
+    background-color:var(--dark-blue);
+}
+
+.nav li a:active{
+    background-color:var(--dark-blue);
+}
+
+.nav--vertical li{
+    text-align: center;
+    border-bottom: solid #fff 1px;
+    width: 200px;
+}
+
+.nav--horizontal li{
+    float: left;
+    text-align: center;
+    border-right: solid #fff 1px;
+    width: 100px;
+}
+
 .button {
     display: flex;
     align-items: center;
@@ -56,3 +153,4 @@ function hello (para){
     color: #fff;
     background-color: var(--sky-blue);
 }
+
