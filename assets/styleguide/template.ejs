@@ -7,13 +7,15 @@
     </head>
 
     <body>
+    <header class="psg-title">
+      <h1><%= projectName %></h1>
+      <h2>Styleguide</h2>
+    </header>
       <div class="psg-wrapper">
+
+
+
         <nav class="psg-menu">
-          <a href="" class="psg-logo">
-            <img
-              title="Philosopher’s stone, logo of PostCSS"
-              src="http://postcss.github.io/postcss/logo-leftp.svg">
-          </a>
 
           <ul class="psg-ComponentList">
             <% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
@@ -35,9 +37,7 @@
         </nav>
 
         <div class="psg-main">
-          <header class="psg-title">
-            <h1><%= projectName %></h1>
-          </header>
+
 
           <div>Kommentar</div>
           <div class="psg-container">

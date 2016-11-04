@@ -2,11 +2,16 @@ var gulp = require('gulp'),
 watch = require('gulp-watch');
 
 // define the default task and add the watch task to it
-gulp.task('default', ['watch', 'copyfonts']);
+gulp.task('default', ['watch', 'copyfonts', 'copyimg']);
 
 gulp.task('copyfonts', function() {
    gulp.src('./assets/fonts/**/*.{ttf,woff,eof,svg}')
-   .pipe(gulp.dest('./build/fonts'));
+   .pipe(gulp.dest('./build/assets/fonts'));
+});
+
+gulp.task('copyimg', function() {
+   gulp.src('./assets/img/**/*.{png,jpg,gif,eps}')
+   .pipe(gulp.dest('./build/assets/img'));
 });
 
 gulp.task('build:css', function () {

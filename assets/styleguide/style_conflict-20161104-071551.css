@@ -620,9 +620,10 @@ p[id] {
 
 .psg-title {
   width: 100%;
-  padding: 30px 60px 20px;
+  padding: 40px 60px;
   font-size: 2rem;
-  color: var(--gray);
+  text-align: center;
+  color: var(--dark-blue);
   background-color: #fff;
   display: block;
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
@@ -630,26 +631,8 @@ p[id] {
   z-index: 10
 }
 
-.psg-title:after {
-  content:'';
-  display: block;
-  clear: both;
-}
-
 .psg-title h1{
-  background: url(../assets/img/logo_color.png) no-repeat;
-  background-size: auto 100%;
-  text-indent: -10000px;
-  width: 50%;
-  float:left;
-}
-
-.psg-title h2{
-  display: block;
-  float: right;
-  width: 50%;
-  text-align: right;
-  font-style: italic;;
+  background: url(./img/logo.png) no-repeat;
 }
 
 .psg-container {
@@ -708,5 +691,4 @@ hr.psg-separator {
   padding: 1em;
   font-size: 1.4rem;
   text-align: center;
-  background: #fff;
 }
