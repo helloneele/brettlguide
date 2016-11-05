@@ -11,8 +11,22 @@
     text-rendering: optimizeLegibility;
 }
 
+/* Webfont: Lato-Italic */
+@font-face {
+    font-family: 'Lato';
+    src: url('../assets/fonts/Lato-Italic.eot'); /* IE9 Compat Modes */
+    src: url('../assets/fonts/Lato-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Lato-Italic.woff2') format('woff2'), /* Modern Browsers */
+         url('../assets/fonts/Lato-Italic.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Lato-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
 body{
   font-family: 'Lato', sans-serif;
+  font-size: 100%;
 }
 
 
@@ -41,29 +55,53 @@ Try to avoid embedding lato font through Google fonts and use locally hosted fon
 `./assets/fonts/` instead.
 
 ## Headings
-<h1>Heading Level 1</h1>
-<h2>Heading Level 2</h2>
-<h3>Heading Level 3</h3>
-<h4>Heading Level 4</h4>
-<h5>Heading Level 5</h5>
-<h6>Heading Level 6</h6>
+<h1>This is an example heading</h1>
+Heading 1
+<h2>This is an example heading</h2>
+Heading 2
+<h3>This is an example heading</h3>
+Heading 3
+<h4>This is an example heading</h4>
+Heading 4
+<h5>This is an example heading</h5>
+Heading 5
+<h6>This is an example heading</h6>
+Heading 6
 
 */
 
 
 
 h1{
+  font-size: 2.5rem;
   color: var(--dark-blue);
 }
 
 h2{
+  font-size: 2.25rem;
   color: var(--sky-blue);
 }
 
 h3{
+  font-size: 1.75rem;
   color: var(--gray);
 }
 
+h4{
+  font-size: 1.5rem;
+  color: var(--gray);
+}
+
+h5{
+  font-size: 1.25rem;
+  color: var(--gray);
+}
+
+h6{
+  font-size: .875rem;
+  color: var(--gray);
+  text-transform: uppercase;
+}
 
 /*
 @styleguide
@@ -76,46 +114,64 @@ h3{
 
 ## Unordered List
 <ul>
-<li>a list item</li>
-<li>another list item</li>
-<li>and another one</li>
+  <li>a list item</li>
+  <li>another list item</li>
+  <li>and another one</li>
 </ul>
 
 ## Ordered List
 <ol>
-<li>a list item</li>
-<li>another list item</li>
-<li>and another one</li>
+  <li>a list item</li>
+  <li>another list item</li>
+  <li>and another one</li>
 </ol>
 
+## Plain List
+Use class `list-plain` to get a list without _padding_, _margin_ and _list-style-type_
+<ul class="list-plain">
+  <li>a list item</li>
+  <li>another list item</li>
+  <li>and another one</li>
+</ul>
+
 ## Blockquote
-<blockquote>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</blockquote>
+<figure class="blockquote">
+  <blockquote>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+    </p>
+  </blockquote>
+  <figcaption>
+    – Source of Quote
+  </figcaption>
+</figure>
+
 
 ## Table
 <table>
-<tr>
-<th>field 1</th>
-<th>field 2</th>
-<th>field 3</th>
-<th>field 4</th>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>State</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>Obertauern</td>
+  <td>Salzburg</td>
+  <td>Austria</td>
 </tr>
 <tr>
-  <td>hello</td>
-  <td>hello</td>
-  <td>hello</td>
-  <td>hello</td>
+  <td>2</td>
+  <td>Schladming</td>
+  <td>Salzburg</td>
+  <td>Austria</td>
 </tr>
 <tr>
-  <td>hello</td>
-  <td>hello</td>
-  <td>hello</td>
-  <td>hello</td>
-</tr>
-<tr>
-  <td>hello</td>
-  <td>hello</td>
-  <td>hello</td>
-  <td>hello</td>
+  <td>3</td>
+  <td>Saalbach Hinterglemm</td>
+  <td>Salzburg</td>
+  <td>Austria</td>
 </tr>
 </table>
 
@@ -126,24 +182,29 @@ p {
 
 }
 
-ul{
-  list-style: square inside none;
+ul, ol{
+  margin: 2rem 0;
 }
 
-ul li{
-  padding: 0;
+ul{
+  list-style: square inside none;
 }
 
 ol {
   list-style: upper-roman inside none;
 }
 
-blockquote {
+.list-plain{
+  list-style: none inside none;
+}
+
+.blockquote {
   background-color: #f9f9f9;
-  border-left: 10px solid #4bb4ca;
-  margin: 1.5em 10px;
+  border-left: 7px solid #4bb4ca;
+  margin: 2rem 0.5rem;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
+  font-style: italic;
 }
 
 blockquote:before {
@@ -155,8 +216,13 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 
-  blockquote p {
-    display: inline;
+blockquote p {
+  display: inline;
+}
+
+.blockquote figcaption{
+  color: #999;
+  margin-top: 0.2rem;
 }
 
 a{
@@ -169,17 +235,22 @@ a:hover{
 
 
 table{
+  text-align: left;
+  margin: 1rem 0 2rem;
+}
 
+th, td{
+  padding: 5px 10px;
 }
 
 td {
-  padding: 5px 10px;
+
 }
 
 th{
-  border-bottom: 3px solid #4bb4ca;
+  border-bottom: 2px solid #4bb4ca;
   color: #4bb4ca;
-  padding: 5px 10px;
+  background: #fff;
 }
 
 tr:nth-child(even){
@@ -187,5 +258,5 @@ tr:nth-child(even){
 }
 
 tr:nth-child(odd){
-  background: #fff;
+  background: #f1f1f1;
 }

@@ -134,7 +134,7 @@ dfn {
  */
 
 h1 {
-  font-size: 2em;
+  font-size: 1rem;
   margin: 0.67em 0;
 }
 
@@ -232,6 +232,7 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
+  color: var(--dark-blue);
 }
 
 /* Forms
@@ -508,17 +509,19 @@ ul {
 }
 
 html.psg-theme {
-  font-size: 62.5%;
+
 }
 
 body {
   margin: 0;
+
 }
 
 html,
 body {
   height: 100%;
   overflow-y: hidden;
+
 }
 
 /*
@@ -531,7 +534,7 @@ h3[id],
 h4[id],
 h5[id],
 h6[id] {
-  margin: 2rem 0 1rem;
+  margin: 1.75rem 0 .75rem;
   font-weight: normal;
   line-height: 1.6;
   color: var(--gray);
@@ -539,18 +542,17 @@ h6[id] {
 }
 
 h1[id] {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
 }
 
 h2[id] {
-  font-size: 2.4rem;
-  margin-top: 3rem;
+  font-size: 1.5rem;
   color: #fff;
   background: var(--sky-blue);
   display: inline-block;
   padding: 1px 8px;
   box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.3);
-  margin-left: -15px;
+  margin-left: -50px;
 }
 
 h3[id] {
@@ -583,7 +585,6 @@ img[alt=logo] {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  font-size: 1.6rem;
   color: #444;
   line-height: 1.5;
   background: #f8f8f8;
@@ -601,7 +602,7 @@ img[alt=logo] {
           flex: 1 1 25%;
   width: 240px;
   height: 100%;
-  padding: 10rem 3.2rem;
+  padding: 5rem 2.5rem;
   overflow-y: scroll;
   background: #fcfcfc;
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
@@ -645,7 +646,7 @@ img[alt=logo] {
 .psg-title {
   width: 100%;
   padding: 30px 60px 20px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--gray);
   background-color: #fff;
   display: block;
@@ -683,8 +684,8 @@ img[alt=logo] {
 }
 
 .psg-component-title.psg-component-title {
-  margin: 2rem 0 1rem -15px;
-  font-size: 3.2rem;
+  margin: 2rem 0 1rem -50px;
+  font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.6;
   color: #3f526b;
@@ -727,7 +728,7 @@ hr.psg-separator {
 .psg-colorBox {
   width: 180px;
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
-  margin: 3rem;
+  margin: 0 2rem 2rem 0;
 }
 
 .psg-colorBox__sample {
@@ -736,7 +737,6 @@ hr.psg-separator {
 
 .psg-colorBox__name {
   padding: 1em;
-  font-size: 1.4rem;
   text-align: center;
   background: #fff;
 }

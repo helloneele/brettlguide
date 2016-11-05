@@ -4,7 +4,7 @@
 @title Logo
 
 ![logo](../assets/img/logo_color.png)
-`assets/img/logo-color.png`  
+`assets/img/logo-color.png`
 This is the __*brettlguide.at logo*__. It consists of the mountain in sky-blue and the lettering BRETTLGuide. Only use it when it can be displayed at least 45px tall, in order to keep the text readable.
 
 [Download .svg](logo_color.svg) | [Download .png](logo_color.png)
@@ -20,9 +20,10 @@ This is the __*brettlguide.at logo*__. It consists of the mountain in sky-blue a
 @styleguide
 
 @title Methodology
-### Code style rules
+## Code style rules
+test  
 
-### Class naming conventions
+## Class naming conventions
 Um eine einheitliche Bennenung zu erreichen, wird BEM verwendet.. Dabei wird zwischen Blöcken, Elementen und Modifiern unterschieden. <br>
 Blöcke sind unabhängige Einheiten, die mit einem kurzen Klassennamen versehen werden:
 
