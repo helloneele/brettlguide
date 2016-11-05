@@ -23,29 +23,45 @@ body{
 @title Typography
 
 ## Typeface
-Als Schriftart wurde die sans serif Schrift __*Lato*__ ausgewählt. designed in the Sum­mer 2010 by Warsaw-​​based designer Łukasz Dziedzic (“Lato” means “Sum­mer” in Pol­ish). In Decem­ber 2010 the Lato fam­ily was pub­lished under the open-​​source Open Font License by his foundry tyPoland, with sup­port from Google.
+The brettlguide.at typeface is the sans serif font __*Lato*__ which was designed in sum­mer 2010 by Warsaw-​​based designer Łukasz Dziedzic (“Lato” means “Sum­mer” in Pol­ish). In Decem­ber 2010 the Lato fam­ily was pub­lished under the open-​​source Open Font License by his foundry tyPoland, with sup­port from Google.
 
-<h1>Header Level 1</h1>
-<h2>Header Level 2</h2>
-<h3>Header Level 3</h3>
-<h4>Header Level 4</h4>
-<h5>Header Level 5</h5>
-<h6>Header Level 6</h6>
+For test purposes you can also use [Google Fonts](https://fonts.google.com/specimen/Lato) code to embed the font in your project
+```css
+<style>
+@import url('https://fonts.googleapis.com/css?family=Lato');
+</style>
+```
+
+Use the following CSS rules to specify Lato font in your CSS-file
+
+```css
+font-family: 'Lato', sans-serif;
+```
+Try to avoid embedding lato font through Google fonts and use locally hosted fonts located in
+`./assets/fonts/` instead.
+
+## Headings
+<h1>Heading Level 1</h1>
+<h2>Heading Level 2</h2>
+<h3>Heading Level 3</h3>
+<h4>Heading Level 4</h4>
+<h5>Heading Level 5</h5>
+<h6>Heading Level 6</h6>
 
 */
 
 
 
 h1{
-
+  color: var(--dark-blue);
 }
 
 h2{
-
+  color: var(--sky-blue);
 }
 
 h3{
-
+  color: var(--gray);
 }
 
 
@@ -111,13 +127,15 @@ p {
 }
 
 ul{
-  list-style: square;
-  list-style-position: inside;
+  list-style: square inside none;
+}
+
+ul li{
+  padding: 0;
 }
 
 ol {
-  list-style: upper-roman;
-  list-style-position: inside;
+  list-style: upper-roman inside none;
 }
 
 blockquote {
@@ -139,6 +157,14 @@ blockquote:before {
 
   blockquote p {
     display: inline;
+}
+
+a{
+  color: var(--sky-blue)
+}
+
+a:hover{
+  color: var(--dark-blue)
 }
 
 
