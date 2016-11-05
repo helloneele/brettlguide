@@ -3,21 +3,14 @@
 
 @title Components
 
-## Buttons
-
-Use the button classes on `<a>`, `<button>`, `<input>` elements.
-
-<button class="button button--large button--dark-blue">dark-blue Button</button>
-
-    <button class="button button--large button--dark-blue">dark-blue Button</button>
-
-<button class="button button--large button--sky-blue">sky-blue Button</button>
-
-    <button class="button button--large button--sky-blue">sky-blue Button</button>
-
 ## Navigation
 
 ### Vertical Navigation
+
+Usage:
+Use the nav classes on `<ul>` elements. nav--vertical for the mobile-view.
+
+Example:
 
 <ul class="nav nav--vertical">
   <li><a href="">Nav-Link 1</a></li>
@@ -26,6 +19,9 @@ Use the button classes on `<a>`, `<button>`, `<input>` elements.
   <li><a href="">Nav-Link 4</a></li>
 </ul>
 
+
+Code:
+
     <ul class="nav nav--vertical">
         <li><a href="">Nav-Link 1</a></li>
         <li><a href="">Nav-Link 2</a></li>
@@ -33,7 +29,12 @@ Use the button classes on `<a>`, `<button>`, `<input>` elements.
         <li><a href="">Nav-Link 4</a></li>
     </ul>
 
-### Vertical Navigation
+### Horizontal Navigation
+
+Usage:
+Use the nav classes on `<ul>` elements. nav--horizontal for the desktop-view.
+
+Example:
 
 <ul class="nav nav--horizontal">
   <li><a href="">Nav-Link 1</a></li>
@@ -42,6 +43,8 @@ Use the button classes on `<a>`, `<button>`, `<input>` elements.
   <li><a href="">Nav-Link 4</a></li>
 </ul>
 
+Code:
+
     <ul class="nav nav--horizontal">
         <li><a href="">Nav-Link 1</a></li>
         <li><a href="">Nav-Link 2</a></li>
@@ -49,43 +52,133 @@ Use the button classes on `<a>`, `<button>`, `<input>` elements.
         <li><a href="">Nav-Link 4</a></li>
     </ul>
 
+***
+
 ## Form Elements
 
-### Select Box
+### Buttons
 
-<form action="">
-  <select name="Values">
-    <option selected disabled>Choose your Value</option>
-    <option value="value1">Value 1</option>
-    <option value="value2">Value 2</option>
-    <option value="value3">Value 3</option>
-    <option value="value4">Value 4</option>
-  </select>
-</form>
+Usage:
+Use the button classes on `<a>`, `<button>`, `<input>` elements.
+
+Example:
+
+<button class="button button--large button--dark-blue">dark-blue Button</button>
+
+Code:
+
+    <button class="button button--large button--dark-blue">dark-blue Button</button>
+
+Example:
+
+<button class="button button--large button--sky-blue">sky-blue Button</button>
+
+Code:
+
+    <button class="button button--large button--sky-blue">sky-blue Button</button>
 
 ### Inputfield
 
+Usage:
+Use the input-field class on `<input>` elements.
+
+Example:
+
 <form action="">
-    <input class="inputfield" type="text" name="input1" value="Your text here">
+    <input class="input-field" type="text" name="input1" value="Your text here">
 </form>
 
-    <input class="inputfield" type="text" name="input1" value="Your text here">
+Code:
+
+    <input class="input-field" type="text" name="input1" value="Your text here">
+
+***
+
+## Links
+
+Usage:
+Use the link class on `<a>` elements.
+
+Example:
+
+<a class="link" href="">That is a not yet visited link</a>
+
+<a class="link visited" href="">That is a visited link</a>
+
+Code:
+
+    <a class="link" href="">That is a not yet visited link</a>
+
+***
+
+## Media Blocks
+
+### Comment Block
+
+Usage:
+Use the comment-box class on `<div>` elements.
+Use the profile class on `<div>` elements.
+Use the picture class on `<img>` elements.
+Combine the elements to get a commentbox.
+
+Example:
+
+<div class="comment-box">
+    <div class="profile">
+        <img class="picture" src="../assets/img/profile_picture.png">
+        <a class="link" href=""> Linkto CommentWriter </a>
+    </div>
+    <div>
+        <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        Nulla consequat massa quis enim.
+        Donec pede justo, fringilla vel, aliquet nec, vulputate
+        <p>
+    </div>
+</div>
+
+Code:
+
+    <div class="comment-div">
+        <div class="profile">
+            <img class="picture" src="../assets/img/profile_picture.png">
+            <a href=""> Linkto CommentWriter </a>
+        </div>
+        <div>
+            <p>
+            Comment
+            <p>
+        </div>
+    </div>
 */
 
-select
+.comment-box
 {
-    background-color: var(--sky-blue);
-    color: #fff;
+    width: 500px;
+    height: auto;
+    background-color: lightgrey;
+    padding: 8px;
     border: 1px solid var(--dark-blue);
-    font-weight: 100;
 }
 
-option
+.profile{
+    border-bottom: 1px solid var(--dark-blue);
+    margin-bottom: 3px;
+}
+
+.profile .picture
 {
-    background: #3f526b;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    align: left;
 }
 
-.inputfield
+
+.input-field
 {
     background-color: lightgrey;
     color: var(--sky-blue);
@@ -152,5 +245,19 @@ option
 .button--sky-blue {
     color: #fff;
     background-color: var(--sky-blue);
+}
+
+.link{
+    text-decoration: none;
+    color: var(--sky-blue);
+}
+
+.link:hover{
+    cursor: hand;
+    color: var(--dark-blue);
+}
+
+.visited{
+    color: var(--dark-blue);
 }
 
