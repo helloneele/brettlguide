@@ -28,18 +28,27 @@ Each time a new block or block-like construct is opened, the indent increases by
 Each color that is used more than once should be placed in a variable in `color.css`.
 
 ## Class naming conventions
-Um eine einheitliche Bennenung zu erreichen, wird BEM verwendet.. Dabei wird zwischen Blöcken, Elementen und Modifiern unterschieden. <br>
-Blöcke sind unabhängige Einheiten, die mit einem kurzen Klassennamen versehen werden:
+To make sure our CSS is structured we use the _**BEM naming convention**_. The BEM naming convention distinguishes between blocks, elements and modifiers.
+
+_**Blocks**_ are independet and named with a short class name
 
 	<div class="site-search">...</div>
 
-Elemente sind Teil eines Blocks und können nicht alleine verwendet werden:
+_**Elements**_ are parts of blocks and can't be used by themselves
+```html
+<div class="site-search">
+    <input type="text" class="site-search__field">
+    <input type="Submit" value ="Search" class="site-search__button">
+</div>
+```
 
-	<div class="site-search site-search__field">...</div>
-
-Modifier verändern beispielsweise das Aussehen von Blöcken oder Elementen:
-
-	<div class="site-search site-search__full">...</div>
+_**Modifiers**_ change the look of blocks or elements
+```html
+<div class="site-search site-search--full">
+    <input type="text" class="site-search__field">
+    <input type="Submit" value ="Search" class="site-search__button">
+</div>
+```
 
 */
 @import "components";

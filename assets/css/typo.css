@@ -108,7 +108,7 @@ Try to avoid embedding lato font through Google fonts and use locally hosted fon
 `./assets/fonts/` instead.
 
 ## Headings
-<h1>This is an example heading</h1>
+<h1>an example heading</h1>
 Heading 1
 <h2>This is an example heading</h2>
 Heading 2
@@ -128,11 +128,17 @@ Heading 6
 h1{
   font-size: 2.5rem;
   color: var(--dark-blue);
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height:1.1em;
+  font-style: italic;
 }
 
 h2{
   font-size: 2.25rem;
   color: var(--sky-blue);
+  font-weight: bold;
+  font-style: italic;
 }
 
 h3{
@@ -142,7 +148,7 @@ h3{
 
 h4{
   font-size: 1.5rem;
-  color: var(--gray);
+  color: var(--mediumgray);
 }
 
 h5{
@@ -154,12 +160,13 @@ h6{
   font-size: .875rem;
   color: var(--gray);
   text-transform: uppercase;
+  color: var(--sky-blue);
 }
 
 /*
 @styleguide
 
-@title Paragraphs, Lists and Blockquotes
+@title Paragraphs. Lists. Blockquotes
 
 ## Paragraphs
 A **_lead paragraph_** can be emphasized with the class `lead`.

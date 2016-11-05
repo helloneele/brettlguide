@@ -88,10 +88,10 @@ Use the picture class on `<img>` elements.
 Combine the elements to get a commentbox.
 
 <div class="commentbox">
-    <div class="commentbox--profile">
-        <img class="commentbox--picture" src="../assets/img/profile_picture.png">
+    <div class="commentbox__profile">
+        <img class="commentbox__picture" src="../assets/img/profile_picture.png">
         <a href="#">John Doe</a>
-        <time datetime="2016-11-01">01. November 2016</time>
+        <time datetime="2016-11-01">10. November 2016</time>
     </div>
     <p>
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -104,10 +104,10 @@ Combine the elements to get a commentbox.
 </div>
 
     <div class="commentbox">
-        <div class="commentbox--profile">
-          <img class="commentbox--picture" src="../assets/img/profile_picture.png">
+        <div class="commentbox__profile">
+          <img class="commentbox__picture" src="../assets/img/profile_picture.png">
           <a href="#">John Doe</a><br>
-          <time datetime="2016-11-01">01. November 2016</time>
+          <time datetime="2016-11-01">10. November 2016</time>
         </div>
         <p>
           Comment
@@ -128,29 +128,29 @@ Combine the elements to get a commentbox.
     margin-top: 1rem;
 }
 
-.commentbox--profile{
+.commentbox__profile{
     border-bottom: 1px solid #eee;
     min-height: 50px;
 }
 
-.commentbox--profile:after{
+.commentbox__profile:after{
   content: '';
   clear: both;
   display: block;
 }
 
-.commentbox--profile a{
+.commentbox__profile a{
   font-size: 1.5rem;
   line-height: 1em;
   text-decoration: none;
   display: block;
 }
 
-.commentbox--profile time{
+.commentbox__profile time{
   font-size: 0.8rem;
 }
 
-.commentbox--picture{
+.commentbox__picture{
     width: 50px;
     height: 50px;
     float:left;
@@ -160,7 +160,7 @@ Combine the elements to get a commentbox.
 /*FORMS*/
 .input-field
 {
-    background-color: var(--background);
+    background-color: var(--white);
     color: var(--sky-blue);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     border: none;

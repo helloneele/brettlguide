@@ -538,7 +538,7 @@ h6[id] {
   font-weight: normal;
   line-height: 1.6;
   color: var(--gray);
-
+  font-weight: 300;
 }
 
 h1[id] {
@@ -605,32 +605,40 @@ img[alt=logo] {
           flex: 1 1 25%;
   width: 240px;
   height: 100%;
-  padding: 5rem 2.5rem;
+  padding: 4.05rem 2.5rem;
   overflow-y: scroll;
   background: #fcfcfc;
-  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .psg-menu h3{
   text-align:right;
-  margin-bottom: 1.5em;
-  color: var(--sky-blue)
+  margin-bottom: 0.5em;
+  color: var(--mediumgray);
+  font-style: italic;
+  font-weight: 300;
 }
 
+
+.psg-ComponentList{
+  margin-top: 1rem;
+}
 .psg-ComponentList__item {
-  display: block;
-  padding: 8px 0;
+  padding: 6px 0;
   list-style: none;
   text-align: right;
+  font-size:1.3em;
 }
 
 .psg-ComponentList__item a:hover {
-  color: var(--sky-blue);
+  color: var(--dark-blue);
 }
 
 .psg-ComponentList a{
   text-decoration: none;
-  color: var(--gray);
+  color: var(--sky-blue);
+  cursor: pointer;
+  font-weight: bold;
 }
 
 /*
@@ -649,9 +657,7 @@ img[alt=logo] {
 .psg-title {
   width: 100%;
   padding: 30px 60px 20px;
-  font-size: 1.5rem;
-  color: var(--gray);
-  background-color: #fff;
+  background-color: var(--white);
   display: block;
   /*box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);*/
   position: fixed;
@@ -679,7 +685,8 @@ img[alt=logo] {
   width: 50%;
   text-align: right;
   font-style: italic;
-  color: var(--gray);
+  color: var(--mediumgray);
+  font-weight: 300;
 }
 
 .psg-container {
@@ -687,16 +694,17 @@ img[alt=logo] {
 }
 
 .psg-component-title.psg-component-title {
-  margin: 2rem 0 1rem -50px;
+  margin: 2em 0 1rem -50px;
   font-size: 2.5rem;
   font-weight: bold;
-  line-height: 1.6;
+  line-height: 1.1em;
   color: #3f526b;
   background: transparent none;
   display: block;
   padding: 0;
   box-shadow: none;
-  font-style: normal;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 .psg-section {
@@ -727,13 +735,13 @@ hr.psg-separator {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .psg-colorBox {
-  width: 180px;
+  width: 170px;
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
-  margin: 0 2rem 2rem 0;
+  margin: 0 1rem 2rem 0;
 }
 
 .psg-colorBox__sample {
@@ -764,9 +772,9 @@ hr.psg-separator {
     content:"";
     position:absolute;
     z-index:5;
-    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.5);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.5);
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
     top:50%;
     bottom:0;
     left:10px;
