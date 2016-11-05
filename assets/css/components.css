@@ -8,6 +8,9 @@
 ### Vertical Navigation
 
 Useage:
+Use the nav classes on `<ul>` elements. nav--vertical for the mobile-view.
+
+Example:
 
 <ul class="nav nav--vertical">
   <li><a href="">Nav-Link 1</a></li>
@@ -16,6 +19,9 @@ Useage:
   <li><a href="">Nav-Link 4</a></li>
 </ul>
 
+
+Code:
+
     <ul class="nav nav--vertical">
         <li><a href="">Nav-Link 1</a></li>
         <li><a href="">Nav-Link 2</a></li>
@@ -23,9 +29,12 @@ Useage:
         <li><a href="">Nav-Link 4</a></li>
     </ul>
 
-### Vertical Navigation
+### Horizontal Navigation
 
 Useage:
+Use the nav classes on `<ul>` elements. nav--horizontal for the desktop-view.
+
+Example:
 
 <ul class="nav nav--horizontal">
   <li><a href="">Nav-Link 1</a></li>
@@ -34,6 +43,7 @@ Useage:
   <li><a href="">Nav-Link 4</a></li>
 </ul>
 
+Code:
 
     <ul class="nav nav--horizontal">
         <li><a href="">Nav-Link 1</a></li>
@@ -48,52 +58,127 @@ Useage:
 
 ### Buttons
 
-Useage: Use the button classes on `<a>`, `<button>`, `<input>` elements.
+Useage:
+Use the button classes on `<a>`, `<button>`, `<input>` elements.
+
+Example:
 
 <button class="button button--large button--dark-blue">dark-blue Button</button>
 
+Code:
+
     <button class="button button--large button--dark-blue">dark-blue Button</button>
 
+Example:
+
 <button class="button button--large button--sky-blue">sky-blue Button</button>
+
+Code:
 
     <button class="button button--large button--sky-blue">sky-blue Button</button>
 
 ### Inputfield
 
 Useage:
+Use the input-field class on `<input>` elements.
+
+Example:
 
 <form action="">
-    <input class="inputfield" type="text" name="input1" value="Your text here">
+    <input class="input-field" type="text" name="input1" value="Your text here">
 </form>
 
-    <input class="inputfield" type="text" name="input1" value="Your text here">
+Code:
+
+    <input class="input-field" type="text" name="input1" value="Your text here">
 
 ***
 
 ## Links
 
 Useage:
+Use the link class on `<a>` elements.
 
-<a href="">That is a not yet visited link</a>
+Example:
 
-<a class="visited" href="">That is a visited link</a>
+<a class="link" href="">That is a not yet visited link</a>
 
-    <a href="">That is a not yet visited link</a>
+<a class="link visited" href="">That is a visited link</a>
+
+Code:
+
+    <a class="link" href="">That is a not yet visited link</a>
 
 ***
 
 ## Media Blocks
 
-Useage:
-
-    ????????
+### Comment Block
 
 Useage:
+Use the comment-box class on `<div>` elements.
+Use the profile class on `<div>` elements.
+Use the picture class on `<img>` elements.
+Combine the elements to get a commentbox.
 
-    ????????
+Example:
+
+<div class="comment-box">
+    <div class="profile">
+        <img class="picture" src="../assets/img/profile_picture.png">
+        <a class="link" href=""> Linkto CommentWriter </a>
+    </div>
+    <div>
+        <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        Nulla consequat massa quis enim.
+        Donec pede justo, fringilla vel, aliquet nec, vulputate
+        <p>
+    </div>
+</div>
+
+Code:
+
+    <div class="comment-div">
+        <div class="profile">
+            <img class="picture" src="../assets/img/profile_picture.png">
+            <a href=""> Linkto CommentWriter </a>
+        </div>
+        <div>
+            <p>
+            Comment
+            <p>
+        </div>
+    </div>
 */
 
-.inputfield
+.comment-box
+{
+    width: 500px;
+    height: auto;
+    background-color: lightgrey;
+    padding: 8px;
+    border: 1px solid var(--dark-blue);
+}
+
+.profile{
+    border-bottom: 1px solid var(--dark-blue);
+    margin-bottom: 3px;
+}
+
+.profile .picture
+{
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    align: left;
+}
+
+
+.input-field
 {
     background-color: lightgrey;
     color: var(--sky-blue);
@@ -162,12 +247,12 @@ Useage:
     background-color: var(--sky-blue);
 }
 
-a{
+.link{
     text-decoration: none;
     color: var(--sky-blue);
 }
 
-a:hover{
+.link:hover{
     cursor: hand;
     color: var(--dark-blue);
 }
