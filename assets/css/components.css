@@ -3,21 +3,11 @@
 
 @title Components
 
-## Buttons
-
-Use the button classes on `<a>`, `<button>`, `<input>` elements.
-
-<button class="button button--large button--dark-blue">dark-blue Button</button>
-
-    <button class="button button--large button--dark-blue">dark-blue Button</button>
-
-<button class="button button--large button--sky-blue">sky-blue Button</button>
-
-    <button class="button button--large button--sky-blue">sky-blue Button</button>
-
 ## Navigation
 
 ### Vertical Navigation
+
+Useage:
 
 <ul class="nav nav--vertical">
   <li><a href="">Nav-Link 1</a></li>
@@ -35,12 +25,15 @@ Use the button classes on `<a>`, `<button>`, `<input>` elements.
 
 ### Vertical Navigation
 
+Useage:
+
 <ul class="nav nav--horizontal">
   <li><a href="">Nav-Link 1</a></li>
   <li><a href="">Nav-Link 2</a></li>
   <li><a href="">Nav-Link 3</a></li>
   <li><a href="">Nav-Link 4</a></li>
 </ul>
+
 
     <ul class="nav nav--horizontal">
         <li><a href="">Nav-Link 1</a></li>
@@ -49,41 +42,56 @@ Use the button classes on `<a>`, `<button>`, `<input>` elements.
         <li><a href="">Nav-Link 4</a></li>
     </ul>
 
+***
+
 ## Form Elements
 
-### Select Box
+### Buttons
 
-<form action="">
-  <select name="Values">
-    <option selected disabled>Choose your Value</option>
-    <option value="value1">Value 1</option>
-    <option value="value2">Value 2</option>
-    <option value="value3">Value 3</option>
-    <option value="value4">Value 4</option>
-  </select>
-</form>
+Useage: Use the button classes on `<a>`, `<button>`, `<input>` elements.
+
+<button class="button button--large button--dark-blue">dark-blue Button</button>
+
+    <button class="button button--large button--dark-blue">dark-blue Button</button>
+
+<button class="button button--large button--sky-blue">sky-blue Button</button>
+
+    <button class="button button--large button--sky-blue">sky-blue Button</button>
 
 ### Inputfield
 
+Useage:
+
 <form action="">
     <input class="inputfield" type="text" name="input1" value="Your text here">
 </form>
 
     <input class="inputfield" type="text" name="input1" value="Your text here">
+
+***
+
+## Links
+
+Useage:
+
+<a href="">That is a not yet visited link</a>
+
+<a class="visited" href="">That is a visited link</a>
+
+    <a href="">That is a not yet visited link</a>
+
+***
+
+## Media Blocks
+
+Useage:
+
+    ????????
+
+Useage:
+
+    ????????
 */
-
-select
-{
-    background-color: var(--sky-blue);
-    color: #fff;
-    border: 1px solid var(--dark-blue);
-    font-weight: 100;
-}
-
-option
-{
-    background: #3f526b;
-}
 
 .inputfield
 {
@@ -152,5 +160,19 @@ option
 .button--sky-blue {
     color: #fff;
     background-color: var(--sky-blue);
+}
+
+a{
+    text-decoration: none;
+    color: var(--sky-blue);
+}
+
+a:hover{
+    cursor: hand;
+    color: var(--dark-blue);
+}
+
+.visited{
+    color: var(--dark-blue);
 }
 
