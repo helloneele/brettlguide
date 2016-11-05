@@ -587,36 +587,31 @@ p[id] {
           flex: 1 1 25%;
   width: 240px;
   height: 100%;
-  padding: 2rem 3.2rem;
-  border-right: 1px solid #ddd;
+  padding: 10rem 3.2rem;
   overflow-y: scroll;
-  background: #fcfcfc;
-  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
+  background: #e8e8e8;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
-.psg-logo {
-}
-
-.psg-logo > img {
-  width: 100%;
-  margin-left: -50px;
+.psg-menu h3{
+  text-align:right;
+  margin-bottom: 1.5em;
 }
 
 .psg-ComponentList__item {
   display: block;
-  color: var(--dark-blue);
-  padding: 12px 8px;
+  padding: 8px 0;
   list-style: none;
+  text-align: right;
 }
 
-.psg-ComponentList__item:hover {
-  background-color: #eee;
+.psg-ComponentList__item a:hover {
+  color: var(--sky-blue);
 }
 
 .psg-ComponentList a{
   text-decoration: none;
-  /*background: #fff;*/
-  text-align: right;
+  color: var(--gray);
 }
 
 /*
@@ -639,7 +634,7 @@ p[id] {
   color: var(--gray);
   background-color: #fff;
   display: block;
-  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
+  /*box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);*/
   position: fixed;
   z-index: 10;
   min-height: 100px;
@@ -724,4 +719,43 @@ hr.psg-separator {
   font-size: 1.4rem;
   text-align: center;
   background: #fff;
+}
+
+
+/*==================================================
+ * Effect
+ * ===============================================*/
+.effect
+{
+  position: fixed;
+  width: 100%;
+  height: 100px;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect:before, .effect:after
+{
+    content:"";
+    position:absolute;
+    z-index:5;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
 }

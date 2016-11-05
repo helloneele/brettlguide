@@ -2,34 +2,33 @@
 <html class="psg-theme" lang="de">
     <head>
         <meta charset="UTF-8">
-        <title><%= projectName %></title>
+        <title>Styleguide – <%= projectName %></title>
         <style><%- codeStyle %><%- tmplStyle %><%- processedCSS %></style>
     </head>
 
     <body>
-    <header class="psg-title">
-      <h1><%= projectName %></h1>
-      <h2>Styleguide</h2>
+
+    <header class="effect">
+      <div class="psg-title">
+        <h1><%= projectName %></h1>
+        <h2>Styleguide</h2>
+      </div>
     </header>
       <div class="psg-wrapper">
 
-
-
         <nav class="psg-menu">
+
+          <h3>Patterns</h3>
 
           <ul class="psg-ComponentList">
             <% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
-              <a href="#color-palette" class="psg-ComponentList__item">
-                <li>Color Palette</li>
-              </a>
+                <li class="psg-ComponentList__item"><a href="#color-palette">Color Palette</a></li>
             <% } %>
             <% maps.forEach(function (map) { %>
               <% if (map.link.title !== null) { %>
-                <a href="#<%= map.link.id %>" class="psg-ComponentList__item">
-                  <li>
-                    <%= map.link.title %>
+                  <li class="psg-ComponentList__item">
+                    <a href="#<%= map.link.id %>" ><%= map.link.title %></a>
                   </li>
-                </a>
               <% } %>
             <% }) %>
           </ul>
@@ -39,7 +38,7 @@
         <div class="psg-main">
 
 
-          
+
           <div class="psg-container">
             <% if (Array.isArray(colorPalette) && colorPalette.length !== 0) { %>
             <section class="psg-section">
@@ -51,7 +50,8 @@
                         <div class="psg-colorBox__sample" style="background-color: <%= palette.color %>">
                         </div>
                         <div class="psg-colorBox__name">
-                            <%= palette.name %> hi
+                            <%= palette.name %> <br>
+                            <strong><%= palette.color %></strong>
                         </div>
                     </div>
                     <% }) %>
