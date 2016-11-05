@@ -2,227 +2,214 @@
 @styleguide
 
 @title Components
-
 ## Navigation
-
 ### Vertical Navigation
 
-Usage:
-Use the nav classes on `<ul>` elements. nav--vertical for the mobile-view.
-
-Example:
+Use the nav class `nav--vertical` on `<ul>` elements for the mobile view.
 
 <ul class="nav nav--vertical">
-  <li><a href="">Nav-Link 1</a></li>
-  <li><a href="">Nav-Link 2</a></li>
-  <li><a href="">Nav-Link 3</a></li>
-  <li><a href="">Nav-Link 4</a></li>
+  <li><a href="#">Nav-Link 1</a></li>
+  <li><a href="#">Nav-Link 2</a></li>
+  <li><a href="#">Nav-Link 3</a></li>
+  <li><a href="#">Nav-Link 4</a></li>
 </ul>
 
 
-Code:
-
     <ul class="nav nav--vertical">
-        <li><a href="">Nav-Link 1</a></li>
-        <li><a href="">Nav-Link 2</a></li>
-        <li><a href="">Nav-Link 3</a></li>
-        <li><a href="">Nav-Link 4</a></li>
+        <li><a href="#">Nav-Link 1</a></li>
+        <li><a href="#">Nav-Link 2</a></li>
+        <li><a href="#">Nav-Link 3</a></li>
+        <li><a href="#">Nav-Link 4</a></li>
     </ul>
 
 ### Horizontal Navigation
 
-Usage:
-Use the nav classes on `<ul>` elements. nav--horizontal for the desktop-view.
-
-Example:
+Use the nav class `nav--horizontal` on `<ul>` elements for desktop view.
 
 <ul class="nav nav--horizontal">
-  <li><a href="">Nav-Link 1</a></li>
-  <li><a href="">Nav-Link 2</a></li>
-  <li><a href="">Nav-Link 3</a></li>
-  <li><a href="">Nav-Link 4</a></li>
+  <li><a href="#">Nav-Link 1</a>
+  <li><a href="#">Nav-Link 2</a>
+  <li><a href="#">Nav-Link 3</a>
+  <li><a href="#">Nav-Link 4</a>
 </ul>
 
-Code:
-
     <ul class="nav nav--horizontal">
-        <li><a href="">Nav-Link 1</a></li>
-        <li><a href="">Nav-Link 2</a></li>
-        <li><a href="">Nav-Link 3</a></li>
-        <li><a href="">Nav-Link 4</a></li>
+        <li><a href="#">Nav-Link 1</a></li>
+        <li><a href="#">Nav-Link 2</a></li>
+        <li><a href="#">Nav-Link 3</a></li>
+        <li><a href="#">Nav-Link 4</a></li>
     </ul>
 
-***
 
 ## Form Elements
 
 ### Buttons
-
-Usage:
 Use the button classes on `<a>`, `<button>`, `<input>` elements.
-
-Example:
-
 <button class="button button--large button--dark-blue">dark-blue Button</button>
-
-Code:
 
     <button class="button button--large button--dark-blue">dark-blue Button</button>
 
-Example:
 
 <button class="button button--large button--sky-blue">sky-blue Button</button>
-
-Code:
 
     <button class="button button--large button--sky-blue">sky-blue Button</button>
 
 ### Inputfield
 
-Usage:
 Use the input-field class on `<input>` elements.
 
-Example:
-
-<form action="">
-    <input class="input-field" type="text" name="input1" value="Your text here">
+<form action="#">
+    <input class="input-field" type="text" name="input1" placeholder="Your text here">
 </form>
 
-Code:
+    <input class="input-field" type="text" name="input1" placeholder="Your text here">
 
-    <input class="input-field" type="text" name="input1" value="Your text here">
-
-***
 
 ## Links
 
-Usage:
 Use the link class on `<a>` elements.
-
-Example:
 
 <a class="link" href="">That is a not yet visited link</a>
 
-<a class="link visited" href="">That is a visited link</a>
+<a class="link visited" href="#">That is a visited link</a>
 
-Code:
 
     <a class="link" href="">That is a not yet visited link</a>
 
-***
+
 
 ## Media Blocks
 
 ### Comment Block
 
-Usage:
 Use the comment-box class on `<div>` elements.
 Use the profile class on `<div>` elements.
 Use the picture class on `<img>` elements.
 Combine the elements to get a commentbox.
 
-Example:
-
-<div class="comment-box">
-    <div class="profile">
-        <img class="picture" src="../assets/img/profile_picture.png">
-        <a class="link" href=""> Linkto CommentWriter </a>
+<div class="commentbox">
+    <div class="commentbox--profile">
+        <img class="commentbox--picture" src="../assets/img/profile_picture.png">
+        <a href="#">John Doe</a>
+        <time datetime="2016-11-01">01. November 2016</time>
     </div>
-    <div>
-        <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-        Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-        Nulla consequat massa quis enim.
-        Donec pede justo, fringilla vel, aliquet nec, vulputate
-        <p>
-    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      Aenean commodo ligula eget dolor. Aenean massa.
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+      Nulla consequat massa quis enim.
+      Donec pede justo, fringilla vel, aliquet nec, vulputate
+    <p>
 </div>
 
-Code:
-
-    <div class="comment-div">
-        <div class="profile">
-            <img class="picture" src="../assets/img/profile_picture.png">
-            <a href=""> Linkto CommentWriter </a>
+    <div class="commentbox">
+        <div class="commentbox--profile">
+          <img class="commentbox--picture" src="../assets/img/profile_picture.png">
+          <a href="#">John Doe</a><br>
+          <time datetime="2016-11-01">01. November 2016</time>
         </div>
-        <div>
-            <p>
-            Comment
-            <p>
-        </div>
+        <p>
+          Comment
+        <p>
     </div>
 */
 
-.comment-box
-{
+/* Comment Box */
+.commentbox{
     width: 500px;
     height: auto;
-    background-color: lightgrey;
-    padding: 8px;
-    border: 1px solid var(--dark-blue);
+    background-color: #fff;
+    padding: 25px 20px;
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.profile{
-    border-bottom: 1px solid var(--dark-blue);
-    margin-bottom: 3px;
+.commentbox p{
+    margin-top: 1rem;
 }
 
-.profile .picture
-{
+.commentbox--profile{
+    border-bottom: 1px solid #eee;
+    min-height: 50px;
+}
+
+.commentbox--profile:after{
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.commentbox--profile a{
+  font-size: 1.5rem;
+  line-height: 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.commentbox--profile time{
+  font-size: 0.8rem;
+}
+
+.commentbox--picture{
     width: 50px;
     height: 50px;
-    margin-right: 5px;
-    align: left;
+    float:left;
+    margin: 0 10px 15px 0;
 }
 
-
+/*FORMS*/
 .input-field
 {
-    background-color: lightgrey;
+    background-color: var(--background);
     color: var(--sky-blue);
-    border: 1px solid var(--dark-blue);
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 100;
-    padding: 3px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    font-weight: 300;
+    padding: 8px 10px;
 }
 
+
+/* NAV */
 .nav{
     list-style: none;
-    overflow: hidden;
+    display: block;
 }
 
 .nav li a{
-    display: block;
-    background-color: var(--sky-blue);
+    background-color: var(--dark-blue);
     color: #fff;
-    font-size: 14px;
     text-decoration: none;
+    text-align: center;
+    padding: 5px 20px;
+    cursor: pointer;
 }
 
 .nav li a:hover{
-    background-color:var(--dark-blue);
+    background-color:var(--sky-blue);
 }
 
 .nav li a:active{
-    background-color:var(--dark-blue);
+    background-color:var(--sky-blue);
 }
 
 .nav--vertical li{
-    text-align: center;
-    border-bottom: solid #fff 1px;
-    width: 200px;
+    margin-bottom: 1px;
+}
+
+.nav--vertical a{
+    display: block;
 }
 
 .nav--horizontal li{
-    float: left;
-    text-align: center;
-    border-right: solid #fff 1px;
-    width: 100px;
+    display: inline-block;
+    margin-right: 5px;
 }
 
+.nav--horizontal a{
+    display: inline-block;
+}
+
+/*BUTTONS*/
 .button {
     display: flex;
     align-items: center;
@@ -260,4 +247,3 @@ Code:
 .visited{
     color: var(--dark-blue);
 }
-

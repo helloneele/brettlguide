@@ -551,12 +551,15 @@ h2[id] {
   background: var(--sky-blue);
   display: inline-block;
   padding: 1px 8px;
-  box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.2);
   margin-left: -50px;
+  font-style: italic;
 }
 
 h3[id] {
-  font-size: 2.0rem;
+  font-size: 1.25rem;
+  color: var(--dark-blue);
+  margin: 1rem 0;
 }
 
 h4[id],
@@ -566,7 +569,7 @@ h6[id] {
 }
 
 p[id] {
-  margin: 1rem 0;
+  margin: 0.5rem 0 1rem;
 }
 
 img[alt=logo] {
@@ -693,6 +696,7 @@ img[alt=logo] {
   display: block;
   padding: 0;
   box-shadow: none;
+  font-style: normal;
 }
 
 .psg-section {
@@ -702,7 +706,7 @@ img[alt=logo] {
 
 .psg-contents > p,
 .psg-contents > pre {
-    margin: 2rem 0;
+    margin: 1rem 0 2rem;
 }
 
 hr.psg-separator {
@@ -723,6 +727,7 @@ hr.psg-separator {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  margin-top: 1rem;
 }
 
 .psg-colorBox {

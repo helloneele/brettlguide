@@ -21,7 +21,11 @@ This is the __*brettlguide.at logo*__. It consists of the mountain in sky-blue a
 
 @title Methodology
 ## Code style rules
-test  
+### Block indentation
+Each time a new block or block-like construct is opened, the indent increases by **_two spaces_**. When the block ends, the indent returns to the previous indent level. The indent level applies to both code and comments throughout the block.
+
+### Color Variables
+Each color that is used more than once should be placed in a variable in `color.css`.
 
 ## Class naming conventions
 Um eine einheitliche Bennenung zu erreichen, wird BEM verwendet.. Dabei wird zwischen Blöcken, Elementen und Modifiern unterschieden. <br>
@@ -35,11 +39,7 @@ Elemente sind Teil eines Blocks und können nicht alleine verwendet werden:
 
 Modifier verändern beispielsweise das Aussehen von Blöcken oder Elementen:
 
-	<div class="site search site-search__full">...</div>
-
-
-
-
+	<div class="site-search site-search__full">...</div>
 
 */
 @import "components";
