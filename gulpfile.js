@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-watch = require('gulp-watch');
+watch = require('gulp-watch'),
+sass = require('gulp-sass');
 
 // define the default task and add the watch task to it
 gulp.task('default', ['watch', 'copyfonts', 'copyimg']);
@@ -23,7 +24,8 @@ gulp.task('build:css', function () {
     var styleGuide = require('postcss-style-guide')
     var nano = require('cssnano')
 
-    return gulp.src('./assets/css/app.css')
+    return gulp.src('./assets/css/app.scss')
+        .pipe(sass().on('error', sass.logError))
         .pipe(postcss([
             Import,
             customProperties({ preserve: true }),
@@ -41,5 +43,5 @@ gulp.task('build:css', function () {
 })
 
 gulp.task('watch', function() {
-  gulp.watch('./assets/**/*.css', ['build:css']);
+  gulp.watch('./assets/**/*.scss', ['build:css']);
 });

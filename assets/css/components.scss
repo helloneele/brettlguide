@@ -173,16 +173,18 @@ Combine the elements to get a commentbox.
 .nav{
     list-style: none;
     display: block;
+
+    li a{
+        background-color: var(--dark-blue);
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        padding: 5px 20px;
+        cursor: pointer;
+    }
 }
 
-.nav li a{
-    background-color: var(--dark-blue);
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    padding: 5px 20px;
-    cursor: pointer;
-}
+
 
 .nav li a:hover{
     background-color:var(--sky-blue);
@@ -215,7 +217,7 @@ Combine the elements to get a commentbox.
     align-items: center;
     justify-content: center;
     border-radius: 6px;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .button--large {
