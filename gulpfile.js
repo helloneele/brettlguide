@@ -10,7 +10,7 @@ gulp.task('copyfonts', function() {
 });
 
 gulp.task('copyimg', function() {
-   gulp.src('./assets/img/**/*.{png,jpg,gif,eps}')
+   gulp.src('./assets/img/**/*.{png,jpg,gif,eps,svg}')
    .pipe(gulp.dest('./build/assets/img'));
 });
 
@@ -27,6 +27,7 @@ gulp.task('build:css', function () {
     return gulp.src('./assets/css/app.css')
         .pipe(postcss([
             Import,
+            nested,
             customProperties({ preserve: true }),
             autoprefixer,
             styleGuide({
