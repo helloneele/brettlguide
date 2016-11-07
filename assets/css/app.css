@@ -26,19 +26,42 @@ Each time a new block or block-like construct is opened, the indent increases by
 Each color that is used more than once should be placed in a variable in `color.css`.
 
 ### File structure
-<ul class="list-plain">
-<li>assets</li>
-  <li>&nbsp;&nbsp;scss</li>
-  <li>&nbsp;&nbsp;styleguide</li>
-<li>build</li>
-   <li>&nbsp;&nbsp;styleguide</li>
-<li>node_modules</li>
-<li>gulpfile.js</li>
-<li>package.json<li>
-</ul>
+```
+app/
+├── assets/
+│   └── css
+│       ├── app.css
+│       ├── color.css
+│       ├── components.css
+│       └── typo.css
+└── build/
+    ├── assets
+    │   └── css
+    │       └── app.min.css
+    ├── styleguide
+    │   └── index.html
+    └── index.html
+
+```
 
 ### Preprocessor
-We use postcss as a preprocessor.
+As a preprocessor we use [postcss](http://postcss.org/). PostCSS is a tool for transforming styles with JS plugins. These plugins can lint your CSS, support variables and mixins, transpile future CSS syntax, inline images, and more.
+
+**Postcss plugins we use** <br><br>
+[autoprefixer](https://github.com/postcss/autoprefixer)<br>
+to add vendor prefixes, using data from Can I Use
+
+[postcss custom properties](https://github.com/postcss/postcss-custom-properties)<br>
+to transform CSS Custom Properties (CSS variables) syntax into a static representation
+
+[postcss import](https://github.com/postcss/postcss-import)
+to consume local files, node modules or web_modules
+
+[postcss style-guide](https://github.com/mdings/postcss-styleguide)
+to create a styleguide from YAML-structured CSS-comments.
+
+[postcss nested](https://github.com/postcss/postcss-nested)
+to unwrap nested rules like how Sass does it.
 
 ## Class naming conventions
 To make sure our CSS is structured we use the _**BEM naming convention**_. The BEM naming convention distinguishes between blocks, elements and modifiers.

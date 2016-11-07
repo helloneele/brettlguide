@@ -38,9 +38,9 @@ gulp.task('build:css', function () {
             nano
         ]))
         .pipe(concat('app.min.css'))
-        .pipe(gulp.dest('./build/styleguide/dist/css'))
+        .pipe(gulp.dest('./build/assets/css'))
 })
 
 gulp.task('watch', function() {
-  gulp.watch('./assets/**/*.scss', ['build:css']);
+  gulp.watch('./assets/**/*.css', ['build:css']);
 });
