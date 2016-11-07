@@ -8,7 +8,7 @@
          url('../assets/fonts/Lato-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility; 
 }
 
 /* Webfont: Lato-Italic */

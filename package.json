@@ -16,6 +16,7 @@
     "gulp-watch": "^4.3.10",
     "postcss-custom-properties": "^5.0.1",
     "postcss-import": "^8.1.2",
+    "postcss-nested": "^1.0.0",
     "postcss-style-guide": "^0.13.0"
   }
 }

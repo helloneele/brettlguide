@@ -4,14 +4,12 @@
 @title Logo
 
 ![logo](../assets/img/logo_color.png)
-`assets/img/logo-color.png`
+`assets/img/logo-color.png`<br>
 This is the __*brettlguide.at logo*__. It consists of the mountain in sky-blue and the lettering BRETTLGuide. Only use it when it can be displayed at least 45px tall, in order to keep the text readable.
 
 [Download .svg](logo_color.svg) | [Download .png](logo_color.png)
 
 */
-
-
 
 @import "color";
 @import "typo";
