@@ -27,6 +27,20 @@ Each time a new block or block-like construct is opened, the indent increases by
 ### Color Variables
 Each color that is used more than once should be placed in a variable in `color.css`.
 
+### File structure
+* __/__
+* __assets__
+  * __scss__ 
+  * __styleguide__ 
+* __build__ 
+  * __styleguide__ 
+* __node_modules__
+* __gulpfile.js__ 
+* __package.json__
+
+### Preprocessor
+We use postcss as a preprocessor.
+
 ## Class naming conventions
 To make sure our CSS is structured we use the _**BEM naming convention**_. The BEM naming convention distinguishes between blocks, elements and modifiers.
 
