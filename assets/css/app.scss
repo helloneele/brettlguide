@@ -28,15 +28,16 @@ Each time a new block or block-like construct is opened, the indent increases by
 Each color that is used more than once should be placed in a variable in `color.css`.
 
 ### File structure
-* __/__
-* __assets__
-  * __scss__ 
-  * __styleguide__ 
-* __build__ 
-  * __styleguide__ 
-* __node_modules__
-* __gulpfile.js__ 
-* __package.json__
+<ul class="list-plain">
+<li>assets</li>
+  <li>&nbsp;&nbsp;scss</li>
+  <li>&nbsp;&nbsp;styleguide</li>
+<li>build</li>
+   <li>&nbsp;&nbsp;styleguide</li>
+<li>node_modules</li>
+<li>gulpfile.js</li>
+<li>package.json<li>
+</ul>
 
 ### Preprocessor
 We use postcss as a preprocessor.
