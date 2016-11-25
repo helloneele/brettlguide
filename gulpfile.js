@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
-watch = require('gulp-watch'),
-sass = require('gulp-sass');
+watch = require('gulp-watch');
 
 // define the default task and add the watch task to it
 gulp.task('default', ['watch', 'copyfonts', 'copyimg']);
@@ -11,7 +10,7 @@ gulp.task('copyfonts', function() {
 });
 
 gulp.task('copyimg', function() {
-   gulp.src('./assets/img/**/*.{png,jpg,gif,eps}')
+   gulp.src('./assets/img/**/*.{png,jpg,gif,eps,svg}')
    .pipe(gulp.dest('./build/assets/img'));
 });
 
@@ -23,11 +22,12 @@ gulp.task('build:css', function () {
     var Import = require('postcss-import')
     var styleGuide = require('postcss-style-guide')
     var nano = require('cssnano')
+    var nested = require('postcss-nested');
 
-    return gulp.src('./assets/css/app.scss')
-        .pipe(sass().on('error', sass.logError))
+    return gulp.src('./assets/css/app.css')
         .pipe(postcss([
             Import,
+            nested,
             customProperties({ preserve: true }),
             autoprefixer,
             styleGuide({
@@ -39,9 +39,9 @@ gulp.task('build:css', function () {
             nano
         ]))
         .pipe(concat('app.min.css'))
-        .pipe(gulp.dest('./build/styleguide/dist/css'))
+        .pipe(gulp.dest('./build/assets/css'))
 })
 
 gulp.task('watch', function() {
-  gulp.watch('./assets/**/*.scss', ['build:css']);
+  gulp.watch('./assets/**/*.css', ['build:css']);
 });

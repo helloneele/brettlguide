@@ -174,7 +174,7 @@ Combine the elements to get a commentbox.
     list-style: none;
     display: block;
 
-    li a{
+    li a{ 
         background-color: var(--dark-blue);
         color: #fff;
         text-decoration: none;
@@ -217,7 +217,7 @@ Combine the elements to get a commentbox.
     align-items: center;
     justify-content: center;
     border-radius: 6px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .button--large {
