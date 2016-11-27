@@ -9,7 +9,12 @@
   "author": "Neele Barthel, Tobias Gann, Anna Ronacher",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
     "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-postcss": "^6.2.0",
     "gulp-sass": "^2.3.2",
@@ -20,6 +25,8 @@
     "postcss-custom-properties": "^5.0.1",
     "postcss-import": "^8.1.2",
     "postcss-nested": "^1.0.0",
-    "postcss-style-guide": "^0.13.0"
+    "postcss-style-guide": "^0.13.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
