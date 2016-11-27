@@ -19,10 +19,10 @@ For smaller sizes use the icon only.
 [Download .svg](logo_color.svg) | [Download .png](logo_icon.png)
 
 */
-
+@import "reset";
 @import "color";
 @import "typo";
-@import "structure"; 
+@import "structure";
 
 /*
 @styleguide

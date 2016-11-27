@@ -1,13 +1,15 @@
+import map from './map'
+
 export default function() {
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      DrawMap(position.coords.latitude, position.coords.longitude)
+      DrawMap(position.coords.longitude, position.coords.latitude)
     });
   } else {
     return
   }
 }
 
-function DrawMap(lat, long){
-  console.log(lat, long)
+function DrawMap(long, lat){
+  map(long, lat)
 }

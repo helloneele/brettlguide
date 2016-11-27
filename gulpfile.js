@@ -2,7 +2,7 @@ var gulp = require('gulp'),
 watch = require('gulp-watch');
 
 // define the default task and add the watch task to it
-gulp.task('default', ['watch', 'copyfonts', 'copyimg']);
+gulp.task('default', ['watch', 'scripts', 'copyfonts', 'copyimg']);
 
 gulp.task('copyfonts', function() {
    gulp.src('./src/assets/fonts/**/*.{ttf,woff,eof,svg}')
@@ -26,7 +26,7 @@ gulp.task('build:css', function () {
   var nano = require('cssnano')
   var nested = require('postcss-nested')
 
-  return gulp.src('./src/assets/css/app.css')
+  return gulp.src(['./src/assets/css/app.css'])
     .pipe(sourcemaps.init())
     .pipe(postcss([
         Import,
@@ -79,4 +79,5 @@ gulp.task('scripts', () => {
 
 gulp.task('watch', function() {
   gulp.watch('./src/assets/**/*.css', ['build:css']);
+  gulp.watch('./src/assets/**/*.js', ['scripts']);
 });
