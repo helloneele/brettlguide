@@ -1,19 +1,21 @@
 {
   "name": "brettlguide.at",
   "version": "1.0.0",
-  "description": "",
+  "description": "Brettlguide is your guide to find your way on ski slopes.",
   "main": "index.html",
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
+  "author": "Neele Barthel, Tobias Gann, Anna Ronacher",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-postcss": "^6.2.0",
     "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
     "gulp-watch": "^4.3.10",
+    "lost": "^7.1.1",
     "mocha": "^3.2.0",
     "postcss-custom-properties": "^5.0.1",
     "postcss-import": "^8.1.2",
