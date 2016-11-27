@@ -1,3 +1,7 @@
+.mapboxgl-popup .mapboxgl-popup-content {
+  background: #ff0000;
+}
+
 header{
   position: fixed;
   z-index: 10;
@@ -27,20 +31,32 @@ header{
     background: #fff;
     width: inherit;
     height: 100%;
-    lost-utility: clearfix;
-    padding: 20px 0 0 20px;
+    lost-center: 100%;
+    padding: 18px 0 0 0;
   }
 
+  .header__left{
+    lost-column: 3/16 0;
+  }
+  .header__center{
+    lost-column: 10/16 0;
+  }
+
+  .header__right{
+    lost-column: 3/16 0;
+  }
   .header__logo{
     background: url(/assets/img/logo_color.png) no-repeat;
-    background-size: auto 90%;
+    background-position: center;
+    background-size: 100% auto;
     text-indent: -10000px;
-    lost-column: 8/10;
+
   }
 }
 
 .content{
   margin-top: 70px;
+
 }
 
 #map{
