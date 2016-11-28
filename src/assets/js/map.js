@@ -1,4 +1,6 @@
 import skihuetten from '../../../build/data/skihuetten'
+import skipisten from '../../../build/data/skipisten'
+import skilifte from '../../../build/data/skilifte'
 
 // use map.loaded true/false for preloader image
 
@@ -10,21 +12,25 @@ export default function(long, lat) {
       style: 'mapbox://styles/helloneele/ciw0yc5ft00dh2jo5ml0fklvd', //hosted style id
       center: [long, lat], // starting position
       zoom: 10, // starting zoom
-      pitch: 45
+      pitch: 60
   });
 
-  //setCurrentPos(map, long, lat)
-  setSkihuetten(map)
-
+  map.on('load', function () {
+    setCurrentPos(map, long, lat)
+    setSkipisten(map)
+    setSkilifte(map)
+    setSkihuetten(map)
+  });
 
   map.on('click', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['huetten'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['huetten', 'skilifte'] });
 
     if (!features.length) {
         return;
     }
 
     var feature = features[0];
+    console.log(feature);
     // https://www.mapbox.com/mapbox-gl-js/example/center-on-symbol/
     this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
     // https://www.mapbox.com/mapbox-gl-js/api/#Popup
@@ -34,19 +40,12 @@ export default function(long, lat) {
         .setHTML(feature.properties.name)
         .addTo(map)
     });
-
-
-
-
-
   });
 
 }
 
 
 function setCurrentPos(map, long, lat){
-
-  map.on('load', function () {
     map.addSource("points", {
         "type": "geojson",
         "data": {
@@ -75,13 +74,10 @@ function setCurrentPos(map, long, lat){
           "text-offset": [0, 0.6],
           "text-anchor": "top"
         }
-
     });
-  });
 }
 
 function setSkihuetten(map){
-  map.on('load', function () {
     map.addSource("huetten", {
         "type": "geojson",
         "data": skihuetten
@@ -104,5 +100,51 @@ function setSkihuetten(map){
           "icon-color": "#295e72",
         }
     });
-  });
+}
+
+function setSkipisten(map){
+  console.log("pisten")
+
+    map.addSource("skipisten", {
+        "type": "geojson",
+        "data": skipisten
+    });
+
+    map.addLayer({
+        "id": "skipisten",
+        "type": "fill",
+        "source": "skipisten",
+        "layout": {
+            // "line-join": "round",
+            // "line-cap": "round"
+        },
+        "paint": {
+          "fill-color": "#4bb4ca",
+          "fill-opacity": 0.6
+        }
+    });
+}
+
+function setSkilifte(map){
+  console.log("lifte")
+
+    map.addSource("skilifte", {
+        "type": "geojson",
+        "data": skilifte
+    });
+
+    map.addLayer({
+        "id": "skilifte",
+        "type": "line",
+        "source": "skilifte",
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "#295e72",
+          "line-width": 2
+          // "line-dasharray": [10, 4]
+        }
+    });
 }
