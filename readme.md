@@ -17,6 +17,20 @@
 Mit `npm install` wird automatisch auch Gulp installiert, siehe `gulpfile.js`.  
 Mit `gulp` startet automatisch der watch Task, der bei einer Änderung in den CSS-Files automatisch kompiliert.
 
+## geojson && daten konvertieren
+[geojson dokumentation](https://www.npmjs.com/package/geojson)
+[push in object](http://stackoverflow.com/a/921012)
+[read from json file](http://stackoverflow.com/a/2177585)
+
+## Mapbox
+[Zoom to Bounds](https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/)
+[Animation zwischen Skigebieten vielleicht was für Startseite](https://www.mapbox.com/mapbox-gl-js/example/playback-locations/)
+[API](https://www.mapbox.com/mapbox-gl-js/api/)
+[POP UP Example](https://www.mapbox.com/mapbox-gl-js/example/popup/)
+[Mouse Posiion](https://www.mapbox.com/mapbox-gl-js/example/mouse-position/)
+
+
+
 ## Styleguide
 Wir verwenden [postcss styleguide](https://github.com/morishitter/postcss-style-guide).  
 

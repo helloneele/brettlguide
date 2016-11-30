@@ -1,0 +1,7675 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.378633142795847,
+          47.462968264596284
+        ]
+      },
+      "properties": {
+        "name": "Salettl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.371995165328233,
+          47.46929296250651
+        ]
+      },
+      "properties": {
+        "name": "Buttermilchalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.375754395073598,
+          47.49949605823142
+        ]
+      },
+      "properties": {
+        "name": "Skihütte Lammertaler Hof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.413151787885814,
+          47.48216989516601
+        ]
+      },
+      "properties": {
+        "name": "Oberbrodhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.41827422189526,
+          47.48471585519976
+        ]
+      },
+      "properties": {
+        "name": "Sommeraugut"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.41984109953132,
+          47.488216511861154
+        ]
+      },
+      "properties": {
+        "name": "Wieseralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.673299699287998,
+          47.15414001181506
+        ]
+      },
+      "properties": {
+        "name": "Sonnblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6720038181125,
+          47.17335954269391
+        ]
+      },
+      "properties": {
+        "name": "Zirmbar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.667341883320027,
+          47.16571611182147
+        ]
+      },
+      "properties": {
+        "name": "Gamsstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.686955097844145,
+          47.16727447421212
+        ]
+      },
+      "properties": {
+        "name": "Sauschneiderhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.693047986477497,
+          47.168554856748585
+        ]
+      },
+      "properties": {
+        "name": "Rucksackl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.693156946866061,
+          47.1691100400961
+        ]
+      },
+      "properties": {
+        "name": "Otto's Schirmbar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.693979221100442,
+          47.16875949959822
+        ]
+      },
+      "properties": {
+        "name": "Fanningberghof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.693194938617381,
+          47.16975246977153
+        ]
+      },
+      "properties": {
+        "name": "Appartments \"Zum Samson\""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.673299699287998,
+          47.15414001181506
+        ]
+      },
+      "properties": {
+        "name": "Sonnblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6720038181125,
+          47.17335954269391
+        ]
+      },
+      "properties": {
+        "name": "Zirmbar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.667341883320027,
+          47.16571611182147
+        ]
+      },
+      "properties": {
+        "name": "Gamsstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.686955097844145,
+          47.16727447421212
+        ]
+      },
+      "properties": {
+        "name": "Sauschneiderhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.693047986477497,
+          47.168554856748585
+        ]
+      },
+      "properties": {
+        "name": "Rucksackl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.693156946866061,
+          47.1691100400961
+        ]
+      },
+      "properties": {
+        "name": "Otto's Schirmbar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.693979221100442,
+          47.16875949959822
+        ]
+      },
+      "properties": {
+        "name": "Fanningberghof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.693194938617381,
+          47.16975246977153
+        ]
+      },
+      "properties": {
+        "name": "Appartments \"Zum Samson\""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.383562309618336,
+          47.46134402377942
+        ]
+      },
+      "properties": {
+        "name": "Moarstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.381558510553036,
+          47.46317900663708
+        ]
+      },
+      "properties": {
+        "name": "Moarwirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.378633142795847,
+          47.462968264596284
+        ]
+      },
+      "properties": {
+        "name": "Salettl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.371995165328233,
+          47.46929296250651
+        ]
+      },
+      "properties": {
+        "name": "Buttermilchalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.375754395073598,
+          47.49949605823142
+        ]
+      },
+      "properties": {
+        "name": "Skihütte Lammertaler Hof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.413151787885814,
+          47.48216989516601
+        ]
+      },
+      "properties": {
+        "name": "Oberbrodhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.41827422189526,
+          47.48471585519976
+        ]
+      },
+      "properties": {
+        "name": "Sommeraugut"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.41984109953132,
+          47.488216511861154
+        ]
+      },
+      "properties": {
+        "name": "Wieseralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.061758135615134,
+          47.31591683793044
+        ]
+      },
+      "properties": {
+        "name": "Kathialm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.084834289881861,
+          47.31534181549838
+        ]
+      },
+      "properties": {
+        "name": "Hackerhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.650225223964766,
+          47.66204811316328
+        ]
+      },
+      "properties": {
+        "name": "Fischbachstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.633653371037077,
+          47.663947389675975
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Wildalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.225728729133447,
+          47.34122864385861
+        ]
+      },
+      "properties": {
+        "name": "Vogei-Hüttn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.228467850332848,
+          47.34590960079849
+        ]
+      },
+      "properties": {
+        "name": "Hahnbaumalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.213366719758598,
+          47.346180165026766
+        ]
+      },
+      "properties": {
+        "name": "Hetzenbichl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.210113929303237,
+          47.347586146622774
+        ]
+      },
+      "properties": {
+        "name": "Ausschank Hetzenbichl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.137636034041156,
+          47.225934040541375
+        ]
+      },
+      "properties": {
+        "name": "Georgs Treff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.140588948633566,
+          47.22839848711714
+        ]
+      },
+      "properties": {
+        "name": "Duxerstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.124263101946248,
+          47.23603392104206
+        ]
+      },
+      "properties": {
+        "name": "Plattenalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.145113515561548,
+          47.23501838257852
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Duxeralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.155583507964685,
+          47.23208324569856
+        ]
+      },
+      "properties": {
+        "name": "SB Filzsteinalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.157296091623087,
+          47.2324145060179
+        ]
+      },
+      "properties": {
+        "name": "Hotel Filzstein"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.97564985043064,
+          47.22268923786486
+        ]
+      },
+      "properties": {
+        "name": "Heim-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.9570923669539,
+          47.2203861154656
+        ]
+      },
+      "properties": {
+        "name": "Hoch-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.98124421393715,
+          47.22990073549578
+        ]
+      },
+      "properties": {
+        "name": "Kreuzboden-Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.985344105540506,
+          47.2368373255157
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Sportalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.992227783695357,
+          47.22390329872745
+        ]
+      },
+      "properties": {
+        "name": "Joe s Würstelbude"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.993015005200206,
+          47.22347457531854
+        ]
+      },
+      "properties": {
+        "name": "Maislau Gasthof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.342902606592986,
+          47.3576917853689
+        ]
+      },
+      "properties": {
+        "name": "Niederbergstüberl und Baumanngut"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.34409242226198,
+          47.356574621444516
+        ]
+      },
+      "properties": {
+        "name": "Wiederer-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.337732463131033,
+          47.34764116892154
+        ]
+      },
+      "properties": {
+        "name": "Franzl-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.34405102466989,
+          47.35590408004884
+        ]
+      },
+      "properties": {
+        "name": "Cafe im \"Roten 8-er\""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.332530280134819,
+          47.34716574965923
+        ]
+      },
+      "properties": {
+        "name": "Edelweiss-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.339181174103377,
+          47.32621778590025
+        ]
+      },
+      "properties": {
+        "name": "Almstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.345597281178316,
+          47.32188733459676
+        ]
+      },
+      "properties": {
+        "name": "Gifthütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.345952761268316,
+          47.326239327918046
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Kogelalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.346646040676987,
+          47.326206382384
+        ]
+      },
+      "properties": {
+        "name": "Gipfelstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.34506319113783,
+          47.320834719808055
+        ]
+      },
+      "properties": {
+        "name": "Wagrainer Haus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.268237036618428,
+          47.30721573306831
+        ]
+      },
+      "properties": {
+        "name": "Hachau-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.273112002929993,
+          47.3098883151048
+        ]
+      },
+      "properties": {
+        "name": "Grafenberg-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.28337745677258,
+          47.31555203213954
+        ]
+      },
+      "properties": {
+        "name": "Starchenstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.289864218212852,
+          47.319361485287644
+        ]
+      },
+      "properties": {
+        "name": "Sonn-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.320625390414257,
+          47.32918707658403
+        ]
+      },
+      "properties": {
+        "name": "Hotel Berghof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.322132100207211,
+          47.33002814916177
+        ]
+      },
+      "properties": {
+        "name": "Berghof-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.315209064638344,
+          47.33698173859059
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Widmoos"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.308433485071992,
+          47.33372306113039
+        ]
+      },
+      "properties": {
+        "name": "Kuhstall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.308202815579481,
+          47.33458377856806
+        ]
+      },
+      "properties": {
+        "name": "Haar Trog Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.30155010186393,
+          47.327214271402184
+        ]
+      },
+      "properties": {
+        "name": "Wagrainer Bauernstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.29966538016025,
+          47.32814762316531
+        ]
+      },
+      "properties": {
+        "name": "Kühberg-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.298703201944,
+          47.32907426028102
+        ]
+      },
+      "properties": {
+        "name": "POINT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.29490563515166,
+          47.32194036818768
+        ]
+      },
+      "properties": {
+        "name": "Krapfn-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.291748243481008,
+          47.32256365675946
+        ]
+      },
+      "properties": {
+        "name": "Onkel Tom's Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.260257382266225,
+          47.30611675256819
+        ]
+      },
+      "properties": {
+        "name": "Großunterberg-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.130961237368094,
+          47.110253496474094
+        ]
+      },
+      "properties": {
+        "name": "Edelweißbar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.131660443976982,
+          47.109567002137496
+        ]
+      },
+      "properties": {
+        "name": "Schirmbar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.127179756003668,
+          47.11515512029488
+        ]
+      },
+      "properties": {
+        "name": "Bellevue Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.113072418319506,
+          47.11329483765744
+        ]
+      },
+      "properties": {
+        "name": "Ahornhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.11059644107257,
+          47.10971933528379
+        ]
+      },
+      "properties": {
+        "name": "Bergstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.100124010323814,
+          47.14405156966143
+        ]
+      },
+      "properties": {
+        "name": "Hartlgut"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.078522993100076,
+          47.12950427116469
+        ]
+      },
+      "properties": {
+        "name": "Hirschenhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.07907231707772,
+          47.12932786472357
+        ]
+      },
+      "properties": {
+        "name": "Waldgasthof Angertal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.083199848898202,
+          47.11762295532405
+        ]
+      },
+      "properties": {
+        "name": "Jungerstube"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.100450647550785,
+          47.12387884465248
+        ]
+      },
+      "properties": {
+        "name": "Stubneralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.099079998379858,
+          47.11165554467244
+        ]
+      },
+      "properties": {
+        "name": "Gipfelrestaurant Stubnerkogel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.06832667025356,
+          47.0594535756764
+        ]
+      },
+      "properties": {
+        "name": "Goldbergalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.058688995850117,
+          47.06184960060823
+        ]
+      },
+      "properties": {
+        "name": "Goldbergstub'n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.081833105079806,
+          47.13289652894995
+        ]
+      },
+      "properties": {
+        "name": "Skirestaurant Angertal 1180"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.060598985146115,
+          47.154251580886296
+        ]
+      },
+      "properties": {
+        "name": "Restaurant Kleine Scharte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.065407874458996,
+          47.15153511514475
+        ]
+      },
+      "properties": {
+        "name": "Hofgasteinerhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.060291643594788,
+          47.148085375232085
+        ]
+      },
+      "properties": {
+        "name": "Hamburger Skihütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.061589427655116,
+          47.146826788450745
+        ]
+      },
+      "properties": {
+        "name": "Weitmoserschlossalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.072169420765572,
+          47.15693854505625
+        ]
+      },
+      "properties": {
+        "name": "Haitzingalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.078462135726033,
+          47.166558416746824
+        ]
+      },
+      "properties": {
+        "name": "Aeroplanstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.08221675986307,
+          47.16526269012464
+        ]
+      },
+      "properties": {
+        "name": "Kitzsteinalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.089813322228329,
+          47.171057073444025
+        ]
+      },
+      "properties": {
+        "name": "Brandnerbauer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.097389967001488,
+          47.168367274156466
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Pension Berglift"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.09395768201567,
+          47.168175188250764
+        ]
+      },
+      "properties": {
+        "name": "Pyrkerhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.085558846977472,
+          47.161830304616444
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Bärsteinalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.07959390550079,
+          47.13343783242785
+        ]
+      },
+      "properties": {
+        "name": "Feldinghütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.57141508701256,
+          47.61031195129115
+        ]
+      },
+      "properties": {
+        "name": "Berghaus Kammerkör"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.580030838700521,
+          47.61784784533402
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Bäreck"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.565544471567566,
+          47.61509327315335
+        ]
+      },
+      "properties": {
+        "name": "Stallenalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.57589679052521,
+          47.62733337561448
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Möseralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.166047992889533,
+          47.10693800431736
+        ]
+      },
+      "properties": {
+        "name": "Berghütte am Graukogel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.150862480971607,
+          47.111679454426536
+        ]
+      },
+      "properties": {
+        "name": "Graukogelalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.530556588944878,
+          47.25170797440053
+        ]
+      },
+      "properties": {
+        "name": "Ski- und Abendrestaurant Almrausch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.540758020072682,
+          47.25258363438288
+        ]
+      },
+      "properties": {
+        "name": "Flubachalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.544035441553394,
+          47.25181570305746
+        ]
+      },
+      "properties": {
+        "name": "Hasenstall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.54748029823926,
+          47.251934222267444
+        ]
+      },
+      "properties": {
+        "name": "Restaurant und Apres Ski Haus Barbara-Spiderbar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.554668366082737,
+          47.24963462389089
+        ]
+      },
+      "properties": {
+        "name": "Weltcup-Schirm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.563161879420335,
+          47.24819258407085
+        ]
+      },
+      "properties": {
+        "name": "Latsch'n Schirm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.562958097021392,
+          47.2479170741436
+        ]
+      },
+      "properties": {
+        "name": "Gruber Stadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.562854257233601,
+          47.24844939896911
+        ]
+      },
+      "properties": {
+        "name": "Lürzer Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.561552353299902,
+          47.24629723364173
+        ]
+      },
+      "properties": {
+        "name": "Der Turm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.566789482527962,
+          47.2460043336272
+        ]
+      },
+      "properties": {
+        "name": "Alpenhotel Austria"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.567406401481334,
+          47.24589142073419
+        ]
+      },
+      "properties": {
+        "name": "OeAV Wismeyerhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.571669435317009,
+          47.24131708090522
+        ]
+      },
+      "properties": {
+        "name": "Heustadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.572151241830985,
+          47.24120441096146
+        ]
+      },
+      "properties": {
+        "name": "Alte Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.572342851319156,
+          47.24090839495398
+        ]
+      },
+      "properties": {
+        "name": "Schaidberg Liftstube"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.559461770769255,
+          47.24467872098684
+        ]
+      },
+      "properties": {
+        "name": "Achenrainhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.533768330546255,
+          47.24104052847261
+        ]
+      },
+      "properties": {
+        "name": "Restaurant Zehnerkarseilbahn-Bergstation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.544075140154852,
+          47.259495115793776
+        ]
+      },
+      "properties": {
+        "name": "Treff 2000"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.545476079890335,
+          47.262389609179756
+        ]
+      },
+      "properties": {
+        "name": "Hochalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.564011920412817,
+          47.26418707952099
+        ]
+      },
+      "properties": {
+        "name": "Kringsalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.56320889257103,
+          47.2637091204806
+        ]
+      },
+      "properties": {
+        "name": "Dikt'n Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.548793650433657,
+          47.25464489834808
+        ]
+      },
+      "properties": {
+        "name": "Berghotel Sonnhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.570669952250507,
+          47.25309128571604
+        ]
+      },
+      "properties": {
+        "name": "Edelweißhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.57276190077578,
+          47.250531538790405
+        ]
+      },
+      "properties": {
+        "name": "Mankei Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.575900120542377,
+          47.26806935258565
+        ]
+      },
+      "properties": {
+        "name": "Hundskogelschirm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.577184126919274,
+          47.25222598749557
+        ]
+      },
+      "properties": {
+        "name": "Yetis Bar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.563221003768229,
+          47.24771628579444
+        ]
+      },
+      "properties": {
+        "name": "Latsch'n Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.562870948488904,
+          47.24758433353396
+        ]
+      },
+      "properties": {
+        "name": "Hotel Cindarella"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.82006087111396,
+          47.364801769112596
+        ]
+      },
+      "properties": {
+        "name": "Schloss Kammer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.813457085511477,
+          47.42231257742893
+        ]
+      },
+      "properties": {
+        "name": "Hinterburg Stubn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.731552169783066,
+          47.36625692285604
+        ]
+      },
+      "properties": {
+        "name": "Dorfstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.731761087598608,
+          47.36625512840632
+        ]
+      },
+      "properties": {
+        "name": "Landal-Rehrenberg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.733425792041505,
+          47.654390258114944
+        ]
+      },
+      "properties": {
+        "name": "Familien Erlebnis Hotel Post"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.734796341268474,
+          47.43834737452535
+        ]
+      },
+      "properties": {
+        "name": "Kralleralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.736427058513565,
+          47.43801159016057
+        ]
+      },
+      "properties": {
+        "name": "Krallerhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.14793707260812,
+          47.24946677147582
+        ]
+      },
+      "properties": {
+        "name": "Mountain Club Hotel Ronach"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.528363250551976,
+          47.289066989078584
+        ]
+      },
+      "properties": {
+        "name": "Pension Platzhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5291445399744,
+          47.28856441725887
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Schlösslstube"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.528115420956931,
+          47.28811224939101
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Verwalterwirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.528181071893423,
+          47.28689424001913
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Flatscher"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.671042765678799,
+          47.290623719115864
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Naglbauer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.574805467920122,
+          47.272356081742664
+        ]
+      },
+      "properties": {
+        "name": "Privatzimmer Schaller"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.29346880401884,
+          47.24911642573353
+        ]
+      },
+      "properties": {
+        "name": "Jugendgästehaus Bärngartenhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.653778484893373,
+          47.27333720534212
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Boderhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.651752193967726,
+          47.27178407868884
+        ]
+      },
+      "properties": {
+        "name": "Privatzimmer Wallner"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.286816024646686,
+          47.24677577346174
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Premishof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.277364453502877,
+          47.24559671849516
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Einöd"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.271601434873384,
+          47.25412766695891
+        ]
+      },
+      "properties": {
+        "name": "Hotel Gassner"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.271459967998295,
+          47.25266997039409
+        ]
+      },
+      "properties": {
+        "name": "Café Fichtenwald"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.273940939479617,
+          47.25213968930447
+        ]
+      },
+      "properties": {
+        "name": "Café Brugger"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.62555301408327,
+          47.13437311942781
+        ]
+      },
+      "properties": {
+        "name": "Berghotel Rudolfshütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.623396695235416,
+          47.15680641337068
+        ]
+      },
+      "properties": {
+        "name": "Restaurant Grünsee"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.624525415948655,
+          47.170680594298574
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Paletti"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.8226866850643,
+          47.244592084381694
+        ]
+      },
+      "properties": {
+        "name": "Pension Ponyhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.99614867224649,
+          47.28959831648684
+        ]
+      },
+      "properties": {
+        "name": "Saleterhof/Klingler"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.997892085213016,
+          47.28943595913993
+        ]
+      },
+      "properties": {
+        "name": "Pension Franzl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.997927261110561,
+          47.2898613042573
+        ]
+      },
+      "properties": {
+        "name": "Appartement Altenhuber"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.998665537529382,
+          47.289915020398816
+        ]
+      },
+      "properties": {
+        "name": "Embacher Hof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.999718261763714,
+          47.28966040046413
+        ]
+      },
+      "properties": {
+        "name": "Appartement Schwab"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.000583610371274,
+          47.28998508205687
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Krämerwirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.000844875156016,
+          47.29059986829035
+        ]
+      },
+      "properties": {
+        "name": "Pension Gersgraser"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.000698921618355,
+          47.29121732124309
+        ]
+      },
+      "properties": {
+        "name": "Sporthotel Unger"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.97833035557091,
+          47.28228838556451
+        ]
+      },
+      "properties": {
+        "name": "Frühstückspension Steger"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.002151254428275,
+          47.28995667843779
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Oberwirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.002792974016938,
+          47.29048235190244
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Wäscherwirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.003645879581317,
+          47.29051314510298
+        ]
+      },
+      "properties": {
+        "name": "Pension Schönblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.003323770328386,
+          47.2904485007406
+        ]
+      },
+      "properties": {
+        "name": "Appartement Schweiger"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.007887797092383,
+          47.2909606991527
+        ]
+      },
+      "properties": {
+        "name": "Pension Langreiter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.012884133520675,
+          47.29088288715312
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Pilzeck"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.003233898600923,
+          47.289566239851546
+        ]
+      },
+      "properties": {
+        "name": "Skihütte Hörndllift I"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.005512643299635,
+          47.284415585050574
+        ]
+      },
+      "properties": {
+        "name": "Skihütte Hörndllift II"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.049702445198696,
+          47.29400934119399
+        ]
+      },
+      "properties": {
+        "name": "Zielhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.045249307038201,
+          47.295209299813294
+        ]
+      },
+      "properties": {
+        "name": "Frühstückspension Söllner"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.35110662053512,
+          47.27256697779576
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Tauernblick (Smaragdhotel)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.354184133760988,
+          47.273877283238726
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Paraplü"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.358152040511007,
+          47.27308078378785
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Gletscherblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.358233466231342,
+          47.268661093466186
+        ]
+      },
+      "properties": {
+        "name": "Pizzeria Bergschmied"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.826180969450403,
+          47.227482805994875
+        ]
+      },
+      "properties": {
+        "name": "Hotel Römerhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.82597992675679,
+          47.22661246556815
+        ]
+      },
+      "properties": {
+        "name": "Hotel Post"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.827221506738253,
+          47.22503194471177
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Lampenhäusl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.826349042306694,
+          47.22347326173204
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Wasserfall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.68349845508303,
+          47.29132068376924
+        ]
+      },
+      "properties": {
+        "name": "Liftstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.625845623776268,
+          47.17158928580004
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Vötter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.625497500890631,
+          47.1721013742321
+        ]
+      },
+      "properties": {
+        "name": "Ferienwohnung Maier"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.756738760618516,
+          47.274044233427475
+        ]
+      },
+      "properties": {
+        "name": "Schirmbar \"Zur Lederhosn\""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.75084313244326,
+          47.27283776955009
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Unteraigen"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.739756638698177,
+          47.270193422788836
+        ]
+      },
+      "properties": {
+        "name": "Schirmbar Eisbär"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.739522735842213,
+          47.26882338650664
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Vorderweißenstein"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.734140509543252,
+          47.269326923845504
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Stangerbauer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.723104629877952,
+          47.2581388094711
+        ]
+      },
+      "properties": {
+        "name": "Maiskogelalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.717337992658303,
+          47.25550995479816
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Glocknerblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.685102547516069,
+          47.189127870559126
+        ]
+      },
+      "properties": {
+        "name": "Bella Vista SB-Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.689770110194434,
+          47.20810339475269
+        ]
+      },
+      "properties": {
+        "name": "Kitz Kids"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.689261869361367,
+          47.20821566004219
+        ]
+      },
+      "properties": {
+        "name": "Bar Skyline"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.688859093085263,
+          47.208257252905206
+        ]
+      },
+      "properties": {
+        "name": "Parasol Schirmbar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.687740053449811,
+          47.20897463144612
+        ]
+      },
+      "properties": {
+        "name": "Bundesskiakademie"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.689705531374791,
+          47.20878287807433
+        ]
+      },
+      "properties": {
+        "name": "Bedienungsrestaurant Gletschermühle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.689266387484743,
+          47.208506272730574
+        ]
+      },
+      "properties": {
+        "name": "SB-Marktrestaurant Big Apple"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.6963904172668,
+          47.21192017483342
+        ]
+      },
+      "properties": {
+        "name": "Krefelderhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.698442901985139,
+          47.22054302714907
+        ]
+      },
+      "properties": {
+        "name": "Häuslalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.726085950469592,
+          47.229540549257145
+        ]
+      },
+      "properties": {
+        "name": "Kitz 900"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.116777889007052,
+          47.787479118323375
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Mitteregg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.11212739998926,
+          47.95227448979026
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Alpenblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.194283361062727,
+          47.808959255789915
+        ]
+      },
+      "properties": {
+        "name": "Buffet Hinterschrofenaulift"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.253166187815872,
+          47.8662046883608
+        ]
+      },
+      "properties": {
+        "name": "Mooswirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.135322725100224,
+          47.8437397630322
+        ]
+      },
+      "properties": {
+        "name": "Berghof Dachsteinblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.241048849598203,
+          47.78115914481157
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Bodenwirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.241277722568883,
+          47.7808077180759
+        ]
+      },
+      "properties": {
+        "name": "Pension Bayerhammer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.246295211863794,
+          47.78292145199989
+        ]
+      },
+      "properties": {
+        "name": "Liftstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.24935182171105,
+          47.788428743718576
+        ]
+      },
+      "properties": {
+        "name": "Schmiedhornstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.248405848199662,
+          47.7919737429802
+        ]
+      },
+      "properties": {
+        "name": "Pension Wald"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.248405464012043,
+          47.79220197119469
+        ]
+      },
+      "properties": {
+        "name": "Liftstüberl Oberwald"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.137828482270866,
+          47.80589934174896
+        ]
+      },
+      "properties": {
+        "name": "Aschaulift-Buffet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.143585817895914,
+          47.818477916611144
+        ]
+      },
+      "properties": {
+        "name": "Gasthof am Riedl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.212191745618298,
+          47.81583086048269
+        ]
+      },
+      "properties": {
+        "name": "Nußbaumerhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.008875146200399,
+          47.72300061712581
+        ]
+      },
+      "properties": {
+        "name": "Bergstation Karlwirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.00804780319494,
+          47.722350543098855
+        ]
+      },
+      "properties": {
+        "name": "Hochalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.007210219121639,
+          47.72453099671369
+        ]
+      },
+      "properties": {
+        "name": "Zeppezauerhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.994068614121304,
+          47.74772430230823
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Kugelmühle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.042937551106018,
+          47.72670564272951
+        ]
+      },
+      "properties": {
+        "name": "Hotel Untersberg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.044476284700119,
+          47.72664330520258
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Schorn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.045744743978188,
+          47.72613122065754
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Simmerlwirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.100426925492195,
+          47.258370354876554
+        ]
+      },
+      "properties": {
+        "name": "Panorama-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.099236467118294,
+          47.25251230120592
+        ]
+      },
+      "properties": {
+        "name": "Larmach-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.280139652795425,
+          47.259767602292335
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Stockenbaum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.272628040560697,
+          47.283409177355956
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Wolkenstein"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.295659637335527,
+          47.279639166028026
+        ]
+      },
+      "properties": {
+        "name": "Wildkogel-Haus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.970921306111938,
+          47.405332917788385
+        ]
+      },
+      "properties": {
+        "name": "Landhaus, Zum Steinbock"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.97443573889345,
+          47.398494694116565
+        ]
+      },
+      "properties": {
+        "name": "Hochmais-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.98871290143253,
+          47.39132805492846
+        ]
+      },
+      "properties": {
+        "name": "Gabühelhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.976825066673788,
+          47.40792621317305
+        ]
+      },
+      "properties": {
+        "name": "Almbar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.940578677818644,
+          47.379677586145895
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Handlerhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.937188911154006,
+          47.38683835831101
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Bachschmied"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.929591696397964,
+          47.37289267669381
+        ]
+      },
+      "properties": {
+        "name": "Thoraualm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.924913165682069,
+          47.36667627302752
+        ]
+      },
+      "properties": {
+        "name": "Kröllalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.920179306506968,
+          47.36601244614866
+        ]
+      },
+      "properties": {
+        "name": "Abergalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.926963852656414,
+          47.36194777591083
+        ]
+      },
+      "properties": {
+        "name": "Schreineralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.919330493220386,
+          47.35723202972263
+        ]
+      },
+      "properties": {
+        "name": "Bergstall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.915991412712604,
+          47.37197470306067
+        ]
+      },
+      "properties": {
+        "name": "Bärmooshütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.91555777058893,
+          47.36923632115553
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Wastlalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.913915740748566,
+          47.3774644365862
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Christernreith"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.911410224118459,
+          47.37380372593984
+        ]
+      },
+      "properties": {
+        "name": "Tischlerhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.907536819788517,
+          47.36243729048603
+        ]
+      },
+      "properties": {
+        "name": "Griessbachhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.908640637282968,
+          47.3902241045324
+        ]
+      },
+      "properties": {
+        "name": "Abergstubn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.908036686163049,
+          47.39115912501716
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Unterberg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.913983668796881,
+          47.39967448798197
+        ]
+      },
+      "properties": {
+        "name": "Natrunhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.912859341270199,
+          47.40387070483826
+        ]
+      },
+      "properties": {
+        "name": "Postalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.906050433638592,
+          47.40700431073909
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Niederreiter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.180010432525412,
+          47.71617168667373
+        ]
+      },
+      "properties": {
+        "name": "Krispl Wirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.17657484406739,
+          47.71483289030545
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Alpenblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.215513225893908,
+          47.6099553614443
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Bachrain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.419864886305426,
+          47.48822144139365
+        ]
+      },
+      "properties": {
+        "name": "Wieseralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.417992329302917,
+          47.4845102748415
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Sommerau"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.413141913291183,
+          47.48217677348582
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Rieger"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.405013315918719,
+          47.48950031476604
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation/Kiosk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.39971800138973,
+          47.49397274238243
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Kerschbaumer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.399185630933014,
+          47.49424473723159
+        ]
+      },
+      "properties": {
+        "name": "Lungötzer Hof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.39927847248048,
+          47.493810709239355
+        ]
+      },
+      "properties": {
+        "name": "Salettl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.319068836094342,
+          47.281870673001855
+        ]
+      },
+      "properties": {
+        "name": "Zirbenhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.31948431590437,
+          47.28143703801963
+        ]
+      },
+      "properties": {
+        "name": "Treff 2000"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.331757850574068,
+          47.283733339045725
+        ]
+      },
+      "properties": {
+        "name": "Landgasthof Galler"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.339420866116047,
+          47.29272890612601
+        ]
+      },
+      "properties": {
+        "name": "Schüttalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.34658363186987,
+          47.294580209141074
+        ]
+      },
+      "properties": {
+        "name": "Almstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.356272039888616,
+          47.30188784518396
+        ]
+      },
+      "properties": {
+        "name": "Hubertusalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.358247164215772,
+          47.30127077304414
+        ]
+      },
+      "properties": {
+        "name": "Frauenalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.36062972247933,
+          47.30037178733923
+        ]
+      },
+      "properties": {
+        "name": "Chill House"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.319887669364354,
+          47.277511431622855
+        ]
+      },
+      "properties": {
+        "name": "Café Annemarie"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.380895787593625,
+          47.30552936844469
+        ]
+      },
+      "properties": {
+        "name": "Winklalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.390546351955571,
+          47.297383424551484
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Walchau"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.329388437336304,
+          47.280194385526016
+        ]
+      },
+      "properties": {
+        "name": "Berggasthof Pröll"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.392307631488121,
+          47.296926969360335
+        ]
+      },
+      "properties": {
+        "name": "Sunshine Schirm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.41465186994329,
+          47.401964478922935
+        ]
+      },
+      "properties": {
+        "name": "ReitlehenAlm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.40850375397958,
+          47.400445864411374
+        ]
+      },
+      "properties": {
+        "name": "MoosAlm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.400095655244609,
+          47.40211171134423
+        ]
+      },
+      "properties": {
+        "name": "Schirmbar Fam Hölzl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.401064562628644,
+          47.40299504596471
+        ]
+      },
+      "properties": {
+        "name": "Ferienwohnung Hans Ebner"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.401206036627359,
+          47.40146468006835
+        ]
+      },
+      "properties": {
+        "name": "Ferienhof Ortnergut"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.436424154218432,
+          47.66473477462389
+        ]
+      },
+      "properties": {
+        "name": "Posthütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.438477674839012,
+          47.67333004733311
+        ]
+      },
+      "properties": {
+        "name": "Thoralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.424317666563459,
+          47.67415673468308
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Schafbergblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.426085187014664,
+          47.67117214128658
+        ]
+      },
+      "properties": {
+        "name": "Wieslerhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.42086844803,
+          47.660899549904244
+        ]
+      },
+      "properties": {
+        "name": "Huber Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.434915113178516,
+          47.652112762971576
+        ]
+      },
+      "properties": {
+        "name": "Jugendgästehaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4327641647323,
+          47.654066869602076
+        ]
+      },
+      "properties": {
+        "name": "Schnitzhofalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.430440689983852,
+          47.65233676552269
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Alpenrose"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.431036382250593,
+          47.653334807433524
+        ]
+      },
+      "properties": {
+        "name": "Welser Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.430402028344986,
+          47.65387940074966
+        ]
+      },
+      "properties": {
+        "name": "Obweghütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.431112313897202,
+          47.64951138254763
+        ]
+      },
+      "properties": {
+        "name": "Limbachhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.430672559733688,
+          47.6507239878162
+        ]
+      },
+      "properties": {
+        "name": "Blonde Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.429815159292765,
+          47.65781242862908
+        ]
+      },
+      "properties": {
+        "name": "Strobler Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.129357932525487,
+          47.23889439165779
+        ]
+      },
+      "properties": {
+        "name": "Wengeralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.124090381670376,
+          47.2412918289895
+        ]
+      },
+      "properties": {
+        "name": "Brandlalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.126612435661704,
+          47.24194863313815
+        ]
+      },
+      "properties": {
+        "name": "Reiterhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.127010002764555,
+          47.24899280552434
+        ]
+      },
+      "properties": {
+        "name": "Mühlwinkel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.143346803653984,
+          47.24165824410833
+        ]
+      },
+      "properties": {
+        "name": "Grabner Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.14769823708487,
+          47.23477977092905
+        ]
+      },
+      "properties": {
+        "name": "Fulseck Gipflstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.136808248608991,
+          47.23961929706952
+        ]
+      },
+      "properties": {
+        "name": "Würstelbude Gru"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.11330677964192,
+          47.24693066394477
+        ]
+      },
+      "properties": {
+        "name": "Hoamroas Stub'n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.180573272630397,
+          47.24143274982376
+        ]
+      },
+      "properties": {
+        "name": "Alpentaverne"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.18071048328391,
+          47.23498678804228
+        ]
+      },
+      "properties": {
+        "name": "Hochbrandhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.179193247402809,
+          47.232896299637574
+        ]
+      },
+      "properties": {
+        "name": "Jagahütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.159257004686337,
+          47.231910146922054
+        ]
+      },
+      "properties": {
+        "name": "Gehwolf Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.158922998561192,
+          47.231403819519564
+        ]
+      },
+      "properties": {
+        "name": "Harbach Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.15355183229453,
+          47.225526607765566
+        ]
+      },
+      "properties": {
+        "name": "Skialm Kreuzkogel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.169763117480235,
+          47.23119931748023
+        ]
+      },
+      "properties": {
+        "name": "Großarler Panoramastube"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.168955388735206,
+          47.228518269705134
+        ]
+      },
+      "properties": {
+        "name": "Laireiteralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.216332269384228,
+          47.70297727484067
+        ]
+      },
+      "properties": {
+        "name": "Intreff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.217642350566395,
+          47.70594244084095
+        ]
+      },
+      "properties": {
+        "name": "Schierler Hof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.221062757619134,
+          47.72358810202692
+        ]
+      },
+      "properties": {
+        "name": "Gasthütte Spielbergalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.227800952480973,
+          47.71874962922744
+        ]
+      },
+      "properties": {
+        "name": "Lechner Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.23794377302861,
+          47.72293365743669
+        ]
+      },
+      "properties": {
+        "name": "Latschen Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.224649524976822,
+          47.705892414552125
+        ]
+      },
+      "properties": {
+        "name": "Heidi´s Schmittenstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.253532448557408,
+          47.71487290898155
+        ]
+      },
+      "properties": {
+        "name": "Franzl´s Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.253841957403763,
+          47.71593661710463
+        ]
+      },
+      "properties": {
+        "name": "Berggasthof Anzenberg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.273285316037503,
+          47.72437970667426
+        ]
+      },
+      "properties": {
+        "name": "Skirast Hintersee"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.639324120452155,
+          47.603075142488244
+        ]
+      },
+      "properties": {
+        "name": "Almtreff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.653573261612856,
+          47.60856423353521
+        ]
+      },
+      "properties": {
+        "name": "Haus Gertrud"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.65346786521529,
+          47.607722646725264
+        ]
+      },
+      "properties": {
+        "name": "Soderkaser"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.650347146366673,
+          47.60724175549323
+        ]
+      },
+      "properties": {
+        "name": "Haus Schönblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.684076316546804,
+          47.60424570132345
+        ]
+      },
+      "properties": {
+        "name": "Loderbichl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.673487250825643,
+          47.604320929149466
+        ]
+      },
+      "properties": {
+        "name": "Hasenstall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.689630116301055,
+          47.59660449660177
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Faistau"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.691336170038337,
+          47.58723366598837
+        ]
+      },
+      "properties": {
+        "name": "Karussell"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.627022961805446,
+          47.09077081525315
+        ]
+      },
+      "properties": {
+        "name": "Weltcupstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.088772238938281,
+          47.64942223770972
+        ]
+      },
+      "properties": {
+        "name": "Zinkenstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.477352494542382,
+          47.571929533869614
+        ]
+      },
+      "properties": {
+        "name": "Hornhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.463905281621813,
+          47.58181964735298
+        ]
+      },
+      "properties": {
+        "name": "Franzlalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.477625601591125,
+          47.54909929521643
+        ]
+      },
+      "properties": {
+        "name": "Edtalmhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.347048690885721,
+          47.733914997708574
+        ]
+      },
+      "properties": {
+        "name": "Illingeralmhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.34825477973154,
+          47.7409398049385
+        ]
+      },
+      "properties": {
+        "name": "Arnikahütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.351496782918167,
+          47.74364330427031
+        ]
+      },
+      "properties": {
+        "name": "Berghof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.356831567494764,
+          47.75133468820013
+        ]
+      },
+      "properties": {
+        "name": "Sausteigalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.355257499507953,
+          47.75281629794593
+        ]
+      },
+      "properties": {
+        "name": "Lärchenhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.354609283385479,
+          47.753298280940335
+        ]
+      },
+      "properties": {
+        "name": "Bartlhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.359191064513663,
+          47.760811185491455
+        ]
+      },
+      "properties": {
+        "name": "Weißwandhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.647951278861658,
+          47.11988465746207
+        ]
+      },
+      "properties": {
+        "name": "Peterbaueralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.650211798817471,
+          47.12306671961353
+        ]
+      },
+      "properties": {
+        "name": "Trogalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.646904783197677,
+          47.13057980113499
+        ]
+      },
+      "properties": {
+        "name": "Speiereckhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.650596381248524,
+          47.1284205349454
+        ]
+      },
+      "properties": {
+        "name": "Panoramaalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.656093271405723,
+          47.12919068905063
+        ]
+      },
+      "properties": {
+        "name": "Wedlstub'n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.662761764778965,
+          47.141880579308854
+        ]
+      },
+      "properties": {
+        "name": "Schialm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.652977233813731,
+          47.12561144368177
+        ]
+      },
+      "properties": {
+        "name": "Sonnalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.355738834138405,
+          47.567592853388305
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Sonnleitn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.35222444467846,
+          47.56633605168406
+        ]
+      },
+      "properties": {
+        "name": "Poschenhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.350882255432516,
+          47.556072739929554
+        ]
+      },
+      "properties": {
+        "name": "Traunstein"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.339708986565688,
+          47.555605776266674
+        ]
+      },
+      "properties": {
+        "name": "Auliftstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.35269469459386,
+          47.55044851624589
+        ]
+      },
+      "properties": {
+        "name": "Kohlhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.358983973928586,
+          47.5453985298966
+        ]
+      },
+      "properties": {
+        "name": "Karkogelhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.450180301789537,
+          47.51887472901147
+        ]
+      },
+      "properties": {
+        "name": "Holzer Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.446594933087345,
+          47.516913530834046
+        ]
+      },
+      "properties": {
+        "name": "Dolomitenhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.441875574243708,
+          47.51118989811479
+        ]
+      },
+      "properties": {
+        "name": "Hareit"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.463517658002985,
+          47.536098401338556
+        ]
+      },
+      "properties": {
+        "name": "Rottenhofhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.297524133164217,
+          47.46270372589872
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Bischlinghöhe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.291491493749321,
+          47.46949181794952
+        ]
+      },
+      "properties": {
+        "name": "Sportalm Strussing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.275737317880381,
+          47.45903041185581
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Barbarahof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.274960775674234,
+          47.458427573282606
+        ]
+      },
+      "properties": {
+        "name": "Liftstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.26970157696692,
+          47.45726392728666
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Strassreith"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.268997499043211,
+          47.456962303563486
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Schöntal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.275443474308883,
+          47.45859902927685
+        ]
+      },
+      "properties": {
+        "name": "Salettl Eikytreff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.301884184252259,
+          47.47637136089454
+        ]
+      },
+      "properties": {
+        "name": "Jagastüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.305002160502765,
+          47.47578800342727
+        ]
+      },
+      "properties": {
+        "name": "Anton Prokschhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.264117746105217,
+          47.45703167412082
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Tennenblick"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.766893371728818,
+          47.306899404694725
+        ]
+      },
+      "properties": {
+        "name": "Areitalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.737991138735161,
+          47.32920999379474
+        ]
+      },
+      "properties": {
+        "name": "Berghotel Schmittenhöhe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.76631041295384,
+          47.33585432376654
+        ]
+      },
+      "properties": {
+        "name": "Berghotel / Blaickner's Sonnalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.744753161049204,
+          47.32203138058334
+        ]
+      },
+      "properties": {
+        "name": "Breiteckalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.78921041038694,
+          47.318058838249726
+        ]
+      },
+      "properties": {
+        "name": "Ebenbergalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.772063488331588,
+          47.31556261845264
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Mittelstation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.755270947998815,
+          47.31420529640164
+        ]
+      },
+      "properties": {
+        "name": "Glocknerhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.779076257144412,
+          47.30116974304053
+        ]
+      },
+      "properties": {
+        "name": "Schoberalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.783429159948554,
+          47.30005361394196
+        ]
+      },
+      "properties": {
+        "name": "Sonnhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.738476780667646,
+          47.33227110040045
+        ]
+      },
+      "properties": {
+        "name": "Hochzelleralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.776345014778226,
+          47.33083835172035
+        ]
+      },
+      "properties": {
+        "name": "Jagaalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.728466765625058,
+          47.3275162791318
+        ]
+      },
+      "properties": {
+        "name": "Kettingalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.719082154188772,
+          47.32284311818776
+        ]
+      },
+      "properties": {
+        "name": "Pinzgauer Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.766065406353306,
+          47.344177294037515
+        ]
+      },
+      "properties": {
+        "name": "Schmiedhofalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.771948830840683,
+          47.32686691609434
+        ]
+      },
+      "properties": {
+        "name": "Häferl-Pfiff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.738389995070236,
+          47.32872740754249
+        ]
+      },
+      "properties": {
+        "name": "Schmitten-Pfiff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.755464327240707,
+          47.3439625036461
+        ]
+      },
+      "properties": {
+        "name": "Sonnkogel-Pfiff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.788738626727646,
+          47.299994729182
+        ]
+      },
+      "properties": {
+        "name": "Areit-Pfiff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.73603786034372,
+          47.32394803385643
+        ]
+      },
+      "properties": {
+        "name": "Panorama-Pfiff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.775834913593789,
+          47.32445789553315
+        ]
+      },
+      "properties": {
+        "name": "Waldgasthaus Köhlergraben"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.772330148812454,
+          47.32777661265748
+        ]
+      },
+      "properties": {
+        "name": "Hotel Schwebebahn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.59311835176897,
+          47.362393290453994
+        ]
+      },
+      "properties": {
+        "name": "Franz Hintermayer Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.49716947715484,
+          47.36487923650982
+        ]
+      },
+      "properties": {
+        "name": "Ossmannalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.49170446699466,
+          47.362230660905524
+        ]
+      },
+      "properties": {
+        "name": "Saalalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.66573376971655,
+          47.358865416008115
+        ]
+      },
+      "properties": {
+        "name": "Rammern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.508083373251372,
+          47.365891653190445
+        ]
+      },
+      "properties": {
+        "name": "Lindlingalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.72464806735371,
+          47.37503770962393
+        ]
+      },
+      "properties": {
+        "name": "Hecher-Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.695301003347062,
+          47.40270471533929
+        ]
+      },
+      "properties": {
+        "name": "Seidl-Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.685172522330761,
+          47.40138658431701
+        ]
+      },
+      "properties": {
+        "name": "Wildenkarhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.682760432149818,
+          47.392024435647485
+        ]
+      },
+      "properties": {
+        "name": "Rauchkuchl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.683676518224038,
+          47.39114608289643
+        ]
+      },
+      "properties": {
+        "name": "Hochwartalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.647864451860542,
+          47.36395796068009
+        ]
+      },
+      "properties": {
+        "name": "Limbergalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.646509656186517,
+          47.36271516414898
+        ]
+      },
+      "properties": {
+        "name": "Simalalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.678729139784524,
+          47.377356689958596
+        ]
+      },
+      "properties": {
+        "name": "Jausernalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.619961994477338,
+          47.41654083024827
+        ]
+      },
+      "properties": {
+        "name": "Spielberghaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.636877331633011,
+          47.39935776584496
+        ]
+      },
+      "properties": {
+        "name": "Maisalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.62042882293828,
+          47.40027305328221
+        ]
+      },
+      "properties": {
+        "name": "Westernstadl-Altach"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.615250760327607,
+          47.403728241593896
+        ]
+      },
+      "properties": {
+        "name": "Bärnalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.634942694966782,
+          47.39253412120192
+        ]
+      },
+      "properties": {
+        "name": "Bäckstättstall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.639626194071454,
+          47.395616470735355
+        ]
+      },
+      "properties": {
+        "name": "Hinterhagalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.664693614240473,
+          47.400535538652896
+        ]
+      },
+      "properties": {
+        "name": "Berger--Hochalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.663868503067814,
+          47.40278271036935
+        ]
+      },
+      "properties": {
+        "name": "Thurneralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.648304552791174,
+          47.40032720447095
+        ]
+      },
+      "properties": {
+        "name": "Asteralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.651854731293472,
+          47.40593349427025
+        ]
+      },
+      "properties": {
+        "name": "Panoramaalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.637356913424075,
+          47.367778222134966
+        ]
+      },
+      "properties": {
+        "name": "Sky-Rest"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.588209754805714,
+          47.388233257376335
+        ]
+      },
+      "properties": {
+        "name": "Wieseralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.59068990073378,
+          47.38881199700615
+        ]
+      },
+      "properties": {
+        "name": "Sportalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.601293608544921,
+          47.39073502925436
+        ]
+      },
+      "properties": {
+        "name": "Sonnalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.56860701313353,
+          47.389382170709375
+        ]
+      },
+      "properties": {
+        "name": "Roßwaldhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.622772076179723,
+          47.364019694027206
+        ]
+      },
+      "properties": {
+        "name": "Westgipfelhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.604823051944674,
+          47.36721110279191
+        ]
+      },
+      "properties": {
+        "name": "Bergstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.582143290306837,
+          47.36269769962104
+        ]
+      },
+      "properties": {
+        "name": "Winklerhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.580988235150214,
+          47.36269993542026
+        ]
+      },
+      "properties": {
+        "name": "Bigfoot-Salettl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.575736213209593,
+          47.35635423635857
+        ]
+      },
+      "properties": {
+        "name": "Breitfussalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.578981719827597,
+          47.34880156126769
+        ]
+      },
+      "properties": {
+        "name": "Ellmaualm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.569362228500838,
+          47.359766398550185
+        ]
+      },
+      "properties": {
+        "name": "Zwölfertreff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.59552367782556,
+          47.38054459261931
+        ]
+      },
+      "properties": {
+        "name": "Goaßstall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.585596756656653,
+          47.38413082326693
+        ]
+      },
+      "properties": {
+        "name": "Pfefferalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.588924846223781,
+          47.3640484345006
+        ]
+      },
+      "properties": {
+        "name": "Hintermaisalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.593534995338628,
+          47.367741998584435
+        ]
+      },
+      "properties": {
+        "name": "Grabenhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.59703522944564,
+          47.36903820466254
+        ]
+      },
+      "properties": {
+        "name": "Gerstreitalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.591808457475807,
+          47.37265617930054
+        ]
+      },
+      "properties": {
+        "name": "Xandlstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.591480279335707,
+          47.37324754706078
+        ]
+      },
+      "properties": {
+        "name": "Dr.-Karl-Rennerhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.547165858300309,
+          47.3850545460985
+        ]
+      },
+      "properties": {
+        "name": "Walleggalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.55328939322975,
+          47.38413270827403
+        ]
+      },
+      "properties": {
+        "name": "Hochalmhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.555144666912138,
+          47.38281851906956
+        ]
+      },
+      "properties": {
+        "name": "Sonnhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.599623628878733,
+          47.396471539606395
+        ]
+      },
+      "properties": {
+        "name": "Reiteralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.695876930624015,
+          47.40298187106457
+        ]
+      },
+      "properties": {
+        "name": "Schönleitenhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.713963957015748,
+          47.409701491509225
+        ]
+      },
+      "properties": {
+        "name": "Berghaus Asitz"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.713379810580557,
+          47.410602961263685
+        ]
+      },
+      "properties": {
+        "name": "Alte Schmiede"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.712749661769346,
+          47.427514314239296
+        ]
+      },
+      "properties": {
+        "name": "Stöcklalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.7085574627759,
+          47.43618441370874
+        ]
+      },
+      "properties": {
+        "name": "Forsthofalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.720584469514018,
+          47.43815194381984
+        ]
+      },
+      "properties": {
+        "name": "Riederalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.717902380181068,
+          47.439708315374624
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Asitzstubn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.760647716858118,
+          47.437624585067226
+        ]
+      },
+      "properties": {
+        "name": "Schantei"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.117244573545007,
+          47.399900095238436
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Sonneck"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.128090969558487,
+          47.40944896444396
+        ]
+      },
+      "properties": {
+        "name": "Berghotel Arthurhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.131650564346359,
+          47.41030961143385
+        ]
+      },
+      "properties": {
+        "name": "Schirm Arthurhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.103267077411033,
+          47.3968098341826
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Kopphütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.123378898942672,
+          47.40621107129437
+        ]
+      },
+      "properties": {
+        "name": "Mitterbergalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.122004005467272,
+          47.404136001557845
+        ]
+      },
+      "properties": {
+        "name": "Hochkeilhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.057917577818246,
+          47.39183599302523
+        ]
+      },
+      "properties": {
+        "name": "Birgkarhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.057201412901202,
+          47.391349960996884
+        ]
+      },
+      "properties": {
+        "name": "Mittereggalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.027764628596167,
+          47.38884666631796
+        ]
+      },
+      "properties": {
+        "name": "Übergossene Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.033318956328948,
+          47.38893016576114
+        ]
+      },
+      "properties": {
+        "name": "Hochkönig Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.032655051353268,
+          47.38877226507269
+        ]
+      },
+      "properties": {
+        "name": "Sennhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.044593145063152,
+          47.37601903370484
+        ]
+      },
+      "properties": {
+        "name": "Sunnhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.062584498277717,
+          47.38113103881809
+        ]
+      },
+      "properties": {
+        "name": "Tiergartenalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.076952237884399,
+          47.38292453140425
+        ]
+      },
+      "properties": {
+        "name": "Fellersbachalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.087770496147725,
+          47.376702764610464
+        ]
+      },
+      "properties": {
+        "name": "Karbachalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.016964105087792,
+          47.37275181552401
+        ]
+      },
+      "properties": {
+        "name": "Bürglalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.031598549052571,
+          47.387155819277076
+        ]
+      },
+      "properties": {
+        "name": "Liebenaualm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.637057632654146,
+          47.05514192889361
+        ]
+      },
+      "properties": {
+        "name": "Adlerhorst"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.673863491340356,
+          47.07108849620185
+        ]
+      },
+      "properties": {
+        "name": "Aineckstub´n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.683533922516983,
+          47.071858648383206
+        ]
+      },
+      "properties": {
+        "name": "Gasthaus Schlögelberger"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.689564344376885,
+          47.08055454792392
+        ]
+      },
+      "properties": {
+        "name": "Almstub´n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.65734354158958,
+          47.06131563181598
+        ]
+      },
+      "properties": {
+        "name": "Kößlbacheralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.657284598352952,
+          47.06234632171249
+        ]
+      },
+      "properties": {
+        "name": "Branntweinerhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.614601385376663,
+          47.05870082200433
+        ]
+      },
+      "properties": {
+        "name": "Erlebnisgasthof Alpina"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.613007104668874,
+          47.05822202210574
+        ]
+      },
+      "properties": {
+        "name": "Wilderer Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.612466811665854,
+          47.05770463712708
+        ]
+      },
+      "properties": {
+        "name": "Lärchenstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.611058806772517,
+          47.0565409732499
+        ]
+      },
+      "properties": {
+        "name": "Pizzeria Stamperl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.60581784490799,
+          47.06100152040362
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Bacher"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.604982974073947,
+          47.06098081540828
+        ]
+      },
+      "properties": {
+        "name": "Schneeflockerl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.60354014717398,
+          47.05834183038841
+        ]
+      },
+      "properties": {
+        "name": "Asenhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6022325744947,
+          47.05528044676097
+        ]
+      },
+      "properties": {
+        "name": "Gamskogelhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.618099877087815,
+          47.058503197177004
+        ]
+      },
+      "properties": {
+        "name": "Einkehr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.528643134564948,
+          47.422366136101196
+        ]
+      },
+      "properties": {
+        "name": "MoosAlm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.520113899899739,
+          47.4318743905171
+        ]
+      },
+      "properties": {
+        "name": "RadstädterHütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.51113663143362,
+          47.442299129507944
+        ]
+      },
+      "properties": {
+        "name": "KleinbergAlm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.493625269900177,
+          47.44346080815661
+        ]
+      },
+      "properties": {
+        "name": "SchweigalmHütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.472324674346805,
+          47.43688513866611
+        ]
+      },
+      "properties": {
+        "name": "GeierbergAlm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.520114322723115,
+          47.41790028483185
+        ]
+      },
+      "properties": {
+        "name": "Schneekanone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.50062534918313,
+          47.43463485723551
+        ]
+      },
+      "properties": {
+        "name": "Holzwurm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.534811794975544,
+          47.34316000523912
+        ]
+      },
+      "properties": {
+        "name": "Zeffererhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.534325344116027,
+          47.34396230937615
+        ]
+      },
+      "properties": {
+        "name": "Trinkeralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.53326184038066,
+          47.34664071359658
+        ]
+      },
+      "properties": {
+        "name": "Aualm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.530526873990826,
+          47.3553309623751
+        ]
+      },
+      "properties": {
+        "name": "Premhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.53165752578983,
+          47.3566336018382
+        ]
+      },
+      "properties": {
+        "name": "Lechneralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.531747292970328,
+          47.35738156221287
+        ]
+      },
+      "properties": {
+        "name": "Unterbergalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.540803364690655,
+          47.367602028876284
+        ]
+      },
+      "properties": {
+        "name": "Heideggalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.545633660711042,
+          47.377721591907104
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Unterreith"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.551390164627033,
+          47.37846529963311
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Forstauerwirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.447174038822087,
+          47.28251107059357
+        ]
+      },
+      "properties": {
+        "name": "Gamskogel Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.448884556919017,
+          47.2918731732955
+        ]
+      },
+      "properties": {
+        "name": "Unterberg Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.435260565127685,
+          47.29573733740385
+        ]
+      },
+      "properties": {
+        "name": "Roßkopf Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.438218066419655,
+          47.29237420374607
+        ]
+      },
+      "properties": {
+        "name": "Adlerhorst - Höchalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.416557289564805,
+          47.29901643762801
+        ]
+      },
+      "properties": {
+        "name": "Bodenalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.40922859503077,
+          47.29678368170466
+        ]
+      },
+      "properties": {
+        "name": "Burgstall Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.420196202239117,
+          47.29994829042305
+        ]
+      },
+      "properties": {
+        "name": "Gloner Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.465369029089697,
+          47.280326570317975
+        ]
+      },
+      "properties": {
+        "name": "Oberzauch Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.473768054736704,
+          47.28744597149287
+        ]
+      },
+      "properties": {
+        "name": "Rauchkopf Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.456832802274254,
+          47.292894843178445
+        ]
+      },
+      "properties": {
+        "name": "Felser Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.457729923615773,
+          47.29089869069041
+        ]
+      },
+      "properties": {
+        "name": "Arena Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.456561308472397,
+          47.29208672473305
+        ]
+      },
+      "properties": {
+        "name": "Liftgasthof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.456309171239083,
+          47.29238512629746
+        ]
+      },
+      "properties": {
+        "name": "Hotel Allpenrose"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.456116086013859,
+          47.29270639288785
+        ]
+      },
+      "properties": {
+        "name": "Hotel Salzburgerhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.45592400770039,
+          47.29348059306533
+        ]
+      },
+      "properties": {
+        "name": "Hotel Central"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.457051997611536,
+          47.292934746355506
+        ]
+      },
+      "properties": {
+        "name": "Garnhof Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.45658176909498,
+          47.29367483608559
+        ]
+      },
+      "properties": {
+        "name": "Hotel Zauchenseehof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.457214924254718,
+          47.29416723820086
+        ]
+      },
+      "properties": {
+        "name": "Hotel Enzian"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.458207367854984,
+          47.29331309646309
+        ]
+      },
+      "properties": {
+        "name": "Hotel Alpenhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.456858486963872,
+          47.2930737288787
+        ]
+      },
+      "properties": {
+        "name": "Zauchenseehütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4576657755982,
+          47.29354646262038
+        ]
+      },
+      "properties": {
+        "name": "Hotel Sportalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.45731515372028,
+          47.29383811675537
+        ]
+      },
+      "properties": {
+        "name": "Sportclub Dechanthof Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.455952449818971,
+          47.29318977505776
+        ]
+      },
+      "properties": {
+        "name": "Appartment Schistube Schneider"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.457635153051964,
+          47.29312350331631
+        ]
+      },
+      "properties": {
+        "name": "Scheiklalm (Hinteraigenhütte)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.426789094617353,
+          47.361935932963156
+        ]
+      },
+      "properties": {
+        "name": "Arlhofhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.465154565170968,
+          47.37177187957409
+        ]
+      },
+      "properties": {
+        "name": "Liftstüberl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.437753168048376,
+          47.354658070184115
+        ]
+      },
+      "properties": {
+        "name": "Bifangalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.440348453614165,
+          47.35313850212839
+        ]
+      },
+      "properties": {
+        "name": "Bifang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.453102602150512,
+          47.35279899647113
+        ]
+      },
+      "properties": {
+        "name": "Sportalm Habersatter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4520431302759,
+          47.36652546346483
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Reiter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.441597640413365,
+          47.356406792771345
+        ]
+      },
+      "properties": {
+        "name": "Hoch Nössler"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.442181366933635,
+          47.36408583878015
+        ]
+      },
+      "properties": {
+        "name": "Berggasthof Bliembauer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.437055549850788,
+          47.3541219988401
+        ]
+      },
+      "properties": {
+        "name": "Bifeis Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.457993997352826,
+          47.29399724121722
+        ]
+      },
+      "properties": {
+        "name": "Apparthotel Kälberloch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.117244600039433,
+          47.39990009528903
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Sonneck"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.128090996057711,
+          47.40944896449205
+        ]
+      },
+      "properties": {
+        "name": "Berghotel Arthurhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.131650590846036,
+          47.410309611481125
+        ]
+      },
+      "properties": {
+        "name": "Schirm Arthurhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.103267103903887,
+          47.39680983423641
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Kopphütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.123378938689063,
+          47.40621107136813
+        ]
+      },
+      "properties": {
+        "name": "Mitterbergalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.122004045212103,
+          47.40413600163207
+        ]
+      },
+      "properties": {
+        "name": "Hochkeilhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.057917604308518,
+          47.39183599308953
+        ]
+      },
+      "properties": {
+        "name": "Birgkarhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.057201452636221,
+          47.39134996109357
+        ]
+      },
+      "properties": {
+        "name": "Mittereggalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.027764655084868,
+          47.38884666638921
+        ]
+      },
+      "properties": {
+        "name": "Übergossene Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.033318982817704,
+          47.38893016583111
+        ]
+      },
+      "properties": {
+        "name": "Hochkönig Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.032655077841929,
+          47.388772265142805
+        ]
+      },
+      "properties": {
+        "name": "Sennhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.044593171545465,
+          47.3760190337722
+        ]
+      },
+      "properties": {
+        "name": "Sunnhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.062584524762617,
+          47.38113103888127
+        ]
+      },
+      "properties": {
+        "name": "Tiergartenalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.076952264370231,
+          47.38292453146413
+        ]
+      },
+      "properties": {
+        "name": "Fellersbachalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.087770535871838,
+          47.37670276469654
+        ]
+      },
+      "properties": {
+        "name": "Karbachalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.016964131568404,
+          47.37275181559776
+        ]
+      },
+      "properties": {
+        "name": "Bürglalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.031598588784355,
+          47.387155819382656
+        ]
+      },
+      "properties": {
+        "name": "Liebenaualm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.383448741931693,
+          47.359473696094646
+        ]
+      },
+      "properties": {
+        "name": "Specherstubn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.383765049549327,
+          47.35914079373196
+        ]
+      },
+      "properties": {
+        "name": "Dampfkessel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.387273776026895,
+          47.355049539431064
+        ]
+      },
+      "properties": {
+        "name": "Hotel Lacknerhof / Yetibar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.385153133481676,
+          47.35499482492168
+        ]
+      },
+      "properties": {
+        "name": "Landgasthof Waldschenke/Schorsch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.384934170723005,
+          47.35325792468542
+        ]
+      },
+      "properties": {
+        "name": "Unterberg Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.380544158540797,
+          47.341471998621536
+        ]
+      },
+      "properties": {
+        "name": "Pfeiffei Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.389677040107882,
+          47.343488875253335
+        ]
+      },
+      "properties": {
+        "name": "Zum Zottl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.386092560709574,
+          47.342121454650886
+        ]
+      },
+      "properties": {
+        "name": "Holzwurm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.370518636856046,
+          47.34183472988382
+        ]
+      },
+      "properties": {
+        "name": "NeureitAlm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.370227054579981,
+          47.34243445852673
+        ]
+      },
+      "properties": {
+        "name": "Waldgasthof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.359056334486597,
+          47.3347161823952
+        ]
+      },
+      "properties": {
+        "name": "Grießenkarhaus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.35753524638625,
+          47.33471678182356
+        ]
+      },
+      "properties": {
+        "name": "Birkhahnalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.353733859727663,
+          47.33155781544566
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Jandlalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.352734202420356,
+          47.331147414896
+        ]
+      },
+      "properties": {
+        "name": "Latschenhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.345924019456556,
+          47.32626402055678
+        ]
+      },
+      "properties": {
+        "name": "HofAlm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.373871136027953,
+          47.34943940711893
+        ]
+      },
+      "properties": {
+        "name": "Berggasthof Munzen"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.375624249763366,
+          47.35120941554116
+        ]
+      },
+      "properties": {
+        "name": "Purzelbaum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.376348096511444,
+          47.34990789321013
+        ]
+      },
+      "properties": {
+        "name": "Brennhütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.385072820268839,
+          47.35227617203732
+        ]
+      },
+      "properties": {
+        "name": "Niederalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.385985471644284,
+          47.35263350181757
+        ]
+      },
+      "properties": {
+        "name": "Kaminklause"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.358188492197073,
+          47.33453786371459
+        ]
+      },
+      "properties": {
+        "name": "Berggasthof Jandlalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.389260152770921,
+          47.34417306171186
+        ]
+      },
+      "properties": {
+        "name": "Hofstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.061758135615134,
+          47.31591683793044
+        ]
+      },
+      "properties": {
+        "name": "Kathialm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.084834289881861,
+          47.31534181549838
+        ]
+      },
+      "properties": {
+        "name": "Hackerhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.383562309618336,
+          47.46134402377942
+        ]
+      },
+      "properties": {
+        "name": "Moarstadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.381558510553036,
+          47.46317900663708
+        ]
+      },
+      "properties": {
+        "name": "Moarwirt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.405468310600583,
+          47.28077192923711
+        ]
+      },
+      "properties": {
+        "name": "Restaurant Talstation Panoramabahn"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.38873372384905,
+          47.31142616365178
+        ]
+      },
+      "properties": {
+        "name": "Schutzhütte Berggasthof Resterhöhe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.388026525964403,
+          47.31349198041154
+        ]
+      },
+      "properties": {
+        "name": "Moseralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.382029921002134,
+          47.30729091108697
+        ]
+      },
+      "properties": {
+        "name": "Jausenstation Moseralm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.401149089003878,
+          47.30437972382102
+        ]
+      },
+      "properties": {
+        "name": "Tonialm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.408003275808744,
+          47.29998913725134
+        ]
+      },
+      "properties": {
+        "name": "Schirmbar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.409508839560946,
+          47.301031066662524
+        ]
+      },
+      "properties": {
+        "name": "Gasthof Breitmoos"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.357267882372259,
+          47.31839764775612
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Panoramaalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.88826243257601,
+          47.40313220016119
+        ]
+      },
+      "properties": {
+        "name": "Berggasthof Hinterreit"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.890713609826893,
+          47.402595838290836
+        ]
+      },
+      "properties": {
+        "name": "Ferienwohnungen Imlauer"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.887603089913409,
+          47.408788747837754
+        ]
+      },
+      "properties": {
+        "name": "Mühlbauern Stub'n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.881463458050245,
+          47.40986385902092
+        ]
+      },
+      "properties": {
+        "name": "Untermühlbauernhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.19690759180905,
+          47.323226249895825
+        ]
+      },
+      "properties": {
+        "name": "Butz und Stingl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.197291595793066,
+          47.32203838356535
+        ]
+      },
+      "properties": {
+        "name": "Oberforsthofalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.205450576004349,
+          47.32000118301795
+        ]
+      },
+      "properties": {
+        "name": "Alpengasthof Sternhof"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.200258594354828,
+          47.3210190728031
+        ]
+      },
+      "properties": {
+        "name": "Alpenhof-Stadl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.219715148822058,
+          47.31757551538962
+        ]
+      },
+      "properties": {
+        "name": "Kreisten Alm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.223886616294562,
+          47.31113300540752
+        ]
+      },
+      "properties": {
+        "name": "Gondl-Stub'n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.232882247111224,
+          47.30883776054366
+        ]
+      },
+      "properties": {
+        "name": "Erlebnisrestaurant Buchau-Hütte"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.236003419466332,
+          47.30862298677137
+        ]
+      },
+      "properties": {
+        "name": "Gernkogelalm mit Salettl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.25049935507412,
+          47.30552447548891
+        ]
+      },
+      "properties": {
+        "name": "Straßalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.22193303777516,
+          47.31061344278355
+        ]
+      },
+      "properties": {
+        "name": "Obergassalm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.912834650220079,
+          47.382085938425455
+        ]
+      },
+      "properties": {
+        "name": "Eberlalm"
+      }
+    }
+  ]
+}

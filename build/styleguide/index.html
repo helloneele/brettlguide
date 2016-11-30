@@ -1,0 +1,414 @@
+<!doctype html>
+<html class="psg-theme" lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Styleguide – brettlguide.at</title>
+        <style>.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8;-webkit-text-size-adjust:none}.diff .hljs-header,.hljs-comment{color:#998;font-style:italic}.css .rule .hljs-keyword,.hljs-keyword,.hljs-request,.hljs-status,.hljs-subst,.hljs-winutils,.nginx .hljs-title{color:#333;font-weight:700}.hljs-hexcolor,.hljs-number,.ruby .hljs-constant{color:teal}.hljs-doctag,.hljs-string,.hljs-tag .hljs-value,.tex .hljs-formula{color:#d14}.hljs-id,.hljs-title,.scss .hljs-preprocessor{color:#900;font-weight:700}.hljs-list .hljs-keyword,.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type,.tex .hljs-command,.vhdl .hljs-literal{color:#458;font-weight:700}.django .hljs-tag .hljs-keyword,.hljs-rule .hljs-property,.hljs-tag,.hljs-tag .hljs-title{color:navy;font-weight:400}.hljs-attribute,.hljs-name,.hljs-variable,.lisp .hljs-body{color:teal}.hljs-regexp{color:#009926}.clojure .hljs-keyword,.hljs-prompt,.hljs-symbol,.lisp .hljs-keyword,.ruby .hljs-symbol .hljs-string,.scheme .hljs-keyword,.tex .hljs-special{color:#990073}.hljs-built_in{color:#0086b3}.hljs-cdata,.hljs-doctype,.hljs-pi,.hljs-pragma,.hljs-preprocessor,.hljs-shebang{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.diff .hljs-change{background:#0086b3}.hljs-chunk{color:#aaa}/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:1rem;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;color:var(--dark-blue)}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}html{box-sizing:border-box}*,:after,:before,input[type=search]{box-sizing:inherit}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,p,pre{margin:0}button{background:transparent;border:0;padding:0}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}fieldset{border:0;margin:0;padding:0}iframe{border:0}ol,ul{list-style:none;margin:0;padding:0}[tabindex="-1"]:focus{outline:none!important}body{margin:0}body,html{height:100%;overflow-y:hidden}h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]{margin:1.75rem 0 .75rem;font-weight:400;line-height:1.6;color:var(--gray);font-weight:300}h1[id]{font-size:2.5rem}h2[id]{font-size:1.5rem;color:#fff;background:var(--sky-blue);display:inline-block;padding:1px 8px;box-shadow:0 0 5px 0 rgba(0,0,0,.2);margin-left:-50px;font-style:italic}h3[id]{font-size:1.25rem;color:var(--dark-blue);margin:1rem 0}h4[id],h5[id],h6[id]{font-size:1.8rem}p[id]{margin:.5rem 0 1rem}img[alt=logo]{height:45px;display:block;margin-bottom:15px}.psg-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;height:100%;color:#444;line-height:1.5;background:#f8f8f8;padding-top:100px}.psg-menu{-webkit-box-flex:1;-ms-flex:1 1 25%;flex:1 1 25%;width:240px;height:100%;padding:4.05rem 2.5rem;overflow-y:scroll;background:#fcfcfc;box-shadow:1px 1px 10px 0 rgba(0,0,0,.2)}.psg-menu h3{text-align:right;margin-bottom:.5em;color:var(--mediumgray);font-style:italic;font-weight:300}.psg-ComponentList{margin-top:1rem}.psg-ComponentList__item{padding:6px 0;list-style:none;text-align:right;font-size:1.3em}.psg-ComponentList__item a:hover{color:var(--dark-blue)}.psg-ComponentList a{text-decoration:none;color:var(--sky-blue);cursor:pointer;font-weight:700}.psg-main{-webkit-box-flex:3;-ms-flex:1 1 75%;flex:1 1 75%;height:100%;overflow-y:scroll}.psg-title{width:100%;padding:30px 60px 20px;background-color:var(--white);display:block;position:fixed;z-index:2;min-height:100px}.psg-title:after{content:'';display:block;clear:both}.psg-title h1{background:url(../assets/img/logo_color.png) no-repeat;background-size:auto 100%;text-indent:-10000px;width:50%;float:left}.psg-title h2{display:block;float:right;width:50%;text-align:right;font-style:italic;color:var(--mediumgray);font-weight:300}.psg-container{margin:50px 0}.psg-component-title.psg-component-title{margin:2em 0 1rem -50px;font-size:2.5rem;font-weight:700;line-height:1.1em;color:#3f526b;background:transparent none;display:block;padding:0;box-shadow:none;font-style:italic;text-transform:uppercase}.psg-section{max-width:580px;margin:0 auto}.psg-contents>p,.psg-contents>pre{margin:1rem 0 2rem}hr.psg-separator{margin:4rem 0;border:0;border-top:1px solid #ddd}.psg-colorPalette{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-flow:row wrap;flex-flow:row wrap;margin-top:1.5rem}.psg-colorBox{width:170px;box-shadow:1px 1px 10px 0 rgba(0,0,0,.2);margin:0 1rem 2rem 0}.psg-colorBox__sample{height:100px}.psg-colorBox__name{padding:1em;text-align:center;background:#fff}.effect{position:fixed;width:100%;height:100px;box-shadow:0 1px 4px rgba(0,0,0,.3),inset 0 0 40px rgba(0,0,0,.1)}.effect:after,.effect:before{content:"";position:absolute;z-index:1;box-shadow:0 0 20px rgba(0,0,0,.5);top:50%;bottom:0;left:10px;right:10px;border-radius:100px/10px}.effect:after{right:10px;left:auto;-webkit-transform:skew(8deg) rotate(3deg);transform:skew(8deg) rotate(3deg)}abbr,address,article,aside,audio,b,blockquote,body,body div,caption,cite,code,dd,del,details,dfn,dl,dt,em,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font-weight:400;vertical-align:baseline;background:transparent}article,aside,details,figure,footer,header,main,nav,section,summary{display:block}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}embed,img,object{max-width:100%}html{overflow-y:scroll}ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}table{border-collapse:separate;border-spacing:0}th{font-weight:700;vertical-align:bottom}td{font-weight:400;vertical-align:top}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}pre{white-space:pre;white-space:pre-wrap;white-space:pre-line;word-wrap:break-word}input[type=radio]{vertical-align:text-bottom}input[type=checkbox]{vertical-align:bottom}.ie7 input[type=checkbox]{vertical-align:baseline}.ie6 input{vertical-align:text-bottom}input,select,textarea{font:99% sans-serif}table{font-size:inherit;font:100%}small{font-size:85%}strong{font-weight:700}td,td img{vertical-align:top}sub,sup{font-size:75%;line-height:0;position:relative}sup{top:-.5em}sub{bottom:-.25em}code,kbd,pre,samp{font-family:monospace,sans-serif}.clickable,button,input[type=button],input[type=file],input[type=submit],label{cursor:pointer}button,input,select,textarea{margin:0}button,input[type=button]{width:auto;overflow:visible}.ie7 img{-ms-interpolation-mode:bicubic}.clearfix:after{content:" ";display:block;clear:both}:root{--dark-blue:#295e72;--sky-blue:#4bb4ca;--white:#fefefe;--lightgray:#f8f8f8;--mediumgray:#757575;--gray:#444}@font-face{font-family:Lato;src:url(../assets/fonts/Lato-Regular.eot);src:url(../assets/fonts/Lato-Regular.eot?#iefix) format('embedded-opentype'),url(../assets/fonts/Lato-Regular.woff) format('woff'),url(../assets/fonts/Lato-Regular.ttf) format('truetype');font-style:normal;font-weight:400;text-rendering:optimizeLegibility}@font-face{font-family:Lato;src:url(../assets/fonts/Lato-Italic.eot);src:url(../assets/fonts/Lato-Italic.eot?#iefix) format('embedded-opentype'),url(../assets/fonts/Lato-Italic.woff) format('woff'),url(../assets/fonts/Lato-Italic.ttf) format('truetype');font-style:italic;font-weight:400;text-rendering:optimizeLegibility}@font-face{font-family:Lato;src:url(../assets/fonts/Lato-Light.eot);src:url(../assets/fonts/Lato-Light.eot?#iefix) format('embedded-opentype'),url(../assets/fonts/Lato-Light.woff) format('woff'),url(../assets/fonts/Lato-Light.ttf) format('truetype');font-style:normal;font-weight:300;text-rendering:optimizeLegibility}@font-face{font-family:Lato;src:url(../assets/fonts/Lato-LightItalic.eot);src:url(../assets/fonts/Lato-LightItalic.eot?#iefix) format('embedded-opentype'),url(../assets/fonts/Lato-LightItalic.woff) format('woff'),url(../assets/fonts/Lato-LightItalic.ttf) format('truetype');font-style:italic;font-weight:300;text-rendering:optimizeLegibility}@font-face{font-family:Lato;src:url(../assets/fonts/Lato-Bold.eot);src:url(../assets/fonts/Lato-Bold.eot?#iefix) format('embedded-opentype'),url(../assets/fonts/Lato-Bold.woff) format('woff'),url(../assets/fonts/Lato-Bold.ttf) format('truetype');font-style:normal;font-weight:700;text-rendering:optimizeLegibility}@font-face{font-family:Lato;src:url(../assets/fonts/Lato-BoldItalic.eot);src:url(../assets/fonts/Lato-BoldItalic.eot?#iefix) format('embedded-opentype'),url(../assets/fonts/Lato-BoldItalic.woff) format('woff'),url(../assets/fonts/Lato-BoldItalic.ttf) format('truetype');font-style:italic;font-weight:700;text-rendering:optimizeLegibility}body{font-family:Lato,sans-serif;font-size:100%}h1{font-size:2.5rem;color:#295e72;color:var(--dark-blue);text-transform:uppercase;line-height:1.1em}h1,h2{font-weight:700;font-style:italic}h2{font-size:2.25rem;color:#4bb4ca;color:var(--sky-blue)}h3{font-size:1.75rem;color:#444;color:var(--gray)}h4{font-size:1.5rem;color:#757575;color:var(--mediumgray)}h5{font-size:1.25rem;color:#444;color:var(--gray)}h6{font-size:.875rem;color:#444;color:var(--gray);text-transform:uppercase;color:#4bb4ca;color:var(--sky-blue)}.lead{font-size:1.2em}ol,ul{margin:2rem 0}ul{list-style:square inside none}ol{list-style:upper-roman inside none}.list-plain{list-style:none inside none}.blockquote{background-color:#f9f9f9;border-left:7px solid #4bb4ca;margin:2rem .5rem;padding:.5em 10px;quotes:"\201C""\201D""\2018""\2019";font-style:italic}blockquote:before{color:#4bb4ca;content:open-quote;font-size:4em;line-height:.1em;margin-right:.25em;vertical-align:-.4em}blockquote p{display:inline}.blockquote figcaption{color:#999;margin-top:.2rem}a{color:#4bb4ca;color:var(--sky-blue)}a:hover{color:#295e72;color:var(--dark-blue)}table{text-align:left;margin:2rem 0}td,th{padding:5px 10px}th{border-bottom:2px solid #4bb4ca;color:#4bb4ca;background:#fff}tr:nth-child(even){background:#fafafa}tr:nth-child(odd){background:#f1f1f1}.mapboxgl-popup .mapboxgl-popup-content{background:red}header{position:fixed;z-index:10;width:100%;height:70px;top:0}header.header--shadow:after,header.header--shadow:before{content:"";position:absolute;z-index:-1;box-shadow:0 0 20px rgba(0,0,0,.7);top:50%;bottom:0;left:10px;right:10px;border-radius:100px/10px}header.header--shadow:after{right:10px;left:auto;-webkit-transform:skew(8deg) rotate(3deg);transform:skew(8deg) rotate(3deg)}header .header__content{background:#fff;width:inherit;height:100%;max-width:100%;margin-left:auto;margin-right:auto;padding:18px 0 0}header .header__content:before{content:'';display:table}header .header__content:after{content:'';display:table;clear:both}header .header__left{width:calc(99.9% * 3/16 - 24.375px)}header .header__left:nth-child(1n){float:left;margin-right:30px;clear:none}header .header__left:last-child{margin-right:0}header .header__left:nth-child(0n){margin-right:0;float:right}header .header__left:nth-child(0n+1){clear:both}header .header__center{width:calc(99.9% * 10/16 - 11.25px)}header .header__center:nth-child(1n){float:left;margin-right:30px;clear:none}header .header__center:last-child{margin-right:0}header .header__center:nth-child(0n){margin-right:0;float:right}header .header__center:nth-child(0n+1){clear:both}header .header__right{width:calc(99.9% * 3/16 - 24.375px)}header .header__right:nth-child(1n){float:left;margin-right:30px;clear:none}header .header__right:last-child{margin-right:0}header .header__right:nth-child(0n){margin-right:0;float:right}header .header__right:nth-child(0n+1){clear:both}header .header__logo{background:url(/assets/img/logo_color.png) no-repeat;background-position:50%;background-size:100% auto;text-indent:-10000px}.content{margin-top:70px}#map{width:100%;height:500px}footer:after,footer:before{content:'';display:table}footer:after{clear:both}footer div{width:calc(99.9% * 1/3 - 20px)}footer div:nth-child(1n){float:left;margin-right:30px;clear:none}footer div:last-child{margin-right:0}footer div:nth-child(3n){margin-right:0;float:right}footer div:nth-child(3n+1){clear:both}.commentbox{width:500px;height:auto;background-color:#fff;padding:25px 20px;box-shadow:0 0 10px 0 rgba(0,0,0,.2)}.commentbox p{margin-top:1rem}.commentbox__profile{border-bottom:1px solid #eee;min-height:50px}.commentbox__profile:after{content:'';clear:both;display:block}.commentbox__profile a{font-size:1.5rem;line-height:1em;text-decoration:none;display:block}.commentbox__profile time{font-size:.8rem}.commentbox__picture{width:50px;height:50px;float:left;margin:0 10px 15px 0}.input-field{background-color:#fefefe;background-color:var(--white);color:#4bb4ca;color:var(--sky-blue);box-shadow:0 0 5px 0 rgba(0,0,0,.1);border:none;font-weight:300;padding:8px 10px}.nav{list-style:none;display:block}.nav li a{background-color:#295e72;background-color:var(--dark-blue);color:#fff;text-decoration:none;text-align:center;padding:5px 20px;cursor:pointer}.nav li a:active,.nav li a:hover{background-color:#4bb4ca;background-color:var(--sky-blue)}.nav--vertical li{margin-bottom:1px}.nav--vertical a{display:block}.nav--horizontal li{margin-right:5px}.nav--horizontal a,.nav--horizontal li{display:inline-block}.button{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;border-radius:6px;cursor:pointer}.button--large{width:140px;height:40px;font-size:14px}.button--dark-blue{color:#fff;background-color:#295e72;background-color:var(--dark-blue)}.button--sky-blue{color:#fff;background-color:#4bb4ca;background-color:var(--sky-blue)}.link{text-decoration:none;color:#4bb4ca;color:var(--sky-blue)}.link:hover{cursor:hand}.link:hover,.visited{color:#295e72;color:var(--dark-blue)}</style>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+
+    <header class="effect">
+      <div class="psg-title">
+        <h1>brettlguide.at</h1>
+        <h2>Styleguide</h2>
+      </div>
+    </header>
+      <div class="psg-wrapper">
+
+        <nav class="psg-menu">
+
+          <h3>Quicklinks</h3>
+
+          <ul class="psg-ComponentList">
+            
+                <li class="psg-ComponentList__item"><a href="#color-palette">Color Palette</a></li>
+            
+            
+              
+                  <li class="psg-ComponentList__item">
+                    <a href="#psg-link-0" >Logo</a>
+                  </li>
+              
+            
+              
+                  <li class="psg-ComponentList__item">
+                    <a href="#psg-link-1" >Typography</a>
+                  </li>
+              
+            
+              
+                  <li class="psg-ComponentList__item">
+                    <a href="#psg-link-2" >Paragraphs. Lists. Blockquotes</a>
+                  </li>
+              
+            
+              
+                  <li class="psg-ComponentList__item">
+                    <a href="#psg-link-3" >Methodology</a>
+                  </li>
+              
+            
+              
+                  <li class="psg-ComponentList__item">
+                    <a href="#psg-link-4" >Components</a>
+                  </li>
+              
+            
+          </ul>
+
+        </nav>
+
+        <div class="psg-main">
+          <div class="psg-container">
+            
+            <section class="psg-section">
+                <h2 id="color-palette" class="psg-component-title">Color Palette</h2>
+                <div class="psg-contents">
+                  <div class="psg-colorPalette">
+                    
+                    <div class="psg-colorBox">
+                        <div class="psg-colorBox__sample" style="background-color: #295e72">
+                        </div>
+                        <div class="psg-colorBox__name">
+                            dark-blue <br>
+                            <strong>#295e72</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="psg-colorBox">
+                        <div class="psg-colorBox__sample" style="background-color: #4bb4ca">
+                        </div>
+                        <div class="psg-colorBox__name">
+                            sky-blue <br>
+                            <strong>#4bb4ca</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="psg-colorBox">
+                        <div class="psg-colorBox__sample" style="background-color: #fefefe">
+                        </div>
+                        <div class="psg-colorBox__name">
+                            white <br>
+                            <strong>#fefefe</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="psg-colorBox">
+                        <div class="psg-colorBox__sample" style="background-color: #f8f8f8">
+                        </div>
+                        <div class="psg-colorBox__name">
+                            lightgray <br>
+                            <strong>#f8f8f8</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="psg-colorBox">
+                        <div class="psg-colorBox__sample" style="background-color: #757575">
+                        </div>
+                        <div class="psg-colorBox__name">
+                            mediumgray <br>
+                            <strong>#757575</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="psg-colorBox">
+                        <div class="psg-colorBox__sample" style="background-color: #444444">
+                        </div>
+                        <div class="psg-colorBox__name">
+                            gray <br>
+                            <strong>#444444</strong>
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+            </section>
+            <hr class="psg-separator">
+            
+            
+                <section class="psg-section">
+                    <h2 id="psg-link-0" class="psg-component-title">Logo</h2>
+
+                    <div class="psg-contents">
+                      <p><img src="../assets/img/logo_color.png" alt="logo">
+<code>assets/img/logo-color.png</code><br>
+This is the <strong><em>brettlguide.at logo</em></strong>. It consists of the mountain in sky-blue and the lettering BRETTLGuide. Only use it when it can be displayed at least 45px tall, in order to keep the text readable.</p>
+<p><a href="logo_color.svg">Download .svg</a> | <a href="logo_color.png">Download .png</a></p>
+<p><img src="../assets/img/logo_icon.png" alt="logo">
+<code>assets/img/logo-icon.png</code><br>
+For smaller sizes use the icon only.</p>
+<p><a href="logo_color.svg">Download .svg</a> | <a href="logo_icon.png">Download .png</a></p>
+                    </div>
+                </section>
+                <hr class="psg-separator">
+            
+                <section class="psg-section">
+                    <h2 id="psg-link-1" class="psg-component-title">Typography</h2>
+
+                    <div class="psg-contents">
+                      <h2 id="typeface">Typeface</h2>
+<p>The brettlguide.at typeface is the sans serif font <strong><em>Lato</em></strong> which was designed in sum­mer 2010 by Warsaw-​​based designer Łukasz Dziedzic (“Lato” means “Sum­mer” in Pol­ish). In Decem­ber 2010 the Lato fam­ily was pub­lished under the open-​​source Open Font License by his foundry tyPoland, with sup­port from Google.</p>
+<p>For test purposes you can also use <a href="https://fonts.google.com/specimen/Lato">Google Fonts</a> code to embed the font in your project</p>
+<pre><code class="lang-css"><span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+<span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-function">url</span>(<span class="hljs-string">'https://fonts.googleapis.com/css?family=Lato'</span>)</span>;
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+</code></pre>
+<p>Use the following CSS rules to specify Lato font in your CSS-file</p>
+<pre><code class="lang-css"><span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Lato'</span>, sans-serif;
+</code></pre>
+<p>Try to avoid embedding lato font through Google fonts and use locally hosted fonts located in
+<code>./assets/fonts/</code> instead.</p>
+<h2 id="headings">Headings</h2>
+<p><h1>an example heading</h1>
+Heading 1</p>
+<p><h2>This is an example heading</h2>
+Heading 2</p>
+<p><h3>This is an example heading</h3>
+Heading 3</p>
+<p><h4>This is an example heading</h4>
+Heading 4</p>
+<p><h5>This is an example heading</h5>
+Heading 5</p>
+<p><h6>This is an example heading</h6>
+Heading 6</p>
+                    </div>
+                </section>
+                <hr class="psg-separator">
+            
+                <section class="psg-section">
+                    <h2 id="psg-link-2" class="psg-component-title">Paragraphs. Lists. Blockquotes</h2>
+
+                    <div class="psg-contents">
+                      <h2 id="paragraphs">Paragraphs</h2>
+<p>A <strong><em>lead paragraph</em></strong> can be emphasized with the class <code>lead</code>.</p>
+<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+<p> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+
+<h2 id="unordered-list">Unordered List</h2>
+<ul>
+  <li>a list item</li>
+  <li>another list item</li>
+  <li>and another one</li>
+</ul>
+
+<h2 id="ordered-list">Ordered List</h2>
+<ol>
+  <li>a list item</li>
+  <li>another list item</li>
+  <li>and another one</li>
+</ol>
+
+<h2 id="plain-list">Plain List</h2>
+<p>Use class <code>list-plain</code> to get a list without <em>padding</em>, <em>margin</em> and <em>list-style-type</em></p>
+<ul class="list-plain">
+  <li>a list item</li>
+  <li>another list item</li>
+  <li>and another one</li>
+</ul>
+
+<h2 id="blockquote">Blockquote</h2>
+<figure class="blockquote">
+  <blockquote>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+    </p>
+  </blockquote>
+  <figcaption>
+    – Source of Quote
+  </figcaption>
+</figure>
+
+
+<h2 id="table">Table</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>State</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>Obertauern</td>
+  <td>Salzburg</td>
+  <td>Austria</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Schladming</td>
+  <td>Salzburg</td>
+  <td>Austria</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Saalbach Hinterglemm</td>
+  <td>Salzburg</td>
+  <td>Austria</td>
+</tr>
+</table>
+                    </div>
+                </section>
+                <hr class="psg-separator">
+            
+                <section class="psg-section">
+                    <h2 id="psg-link-3" class="psg-component-title">Methodology</h2>
+
+                    <div class="psg-contents">
+                      <h2 id="code-style-rules">Code style rules</h2>
+<h3 id="block-indentation">Block indentation</h3>
+<p>Each time a new block or block-like construct is opened, the indent increases by <strong><em>two spaces</em></strong>. When the block ends, the indent returns to the previous indent level. The indent level applies to both code and comments throughout the block.</p>
+<h3 id="color-variables">Color Variables</h3>
+<p>Each color that is used more than once should be placed in a variable in <code>color.css</code>.</p>
+<h3 id="file-structure">File structure</h3>
+<pre><code>app/
+├── assets/
+│   └── css
+│       ├── app<span class="hljs-class">.css</span>
+│       ├── <span class="hljs-attribute">color</span><span class="hljs-class">.css</span>
+│       ├── components<span class="hljs-class">.css</span>
+│       └── typo<span class="hljs-class">.css</span>
+└── build/
+    ├── assets
+    │   └── css
+    │       └── app<span class="hljs-class">.min</span><span class="hljs-class">.css</span>
+    ├── styleguide
+    │   └── index<span class="hljs-class">.html</span>
+    └── index.html
+</code></pre><h3 id="preprocessor">Preprocessor</h3>
+<p>As a preprocessor we use <a href="http://postcss.org/">postcss</a>. PostCSS is a tool for transforming styles with JS plugins. These plugins can lint your CSS, support variables and mixins, transpile future CSS syntax, inline images, and more.</p>
+<p><strong>Postcss plugins we use</strong> <br><br>
+<a href="https://github.com/postcss/autoprefixer">autoprefixer</a><br>
+to add vendor prefixes, using data from Can I Use</p>
+<p><a href="https://github.com/postcss/postcss-custom-properties">postcss custom properties</a><br>
+to transform CSS Custom Properties (CSS variables) syntax into a static representation</p>
+<p><a href="https://github.com/postcss/postcss-import">postcss import</a><br>
+to consume local files, node modules or web_modules</p>
+<p><a href="https://github.com/mdings/postcss-styleguide">postcss style-guide</a><br>
+to create a styleguide from YAML-structured CSS-comments.</p>
+<p><a href="https://github.com/postcss/postcss-nested">postcss nested</a><br>
+to unwrap nested rules like how Sass does it.</p>
+<h2 id="class-naming-conventions">Class naming conventions</h2>
+<p>To make sure our CSS is structured we use the <em><strong>BEM naming convention</strong></em>. The BEM naming convention distinguishes between blocks, elements and modifiers.</p>
+<p><em><strong>Blocks</strong></em> are independet and named with a short class name</p>
+<pre><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"site-search"</span>&gt;...&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre><p><em><strong>Elements</strong></em> are parts of blocks and can&#39;t be used by themselves</p>
+<pre><code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"site-search"</span>&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"site-search__field"</span>&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"Submit"</span> value =<span class="hljs-string">"Search"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"site-search__button"</span>&gt;
+&lt;/div&gt;
+</code></pre>
+<p><em><strong>Modifiers</strong></em> change the look of blocks or elements</p>
+<pre><code class="lang-html">&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"site-search site-search--full"</span>&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"text"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"site-search__field"</span>&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"Submit"</span> value =<span class="hljs-string">"Search"</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"site-search__button"</span>&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                </section>
+                <hr class="psg-separator">
+            
+                <section class="psg-section">
+                    <h2 id="psg-link-4" class="psg-component-title">Components</h2>
+
+                    <div class="psg-contents">
+                      <h2 id="navigation">Navigation</h2>
+<h3 id="vertical-navigation">Vertical Navigation</h3>
+<p>Use the nav class <code>nav--vertical</code> on <code>&lt;ul&gt;</code> elements for the mobile view.</p>
+<ul class="nav nav--vertical">
+  <li><a href="#">Nav-Link 1</a></li>
+  <li><a href="#">Nav-Link 2</a></li>
+  <li><a href="#">Nav-Link 3</a></li>
+  <li><a href="#">Nav-Link 4</a></li>
+</ul>
+
+
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nav nav--vertical"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Nav-Link 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Nav-Link 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Nav-Link 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Nav-Link 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre><h3 id="horizontal-navigation">Horizontal Navigation</h3>
+<p>Use the nav class <code>nav--horizontal</code> on <code>&lt;ul&gt;</code> elements for desktop view.</p>
+<ul class="nav nav--horizontal">
+  <li><a href="#">Nav-Link 1</a>
+  <li><a href="#">Nav-Link 2</a>
+  <li><a href="#">Nav-Link 3</a>
+  <li><a href="#">Nav-Link 4</a>
+</ul>
+
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nav nav--horizontal"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Nav-Link 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Nav-Link 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Nav-Link 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Nav-Link 4<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre><h2 id="form-elements">Form Elements</h2>
+<h3 id="buttons">Buttons</h3>
+<p>Use the button classes on <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code> elements.</p>
+<button class="button button--large button--dark-blue">dark-blue Button</button>
+
+<pre><code>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"button button--large button--dark-blue"</span>&gt;dark-<span class="hljs-keyword">blue </span><span class="hljs-keyword">Button&lt;/button&gt;</span>
+</code></pre><button class="button button--large button--sky-blue">sky-blue Button</button>
+
+<pre><code>&lt;<span class="hljs-keyword">button </span>class=<span class="hljs-string">"button button--large button--sky-blue"</span>&gt;sky-<span class="hljs-keyword">blue </span><span class="hljs-keyword">Button&lt;/button&gt;</span>
+</code></pre><h3 id="inputfield">Inputfield</h3>
+<p>Use the input-field class on <code>&lt;input&gt;</code> elements.</p>
+<form action="#">
+    <input class="input-field" type="text" name="input1" placeholder="Your text here">
+</form>
+
+<pre><code>&lt;input <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">"input-field"</span> <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">"text"</span> name=<span class="hljs-string">"input1"</span> placeholder=<span class="hljs-string">"Your text here"</span>&gt;
+</code></pre><h2 id="links">Links</h2>
+<p>Use the link class on <code>&lt;a&gt;</code> elements.</p>
+<p><a class="link" href="">That is a not yet visited link</a></p>
+<p><a class="link visited" href="#">That is a visited link</a></p>
+<pre><code>&lt;<span class="hljs-literal">a</span> class=<span class="hljs-string">"link"</span> href=<span class="hljs-string">""</span>&gt;That is <span class="hljs-literal">a</span> <span class="hljs-literal">not</span> yet visited link&lt;/<span class="hljs-literal">a</span>&gt;
+</code></pre><h2 id="media-blocks">Media Blocks</h2>
+<h3 id="comment-block">Comment Block</h3>
+<p>Use the comment-box class on <code>&lt;div&gt;</code> elements.
+Use the profile class on <code>&lt;div&gt;</code> elements.
+Use the picture class on <code>&lt;img&gt;</code> elements.
+Combine the elements to get a commentbox.</p>
+<div class="commentbox">
+    <div class="commentbox__profile">
+        <img class="commentbox__picture" src="../assets/img/profile_picture.png">
+        <a href="#">John Doe</a>
+        <time datetime="2016-11-01">10. November 2016</time>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      Aenean commodo ligula eget dolor. Aenean massa.
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+      Nulla consequat massa quis enim.
+      Donec pede justo, fringilla vel, aliquet nec, vulputate
+    <p>
+</div>
+
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"commentbox"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"commentbox__profile"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"commentbox__picture"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"../assets/img/profile_picture.png"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>John Doe<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">time</span> <span class="hljs-attribute">datetime</span>=<span class="hljs-value">"2016-11-01"</span>&gt;</span>10. November 2016<span class="hljs-tag">&lt;/<span class="hljs-title">time</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+      Comment
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+                    </div>
+                </section>
+                <hr class="psg-separator">
+            
+          </div>
+        </div>
+
+      </div>
+
+    </body>
+</html>

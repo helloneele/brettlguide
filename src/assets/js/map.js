@@ -5,6 +5,8 @@ import skilifte from '../../../build/data/skilifte'
 // use map.loaded true/false for preloader image
 
 export default function(long, lat) {
+  document.getElementById("map").style.height = window.innerHeight + "px";
+
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
 
   var map = new mapboxgl.Map({
@@ -14,6 +16,10 @@ export default function(long, lat) {
       zoom: 10, // starting zoom
       pitch: 60
   });
+
+  map.addControl(new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken
+  }));
 
   map.on('load', function () {
     setCurrentPos(map, long, lat)
