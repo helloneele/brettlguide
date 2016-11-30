@@ -28,6 +28,7 @@ Mit `gulp` startet automatisch der watch Task, der bei einer Änderung in den CS
 [API](https://www.mapbox.com/mapbox-gl-js/api/)
 [POP UP Example](https://www.mapbox.com/mapbox-gl-js/example/popup/)
 [Mouse Posiion](https://www.mapbox.com/mapbox-gl-js/example/mouse-position/)
+[Filter für layer](https://www.mapbox.com/mapbox-gl-style-spec/#types-filter)
 
 
 
