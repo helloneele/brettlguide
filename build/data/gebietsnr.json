@@ -1,0 +1,356 @@
+[
+ {
+   "Nr": 200,
+   "Skigebiet": "Tennengau",
+   "Skiregion": "Tennengau",
+   "Skiverbund": "Tennengau"
+ },
+ {
+   "Nr": 201,
+   "Skigebiet": "Krispl - Gaißau - Wieserhörndl",
+   "Skiregion": "Winterfreuden Gaißau Hintersee",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 202,
+   "Skigebiet": "Hallein - Bad Dürrnberg - Zinken",
+   "Skiregion": "Hallein - Bad Dürrnberg - Zinkenlifte",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 203,
+   "Skigebiet": "Abtenau - Karkogel",
+   "Skiregion": "Abtenau - Karkogel",
+   "Skiverbund": "Dachstein West"
+ },
+ {
+   "Nr": 204,
+   "Skigebiet": "Postalm",
+   "Skiregion": "Postalm Aktiv Skicenter",
+   "Skiverbund": "Dachstein West"
+ },
+ {
+   "Nr": 205,
+   "Skigebiet": "Russbach - Hornspitze",
+   "Skiregion": "Skiregion Dachstein West",
+   "Skiverbund": "Dachstein West"
+ },
+ {
+   "Nr": 206,
+   "Skigebiet": "Annaberg - Kopfberg - Astauwinkel",
+   "Skiregion": "Skiregion Dachstein West",
+   "Skiverbund": "Dachstein West"
+ },
+ {
+   "Nr": 300,
+   "Skigebiet": "Flachgau",
+   "Skiregion": "Flachgau",
+   "Skiverbund": "Flachgau"
+ },
+ {
+   "Nr": 301,
+   "Skigebiet": "Hintersee - Anzenberg",
+   "Skiregion": "Winterfreuden Gaißau Hintersee",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 302,
+   "Skigebiet": "St. Gilgen - Zwölferhorn",
+   "Skiregion": "Zwölferhorn",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 400,
+   "Skigebiet": "Pongau",
+   "Skiregion": "Pongau",
+   "Skiverbund": "Pongau"
+ },
+ {
+   "Nr": 401,
+   "Skigebiet": "Mühlbach - Schneeberg",
+   "Skiregion": "Hochkönig's Winterreich",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 402,
+   "Skigebiet": "Mitterberg - Hochkeil",
+   "Skiregion": "Hochkönig's Winterreich",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 403,
+   "Skigebiet": "Goldegg - Buchberg",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 404,
+   "Skigebiet": "Dorfgastein - Fulseck",
+   "Skiregion": "Gastein",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 405,
+   "Skigebiet": "Bad Hofgastein - Schloßalm",
+   "Skiregion": "Gastein",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 406,
+   "Skigebiet": "Bad Gastein - Stubnerkogel",
+   "Skiregion": "Gastein",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 407,
+   "Skigebiet": "Bad Gastein - Graukogel",
+   "Skiregion": "Gastein",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 408,
+   "Skigebiet": "Sportgastein - Kreuzkogel",
+   "Skiregion": "Gastein",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 409,
+   "Skigebiet": "Großarl - Kreuzkogel",
+   "Skiregion": "Großarltal",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 410,
+   "Skigebiet": "St. Johann - Hahnbaum",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 411,
+   "Skigebiet": "St. Johann - Alpendorf - Hirschkogel",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 412,
+   "Skigebiet": "Wagrain - Grafenberg - Sonntagskogel",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 413,
+   "Skigebiet": "Wagrain - Saukarkopf",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 414,
+   "Skigebiet": "Flachau",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 415,
+   "Skigebiet": "Kleinarl - Flachauwinkl",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 416,
+   "Skigebiet": "Zauchensee - Flachauwinkl",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 417,
+   "Skigebiet": "Obertauern I",
+   "Skiregion": "Obertauern",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 418,
+   "Skigebiet": "Forstau - Fageralm",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 419,
+   "Skigebiet": "Altenmarkt - Radstadt",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 420,
+   "Skigebiet": "Eben",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 421,
+   "Skigebiet": "Filzmoos - Großberg - Neuberg - Moosalm",
+   "Skiregion": "Salzburger Sportwelt",
+   "Skiverbund": "Ski Amade"
+ },
+ {
+   "Nr": 422,
+   "Skigebiet": "St. Martin am Tennengebirge",
+   "Skiregion": "Skilifte St. Martin am Tennengebirge",
+   "Skiverbund": "Dachstein West"
+ },
+ {
+   "Nr": 423,
+   "Skigebiet": "Werfenweng",
+   "Skiregion": "Ski-Board-Wander-Arena Werfenweng",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 500,
+   "Skigebiet": "Lungau",
+   "Skiregion": "Lungau",
+   "Skiverbund": "Lungau"
+ },
+ {
+   "Nr": 501,
+   "Skigebiet": "Obertauern II",
+   "Skiregion": "Obertauern",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 502,
+   "Skigebiet": "Fanningberg",
+   "Skiregion": "Mariapfarr - Lungau",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 503,
+   "Skigebiet": "Großeck - Speiereck",
+   "Skiregion": "Mautendorf - Lungau",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 504,
+   "Skigebiet": "Aineck - Katschberg",
+   "Skiregion": "St. Margarethen - Lungau",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 505,
+   "Skigebiet": "Katschberg - Tschaneck",
+   "Skiregion": "Katschberg - Lungau",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 506,
+   "Skigebiet": "Karneralm - Schönfeld",
+   "Skiregion": "Innerkrems - Schönfeld - Karneralm",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 600,
+   "Skigebiet": "Pinzgau",
+   "Skiregion": "Pinzgau",
+   "Skiverbund": "Pinzgau"
+ },
+ {
+   "Nr": 601,
+   "Skigebiet": "Hochkrimml - Gerlosplatte",
+   "Skiregion": "Zillertal Arena",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 602,
+   "Skigebiet": "Wald - Königsleiten",
+   "Skiregion": "Zillertal Arena",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 603,
+   "Skigebiet": "Neukirchen - Wildkogel",
+   "Skiregion": "Ski-Arena Wildkogel",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 604,
+   "Skigebiet": "Mittersill - Resterhöhe",
+   "Skiregion": "Kitzbühel",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 605,
+   "Skigebiet": "Uttendorf - Weißsee",
+   "Skiregion": "Weißsee Gletscherwelt",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 606,
+   "Skigebiet": "Kaprun - Kitzsteinhorn",
+   "Skiregion": "Europa-Sportregion Zell am See - Kaprun",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 607,
+   "Skigebiet": "Kaprun - Maiskogel",
+   "Skiregion": "Europa-Sportregion Zell am See - Kaprun",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 608,
+   "Skigebiet": "Zell am See - Schmittenhöhe",
+   "Skiregion": "Europa-Sportregion Zell am See - Kaprun",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 609,
+   "Skigebiet": "Saalbach - Hinterglemm",
+   "Skiregion": "Skicircus Saalbach Hinterglemm Leogang",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 610,
+   "Skigebiet": "Leogang",
+   "Skiregion": "Skicircus Saalbach Hinterglemm Leogang",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 611,
+   "Skigebiet": "Lofer",
+   "Skiregion": "Loferer Alm",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 612,
+   "Skigebiet": "Unken - Heutal",
+   "Skiregion": "Unken - Heutal",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 613,
+   "Skigebiet": "Unken - Steinplatte",
+   "Skiregion": "Steinplatte",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 614,
+   "Skigebiet": "Maria Alm - Hinterreit",
+   "Skiregion": "Hochkönig's Winterreich",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 615,
+   "Skigebiet": "Maria Alm - Aberg - Langeck",
+   "Skiregion": "Hochkönig's Winterreich",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 616,
+   "Skigebiet": "Dienten",
+   "Skiregion": "Hochkönig's Winterreich",
+   "Skiverbund": ""
+ },
+ {
+   "Nr": 617,
+   "Skigebiet": "Rauris",
+   "Skiregion": "Rauris - Hochalm",
+   "Skiverbund": ""
+ }
+]
