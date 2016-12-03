@@ -305,14 +305,11 @@ function updateListItems(listItems) {
         li.setAttribute("class", "suggestion");
 
         let p = document.createElement("p");
-        p.setAttribute("listPos", i);
         p.innerHTML = getItemContent(listItems[i]);
-
 
         let a = document.createElement("a");
         a.innerHTML = "Details";
         a.setAttribute("href", "detailansicht");
-
 
         let span = document.createElement("span");
         span.innerHTML = "\t//" + listItems[i].ident ;
