@@ -2,6 +2,7 @@ import skihuetten from '../../../build/data/skihuetten'
 import skipisten from '../../../build/data/skipisten'
 import skilifte from '../../../build/data/skilifte'
 import parkplaetze from '../../../build/data/parkplaetze'
+import gebietsnr from '../../../build/data/gebietsnr'
 
 // use map.loaded true/false for preloader image
 
@@ -32,6 +33,8 @@ export default function(long, lat) {
   });
 
   map.on('click', function (e) {
+      console.log(e)
+      console.log(this);
     var features = map.queryRenderedFeatures(e.point, { layers: ['huetten', 'parkplaetze', 'skilifte', 'skipistenx'] });
     console.log(features);
     if (!features.length) {
@@ -234,28 +237,33 @@ field.addEventListener("keyup", search);
 
 function search() {
 
-    if(this.value.length >= 4)
+    if(this.value.length >= 3)
     {
         let regEx = new RegExp(this.value, "i");
-        let matchedHuts = scanfile(skihuetten, regEx, "Hütte");
-        let matchedTracks = scanfile(skipisten, regEx , "Piste");
-        let matchedLifts = scanfile(skilifte, regEx, "Lift");
+        let matchedHuts = scanFile(skihuetten, regEx, "Hütte");
+        let matchedTracks = scanFile(skipisten, regEx , "Piste");
+        let matchedLifts = scanFile(skilifte, regEx, "Lift");
 
         let listItems = matchedHuts.concat(matchedTracks).concat(matchedLifts);
         updateListItems(listItems);
     }
+    else {
+        let ul = document.getElementById("suggestions");
+        deleteAllListItems(ul);
+    }
 }
 
-function scanfile(file, regEx, ident) {
+function scanFile(file, regEx, ident) {
+
     let arr = new Array();
 
-    for(let i = 0; i < file.features.length; i++)
+    for(let object of file.features)
     {
-        let name = file.features[i].properties.name;
+        let name = object.properties.name;
         if(name.match(regEx))
         {
             let dataObject = {
-                "data" : file.features[i],
+                "data" : object,
                 "ident" : ident
             };
             arr.push(dataObject);
@@ -265,22 +273,53 @@ function scanfile(file, regEx, ident) {
 }
 
 function updateListItems(listItems) {
+
     let ul = document.getElementById("suggestions");
+
+    deleteAllListItems(ul);
+
+    for(let i = 0; i < listItems.length && i < 10; i++)
+    {
+        let li = document.createElement("li");
+        li.setAttribute("class", "suggestion");
+
+        let p = document.createElement("p");
+        p.setAttribute("listPos", i);
+        p.innerHTML = getItemContent(listItems[i]);
+        p.addEventListener("click", function (e) {
+            //myfunction(listItems[this.getAttribute("listPos")]);
+            console.log(this.getAttribute("listPos"));
+            
+        })
+
+        let a = document.createElement("a");
+        a.innerHTML = "Details";
+        a.setAttribute("href", "detailansicht");
+
+        let span = document.createElement("span");
+        span.innerHTML = "\t//" + listItems[i].ident ;
+
+        li.appendChild(p);
+        p.appendChild(a);
+        li.appendChild(span);
+        ul.appendChild(li);
+    }
+}
+
+function deleteAllListItems(ul) {
 
     while (ul.hasChildNodes())
     {
         ul.removeChild(ul.firstElementChild);
     }
+}
 
-    for(let i = 0; i < listItems.length && i < 10; i++)
-    {
-        let li = document.createElement("li");
-        let p = document.createElement("p");
-        let a = document.createElement("a");
-        p.innerHTML = listItems[i].ident +  " - " + listItems[i].data.properties.name;
-        a.innerHTML = " Details";
-        li.appendChild(p);
-        p.appendChild(a);
-        ul.appendChild(li);
+function getItemContent(listItem) {
+
+    for (let object of gebietsnr) {
+        if (object.Nr == listItem.data.properties.gb_nr) {
+            return listItem.data.properties.name + " (" + object.Skigebiet + ")" + "\t";
+        }
     }
+    return listItem.data.properties.name + "\t";
 }
