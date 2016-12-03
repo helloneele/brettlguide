@@ -48,7 +48,7 @@ header{
   .header__logo{
     background: url(/assets/img/logo_color.png) no-repeat;
     background-position: center;
-    background-size: 100% auto;
+    background-size: auto 100%;
     text-indent: -10000px;
 
   }

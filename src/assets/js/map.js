@@ -74,6 +74,9 @@ export default function(long, lat) {
 
   });
 
+  // hide/display layers
+  // map.setLayoutProperty('my-layer', 'visibility', 'none');
+
 }
 
 
