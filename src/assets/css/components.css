@@ -249,3 +249,25 @@ Combine the elements to get a commentbox.
 .visited{
     color: var(--dark-blue);
 }
+
+#suggestions {
+    list-style: none;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.suggestion {
+    padding: 2px;
+    width: 350px;
+}
+
+.suggestion p:hover {
+    text-decoration: underline;
+}
+.suggestion a {
+    font-size: 14px;
+}
+.suggestion span {
+    font-size: 12px;
+    color: silver;
+}
