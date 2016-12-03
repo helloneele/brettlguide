@@ -22,6 +22,7 @@ export default function(long, lat) {
     accessToken: mapboxgl.accessToken
   }));
 
+
   map.on('load', function () {
     setCurrentPos(map, long, lat)
     setSkipisten(map)
@@ -226,4 +227,60 @@ function setParkingSpots(map){
           "icon-image": "pparking-15"
         }
     });
+}
+
+let field = document.getElementById("searchfield");
+field.addEventListener("keyup", search);
+
+function search() {
+
+    if(this.value.length >= 4)
+    {
+        let regEx = new RegExp(this.value, "i");
+        let matchedHuts = scanfile(skihuetten, regEx, "Hütte");
+        let matchedTracks = scanfile(skipisten, regEx , "Piste");
+        let matchedLifts = scanfile(skilifte, regEx, "Lift");
+
+        let listItems = matchedHuts.concat(matchedTracks).concat(matchedLifts);
+        updateListItems(listItems);
+    }
+}
+
+function scanfile(file, regEx, ident) {
+    let arr = new Array();
+
+    for(let i = 0; i < file.features.length; i++)
+    {
+        let name = file.features[i].properties.name;
+        if(name.match(regEx))
+        {
+            let dataObject = {
+                "data" : file.features[i],
+                "ident" : ident
+            };
+            arr.push(dataObject);
+        }
+    }
+    return arr;
+}
+
+function updateListItems(listItems) {
+    let ul = document.getElementById("suggestions");
+
+    while (ul.hasChildNodes())
+    {
+        ul.removeChild(ul.firstElementChild);
+    }
+
+    for(let i = 0; i < listItems.length && i < 10; i++)
+    {
+        let li = document.createElement("li");
+        let p = document.createElement("p");
+        let a = document.createElement("a");
+        p.innerHTML = listItems[i].ident +  " - " + listItems[i].data.properties.name;
+        a.innerHTML = " Details";
+        li.appendChild(p);
+        p.appendChild(a);
+        ul.appendChild(li);
+    }
 }
