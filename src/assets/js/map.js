@@ -321,10 +321,13 @@ function updateListItems(listItems) {
         p.appendChild(a);
         li.appendChild(span);
         ul.appendChild(li);
+
         p.addEventListener("click", function(){
           goToTarget(listItems[i], "search")
         })
+
     }
+
 }
 
 function deleteAllListItems(ul) {
