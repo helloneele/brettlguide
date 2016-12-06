@@ -2,11 +2,14 @@ import skihuetten from '../../../build/data/skihuetten'
 import skipisten from '../../../build/data/skipisten'
 import skilifte from '../../../build/data/skilifte'
 import parkplaetze from '../../../build/data/parkplaetze'
+import nummern from '../../../build/data/gebietsnr_keyvalue'
 
 // use map.loaded true/false for preloader image
 
 export default function(long, lat) {
   document.getElementById("map").style.height = window.innerHeight + "px";
+
+
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
 
@@ -46,8 +49,9 @@ export default function(long, lat) {
         var popup = new mapboxgl.Popup()
           .setLngLat(e.lngLat)
           .setHTML(feature.properties.name)
-          .setHTML(feature.properties.p_nr)
+          //.setHTML(feature.properties.p_nr)
           .addTo(map)
+     
       });
     }
     else if (feature.layer.id == "parkplaetze"){
