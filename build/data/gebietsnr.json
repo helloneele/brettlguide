@@ -9,37 +9,61 @@
    "Nr": 201,
    "Skigebiet": "Krispl - Gaißau - Wieserhörndl",
    "Skiregion": "Winterfreuden Gaißau Hintersee",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+          13.2331229,
+          47.7272149
+        ]
  },
  {
    "Nr": 202,
    "Skigebiet": "Hallein - Bad Dürrnberg - Zinken",
    "Skiregion": "Hallein - Bad Dürrnberg - Zinkenlifte",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+          13.0923564,
+          47.6595066
+        ]
  },
  {
    "Nr": 203,
    "Skigebiet": "Abtenau - Karkogel",
    "Skiregion": "Abtenau - Karkogel",
-   "Skiverbund": "Dachstein West"
+   "Skiverbund": "Dachstein West",
+   "Koordinaten": [
+          13.3502922,
+          47.5558235
+        ]
  },
  {
    "Nr": 204,
    "Skigebiet": "Postalm",
    "Skiregion": "Postalm Aktiv Skicenter",
-   "Skiverbund": "Dachstein West"
+   "Skiverbund": "Dachstein West",
+   "Koordinaten": [
+          13.4297959,
+          47.6577705
+        ]
  },
  {
    "Nr": 205,
    "Skigebiet": "Russbach - Hornspitze",
    "Skiregion": "Skiregion Dachstein West",
-   "Skiverbund": "Dachstein West"
+   "Skiverbund": "Dachstein West",
+   "Koordinaten": [
+          13.4624002,
+          47.5887695
+        ]
  },
  {
    "Nr": 206,
    "Skigebiet": "Annaberg - Kopfberg - Astauwinkel",
    "Skiregion": "Skiregion Dachstein West",
-   "Skiverbund": "Dachstein West"
+   "Skiverbund": "Dachstein West",
+   "Koordinaten": [
+          13.448435,
+          47.520081
+        ]
  },
  {
    "Nr": 300,
@@ -51,13 +75,21 @@
    "Nr": 301,
    "Skigebiet": "Hintersee - Anzenberg",
    "Skiregion": "Winterfreuden Gaißau Hintersee",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+          13.216913,
+          47.703008
+        ]
  },
  {
    "Nr": 302,
    "Skigebiet": "St. Gilgen - Zwölferhorn",
    "Skiregion": "Zwölferhorn",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+          13.36285114,
+          47.76301411
+        ]
  },
  {
    "Nr": 400,
@@ -69,37 +101,61 @@
    "Nr": 401,
    "Skigebiet": "Mühlbach - Schneeberg",
    "Skiregion": "Hochkönig's Winterreich",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.1090427,
+          47.3798438
+        ]
  },
  {
    "Nr": 402,
    "Skigebiet": "Mitterberg - Hochkeil",
    "Skiregion": "Hochkönig's Winterreich",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.136622,
+          47.401762
+        ]
  },
  {
    "Nr": 403,
    "Skigebiet": "Goldegg - Buchberg",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+          13.060858,
+          47.308455
+        ]
  },
  {
    "Nr": 404,
    "Skigebiet": "Dorfgastein - Fulseck",
    "Skiregion": "Gastein",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.110090,
+          47.244883
+        ]
  },
  {
    "Nr": 405,
    "Skigebiet": "Bad Hofgastein - Schloßalm",
    "Skiregion": "Gastein",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.059886,
+          47.155026
+        ]
  },
  {
    "Nr": 406,
    "Skigebiet": "Bad Gastein - Stubnerkogel",
    "Skiregion": "Gastein",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.081923,
+          47.132609
+        ]
  },
  {
    "Nr": 407,
