@@ -25,10 +25,10 @@ export default function(long, lat) {
 
   map.on('load', function () {
     setCurrentPos(map, long, lat)
-    // setSlopes(map)
-    // setLifts(map)
-    // setHuts(map)
-    // setParkingSpaces(map)
+     setSlopes(map)
+     setLifts(map)
+     setHuts(map)
+     setParkingSpaces(map)
   });
 
   map.on('click', function (e) {
@@ -39,15 +39,13 @@ export default function(long, lat) {
 
     // Get clicked element
     var feature = features[0];
-<<<<<<< HEAD
+
 
 
     goToTarget(feature)
 
 
-=======
-    goToTarget(feature)
->>>>>>> ac19aa2af43cd93539d3ff2c47bb5ac1be4b7a4e
+
   });
 
   // hide/display layers
@@ -56,14 +54,14 @@ export default function(long, lat) {
 }
 
 function goToTarget(feature, string){
-  if(string == "search"){
+  //if(string == "search"){
     map.flyTo({center: feature.data.geometry.coordinates, zoom: 15, pitch: 45});
     map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
         .setLngLat(feature.data.geometry.coordinates)
         .setHTML(feature.data.name)
         .addTo(map)
-    });
+  //  });
     return
   }
 

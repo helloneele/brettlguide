@@ -161,49 +161,79 @@
    "Nr": 407,
    "Skigebiet": "Bad Gastein - Graukogel",
    "Skiregion": "Gastein",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.150723,
+          47.111113
+        ]
  },
  {
    "Nr": 408,
    "Skigebiet": "Sportgastein - Kreuzkogel",
    "Skiregion": "Gastein",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.069031,
+          47.059501
+        ]
+
  },
  {
    "Nr": 409,
    "Skigebiet": "Großarl - Kreuzkogel",
    "Skiregion": "Großarltal",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.195556,
+          47.241548
+        ]
  },
  {
    "Nr": 410,
    "Skigebiet": "St. Johann - Hahnbaum",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.206675,
+          47.350153
+        ]
  },
  {
    "Nr": 411,
    "Skigebiet": "St. Johann - Alpendorf - Hirschkogel",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.197076,
+          47.322785
+        ]
  },
  {
    "Nr": 412,
    "Skigebiet": "Wagrain - Grafenberg - Sonntagskogel",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.299429,
+          47.328079
+        ]
  },
  {
    "Nr": 413,
    "Skigebiet": "Wagrain - Saukarkopf",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+
  },
  {
    "Nr": 414,
    "Skigebiet": "Flachau",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.346841,
+          47.325674
+        ]
  },
  {
    "Nr": 415,
