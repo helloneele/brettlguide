@@ -239,55 +239,91 @@
    "Nr": 415,
    "Skigebiet": "Kleinarl - Flachauwinkl",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.319786,
+          47.281687
+        ]
  },
  {
    "Nr": 416,
    "Skigebiet": "Zauchensee - Flachauwinkl",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.457720,
+          47.290771
+        ]
  },
  {
    "Nr": 417,
    "Skigebiet": "Obertauern I",
    "Skiregion": "Obertauern",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+          13.546556,
+          47.251200
+        ]
  },
  {
    "Nr": 418,
    "Skigebiet": "Forstau - Fageralm",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.546189,
+          47.377627
+        ]
  },
  {
    "Nr": 419,
    "Skigebiet": "Altenmarkt - Radstadt",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.452699,
+          47.352887
+        ]
  },
  {
    "Nr": 420,
    "Skigebiet": "Eben",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.412477,
+          47.401674
+        ]
  },
  {
    "Nr": 421,
    "Skigebiet": "Filzmoos - Großberg - Neuberg - Moosalm",
    "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade"
+   "Skiverbund": "Ski Amade",
+   "Koordinaten": [
+          13.521131,
+          47.431881
+        ]
  },
  {
    "Nr": 422,
    "Skigebiet": "St. Martin am Tennengebirge",
    "Skiregion": "Skilifte St. Martin am Tennengebirge",
-   "Skiverbund": "Dachstein West"
+   "Skiverbund": "Dachstein West",
+   "Koordinaten": [
+          13.379323,
+          47.466589
+        ]
  },
  {
    "Nr": 423,
    "Skigebiet": "Werfenweng",
    "Skiregion": "Ski-Board-Wander-Arena Werfenweng",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+          13.276019,
+          47.458694
+        ]
  },
  {
    "Nr": 500,
@@ -299,37 +335,58 @@
    "Nr": 501,
    "Skigebiet": "Obertauern II",
    "Skiregion": "Obertauern",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+          13.560769,
+          47.246699
+        ]
  },
  {
    "Nr": 502,
    "Skigebiet": "Fanningberg",
    "Skiregion": "Mariapfarr - Lungau",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+          13.666640,
+          47.166847
+        ]
  },
  {
    "Nr": 503,
    "Skigebiet": "Großeck - Speiereck",
    "Skiregion": "Mautendorf - Lungau",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         13.648659,
+         47.123847
+        ]
  },
  {
    "Nr": 504,
    "Skigebiet": "Aineck - Katschberg",
    "Skiregion": "St. Margarethen - Lungau",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         13.689184,
+         47.080345
+        ]
  },
  {
    "Nr": 505,
    "Skigebiet": "Katschberg - Tschaneck",
    "Skiregion": "Katschberg - Lungau",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         13.615786,
+         47.059332
+        ]
  },
  {
    "Nr": 506,
    "Skigebiet": "Karneralm - Schönfeld",
    "Skiregion": "Innerkrems - Schönfeld - Karneralm",
    "Skiverbund": ""
+
  },
  {
    "Nr": 600,
@@ -341,102 +398,172 @@
    "Nr": 601,
    "Skigebiet": "Hochkrimml - Gerlosplatte",
    "Skiregion": "Zillertal Arena",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.115500,
+         47.241278
+        ]
  },
  {
    "Nr": 602,
    "Skigebiet": "Wald - Königsleiten",
    "Skiregion": "Zillertal Arena",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.089393,
+         47.261399
+        ]
  },
  {
    "Nr": 603,
    "Skigebiet": "Neukirchen - Wildkogel",
    "Skiregion": "Ski-Arena Wildkogel",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.280776,
+         47.254542
+        ]
  },
  {
    "Nr": 604,
    "Skigebiet": "Mittersill - Resterhöhe",
    "Skiregion": "Kitzbühel",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.385944,
+         47.313468
+        ]
  },
  {
    "Nr": 605,
    "Skigebiet": "Uttendorf - Weißsee",
    "Skiregion": "Weißsee Gletscherwelt",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.624394,
+         47.169404
+        ]
  },
  {
    "Nr": 606,
    "Skigebiet": "Kaprun - Kitzsteinhorn",
    "Skiregion": "Europa-Sportregion Zell am See - Kaprun",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.677854,
+         47.190375
+        ]
+
  },
  {
    "Nr": 607,
    "Skigebiet": "Kaprun - Maiskogel",
    "Skiregion": "Europa-Sportregion Zell am See - Kaprun",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.730568,
+         47.267313
+        ]
  },
  {
    "Nr": 608,
    "Skigebiet": "Zell am See - Schmittenhöhe",
    "Skiregion": "Europa-Sportregion Zell am See - Kaprun",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.788282,
+         47.300040
+        ]
  },
  {
    "Nr": 609,
    "Skigebiet": "Saalbach - Hinterglemm",
    "Skiregion": "Skicircus Saalbach Hinterglemm Leogang",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.596621,
+         47.379818
+        ]
  },
  {
    "Nr": 610,
    "Skigebiet": "Leogang",
    "Skiregion": "Skicircus Saalbach Hinterglemm Leogang",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.718766,
+         47.439030
+        ]
  },
  {
    "Nr": 611,
    "Skigebiet": "Lofer",
    "Skiregion": "Loferer Alm",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.691014,
+         47.588320
+        ]
  },
  {
    "Nr": 612,
    "Skigebiet": "Unken - Heutal",
    "Skiregion": "Unken - Heutal",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.650024,
+         47.662344
+        ]
  },
  {
    "Nr": 613,
    "Skigebiet": "Unken - Steinplatte",
    "Skiregion": "Steinplatte",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.572647,
+         47.611068
+        ]
  },
  {
    "Nr": 614,
    "Skigebiet": "Maria Alm - Hinterreit",
    "Skiregion": "Hochkönig's Winterreich",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.887066,
+         47.398347
+        ]
  },
  {
    "Nr": 615,
    "Skigebiet": "Maria Alm - Aberg - Langeck",
    "Skiregion": "Hochkönig's Winterreich",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.908967,
+         47.389667
+        ]
  },
  {
    "Nr": 616,
    "Skigebiet": "Dienten",
    "Skiregion": "Hochkönig's Winterreich",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         13.032258,
+         47.387889
+        ]
  },
  {
    "Nr": 617,
    "Skigebiet": "Rauris",
    "Skiregion": "Rauris - Hochalm",
-   "Skiverbund": ""
+   "Skiverbund": "",
+   "Koordinaten": [
+         12.990909,
+         47.223745
+        ]
+
  }
 ]
