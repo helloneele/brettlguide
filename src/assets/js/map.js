@@ -25,10 +25,10 @@ export default function(long, lat) {
 
   map.on('load', function () {
     setCurrentPos(map, long, lat)
-     setSlopes(map)
-     setLifts(map)
-     setHuts(map)
-     setParkingSpaces(map)
+    setSlopes(map)
+    setLifts(map)
+    setHuts(map)
+    setParkingSpaces(map)
   });
 
   map.on('click', function (e) {
@@ -39,29 +39,22 @@ export default function(long, lat) {
 
     // Get clicked element
     var feature = features[0];
-
-
-
     goToTarget(feature)
-
-
-
   });
 
   // hide/display layers
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
-
 }
 
 function goToTarget(feature, string){
-  //if(string == "search"){
+  if(string == "search"){
     map.flyTo({center: feature.data.geometry.coordinates, zoom: 15, pitch: 45});
     map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
         .setLngLat(feature.data.geometry.coordinates)
         .setHTML(feature.data.name)
         .addTo(map)
-  //  });
+    });
     return
   }
 
@@ -87,7 +80,7 @@ function goToTarget(feature, string){
 
   else{
     // https://www.mapbox.com/mapbox-gl-js/example/center-on-symbol/
-    this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+    this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45})
     // https://www.mapbox.com/mapbox-gl-js/api/#Popup
     this.once('moveend', function() {
       var popup = new mapboxgl.Popup()
@@ -157,7 +150,7 @@ function setHuts(map){
     });
 }
 
-function setSlopes(map){
+function setSlopes(){
     map.addSource("slopes", {
         "type": "geojson",
         "data": slopes
