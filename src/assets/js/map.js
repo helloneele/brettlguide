@@ -1,7 +1,7 @@
-import skihuetten from '../../../build/data/skihuetten'
-import skipisten from '../../../build/data/skipisten'
-import skilifte from '../../../build/data/skilifte'
-import parkplaetze from '../../../build/data/parkplaetze'
+import huts from '../../../build/data/skihuetten'
+import slopes from '../../../build/data/skipisten'
+import lifts from '../../../build/data/skilifte'
+import parkingSpaces from '../../../build/data/parkplaetze'
 import gebietsnr from '../../../build/data/gebietsnr'
 
 // use map.loaded true/false for preloader image
@@ -9,8 +9,7 @@ import gebietsnr from '../../../build/data/gebietsnr'
 let map;
 
 export default function(long, lat) {
-  document.getElementById("map").style.height = window.innerHeight + "px";
-
+  // document.getElementById("map").style.height = window.innerHeight + "px";
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
 
   map = new mapboxgl.Map({
@@ -21,32 +20,23 @@ export default function(long, lat) {
       pitch: 60
   });
 
-  map.addControl(new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken
-  }));
-
-
   map.on('load', function () {
     setCurrentPos(map, long, lat)
-    setSkipisten(map)
-    setSkilifte(map)
-    setSkihuetten(map)
-    setParkingSpots(map)
+    // setSlopes(map)
+    // setLifts(map)
+    // setHuts(map)
+    // setParkingSpaces(map)
   });
 
   map.on('click', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['huts', 'parking', 'lifts', 'slopesBlue'] });
 
-    var features = map.queryRenderedFeatures(e.point, { layers: ['huetten', 'parkplaetze', 'skilifte', 'skipistenx'] });
-
-    if (!features.length) {
-        return;
-    }
+    if (!features.length)
+      return;
 
     // Get clicked element
     var feature = features[0];
-
     goToTarget(feature)
-
   });
 
   // hide/display layers
@@ -66,7 +56,7 @@ function goToTarget(feature, string){
     return
   }
 
-  // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "skipistenx"){
+  // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "slopesBlue"){
   //   this.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
   //   this.once('moveend', function() {
   //     var popup = new mapboxgl.Popup()
@@ -133,16 +123,16 @@ function setCurrentPos(map, long, lat){
     });
 }
 
-function setSkihuetten(map){
-    map.addSource("huetten", {
+function setHuts(map){
+    map.addSource("huts", {
         "type": "geojson",
-        "data": skihuetten
+        "data": huts
     });
 
     map.addLayer({
-        "id": "huetten",
+        "id": "huts",
         "type": "symbol",
-        "source": "huetten",
+        "source": "huts",
         "minzoom": 13,
         "layout": {
           "icon-image": "rrestaurant-15",
@@ -158,19 +148,16 @@ function setSkihuetten(map){
     });
 }
 
-function setSkipisten(map){
-  console.log("pisten")
-
-    map.addSource("skipisten2", {
+function setSlopes(map){
+    map.addSource("slopes", {
         "type": "geojson",
-        "data": skipisten
+        "data": slopes
     });
 
-    console.log(skipisten.features[0].properties['schwgrad']);
     map.addLayer({
-        "id": "skipistenx",
+        "id": "slopesBlue",
         "type": "fill",
-        "source": "skipisten2",
+        "source": "slopes",
         "filter": ["==", "schwgrad", 1],
         "layout": {
         },
@@ -182,9 +169,9 @@ function setSkipisten(map){
     });
 
     map.addLayer({
-        "id": "skipistenxx",
+        "id": "slopesRed",
         "type": "fill",
-        "source": "skipisten2",
+        "source": "slopes",
         "filter": ["==", "schwgrad", 2],
         "layout": {
         },
@@ -196,9 +183,9 @@ function setSkipisten(map){
     });
 
     map.addLayer({
-        "id": "skipistenxxx",
+        "id": "slopesBlack",
         "type": "fill",
-        "source": "skipisten2",
+        "source": "slopes",
         "filter": ["==", "schwgrad", 3],
         "layout": {
         },
@@ -210,18 +197,15 @@ function setSkipisten(map){
     });
 }
 
-function setSkilifte(map){
-  console.log("lifte")
-
-    map.addSource("skilifte", {
+function setLifts(map){
+    map.addSource("lifts", {
         "type": "geojson",
-        "data": skilifte
+        "data": lifts
     });
-
     map.addLayer({
-        "id": "skilifte",
+        "id": "lifts",
         "type": "line",
-        "source": "skilifte",
+        "source": "lifts",
         "layout": {
             "line-join": "round",
             "line-cap": "square"
@@ -234,17 +218,15 @@ function setSkilifte(map){
     });
 }
 
-function setParkingSpots(map){
-    console.log(parkplaetze)
-    map.addSource("parkplaetze", {
+function setParkingSpaces(map){
+    map.addSource("parking", {
         "type": "geojson",
-        "data": parkplaetze
+        "data": parkingSpaces
     });
-
     map.addLayer({
-        "id": "parkplaetze",
+        "id": "parking",
         "type": "symbol",
-        "source": "parkplaetze",
+        "source": "parking",
         "minzoom": 13,
         "layout": {
           "icon-image": "pparking-15"
@@ -260,11 +242,11 @@ function search() {
     if(this.value.length >= 3)
     {
         let regEx = new RegExp(this.value, "i");
-        let matchedHuts = scanFile(skihuetten, regEx, "Hütte");
-        let matchedTracks = scanFile(skipisten, regEx , "Piste");
-        let matchedLifts = scanFile(skilifte, regEx, "Lift");
+        let matchedHuts = scanFile(huts, regEx, "Hütte");
+        let matchedSlopes = scanFile(slopes, regEx , "Piste");
+        let matchedLifts = scanFile(lifts, regEx, "Lift");
 
-        let listItems = matchedHuts.concat(matchedTracks).concat(matchedLifts);
+        let listItems = matchedHuts.concat(matchedSlopes).concat(matchedLifts);
         updateListItems(listItems);
     }
     else {
@@ -305,14 +287,11 @@ function updateListItems(listItems) {
         li.setAttribute("class", "suggestion");
 
         let p = document.createElement("p");
-        p.setAttribute("listPos", i);
         p.innerHTML = getItemContent(listItems[i]);
-
 
         let a = document.createElement("a");
         a.innerHTML = "Details";
         a.setAttribute("href", "detailansicht");
-
 
         let span = document.createElement("span");
         span.innerHTML = "\t//" + listItems[i].ident ;
@@ -331,7 +310,6 @@ function updateListItems(listItems) {
 }
 
 function deleteAllListItems(ul) {
-
     while (ul.hasChildNodes())
     {
         ul.removeChild(ul.firstElementChild);
@@ -339,7 +317,6 @@ function deleteAllListItems(ul) {
 }
 
 function getItemContent(listItem) {
-
     for (let object of gebietsnr) {
         if (object.Nr == listItem.data.properties.gb_nr) {
             return listItem.data.properties.name + " (" + object.Skigebiet + ")" + "\t";
