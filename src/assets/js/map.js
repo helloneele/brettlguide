@@ -48,11 +48,11 @@ export default function(long, lat) {
 
 function goToTarget(feature, string){
   if(string == "search"){
-    map.flyTo({center: feature.data.geometry.coordinates, zoom: 15, pitch: 45});
+    map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
     map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
-        .setLngLat(feature.data.geometry.coordinates)
-        .setHTML(feature.data.name)
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.name)
         .addTo(map)
     });
     return
@@ -241,14 +241,14 @@ field.addEventListener("keyup", search);
 
 function search() {
 
-    if(this.value.length >= 3)
-    {
+    if(this.value.length >= 3) {
         let regEx = new RegExp(this.value, "i");
         let matchedHuts = scanFile(huts, regEx, "Hütte");
         let matchedSlopes = scanFile(slopes, regEx , "Piste");
         let matchedLifts = scanFile(lifts, regEx, "Lift");
 
-        let listItems = matchedHuts.concat(matchedSlopes).concat(matchedLifts);
+        let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts]);
+
         updateListItems(listItems);
     }
     else {
@@ -259,22 +259,16 @@ function search() {
 
 function scanFile(file, regEx, ident) {
 
-    let arr = new Array();
+    let suggestions = new Map();
 
-    for(let object of file.features)
-    {
+    for(let object of file.features) {
         let name = object.properties.name;
         if(name.match(regEx))
         {
-            let dataObject = {
-                "data" : object,
-                "ident" : ident
-            };
-            console.log(dataObject)
-            arr.push(dataObject);
+            suggestions.set(object, ident);
         }
     }
-    return arr;
+    return suggestions;
 }
 
 function updateListItems(listItems) {
@@ -283,20 +277,19 @@ function updateListItems(listItems) {
 
     deleteAllListItems(ul);
 
-    for(let i = 0; i < listItems.length && i < 10; i++)
-    {
+    for(let [key, val] of listItems) {
         let li = document.createElement("li");
         li.setAttribute("class", "suggestion");
 
         let p = document.createElement("p");
-        p.innerHTML = getItemContent(listItems[i]);
+        p.innerHTML = getItemContent(key);
 
         let a = document.createElement("a");
         a.innerHTML = "Details";
         a.setAttribute("href", "detailansicht");
 
         let span = document.createElement("span");
-        span.innerHTML = "\t//" + listItems[i].ident ;
+        span.innerHTML = "\t//" + val ;
 
         li.appendChild(p);
         p.appendChild(a);
@@ -304,25 +297,22 @@ function updateListItems(listItems) {
         ul.appendChild(li);
 
         p.addEventListener("click", function(){
-          goToTarget(listItems[i], "search")
+          goToTarget(key, "search")
         })
-
     }
-
 }
 
 function deleteAllListItems(ul) {
-    while (ul.hasChildNodes())
-    {
+    while (ul.hasChildNodes()) {
         ul.removeChild(ul.firstElementChild);
     }
 }
 
-function getItemContent(listItem) {
+function getItemContent(key) {
     for (let object of gebietsnr) {
-        if (object.Nr == listItem.data.properties.gb_nr) {
-            return listItem.data.properties.name + " (" + object.Skigebiet + ")" + "\t";
+        if (object.Nr == key.properties.gb_nr) {
+            return key.properties.name + " (" + object.Skigebiet + ")" + "\t";
         }
     }
-    return listItem.data.properties.name + "\t";
+    return key.properties.name + "\t";
 }
