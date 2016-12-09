@@ -267,9 +267,6 @@ function search() {
     }
 }
 
-function isUnique() {
-
-}
 
 function scanFile(file, regEx, ident) {
 
