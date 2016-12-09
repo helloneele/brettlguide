@@ -256,9 +256,8 @@ function search() {
         let matchedHuts = scanFile(huts, regEx, "Hütte");
         let matchedSlopes = scanFile(slopes, regEx , "Piste");
         let matchedLifts = scanFile(lifts, regEx, "Lift");
-        let matchedAreas = scanAreaFile(regEx, "Skigebiet");
-
-        let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts, ...matchedAreas]);
+       
+        let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts]);
 
         updateListItems(listItems);
     }
@@ -268,9 +267,14 @@ function search() {
     }
 }
 
+function isUnique() {
+
+}
+
 function scanFile(file, regEx, ident) {
 
     let suggestions = new Map();
+
 
     for(let object of file.features) {
         let name = object.properties.name;
@@ -281,26 +285,9 @@ function scanFile(file, regEx, ident) {
         }
     }
 
+    
     return suggestions;
 }
-
-function scanAreaFile(regEx, ident){
-  let suggestions = new Map();
-
-    for(let object of gebietsnr)
-    {
-      let name = object.Skigebiet;
-
-      if(name.match(regEx))
-      {
-        suggestions.set(object, ident);
-      }
-    }
-
-    return suggestions;
-
-}
-
 
 
 function updateListItems(listItems) {
