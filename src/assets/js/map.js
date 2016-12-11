@@ -48,6 +48,8 @@ export default function(long, lat) {
 
 function goToTarget(feature, string){
   if(string == "search"){
+    //let h = document.getElementById("searchheader");
+    //h.innerHTML = feature.properties.name;
     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
     map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
@@ -58,6 +60,9 @@ function goToTarget(feature, string){
     return
   }
   else if(string =="area"){
+    let h = document.getElementById("searchheader");
+    h.innerHTML = feature.Skigebiet;
+    
      map.flyTo({center: feature.Koordinaten, zoom: 15, pitch: 45});
       map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
@@ -89,6 +94,8 @@ function goToTarget(feature, string){
   // }
 
   else{
+    //let h = document.getElementById("searchheader");
+    //h.innerHTML = feature.properties.name;
     // https://www.mapbox.com/mapbox-gl-js/example/center-on-symbol/
     this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45})
     // https://www.mapbox.com/mapbox-gl-js/api/#Popup
