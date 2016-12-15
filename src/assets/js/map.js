@@ -11,7 +11,7 @@ let map;
 
 export default function(long, lat) {
 
-  document.getElementById("map").style.height = window.innerHeight + "px";
+  //document.getElementById("map").style.height = window.innerHeight + "px";
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
 
@@ -62,7 +62,7 @@ function goToTarget(feature, string){
   else if(string =="area"){
     let h = document.getElementById("searchheader");
     h.innerHTML = feature.Skigebiet;
-    
+
      map.flyTo({center: feature.Koordinaten, zoom: 15, pitch: 45});
       map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
@@ -263,7 +263,7 @@ function search() {
         let matchedHuts = scanFile(huts, regEx, "Hütte");
         let matchedSlopes = scanFile(slopes, regEx , "Piste");
         let matchedLifts = scanFile(lifts, regEx, "Lift");
-       
+
         let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts]);
 
         updateListItems(listItems);
@@ -282,14 +282,14 @@ function scanFile(file, regEx, ident) {
 
     for(let object of file.features) {
         let name = object.properties.name;
-        
+
         if(name.match(regEx))
         {
             suggestions.set(object, ident);
         }
     }
 
-    
+
     return suggestions;
 }
 
