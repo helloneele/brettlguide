@@ -19,16 +19,21 @@
 
     <header class="header--shadow">
       <div class="header__content">
-        <div class="header__left">:)</div>
+        <div class="header__left"></div>
         <div class="header__center">
           <h1 class="header__logo">BRETTLGUIDE</h1>
         </div>
-        <div class="header__right">:)</div>
+        <div class="header__right"></div>
       </div>
     </header>
     <div class="content">
-      <div id="map"></div>
-
+      <div class="mapWrapper">
+        <div id="map"></div>
+        <div class="search">
+          <input id="searchfield" class="search__field" placeholder="Suchbegriff eingeben" type="text">
+          <ul id="suggestions" class="search__suggestions"></ul>
+        </div>
+      </div>
     </div>
     <footer>
       <div class="footerLeft">
@@ -42,12 +47,7 @@
       </div>
     </footer>
 
-    <h1 id="searchheader">Suche:</h1>
 
-    <div class="searchdiv">
-      <input id="searchfield" placeholder="Search" type="text">
-      <ul id="suggestions"></ul>
-    </div>
 
     <script src="assets/js/app.js" charset="utf-8"></script>
 

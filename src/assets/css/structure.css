@@ -56,13 +56,47 @@ header{
 
 .content{
   margin-top: 70px;
+  position:relative;
+}
 
+.mapWrapper{
+  position: relative;
 }
 
 #map{
   width: 100%;
-  height: 500px;
+  height: 400px;
 }
+
+.search{
+  position: absolute;
+  width: 100%;
+  background: var(--dark-blue);
+  top:0;
+  padding: 20px;
+  color: var(--white);
+
+  .search__field{
+    border: none;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+  }
+
+  .search__suggestions{
+    list-style: none;
+    max-height: 200px;
+    overflow:hidden;
+    overflow-y:scroll;
+    margin: 0;
+
+    li{
+      border-bottom: 1px solid var(--white);
+    }
+  }
+}
+
+
 
 footer {
   lost-utility: clearfix;
