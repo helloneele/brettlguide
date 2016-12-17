@@ -54,20 +54,20 @@ function goToTarget(feature, string){
     map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
         .setLngLat(feature.geometry.coordinates)
-        .setHTML(feature.name)
+        .setHTML(feature.properties.name)
         .addTo(map)
     });
     return
   }
   else if(string =="area"){
-    let h = document.getElementById("searchheader");
-    h.innerHTML = feature.Skigebiet;
-    
+    //let h = document.getElementById("searchheader");
+    //h.innerHTML = feature.Skigebiet;
+
      map.flyTo({center: feature.Koordinaten, zoom: 15, pitch: 45});
       map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
         .setLngLat(feature.Koordinaten)
-        .setHTML(feature.Skigebiet)
+        .setHTML(feature.Skigebiet+"<br><a href='../detailansicht'>Details</a>")
         .addTo(map)
     });
     return
