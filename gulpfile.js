@@ -1,17 +1,27 @@
 var gulp = require('gulp'),
-watch = require('gulp-watch');
+    watch = require('gulp-watch'),
+    handlebars = require('gulp-handlebars'),
+    defineModule = require('gulp-define-module');
 
 // define the default task and add the watch task to it
-gulp.task('default', ['watch', 'scripts', 'copyfonts', 'copyimg']);
+gulp.task('default', ['watch', 'templates', 'scripts', 'copyfonts', 'copyimg']);
 
 gulp.task('copyfonts', function() {
    gulp.src('./src/assets/fonts/**/*.{ttf,woff,eof,svg}')
    .pipe(gulp.dest('./build/assets/fonts'));
 });
 
+
 gulp.task('copyimg', function() {
    gulp.src('./src/assets/img/**/*.{png,jpg,gif,eps,svg}')
    .pipe(gulp.dest('./build/assets/img'));
+});
+
+gulp.task('templates', function(){
+    gulp.src(['./src/assets/templates/*.hbs'])
+        .pipe(handlebars())
+        .pipe(defineModule('node'))
+        .pipe(gulp.dest('./build/assets/templates/'));
 });
 
 gulp.task('build:css', function () {
