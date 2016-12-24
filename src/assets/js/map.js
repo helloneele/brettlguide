@@ -39,6 +39,7 @@ export default function(long, lat) {
 
     // Get clicked element
     var feature = features[0];
+   
     goToTarget(feature)
   });
 
