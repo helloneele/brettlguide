@@ -280,7 +280,6 @@ function scanFile(file, regEx, ident) {
 
     let suggestions = new Map();
 
-
     for(let object of file.features) {
         let name = object.properties.name;
 
@@ -289,8 +288,6 @@ function scanFile(file, regEx, ident) {
             suggestions.set(object, ident);
         }
     }
-
-
     return suggestions;
 }
 
@@ -314,7 +311,7 @@ function updateListItems(listItems) {
 
         let a = document.createElement("a");
         a.innerHTML = "Details";
-        a.setAttribute("href", "detailansicht");
+        a.setAttribute("href", "huts/assl");
 
         let span = document.createElement("span");
         span.innerHTML = "\t//" + val ;
