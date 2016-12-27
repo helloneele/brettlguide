@@ -48,8 +48,12 @@ export default function(long, lat) {
       goToTarget(feature, "parking");
       break;
 
+      case "lifts":
+      goToTarget(feature, "lifts");
+      break;
+
       case "huts":
-      goToTarget(feature)
+      goToTarget(feature, "huts");
       break;
 
       case "slopesBlue":
@@ -73,10 +77,10 @@ function goToTarget(feature, string){
   if(string == "search"){
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.properties.name;
-    map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+    map.flyTo({center: feature.geometry.coordinates[0][0], zoom: 15, pitch: 45});
     map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates)
+        .setLngLat(feature.geometry.coordinates[0][0])
         .setHTML(feature.properties.name)
         .addTo(map)
     });
@@ -95,7 +99,7 @@ function goToTarget(feature, string){
     });
     return
   }
-  else if(string =="slope"){
+  else if(string =="slope"|| string =="Piste"){
 
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.Skigebiet;
@@ -115,7 +119,33 @@ function goToTarget(feature, string){
      map.once('moveend', function() {
        var popup = new mapboxgl.Popup()
          .setLngLat(feature.geometry.coordinates)
-         .setHTML(feature.properties.groesse)
+         .setHTML("Parkplätze: "+feature.properties.groesse)
+         .addTo(map)
+         });
+    return
+
+  }
+
+  else if(string == "huts" || string =="Hütte")
+  {
+    map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+     map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+         .setLngLat(feature.geometry.coordinates)
+         .setHTML(feature.properties.name+"<br><a href='../detailansicht'>Tagesangebote</a>")
+         .addTo(map)
+         });
+    return
+
+  }
+
+  else if(string == "lifts" || string =="Lift")
+  {
+    map.flyTo({center: feature.geometry.coordinates[0], zoom: 15, pitch: 45});
+     map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+         .setLngLat(feature.geometry.coordinates[0])
+         .setHTML(feature.properties.name)
          .addTo(map)
          });
     return
@@ -371,7 +401,7 @@ function updateListItems(listItems) {
         ul.appendChild(li);
 
         p.addEventListener("click", function(){
-          goToTarget(key, "search")
+          goToTarget(key, val)
         })
 
         area.addEventListener("click", function(){
