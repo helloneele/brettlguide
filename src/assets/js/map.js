@@ -32,15 +32,37 @@ export default function(long, lat) {
   });
 
   map.on('click', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['huts', 'parking', 'lifts', 'slopesBlue'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['huts', 'parking', 'lifts', 'slopesBlue', 'slopesRed', 'slopesBlack'] });
 
     if (!features.length)
       return;
 
     // Get clicked element
     var feature = features[0];
+ 
+    console.log(feature)
    
-    goToTarget(feature)
+    switch(feature.layer.id)
+    {
+      case "parking":
+      goToTarget(feature, "parking");
+      break;
+
+      case "huts":
+      goToTarget(feature)
+      break;
+
+      case "slopesBlue":
+      case "slopesRed":
+      case "slopesBlack":
+      goToTarget(feature, "slope");
+      break;
+
+      default:
+      goToTarget(feature);
+    }
+
+
   });
 
   // hide/display layers
@@ -72,6 +94,32 @@ function goToTarget(feature, string){
         .addTo(map)
     });
     return
+  }
+  else if(string =="slope"){
+
+    //let h = document.getElementById("searchheader");
+    //h.innerHTML = feature.Skigebiet;
+     map.flyTo({center: feature.geometry.coordinates[0][7], zoom: 15, pitch: 45});
+
+      map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates[0][7])
+        .setHTML(feature.properties.name)
+        .addTo(map)
+    });
+    return
+  }
+  else if(string =="parking")
+  {
+     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+     map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+         .setLngLat(feature.geometry.coordinates)
+         .setHTML(feature.properties.groesse)
+         .addTo(map)
+         });
+    return
+
   }
 
   // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "slopesBlue"){
