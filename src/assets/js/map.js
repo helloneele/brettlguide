@@ -2,7 +2,7 @@ import huts from '../../../build/data/skihuetten'
 import slopes from '../../../build/data/skipisten'
 import lifts from '../../../build/data/skilifte'
 import parkingSpaces from '../../../build/data/parkplaetze'
-import gebietsnr from '../../../build/data/gebietsnr'
+import skiingAreas from '../../../build/data/gebietsnr'
 
 
 // use map.loaded true/false for preloader image
@@ -10,7 +10,6 @@ import gebietsnr from '../../../build/data/gebietsnr'
 let map;
 
 export default function(long, lat) {
-
   //document.getElementById("map").style.height = window.innerHeight + "px";
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
@@ -253,18 +252,28 @@ function setParkingSpaces(map){
     });
 }
 
-let field = document.getElementById("searchfield");
-field.addEventListener("keyup", search);
+let d = document.getElementById("dynamic-content");
+d.addEventListener("keyup", test);
 
-function search() {
+function test(e) {
+    if(e.target && e.target.matches("#searchfield"))
+    {
+        search(e.target);
+    }
+}
 
-    if(this.value.length >= 3) {
-        let regEx = new RegExp(this.value, "i");
+//let field = document.getElementById("searchfield");
+//field.addEventListener("keyup", search);
+
+function search(element) {
+    if(element.value.length >= 3) {
+        let regEx = new RegExp(element.value, "i");
         let matchedHuts = scanFile(huts, regEx, "Hütte");
         let matchedSlopes = scanFile(slopes, regEx , "Piste");
         let matchedLifts = scanFile(lifts, regEx, "Lift");
+        //let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
 
-        let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts]);
+        let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts]); //...matchtedAreas
 
         updateListItems(listItems);
     }
@@ -276,7 +285,6 @@ function search() {
 
 
 function scanFile(file, regEx, ident) {
-
     let suggestions = new Map();
 
     for(let object of file.features) {
@@ -309,8 +317,9 @@ function updateListItems(listItems) {
         area.innerHTML = "("+areaName.Skigebiet+") \t";
 
         let a = document.createElement("a");
+        let path = getPath(key, val)
         a.innerHTML = "Details";
-        a.setAttribute("href", "huts/assl");
+        a.setAttribute("href", path);
 
         let span = document.createElement("span");
         span.innerHTML = "\t//" + val ;
@@ -347,7 +356,7 @@ function deleteAllListItems(ul) {
 }*/
 
 function getItemContent(key) {
-    for (let object of gebietsnr) {
+    for (let object of skiingAreas) {
         if (object.Nr == key.properties.gb_nr) {
             return key.properties.name + "\t";
         }
@@ -356,10 +365,36 @@ function getItemContent(key) {
 }
 
 function getItemArea(key) {
-  for (let object of gebietsnr) {
+  for (let object of skiingAreas) {
         if (object.Nr == key.properties.gb_nr) {
             return object;
         }
     }
     return "";
+}
+
+function getPath(key, val) {
+    let path = "*";
+
+    if(val === "Hütte")
+    {
+        path = "/huts/" + key.properties.h_id;
+    }
+    else if(val === "Piste")
+    {
+        let id = key.properties.gb_nr + "-"
+        + key.properties.p_nr + "-"
+        + key.properties.a_nr + "-"
+        + key.properties.a_name;
+        path = "/slopes/" + id;
+    }
+    else if(val === "Lift")
+    {
+        path = "/lifts/" + key.properties.s_id;
+    }
+    /*else if(val === "Skigebiet")
+    {
+        path = "/areas/" + key.properties.gb_nr;
+    }*/
+    return path;
 }

@@ -90,4 +90,5 @@ gulp.task('scripts', () => {
 gulp.task('watch', function() {
   gulp.watch('./src/assets/**/*.css', ['build:css']);
   gulp.watch('./src/assets/**/*.js', ['scripts']);
+  gulp.watch('./src/assets/**/*.hbs', ['templates'])
 });
