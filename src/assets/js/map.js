@@ -31,14 +31,41 @@ export default function(long, lat) {
   });
 
   map.on('click', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['huts', 'parking', 'lifts', 'slopesBlue'] });
+    var features = map.queryRenderedFeatures(e.point, { layers: ['huts', 'parking', 'lifts', 'slopesBlue', 'slopesRed', 'slopesBlack'] });
 
     if (!features.length)
       return;
 
     // Get clicked element
     var feature = features[0];
-    goToTarget(feature)
+ 
+    console.log(feature)
+   
+    switch(feature.layer.id)
+    {
+      case "parking":
+      goToTarget(feature, "parking");
+      break;
+
+      case "lifts":
+      goToTarget(feature, "lifts");
+      break;
+
+      case "huts":
+      goToTarget(feature, "huts");
+      break;
+
+      case "slopesBlue":
+      case "slopesRed":
+      case "slopesBlack":
+      goToTarget(feature, "slope");
+      break;
+
+      default:
+      goToTarget(feature);
+    }
+
+
   });
 
   // hide/display layers
@@ -49,27 +76,79 @@ function goToTarget(feature, string){
   if(string == "search"){
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.properties.name;
-    map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+    map.flyTo({center: feature.geometry.coordinates[0][0], zoom: 15, pitch: 45});
     map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates)
-        .setHTML(feature.name)
+        .setLngLat(feature.geometry.coordinates[0][0])
+        .setHTML(feature.properties.name)
         .addTo(map)
     });
     return
   }
   else if(string =="area"){
-    let h = document.getElementById("searchheader");
-    h.innerHTML = feature.Skigebiet;
 
+    //let h = document.getElementById("searchheader");
+    //h.innerHTML = feature.Skigebiet;
      map.flyTo({center: feature.Koordinaten, zoom: 15, pitch: 45});
       map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
         .setLngLat(feature.Koordinaten)
-        .setHTML(feature.Skigebiet)
+        .setHTML(feature.Skigebiet+"<br><a href='../detailansicht'>Details</a>")
         .addTo(map)
     });
     return
+  }
+  else if(string =="slope"|| string =="Piste"){
+
+    //let h = document.getElementById("searchheader");
+    //h.innerHTML = feature.Skigebiet;
+     map.flyTo({center: feature.geometry.coordinates[0][7], zoom: 15, pitch: 45});
+
+      map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates[0][7])
+        .setHTML(feature.properties.name)
+        .addTo(map)
+    });
+    return
+  }
+  else if(string =="parking")
+  {
+     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+     map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+         .setLngLat(feature.geometry.coordinates)
+         .setHTML("Parkplätze: "+feature.properties.groesse)
+         .addTo(map)
+         });
+    return
+
+  }
+
+  else if(string == "huts" || string =="Hütte")
+  {
+    map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+     map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+         .setLngLat(feature.geometry.coordinates)
+         .setHTML(feature.properties.name+"<br><a href='../detailansicht'>Tagesangebote</a>")
+         .addTo(map)
+         });
+    return
+
+  }
+
+  else if(string == "lifts" || string =="Lift")
+  {
+    map.flyTo({center: feature.geometry.coordinates[0], zoom: 15, pitch: 45});
+     map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+         .setLngLat(feature.geometry.coordinates[0])
+         .setHTML(feature.properties.name)
+         .addTo(map)
+         });
+    return
+
   }
 
   // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "slopesBlue"){
@@ -331,7 +410,7 @@ function updateListItems(listItems) {
         ul.appendChild(li);
 
         p.addEventListener("click", function(){
-          goToTarget(key, "search")
+          goToTarget(key, val)
         })
 
         area.addEventListener("click", function(){
