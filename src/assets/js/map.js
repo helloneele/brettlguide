@@ -100,10 +100,10 @@ function goToTarget(feature, string){
 
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.Skigebiet;
-     map.flyTo({center: feature.Koordinaten, zoom: 15, pitch: 45});
+     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
       map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
-        .setLngLat(feature.Koordinaten)
+        .setLngLat(feature.geometry.coordinates)
         .setHTML(feature.Skigebiet+"<br><a href='../detailansicht'>Details</a>")
         .addTo(map)
     });
@@ -373,12 +373,12 @@ function search() {
 
   if(this.value.length >= 3) {
     let regEx = new RegExp(this.value, "i");
-    let matchedHuts = scanFile(huts, regEx, "Hütte");
+    let matchedHuts = scanFile(huts, regEx,  "Hütte");
     let matchedSlopes = scanFile(slopes, regEx , "Piste");
     let matchedLifts = scanFile(lifts, regEx, "Lift");
-    //let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
+    let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
 
-    let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts]); //...matchtedAreas
+    let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts, ...matchtedAreas]);
 
     updateListItems(listItems);
 
@@ -402,8 +402,7 @@ function scanFile(file, regEx, ident) {
     for(let object of file.features) {
         let name = object.properties.name;
 
-        if(name.match(regEx))
-        {
+        if(name.match(regEx)) {
             suggestions.set(object, ident);
         }
     }
@@ -425,31 +424,42 @@ function updateListItems(listItems) {
         let li = document.createElement("li");
         li.setAttribute("class", "suggestion");
 
-        let p = document.createElement("p");
-        p.innerHTML = getItemContent(key);
-
-        let area = document.createElement("p");
-        let areaName = getItemArea(key);
-        area.innerHTML = "("+areaName.Skigebiet+") \t";
+        let pName = document.createElement("p");
+        pName.innerHTML = key.properties.name;
 
         let span = document.createElement("span");
         span.innerHTML = "\t//" + val ;
 
         let a = getDetailLinkElement(key, val, "Details");
 
-        li.appendChild(area);
-        li.appendChild(p);
-        p.appendChild(a);
+        if(val !== "Skigebiet") {
+            let area = getItemArea(key);
+
+            if(area) {
+                let pArea = document.createElement("p");
+                pArea.innerHTML = "(" + area.properties.name + ")";
+                li.appendChild(pArea);
+
+                pArea.addEventListener("click", function () {
+                    goToTarget(area, "area")
+                });
+
+                pName.addEventListener("click", function () {
+                    goToTarget(key, val)
+                });
+            }
+        }
+        else {
+            pName.addEventListener("click", function(){
+                goToTarget(key, "area")
+            });
+        }
+
+
+        li.appendChild(pName);
+        pName.appendChild(a);
         li.appendChild(span);
         ul.appendChild(li);
-
-        p.addEventListener("click", function(){
-          goToTarget(key, val)
-        });
-
-        area.addEventListener("click", function(){
-          goToTarget(areaName, "area")
-        });
     }
 }
 
@@ -469,8 +479,8 @@ function deleteAllListItems(ul) {
 }*/
 
 function getItemContent(key) {
-    for (let object of skiingAreas) {
-        if (object.Nr == key.properties.gb_nr) {
+    for (let object of skiingAreas.features) {
+        if (object.properties.gb_nr == key.properties.gb_nr) {
             return key.properties.name + "\t";
         }
     }
@@ -478,12 +488,11 @@ function getItemContent(key) {
 }
 
 function getItemArea(key) {
-  for (let object of skiingAreas) {
-        if (object.Nr == key.properties.gb_nr) {
+  for (let object of skiingAreas.features) {
+        if (object.properties.gb_nr == key.properties.gb_nr) {
             return object;
         }
     }
-    return "";
 }
 
 function getDetailLinkElement(key, val, text) {
@@ -513,9 +522,9 @@ function getPath(key, val) {
     {
         path = "/lifts/" + key.properties.s_id;
     }
-    /*else if(val === "Skigebiet")
+    else if(val === "Skigebiet")
     {
         path = "/areas/" + key.properties.gb_nr;
-    }*/
+    }
     return path;
 }
