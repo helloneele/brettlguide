@@ -30,14 +30,14 @@
     <div class="content">
       <div class="mapWrapper">
           <div id="map"></div>
-          <div id="search" class="search active">
-              <input id="searchfield" class="search__field" placeholder="Suchbegriff eingeben" type="text">
+          <div id="search" class="search">
+              <input id="searchfield" class="search__field" placeholder="Suchbegriff eingeben" type="text" autofocus>
               <ul id="suggestions" class="search__suggestions"></ul>
           </div>
 
           <div class="mapButtons">
-            <div id="searchToggle" class="mapButtons__item searchToggle active">
-              <i id="icon" class="searchToggle--icon fa fa-close" aria-hidden="true"></i>
+            <div id="searchToggle" class="mapButtons__item searchToggle">
+              <i id="icon" class="searchToggle--icon fa fa-search" aria-hidden="true"></i>
             </div>
             <div id="locationToggle" class="mapButtons__item locationToggle">
               <i class="fa fa-location-arrow" aria-hidden="true"></i>
@@ -47,15 +47,25 @@
 
       <div id="dynamic-content"></div>
     </div>
-    <footer>
+    <footer class="footer--shadow">
       <div class="footerLeft">
-        hi
+        <h3>About</h3>
+        <p>brettlguide.at ist ein Semesterprojekt des Studiengangs MMT an der <a href="http://fh-salzburg.ac.at">Fachochschule Salzburg</a>.</p>
+        <p>Bei einigen Daten handelt es sich um fiktive Kennzahlen.</p>
       </div>
       <div class="footerCenter">
-        hello
+        <h3>Contact</h3>
+        <p>Verantwortlich für den Inhalt</p>
+        <ul class="list-plain">
+          <li>Anna Ronacher</li>
+          <li>Neele Barthel</li>
+          <li>Tobias Gann</li>
+        </ul>
+        <p><a href="mailto:info@brettlguide.at">info@brettlguide.at</a></p>
       </div>
       <div class="lfooterRight">
-        hey
+        <h3>Follow us on</h3>
+          <p></p>
       </div>
     </footer>
 

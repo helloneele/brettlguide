@@ -12,7 +12,7 @@ let layersLoaded = false;
 
 
 export default function(long, lat) {
-  //document.getElementById("map").style.height = window.innerHeight + "px";
+  //document.getElementById("map").style.height = window.innerHeight-70 + "px";
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
 
@@ -361,23 +361,38 @@ function test(e) {
 
 let field = document.getElementById("searchfield");
 field.addEventListener("keyup", search);
+field.addEventListener("focus", search);
+
 
 function search() {
-    if(this.value.length >= 3) {
-        let regEx = new RegExp(this.value, "i");
-        let matchedHuts = scanFile(huts, regEx, "Hütte");
-        let matchedSlopes = scanFile(slopes, regEx , "Piste");
-        let matchedLifts = scanFile(lifts, regEx, "Lift");
-        //let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
+  let ul = document.getElementById("suggestions");
 
-        let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts]); //...matchtedAreas
+  if(this === document.activeElement){
+    ul.classList.remove("hidden")
+  }
 
-        updateListItems(listItems);
-    }
-    else {
-        let ul = document.getElementById("suggestions");
-        deleteAllListItems(ul);
-    }
+  if(this.value.length >= 3) {
+    let regEx = new RegExp(this.value, "i");
+    let matchedHuts = scanFile(huts, regEx, "Hütte");
+    let matchedSlopes = scanFile(slopes, regEx , "Piste");
+    let matchedLifts = scanFile(lifts, regEx, "Lift");
+    //let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
+
+    let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts]); //...matchtedAreas
+
+    updateListItems(listItems);
+
+    // closing suggestions if clicked outside
+    document.addEventListener('click', function(event) {
+    let isClickInside = document.getElementById("search").contains(event.target);
+    if (!isClickInside)
+      hideSearchResults()
+    });
+
+  }
+  else {
+      deleteAllListItems(ul)
+  }
 }
 
 
@@ -395,6 +410,10 @@ function scanFile(file, regEx, ident) {
     return suggestions;
 }
 
+function hideSearchResults() {
+  let results = document.getElementById("suggestions")
+  results.classList.add("hidden")
+}
 
 function updateListItems(listItems) {
 

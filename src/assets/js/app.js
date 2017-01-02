@@ -4,8 +4,6 @@ import routing from './routing'
 import page from 'page';
 
 
-
-
 //define routes
 page('/', detectLocation); //page('/', routing.index);
 page('/slopes/:slope', routing.slopes);
@@ -24,13 +22,10 @@ function searchToggle(e){
     this.classList.toggle("active")
     document.getElementById("search").classList.toggle("active")
 
-
     let icon = document.getElementById("icon")
     icon.classList.toggle("fa-search", !this.classList.contains('active'))
     icon.classList.toggle("fa-close", this.classList.contains('active'))
 }
-
-
 
 
 //TODO

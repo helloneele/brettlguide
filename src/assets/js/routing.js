@@ -27,11 +27,9 @@ let templates = {
         let hut = getObject.hut(ctx.params.hut);
 
         if (hut) {
-            console.log(hut);
             dynamicContent.innerHTML = hutTpl(hut);
         }
         else {
-            console.log("asas: " + this);
             templates.notFound();
         }
     },

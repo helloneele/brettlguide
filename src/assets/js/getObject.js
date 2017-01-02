@@ -20,6 +20,7 @@ export default {
         }
     },
     hut: (param) => {
+        console.log(param)
         for(let object of huts.features)
         {
             if(object.properties.h_id === param)
