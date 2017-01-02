@@ -37,14 +37,14 @@ export default {
                 return object;
             }
         }
-    }/*,
+    },
     area: (param) => {
         for(let object of skiingAreas.features)
         {
-            if(object.properties.gb_nr === param)
+            if(object.properties.gb_nr == param) //gb_nr ist number
             {
                 return object;
             }
         }
-    }*/
+    }
 };
