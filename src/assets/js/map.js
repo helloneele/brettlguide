@@ -86,6 +86,7 @@ function goToTarget(feature, string){
     return
   }
   else if(string =="area"){
+    let path = getPath(feature, "Skigebiet");
 
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.Skigebiet;
@@ -102,6 +103,7 @@ function goToTarget(feature, string){
 
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.Skigebiet;
+
      map.flyTo({center: feature.geometry.coordinates[0][7], zoom: 15, pitch: 45});
 
       map.once('moveend', function() {
@@ -127,11 +129,13 @@ function goToTarget(feature, string){
 
   else if(string == "huts" || string =="Hütte")
   {
+      let a = getDetailLinkElement(feature, "Hütte", feature.properties.name);
+
     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
      map.once('moveend', function() {
        var popup = new mapboxgl.Popup()
          .setLngLat(feature.geometry.coordinates)
-         .setHTML(feature.properties.name+"<br><a href='../detailansicht'>Tagesangebote</a>")
+           .setDOMContent(a)
          .addTo(map)
          });
     return
@@ -140,6 +144,8 @@ function goToTarget(feature, string){
 
   else if(string == "lifts" || string =="Lift")
   {
+      let path = getPath(feature, "Lift");
+
     map.flyTo({center: feature.geometry.coordinates[0], zoom: 15, pitch: 45});
      map.once('moveend', function() {
        var popup = new mapboxgl.Popup()
@@ -331,6 +337,7 @@ function setParkingSpaces(map){
     });
 }
 
+/* wenn map eigenes ist handlebar funktioniert suche so
 let d = document.getElementById("dynamic-content");
 d.addEventListener("keyup", test);
 
@@ -339,14 +346,14 @@ function test(e) {
     {
         search(e.target);
     }
-}
+}*/
 
-//let field = document.getElementById("searchfield");
-//field.addEventListener("keyup", search);
+let field = document.getElementById("searchfield");
+field.addEventListener("keyup", search);
 
-function search(element) {
-    if(element.value.length >= 3) {
-        let regEx = new RegExp(element.value, "i");
+function search() {
+    if(this.value.length >= 3) {
+        let regEx = new RegExp(this.value, "i");
         let matchedHuts = scanFile(huts, regEx, "Hütte");
         let matchedSlopes = scanFile(slopes, regEx , "Piste");
         let matchedLifts = scanFile(lifts, regEx, "Lift");
@@ -395,13 +402,10 @@ function updateListItems(listItems) {
         let areaName = getItemArea(key);
         area.innerHTML = "("+areaName.Skigebiet+") \t";
 
-        let a = document.createElement("a");
-        let path = getPath(key, val)
-        a.innerHTML = "Details";
-        a.setAttribute("href", path);
-
         let span = document.createElement("span");
         span.innerHTML = "\t//" + val ;
+
+        let a = getDetailLinkElement(key, val, "Details");
 
         li.appendChild(area);
         li.appendChild(p);
@@ -411,11 +415,11 @@ function updateListItems(listItems) {
 
         p.addEventListener("click", function(){
           goToTarget(key, val)
-        })
+        });
 
         area.addEventListener("click", function(){
           goToTarget(areaName, "area")
-        })
+        });
     }
 }
 
@@ -452,6 +456,14 @@ function getItemArea(key) {
     return "";
 }
 
+function getDetailLinkElement(key, val, text) {
+    let a = document.createElement("a");
+    let path = getPath(key, val);
+    a.innerHTML = text;
+    a.setAttribute("href", path);
+
+    return a;
+}
 function getPath(key, val) {
     let path = "*";
 
