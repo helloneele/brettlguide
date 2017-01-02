@@ -82,6 +82,128 @@ export default function(long, lat) {
 }
 
 
+function goToTarget(feature, string){
+  if(string == "search"){
+    //let h = document.getElementById("searchheader");
+    //h.innerHTML = feature.properties.name;
+    map.flyTo({center: feature.geometry.coordinates[0][0], zoom: 15, pitch: 45});
+    map.once('moveend', function() {
+      var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates[0][0])
+        .setHTML(feature.properties.name)
+        .addTo(map)
+    });
+    return
+  }
+  else if(string =="area"){
+    let path = getPath(feature, "Skigebiet");
+
+    //let h = document.getElementById("searchheader");
+    //h.innerHTML = feature.Skigebiet;
+     map.flyTo({center: feature.Koordinaten, zoom: 15, pitch: 45});
+      map.once('moveend', function() {
+      var popup = new mapboxgl.Popup()
+        .setLngLat(feature.Koordinaten)
+        .setHTML(feature.Skigebiet+"<br><a href='../detailansicht'>Details</a>")
+        .addTo(map)
+    });
+    return
+  }
+  else if(string =="slope"|| string =="Piste"){
+
+    //let h = document.getElementById("searchheader");
+    //h.innerHTML = feature.Skigebiet;
+
+     map.flyTo({center: feature.geometry.coordinates[0][7], zoom: 15, pitch: 45});
+
+      map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates[0][7])
+        .setHTML(feature.properties.name)
+        .addTo(map)
+    });
+    return
+  }
+  else if(string =="parking")
+  {
+     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+     map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+         .setLngLat(feature.geometry.coordinates)
+         .setHTML("Parkplätze: "+feature.properties.groesse)
+         .addTo(map)
+         });
+    return
+
+  }
+
+  else if(string == "huts" || string =="Hütte")
+  {
+      let a = getDetailLinkElement(feature, "Hütte", feature.properties.name);
+
+    map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+     map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+         .setLngLat(feature.geometry.coordinates)
+           .setDOMContent(a)
+         .addTo(map)
+         });
+    return
+
+  }
+
+  else if(string == "lifts" || string =="Lift")
+  {
+      let path = getPath(feature, "Lift");
+
+    map.flyTo({center: feature.geometry.coordinates[0], zoom: 15, pitch: 45});
+     map.once('moveend', function() {
+       var popup = new mapboxgl.Popup()
+         .setLngLat(feature.geometry.coordinates[0])
+         .setHTML(feature.properties.name)
+         .addTo(map)
+         });
+    return
+
+  }
+
+  // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "slopesBlue"){
+  //   this.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
+  //   this.once('moveend', function() {
+  //     var popup = new mapboxgl.Popup()
+  //       .setLngLat(e.lngLat)
+  //       .setHTML(feature.properties.name)
+  //       .setHTML(feature.properties.p_nr)
+  //       .addTo(map)
+  //   });
+  // }
+  // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "parkplaetze"){
+  //   this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+  //   this.once('moveend', function() {
+  //     var popup = new mapboxgl.Popup()
+  //       .setLngLat(feature.geometry.coordinates)
+  //       .setHTML(feature.properties.groesse)
+  //       .addTo(map)
+  //   });
+  // }
+
+  else{
+    //let h = document.getElementById("searchheader");
+    //h.innerHTML = feature.properties.name;
+    // https://www.mapbox.com/mapbox-gl-js/example/center-on-symbol/
+    this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45})
+    // https://www.mapbox.com/mapbox-gl-js/api/#Popup
+    this.once('moveend', function() {
+      var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.name)
+        .addTo(map)
+    });
+  }
+
+}
+
+
 function setCurrentPos(long, lat){
     map.addSource("points", {
         "type": "geojson",
@@ -226,128 +348,7 @@ function setParkingSpaces(){
 }
 
 
-function goToTarget(feature, string){
-  if(string == "search"){
-    //let h = document.getElementById("searchheader");
-    //h.innerHTML = feature.properties.name;
-    map.flyTo({center: feature.geometry.coordinates[0][0], zoom: 15, pitch: 45});
-    map.once('moveend', function() {
-      var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates[0][0])
-        .setHTML(feature.properties.name)
-        .addTo(map)
-    });
-    return
-  }
-  else if(string =="area"){
-
-    //let h = document.getElementById("searchheader");
-    //h.innerHTML = feature.Skigebiet;
-     map.flyTo({center: feature.Koordinaten, zoom: 15, pitch: 45});
-      map.once('moveend', function() {
-      var popup = new mapboxgl.Popup()
-        .setLngLat(feature.Koordinaten)
-        .setHTML(feature.Skigebiet+"<br><a href='../detailansicht'>Details</a>")
-        .addTo(map)
-    });
-    return
-  }
-  else if(string =="slope"|| string =="Piste"){
-
-    //let h = document.getElementById("searchheader");
-    //h.innerHTML = feature.Skigebiet;
-     map.flyTo({center: feature.geometry.coordinates[0][7], zoom: 15, pitch: 45});
-
-      map.once('moveend', function() {
-       var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates[0][7])
-        .setHTML(feature.properties.name)
-        .addTo(map)
-    });
-    return
-  }
-  else if(string =="parking")
-  {
-     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-     map.once('moveend', function() {
-       var popup = new mapboxgl.Popup()
-         .setLngLat(feature.geometry.coordinates)
-         .setHTML("Parkplätze: "+feature.properties.groesse)
-         .addTo(map)
-         });
-    return
-
-  }
-
-  else if(string == "huts" || string =="Hütte")
-  {
-    map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-     map.once('moveend', function() {
-       var popup = new mapboxgl.Popup()
-         .setLngLat(feature.geometry.coordinates)
-         .setHTML(feature.properties.name+"<br><a href='../detailansicht'>Tagesangebote</a>")
-         .addTo(map)
-         });
-    return
-
-  }
-
-  else if(string == "lifts" || string =="Lift")
-  {
-    map.flyTo({center: feature.geometry.coordinates[0], zoom: 15, pitch: 45});
-     map.once('moveend', function() {
-       var popup = new mapboxgl.Popup()
-         .setLngLat(feature.geometry.coordinates[0])
-         .setHTML(feature.properties.name)
-         .addTo(map)
-         });
-    return
-
-  }
-
-  // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "slopesBlue"){
-  //   this.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
-  //   this.once('moveend', function() {
-  //     var popup = new mapboxgl.Popup()
-  //       .setLngLat(e.lngLat)
-  //       .setHTML(feature.properties.name)
-  //       .setHTML(feature.properties.p_nr)
-  //       .addTo(map)
-  //   });
-  // }
-  // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "parkplaetze"){
-  //   this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-  //   this.once('moveend', function() {
-  //     var popup = new mapboxgl.Popup()
-  //       .setLngLat(feature.geometry.coordinates)
-  //       .setHTML(feature.properties.groesse)
-  //       .addTo(map)
-  //   });
-  // }
-
-  else{
-    //let h = document.getElementById("searchheader");
-    //h.innerHTML = feature.properties.name;
-    // https://www.mapbox.com/mapbox-gl-js/example/center-on-symbol/
-    this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45})
-    // https://www.mapbox.com/mapbox-gl-js/api/#Popup
-    this.once('moveend', function() {
-      var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates)
-        .setHTML(feature.properties.name)
-        .addTo(map)
-    });
-  }
-
-}
-
-
-
-
-
-
-
-
+/* wenn map eigenes ist handlebar funktioniert suche so
 let d = document.getElementById("dynamic-content");
 d.addEventListener("keyup", test);
 
@@ -356,14 +357,14 @@ function test(e) {
     {
         search(e.target);
     }
-}
+}*/
 
-//let field = document.getElementById("searchfield");
-//field.addEventListener("keyup", search);
+let field = document.getElementById("searchfield");
+field.addEventListener("keyup", search);
 
-function search(element) {
-    if(element.value.length >= 3) {
-        let regEx = new RegExp(element.value, "i");
+function search() {
+    if(this.value.length >= 3) {
+        let regEx = new RegExp(this.value, "i");
         let matchedHuts = scanFile(huts, regEx, "Hütte");
         let matchedSlopes = scanFile(slopes, regEx , "Piste");
         let matchedLifts = scanFile(lifts, regEx, "Lift");
@@ -412,13 +413,10 @@ function updateListItems(listItems) {
         let areaName = getItemArea(key);
         area.innerHTML = "("+areaName.Skigebiet+") \t";
 
-        let a = document.createElement("a");
-        let path = getPath(key, val)
-        a.innerHTML = "Details";
-        a.setAttribute("href", path);
-
         let span = document.createElement("span");
         span.innerHTML = "\t//" + val ;
+
+        let a = getDetailLinkElement(key, val, "Details");
 
         li.appendChild(area);
         li.appendChild(p);
@@ -428,11 +426,11 @@ function updateListItems(listItems) {
 
         p.addEventListener("click", function(){
           goToTarget(key, val)
-        })
+        });
 
         area.addEventListener("click", function(){
           goToTarget(areaName, "area")
-        })
+        });
     }
 }
 
@@ -469,6 +467,14 @@ function getItemArea(key) {
     return "";
 }
 
+function getDetailLinkElement(key, val, text) {
+    let a = document.createElement("a");
+    let path = getPath(key, val);
+    a.innerHTML = text;
+    a.setAttribute("href", path);
+
+    return a;
+}
 function getPath(key, val) {
     let path = "*";
 
