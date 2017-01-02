@@ -1,569 +1,907 @@
-[
- {
-   "Nr": 200,
-   "Skigebiet": "Tennengau",
-   "Skiregion": "Tennengau",
-   "Skiverbund": "Tennengau"
- },
- {
-   "Nr": 201,
-   "Skigebiet": "Krispl - Gaißau - Wieserhörndl",
-   "Skiregion": "Winterfreuden Gaißau Hintersee",
-   "Skiverbund": "",
-   "Koordinaten": [
-          13.2331229,
-          47.7272149
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {},
+      "properties": {
+        "gb_nr": 200,
+        "skigebiet": "Tennengau",
+        "skiregion": "Tennengau",
+        "skiverbund": "Tennengau"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.7272149,
+          13.2331229
         ]
- },
- {
-   "Nr": 202,
-   "Skigebiet": "Hallein - Bad Dürrnberg - Zinken",
-   "Skiregion": "Hallein - Bad Dürrnberg - Zinkenlifte",
-   "Skiverbund": "",
-   "Koordinaten": [
-          13.0923564,
-          47.6595066
+      },
+      "properties": {
+        "gb_nr": 201,
+        "skigebiet": "Krispl - Gaißau - Wieserhörndl",
+        "skiregion": "Winterfreuden Gaißau Hintersee",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.6595066,
+          13.0923564
         ]
- },
- {
-   "Nr": 203,
-   "Skigebiet": "Abtenau - Karkogel",
-   "Skiregion": "Abtenau - Karkogel",
-   "Skiverbund": "Dachstein West",
-   "Koordinaten": [
-          13.3502922,
-          47.5558235
+      },
+      "properties": {
+        "gb_nr": 202,
+        "skigebiet": "Hallein - Bad Dürrnberg - Zinken",
+        "skiregion": "Hallein - Bad Dürrnberg - Zinkenlifte",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.5558235,
+          13.3502922
         ]
- },
- {
-   "Nr": 204,
-   "Skigebiet": "Postalm",
-   "Skiregion": "Postalm Aktiv Skicenter",
-   "Skiverbund": "Dachstein West",
-   "Koordinaten": [
-          13.4297959,
-          47.6577705
+      },
+      "properties": {
+        "gb_nr": 203,
+        "skigebiet": "Abtenau - Karkogel",
+        "skiregion": "Abtenau - Karkogel",
+        "skiverbund": "Dachstein West"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.6577705,
+          13.4297959
         ]
- },
- {
-   "Nr": 205,
-   "Skigebiet": "Russbach - Hornspitze",
-   "Skiregion": "Skiregion Dachstein West",
-   "Skiverbund": "Dachstein West",
-   "Koordinaten": [
-          13.4624002,
-          47.5887695
+      },
+      "properties": {
+        "gb_nr": 204,
+        "skigebiet": "Postalm",
+        "skiregion": "Postalm Aktiv Skicenter",
+        "skiverbund": "Dachstein West"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.5887695,
+          13.4624002
         ]
- },
- {
-   "Nr": 206,
-   "Skigebiet": "Annaberg - Kopfberg - Astauwinkel",
-   "Skiregion": "Skiregion Dachstein West",
-   "Skiverbund": "Dachstein West",
-   "Koordinaten": [
-          13.448435,
-          47.520081
+      },
+      "properties": {
+        "gb_nr": 205,
+        "skigebiet": "Russbach - Hornspitze",
+        "skiregion": "Skiregion Dachstein West",
+        "skiverbund": "Dachstein West"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.520081,
+          13.448435
         ]
- },
- {
-   "Nr": 300,
-   "Skigebiet": "Flachgau",
-   "Skiregion": "Flachgau",
-   "Skiverbund": "Flachgau"
- },
- {
-   "Nr": 301,
-   "Skigebiet": "Hintersee - Anzenberg",
-   "Skiregion": "Winterfreuden Gaißau Hintersee",
-   "Skiverbund": "",
-   "Koordinaten": [
-          13.216913,
-          47.703008
+      },
+      "properties": {
+        "gb_nr": 206,
+        "skigebiet": "Annaberg - Kopfberg - Astauwinkel",
+        "skiregion": "Skiregion Dachstein West",
+        "skiverbund": "Dachstein West"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {},
+      "properties": {
+        "gb_nr": 300,
+        "skigebiet": "Flachgau",
+        "skiregion": "Flachgau",
+        "skiverbund": "Flachgau"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.703008,
+          13.216913
         ]
- },
- {
-   "Nr": 302,
-   "Skigebiet": "St. Gilgen - Zwölferhorn",
-   "Skiregion": "Zwölferhorn",
-   "Skiverbund": "",
-   "Koordinaten": [
-          13.36285114,
-          47.76301411
+      },
+      "properties": {
+        "gb_nr": 301,
+        "skigebiet": "Hintersee - Anzenberg",
+        "skiregion": "Winterfreuden Gaißau Hintersee",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.76301411,
+          13.36285114
         ]
- },
- {
-   "Nr": 400,
-   "Skigebiet": "Pongau",
-   "Skiregion": "Pongau",
-   "Skiverbund": "Pongau"
- },
- {
-   "Nr": 401,
-   "Skigebiet": "Mühlbach - Schneeberg",
-   "Skiregion": "Hochkönig's Winterreich",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.1090427,
-          47.3798438
+      },
+      "properties": {
+        "gb_nr": 302,
+        "skigebiet": "St. Gilgen - Zwölferhorn",
+        "skiregion": "Zwölferhorn",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {},
+      "properties": {
+        "gb_nr": 400,
+        "skigebiet": "Pongau",
+        "skiregion": "Pongau",
+        "skiverbund": "Pongau"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.3798438,
+          13.1090427
         ]
- },
- {
-   "Nr": 402,
-   "Skigebiet": "Mitterberg - Hochkeil",
-   "Skiregion": "Hochkönig's Winterreich",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.136622,
-          47.401762
+      },
+      "properties": {
+        "gb_nr": 401,
+        "skigebiet": "Mühlbach - Schneeberg",
+        "skiregion": "Hochkönig's Winterreich",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.401762,
+          13.136622
         ]
- },
- {
-   "Nr": 403,
-   "Skigebiet": "Goldegg - Buchberg",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "",
-   "Koordinaten": [
-          13.060858,
-          47.308455
+      },
+      "properties": {
+        "gb_nr": 402,
+        "skigebiet": "Mitterberg - Hochkeil",
+        "skiregion": "Hochkönig's Winterreich",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.308455,
+          13.060858
         ]
- },
- {
-   "Nr": 404,
-   "Skigebiet": "Dorfgastein - Fulseck",
-   "Skiregion": "Gastein",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.110090,
-          47.244883
+      },
+      "properties": {
+        "gb_nr": 403,
+        "skigebiet": "Goldegg - Buchberg",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.244883,
+          13.11009
         ]
- },
- {
-   "Nr": 405,
-   "Skigebiet": "Bad Hofgastein - Schloßalm",
-   "Skiregion": "Gastein",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.059886,
-          47.155026
+      },
+      "properties": {
+        "gb_nr": 404,
+        "skigebiet": "Dorfgastein - Fulseck",
+        "skiregion": "Gastein",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.155026,
+          13.059886
         ]
- },
- {
-   "Nr": 406,
-   "Skigebiet": "Bad Gastein - Stubnerkogel",
-   "Skiregion": "Gastein",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.081923,
-          47.132609
+      },
+      "properties": {
+        "gb_nr": 405,
+        "skigebiet": "Bad Hofgastein - Schloßalm",
+        "skiregion": "Gastein",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.132609,
+          13.081923
         ]
- },
- {
-   "Nr": 407,
-   "Skigebiet": "Bad Gastein - Graukogel",
-   "Skiregion": "Gastein",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.150723,
-          47.111113
+      },
+      "properties": {
+        "gb_nr": 406,
+        "skigebiet": "Bad Gastein - Stubnerkogel",
+        "skiregion": "Gastein",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.111113,
+          13.150723
         ]
- },
- {
-   "Nr": 408,
-   "Skigebiet": "Sportgastein - Kreuzkogel",
-   "Skiregion": "Gastein",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.069031,
-          47.059501
+      },
+      "properties": {
+        "gb_nr": 407,
+        "skigebiet": "Bad Gastein - Graukogel",
+        "skiregion": "Gastein",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.059501,
+          13.069031
         ]
-
- },
- {
-   "Nr": 409,
-   "Skigebiet": "Großarl - Kreuzkogel",
-   "Skiregion": "Großarltal",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.195556,
-          47.241548
+      },
+      "properties": {
+        "gb_nr": 408,
+        "skigebiet": "Sportgastein - Kreuzkogel",
+        "skiregion": "Gastein",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.241548,
+          13.195556
         ]
- },
- {
-   "Nr": 410,
-   "Skigebiet": "St. Johann - Hahnbaum",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.206675,
-          47.350153
+      },
+      "properties": {
+        "gb_nr": 409,
+        "skigebiet": "Großarl - Kreuzkogel",
+        "skiregion": "Großarltal",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.350153,
+          13.206675
         ]
- },
- {
-   "Nr": 411,
-   "Skigebiet": "St. Johann - Alpendorf - Hirschkogel",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.197076,
-          47.322785
+      },
+      "properties": {
+        "gb_nr": 410,
+        "skigebiet": "St. Johann - Hahnbaum",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.322785,
+          13.197076
         ]
- },
- {
-   "Nr": 412,
-   "Skigebiet": "Wagrain - Grafenberg - Sonntagskogel",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.299429,
-          47.328079
+      },
+      "properties": {
+        "gb_nr": 411,
+        "skigebiet": "St. Johann - Alpendorf - Hirschkogel",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.328079,
+          13.299429
         ]
- },
- {
-   "Nr": 413,
-   "Skigebiet": "Wagrain - Saukarkopf",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-
- },
- {
-   "Nr": 414,
-   "Skigebiet": "Flachau",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.346841,
-          47.325674
+      },
+      "properties": {
+        "gb_nr": 412,
+        "skigebiet": "Wagrain - Grafenberg - Sonntagskogel",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {},
+      "properties": {
+        "gb_nr": 413,
+        "skigebiet": "Wagrain - Saukarkopf",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.325674,
+          13.346841
         ]
- },
- {
-   "Nr": 415,
-   "Skigebiet": "Kleinarl - Flachauwinkl",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.319786,
-          47.281687
+      },
+      "properties": {
+        "gb_nr": 414,
+        "skigebiet": "Flachau",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.281687,
+          13.319786
         ]
- },
- {
-   "Nr": 416,
-   "Skigebiet": "Zauchensee - Flachauwinkl",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.457720,
-          47.290771
+      },
+      "properties": {
+        "gb_nr": 415,
+        "skigebiet": "Kleinarl - Flachauwinkl",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.290771,
+          13.45772
         ]
- },
- {
-   "Nr": 417,
-   "Skigebiet": "Obertauern I",
-   "Skiregion": "Obertauern",
-   "Skiverbund": "",
-   "Koordinaten": [
-          13.546556,
-          47.251200
+      },
+      "properties": {
+        "gb_nr": 416,
+        "skigebiet": "Zauchensee - Flachauwinkl",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.2512,
+          13.546556
         ]
- },
- {
-   "Nr": 418,
-   "Skigebiet": "Forstau - Fageralm",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.546189,
-          47.377627
+      },
+      "properties": {
+        "gb_nr": 417,
+        "skigebiet": "Obertauern I",
+        "skiregion": "Obertauern",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.377627,
+          13.546189
         ]
- },
- {
-   "Nr": 419,
-   "Skigebiet": "Altenmarkt - Radstadt",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.452699,
-          47.352887
+      },
+      "properties": {
+        "gb_nr": 418,
+        "skigebiet": "Forstau - Fageralm",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.352887,
+          13.452699
         ]
- },
- {
-   "Nr": 420,
-   "Skigebiet": "Eben",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.412477,
-          47.401674
+      },
+      "properties": {
+        "gb_nr": 419,
+        "skigebiet": "Altenmarkt - Radstadt",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.401674,
+          13.412477
         ]
- },
- {
-   "Nr": 421,
-   "Skigebiet": "Filzmoos - Großberg - Neuberg - Moosalm",
-   "Skiregion": "Salzburger Sportwelt",
-   "Skiverbund": "Ski Amade",
-   "Koordinaten": [
-          13.521131,
-          47.431881
+      },
+      "properties": {
+        "gb_nr": 420,
+        "skigebiet": "Eben",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.431881,
+          13.521131
         ]
- },
- {
-   "Nr": 422,
-   "Skigebiet": "St. Martin am Tennengebirge",
-   "Skiregion": "Skilifte St. Martin am Tennengebirge",
-   "Skiverbund": "Dachstein West",
-   "Koordinaten": [
-          13.379323,
-          47.466589
+      },
+      "properties": {
+        "gb_nr": 421,
+        "skigebiet": "Filzmoos - Großberg - Neuberg - Moosalm",
+        "skiregion": "Salzburger Sportwelt",
+        "skiverbund": "Ski Amade"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.466589,
+          13.379323
         ]
- },
- {
-   "Nr": 423,
-   "Skigebiet": "Werfenweng",
-   "Skiregion": "Ski-Board-Wander-Arena Werfenweng",
-   "Skiverbund": "",
-   "Koordinaten": [
-          13.276019,
-          47.458694
+      },
+      "properties": {
+        "gb_nr": 422,
+        "skigebiet": "St. Martin am Tennengebirge",
+        "skiregion": "Skilifte St. Martin am Tennengebirge",
+        "skiverbund": "Dachstein West"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.458694,
+          13.276019
         ]
- },
- {
-   "Nr": 500,
-   "Skigebiet": "Lungau",
-   "Skiregion": "Lungau",
-   "Skiverbund": "Lungau"
- },
- {
-   "Nr": 501,
-   "Skigebiet": "Obertauern II",
-   "Skiregion": "Obertauern",
-   "Skiverbund": "",
-   "Koordinaten": [
-          13.560769,
-          47.246699
+      },
+      "properties": {
+        "gb_nr": 423,
+        "skigebiet": "Werfenweng",
+        "skiregion": "Ski-Board-Wander-Arena Werfenweng",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {},
+      "properties": {
+        "gb_nr": 500,
+        "skigebiet": "Lungau",
+        "skiregion": "Lungau",
+        "skiverbund": "Lungau"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.246699,
+          13.560769
         ]
- },
- {
-   "Nr": 502,
-   "Skigebiet": "Fanningberg",
-   "Skiregion": "Mariapfarr - Lungau",
-   "Skiverbund": "",
-   "Koordinaten": [
-          13.666640,
-          47.166847
+      },
+      "properties": {
+        "gb_nr": 501,
+        "skigebiet": "Obertauern II",
+        "skiregion": "Obertauern",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.166847,
+          13.66664
         ]
- },
- {
-   "Nr": 503,
-   "Skigebiet": "Großeck - Speiereck",
-   "Skiregion": "Mautendorf - Lungau",
-   "Skiverbund": "",
-   "Koordinaten": [
-         13.648659,
-         47.123847
+      },
+      "properties": {
+        "gb_nr": 502,
+        "skigebiet": "Fanningberg",
+        "skiregion": "Mariapfarr - Lungau",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.123847,
+          13.648659
         ]
- },
- {
-   "Nr": 504,
-   "Skigebiet": "Aineck - Katschberg",
-   "Skiregion": "St. Margarethen - Lungau",
-   "Skiverbund": "",
-   "Koordinaten": [
-         13.689184,
-         47.080345
+      },
+      "properties": {
+        "gb_nr": 503,
+        "skigebiet": "Großeck - Speiereck",
+        "skiregion": "Mautendorf - Lungau",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.080345,
+          13.689184
         ]
- },
- {
-   "Nr": 505,
-   "Skigebiet": "Katschberg - Tschaneck",
-   "Skiregion": "Katschberg - Lungau",
-   "Skiverbund": "",
-   "Koordinaten": [
-         13.615786,
-         47.059332
+      },
+      "properties": {
+        "gb_nr": 504,
+        "skigebiet": "Aineck - Katschberg",
+        "skiregion": "St. Margarethen - Lungau",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.059332,
+          13.615786
         ]
- },
- {
-   "Nr": 506,
-   "Skigebiet": "Karneralm - Schönfeld",
-   "Skiregion": "Innerkrems - Schönfeld - Karneralm",
-   "Skiverbund": ""
-
- },
- {
-   "Nr": 600,
-   "Skigebiet": "Pinzgau",
-   "Skiregion": "Pinzgau",
-   "Skiverbund": "Pinzgau"
- },
- {
-   "Nr": 601,
-   "Skigebiet": "Hochkrimml - Gerlosplatte",
-   "Skiregion": "Zillertal Arena",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.115500,
-         47.241278
+      },
+      "properties": {
+        "gb_nr": 505,
+        "skigebiet": "Katschberg - Tschaneck",
+        "skiregion": "Katschberg - Lungau",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {},
+      "properties": {
+        "gb_nr": 506,
+        "skigebiet": "Karneralm - Schönfeld",
+        "skiregion": "Innerkrems - Schönfeld - Karneralm",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {},
+      "properties": {
+        "gb_nr": 600,
+        "skigebiet": "Pinzgau",
+        "skiregion": "Pinzgau",
+        "skiverbund": "Pinzgau"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.241278,
+          12.1155
         ]
- },
- {
-   "Nr": 602,
-   "Skigebiet": "Wald - Königsleiten",
-   "Skiregion": "Zillertal Arena",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.089393,
-         47.261399
+      },
+      "properties": {
+        "gb_nr": 601,
+        "skigebiet": "Hochkrimml - Gerlosplatte",
+        "skiregion": "Zillertal Arena",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.261399,
+          12.089393
         ]
- },
- {
-   "Nr": 603,
-   "Skigebiet": "Neukirchen - Wildkogel",
-   "Skiregion": "Ski-Arena Wildkogel",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.280776,
-         47.254542
+      },
+      "properties": {
+        "gb_nr": 602,
+        "skigebiet": "Wald - Königsleiten",
+        "skiregion": "Zillertal Arena",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.254542,
+          12.280776
         ]
- },
- {
-   "Nr": 604,
-   "Skigebiet": "Mittersill - Resterhöhe",
-   "Skiregion": "Kitzbühel",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.385944,
-         47.313468
+      },
+      "properties": {
+        "gb_nr": 603,
+        "skigebiet": "Neukirchen - Wildkogel",
+        "skiregion": "Ski-Arena Wildkogel",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.313468,
+          12.385944
         ]
- },
- {
-   "Nr": 605,
-   "Skigebiet": "Uttendorf - Weißsee",
-   "Skiregion": "Weißsee Gletscherwelt",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.624394,
-         47.169404
+      },
+      "properties": {
+        "gb_nr": 604,
+        "skigebiet": "Mittersill - Resterhöhe",
+        "skiregion": "Kitzbühel",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.169404,
+          12.624394
         ]
- },
- {
-   "Nr": 606,
-   "Skigebiet": "Kaprun - Kitzsteinhorn",
-   "Skiregion": "Europa-Sportregion Zell am See - Kaprun",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.677854,
-         47.190375
+      },
+      "properties": {
+        "gb_nr": 605,
+        "skigebiet": "Uttendorf - Weißsee",
+        "skiregion": "Weißsee Gletscherwelt",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.190375,
+          12.677854
         ]
-
- },
- {
-   "Nr": 607,
-   "Skigebiet": "Kaprun - Maiskogel",
-   "Skiregion": "Europa-Sportregion Zell am See - Kaprun",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.730568,
-         47.267313
+      },
+      "properties": {
+        "gb_nr": 606,
+        "skigebiet": "Kaprun - Kitzsteinhorn",
+        "skiregion": "Europa-Sportregion Zell am See - Kaprun",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.267313,
+          12.730568
         ]
- },
- {
-   "Nr": 608,
-   "Skigebiet": "Zell am See - Schmittenhöhe",
-   "Skiregion": "Europa-Sportregion Zell am See - Kaprun",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.788282,
-         47.300040
+      },
+      "properties": {
+        "gb_nr": 607,
+        "skigebiet": "Kaprun - Maiskogel",
+        "skiregion": "Europa-Sportregion Zell am See - Kaprun",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.30004,
+          12.788282
         ]
- },
- {
-   "Nr": 609,
-   "Skigebiet": "Saalbach - Hinterglemm",
-   "Skiregion": "Skicircus Saalbach Hinterglemm Leogang",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.596621,
-         47.379818
+      },
+      "properties": {
+        "gb_nr": 608,
+        "skigebiet": "Zell am See - Schmittenhöhe",
+        "skiregion": "Europa-Sportregion Zell am See - Kaprun",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.379818,
+          12.596621
         ]
- },
- {
-   "Nr": 610,
-   "Skigebiet": "Leogang",
-   "Skiregion": "Skicircus Saalbach Hinterglemm Leogang",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.718766,
-         47.439030
+      },
+      "properties": {
+        "gb_nr": 609,
+        "skigebiet": "Saalbach - Hinterglemm",
+        "skiregion": "Skicircus Saalbach Hinterglemm Leogang",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.43903,
+          12.718766
         ]
- },
- {
-   "Nr": 611,
-   "Skigebiet": "Lofer",
-   "Skiregion": "Loferer Alm",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.691014,
-         47.588320
+      },
+      "properties": {
+        "gb_nr": 610,
+        "skigebiet": "Leogang",
+        "skiregion": "Skicircus Saalbach Hinterglemm Leogang",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.58832,
+          12.691014
         ]
- },
- {
-   "Nr": 612,
-   "Skigebiet": "Unken - Heutal",
-   "Skiregion": "Unken - Heutal",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.650024,
-         47.662344
+      },
+      "properties": {
+        "gb_nr": 611,
+        "skigebiet": "Lofer",
+        "skiregion": "Loferer Alm",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.662344,
+          12.650024
         ]
- },
- {
-   "Nr": 613,
-   "Skigebiet": "Unken - Steinplatte",
-   "Skiregion": "Steinplatte",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.572647,
-         47.611068
+      },
+      "properties": {
+        "gb_nr": 612,
+        "skigebiet": "Unken - Heutal",
+        "skiregion": "Unken - Heutal",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.611068,
+          12.572647
         ]
- },
- {
-   "Nr": 614,
-   "Skigebiet": "Maria Alm - Hinterreit",
-   "Skiregion": "Hochkönig's Winterreich",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.887066,
-         47.398347
+      },
+      "properties": {
+        "gb_nr": 613,
+        "skigebiet": "Unken - Steinplatte",
+        "skiregion": "Steinplatte",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.398347,
+          12.887066
         ]
- },
- {
-   "Nr": 615,
-   "Skigebiet": "Maria Alm - Aberg - Langeck",
-   "Skiregion": "Hochkönig's Winterreich",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.908967,
-         47.389667
+      },
+      "properties": {
+        "gb_nr": 614,
+        "skigebiet": "Maria Alm - Hinterreit",
+        "skiregion": "Hochkönig's Winterreich",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.389667,
+          12.908967
         ]
- },
- {
-   "Nr": 616,
-   "Skigebiet": "Dienten",
-   "Skiregion": "Hochkönig's Winterreich",
-   "Skiverbund": "",
-   "Koordinaten": [
-         13.032258,
-         47.387889
+      },
+      "properties": {
+        "gb_nr": 615,
+        "skigebiet": "Maria Alm - Aberg - Langeck",
+        "skiregion": "Hochkönig's Winterreich",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.387889,
+          13.032258
         ]
- },
- {
-   "Nr": 617,
-   "Skigebiet": "Rauris",
-   "Skiregion": "Rauris - Hochalm",
-   "Skiverbund": "",
-   "Koordinaten": [
-         12.990909,
-         47.223745
+      },
+      "properties": {
+        "gb_nr": 616,
+        "skigebiet": "Dienten",
+        "skiregion": "Hochkönig's Winterreich",
+        "skiverbund": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.223745,
+          12.990909
         ]
-
- }
-]
+      },
+      "properties": {
+        "gb_nr": 617,
+        "skigebiet": "Rauris",
+        "skiregion": "Rauris - Hochalm",
+        "skiverbund": ""
+      }
+    }
+  ]
+}
