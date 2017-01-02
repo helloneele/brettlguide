@@ -8,6 +8,8 @@ import skiingAreas from '../../../build/data/gebietsnr'
 // use map.loaded true/false for preloader image
 
 let map;
+let layersLoaded = false;
+
 
 export default function(long, lat) {
   //document.getElementById("map").style.height = window.innerHeight + "px";
@@ -22,12 +24,19 @@ export default function(long, lat) {
       pitch: 60
   });
 
-  map.on('load', function () {
-    setCurrentPos(map, long, lat)
-    setSlopes(map)
-    setLifts(map)
-    setHuts(map)
-    setParkingSpaces(map)
+  map.on('load', function() {
+    setCurrentPos(long, lat)
+    //TODO LOAD Skigebiete
+  });
+
+  map.on('zoom', function() {
+    if(!layersLoaded && map.getZoom() > 12){
+      layersLoaded = true
+      setSlopes()
+      setLifts()
+      setHuts()
+      setParkingSpaces()
+    }
   });
 
   map.on('click', function (e) {
@@ -38,9 +47,9 @@ export default function(long, lat) {
 
     // Get clicked element
     var feature = features[0];
- 
+
     console.log(feature)
-   
+
     switch(feature.layer.id)
     {
       case "parking":
@@ -71,6 +80,7 @@ export default function(long, lat) {
   // hide/display layers
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
 }
+
 
 function goToTarget(feature, string){
   if(string == "search"){
@@ -194,7 +204,7 @@ function goToTarget(feature, string){
 }
 
 
-function setCurrentPos(map, long, lat){
+function setCurrentPos(long, lat){
     map.addSource("points", {
         "type": "geojson",
         "data": {
@@ -226,7 +236,7 @@ function setCurrentPos(map, long, lat){
     });
 }
 
-function setHuts(map){
+function setHuts(){
     map.addSource("huts", {
         "type": "geojson",
         "data": huts
@@ -300,7 +310,7 @@ function setSlopes(){
     });
 }
 
-function setLifts(map){
+function setLifts(){
     map.addSource("lifts", {
         "type": "geojson",
         "data": lifts
@@ -321,7 +331,7 @@ function setLifts(map){
     });
 }
 
-function setParkingSpaces(map){
+function setParkingSpaces(){
     map.addSource("parking", {
         "type": "geojson",
         "data": parkingSpaces
@@ -336,6 +346,7 @@ function setParkingSpaces(map){
         }
     });
 }
+
 
 /* wenn map eigenes ist handlebar funktioniert suche so
 let d = document.getElementById("dynamic-content");
