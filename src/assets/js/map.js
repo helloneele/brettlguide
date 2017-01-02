@@ -57,7 +57,7 @@ export default function(long, lat) {
       break;
 
       case "lifts":
-      goToTarget(feature, "lifts");
+      goToTarget(feature, "lifts", e);
       break;
 
       case "huts":
@@ -67,7 +67,7 @@ export default function(long, lat) {
       case "slopesBlue":
       case "slopesRed":
       case "slopesBlack":
-      goToTarget(feature, "slope");
+      goToTarget(feature, "slope", e);
       break;
 
       default:
@@ -82,7 +82,7 @@ export default function(long, lat) {
 }
 
 
-function goToTarget(feature, string){
+function goToTarget(feature, string, e){
   if(string == "search"){
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.properties.name;
@@ -114,11 +114,11 @@ function goToTarget(feature, string){
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.Skigebiet;
 
-     map.flyTo({center: feature.geometry.coordinates[0][7], zoom: 15, pitch: 45});
+     map.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
 
       map.once('moveend', function() {
        var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates[0][7])
+        .setLngLat(e.lngLat)
         .setHTML(feature.properties.name)
         .addTo(map)
     });
@@ -139,54 +139,31 @@ function goToTarget(feature, string){
 
   else if(string == "huts" || string =="Hütte")
   {
-      let a = getDetailLinkElement(feature, "Hütte", feature.properties.name);
-
+    let a = getDetailLinkElement(feature, "Hütte", feature.properties.name);
     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-     map.once('moveend', function() {
-       var popup = new mapboxgl.Popup()
-         .setLngLat(feature.geometry.coordinates)
-           .setDOMContent(a)
-         .addTo(map)
-         });
+    map.once('moveend', function() {
+      var popup = new mapboxgl.Popup()
+      .setLngLat(feature.geometry.coordinates)
+      .setDOMContent(a)
+      .addTo(map)
+    });
     return
-
   }
 
   else if(string == "lifts" || string =="Lift")
   {
       let path = getPath(feature, "Lift");
 
-    map.flyTo({center: feature.geometry.coordinates[0], zoom: 15, pitch: 45});
+    map.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
      map.once('moveend', function() {
        var popup = new mapboxgl.Popup()
-         .setLngLat(feature.geometry.coordinates[0])
+         .setLngLat(e.lngLat)
          .setHTML(feature.properties.name)
          .addTo(map)
          });
     return
 
   }
-
-  // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "slopesBlue"){
-  //   this.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
-  //   this.once('moveend', function() {
-  //     var popup = new mapboxgl.Popup()
-  //       .setLngLat(e.lngLat)
-  //       .setHTML(feature.properties.name)
-  //       .setHTML(feature.properties.p_nr)
-  //       .addTo(map)
-  //   });
-  // }
-  // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "parkplaetze"){
-  //   this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-  //   this.once('moveend', function() {
-  //     var popup = new mapboxgl.Popup()
-  //       .setLngLat(feature.geometry.coordinates)
-  //       .setHTML(feature.properties.groesse)
-  //       .addTo(map)
-  //   });
-  // }
-
   else{
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.properties.name;
@@ -503,6 +480,7 @@ function getDetailLinkElement(key, val, text) {
 
     return a;
 }
+
 function getPath(key, val) {
     let path = "*";
 
