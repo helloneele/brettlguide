@@ -8,6 +8,8 @@ import skiingAreas from '../../../build/data/gebietsnr'
 // use map.loaded true/false for preloader image
 
 let map;
+let layersLoaded = false;
+
 
 export default function(long, lat) {
   //document.getElementById("map").style.height = window.innerHeight + "px";
@@ -22,12 +24,19 @@ export default function(long, lat) {
       pitch: 60
   });
 
-  map.on('load', function () {
-    setCurrentPos(map, long, lat)
-    setSlopes(map)
-    setLifts(map)
-    setHuts(map)
-    setParkingSpaces(map)
+  map.on('load', function() {
+    setCurrentPos(long, lat)
+    //TODO LOAD Skigebiete
+  });
+
+  map.on('zoom', function() {
+    if(!layersLoaded && map.getZoom() > 12){
+      layersLoaded = true
+      setSlopes()
+      setLifts()
+      setHuts()
+      setParkingSpaces()
+    }
   });
 
   map.on('click', function (e) {
@@ -38,9 +47,9 @@ export default function(long, lat) {
 
     // Get clicked element
     var feature = features[0];
- 
+
     console.log(feature)
-   
+
     switch(feature.layer.id)
     {
       case "parking":
@@ -71,6 +80,151 @@ export default function(long, lat) {
   // hide/display layers
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
 }
+
+
+function setCurrentPos(long, lat){
+    map.addSource("points", {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [long, lat]
+                },
+                "properties": {
+                    "icon": "marker"
+                }
+            }]
+        }
+    });
+
+    map.addLayer({
+        "id": "points",
+        "type": "symbol",
+        "source": "points",
+        "layout": {
+          "icon-image": "{icon}-15",
+          "text-field": "{title}",
+          "text-font": ["Lato Regular", "Arial Unicode MS Bold"],
+          "text-offset": [0, 0.6],
+          "text-anchor": "top"
+        }
+    });
+}
+
+function setHuts(){
+    map.addSource("huts", {
+        "type": "geojson",
+        "data": huts
+    });
+
+    map.addLayer({
+        "id": "huts",
+        "type": "symbol",
+        "source": "huts",
+        "minzoom": 13,
+        "layout": {
+          "icon-image": "rrestaurant-15",
+          //"text-field": "{name}",
+          "text-font": ["Lato Regular", "Arial Unicode MS Bold"],
+          "text-size": 12,
+          "text-offset": [0, 0.6],
+          "text-anchor": "top"
+        },
+        "paint": {
+          "text-color": "#295e72"
+        }
+    });
+}
+
+function setSlopes(){
+    map.addSource("slopes", {
+        "type": "geojson",
+        "data": slopes
+    });
+
+    map.addLayer({
+        "id": "slopesBlue",
+        "type": "fill",
+        "source": "slopes",
+        "filter": ["==", "schwgrad", 1],
+        "layout": {
+        },
+        "paint": {
+          "fill-color": "#295e72",
+          "fill-opacity": 0.5,
+          "fill-outline-color": "#295e72"
+        }
+    });
+
+    map.addLayer({
+        "id": "slopesRed",
+        "type": "fill",
+        "source": "slopes",
+        "filter": ["==", "schwgrad", 2],
+        "layout": {
+        },
+        "paint": {
+          "fill-color": "#722929",
+          "fill-opacity": 0.5,
+          "fill-outline-color": "#722929"
+        }
+    });
+
+    map.addLayer({
+        "id": "slopesBlack",
+        "type": "fill",
+        "source": "slopes",
+        "filter": ["==", "schwgrad", 3],
+        "layout": {
+        },
+        "paint": {
+          "fill-color": "#333",
+          "fill-opacity": 0.5,
+          "fill-outline-color": "#333"
+        }
+    });
+}
+
+function setLifts(){
+    map.addSource("lifts", {
+        "type": "geojson",
+        "data": lifts
+    });
+    map.addLayer({
+        "id": "lifts",
+        "type": "line",
+        "source": "lifts",
+        "layout": {
+            "line-join": "round",
+            "line-cap": "square"
+        },
+        "paint": {
+          "line-color": "#111",
+          "line-width": 3,
+          "line-dasharray": [3, 2]
+        }
+    });
+}
+
+function setParkingSpaces(){
+    map.addSource("parking", {
+        "type": "geojson",
+        "data": parkingSpaces
+    });
+    map.addLayer({
+        "id": "parking",
+        "type": "symbol",
+        "source": "parking",
+        "minzoom": 13,
+        "layout": {
+          "icon-image": "pparking-15"
+        }
+    });
+}
+
 
 function goToTarget(feature, string){
   if(string == "search"){
@@ -188,148 +342,11 @@ function goToTarget(feature, string){
 }
 
 
-function setCurrentPos(map, long, lat){
-    map.addSource("points", {
-        "type": "geojson",
-        "data": {
-            "type": "FeatureCollection",
-            "features": [{
-                "type": "Feature",
-                "geometry": {
-                  "type": "Point",
-                  "coordinates": [long, lat]
-                },
-                "properties": {
-                    "icon": "marker"
-                }
-            }]
-        }
-    });
 
-    map.addLayer({
-        "id": "points",
-        "type": "symbol",
-        "source": "points",
-        "layout": {
-          "icon-image": "{icon}-15",
-          "text-field": "{title}",
-          "text-font": ["Lato Regular", "Arial Unicode MS Bold"],
-          "text-offset": [0, 0.6],
-          "text-anchor": "top"
-        }
-    });
-}
 
-function setHuts(map){
-    map.addSource("huts", {
-        "type": "geojson",
-        "data": huts
-    });
 
-    map.addLayer({
-        "id": "huts",
-        "type": "symbol",
-        "source": "huts",
-        "minzoom": 13,
-        "layout": {
-          "icon-image": "rrestaurant-15",
-          //"text-field": "{name}",
-          "text-font": ["Lato Regular", "Arial Unicode MS Bold"],
-          "text-size": 12,
-          "text-offset": [0, 0.6],
-          "text-anchor": "top"
-        },
-        "paint": {
-          "text-color": "#295e72"
-        }
-    });
-}
 
-function setSlopes(){
-    map.addSource("slopes", {
-        "type": "geojson",
-        "data": slopes
-    });
 
-    map.addLayer({
-        "id": "slopesBlue",
-        "type": "fill",
-        "source": "slopes",
-        "filter": ["==", "schwgrad", 1],
-        "layout": {
-        },
-        "paint": {
-          "fill-color": "#295e72",
-          "fill-opacity": 0.5,
-          "fill-outline-color": "#295e72"
-        }
-    });
-
-    map.addLayer({
-        "id": "slopesRed",
-        "type": "fill",
-        "source": "slopes",
-        "filter": ["==", "schwgrad", 2],
-        "layout": {
-        },
-        "paint": {
-          "fill-color": "#722929",
-          "fill-opacity": 0.5,
-          "fill-outline-color": "#722929"
-        }
-    });
-
-    map.addLayer({
-        "id": "slopesBlack",
-        "type": "fill",
-        "source": "slopes",
-        "filter": ["==", "schwgrad", 3],
-        "layout": {
-        },
-        "paint": {
-          "fill-color": "#333",
-          "fill-opacity": 0.5,
-          "fill-outline-color": "#333"
-        }
-    });
-}
-
-function setLifts(map){
-    map.addSource("lifts", {
-        "type": "geojson",
-        "data": lifts
-    });
-    map.addLayer({
-        "id": "lifts",
-        "type": "line",
-        "source": "lifts",
-        "layout": {
-            "line-join": "round",
-            "line-cap": "square"
-        },
-        "paint": {
-          "line-color": "#111",
-          "line-width": 3,
-          "line-dasharray": [3, 2]
-        }
-    });
-}
-
-function setParkingSpaces(map){
-    map.addSource("parking", {
-        "type": "geojson",
-        "data": parkingSpaces
-    });
-    map.addLayer({
-        "id": "parking",
-        "type": "symbol",
-        "source": "parking",
-        "minzoom": 13,
-        "layout": {
-          "icon-image": "pparking-15"
-        }
-    });
-}
 
 let d = document.getElementById("dynamic-content");
 d.addEventListener("keyup", test);

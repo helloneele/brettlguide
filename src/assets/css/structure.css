@@ -72,9 +72,14 @@ header{
   position: absolute;
   width: 100%;
   background: var(--dark-blue);
-  top:0;
+  top: -100px;
   padding: 20px;
   color: var(--white);
+  transition: 0.5s top ease-in;
+
+  &.active{
+    top:0;
+  }
 
   .search__field{
     border: none;
@@ -96,6 +101,45 @@ header{
   }
 }
 
+.mapButtons{
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 20px;
+  width: 200px;
+}
+
+.mapButtons__item{
+  width: 40px;
+  height: 40px;
+  background: var(--white);
+  text-align: center;
+  border-radius: 20px;
+  font-size: 30px;
+  display: inline-block;
+  color: var(--dark-blue);
+  box-shadow:0px 0px 5px rgba(0,0,0,0.7);
+
+  &:hover{
+    color: var(--sky-blue);
+  }
+}
+
+.searchToggle{
+
+  padding-top:3px;
+  font-size: 25px;
+
+  &.active{
+    padding-top: 0;
+    font-size: 30px;
+  }
+}
+
+.locationToggle{
+}
 
 
 footer {

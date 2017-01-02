@@ -1,27 +1,36 @@
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
     handlebars = require('gulp-handlebars'),
-    defineModule = require('gulp-define-module');
+    defineModule = require('gulp-define-module'),
+    merge = require('merge-stream');
 
 // define the default task and add the watch task to it
-gulp.task('default', ['watch', 'templates', 'scripts', 'copyfonts', 'copyimg']);
+gulp.task('default', ['watch', 'templates', 'scripts', 'copyfonts', 'copy']);
 
 gulp.task('copyfonts', function() {
-   gulp.src('./src/assets/fonts/**/*.{ttf,woff,eof,svg}')
+   var brettlFonts = gulp.src('./src/assets/fonts/**/*.{ttf,woff,eof,svg}')
    .pipe(gulp.dest('./build/assets/fonts'));
+   var fontAwsmFonts = gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
+   .pipe(gulp.dest('./build/assets/fonts'));
+
+   return merge(brettlFonts, fontAwsmFonts);
 });
 
 
-gulp.task('copyimg', function() {
-   gulp.src('./src/assets/img/**/*.{png,jpg,gif,eps,svg}')
+gulp.task('copy', function() {
+   var images = gulp.src('./src/assets/img/**/*.{png,jpg,gif,eps,svg}')
    .pipe(gulp.dest('./build/assets/img'));
+   var fontAwesomeCSS = gulp.src('./node_modules/font-awesome/css/font-awesome.min.css')
+   .pipe(gulp.dest('./build/assets/css'));
+
+   return merge(images, fontAwesomeCSS);
 });
 
 gulp.task('templates', function(){
     gulp.src(['./src/assets/templates/*.hbs'])
         .pipe(handlebars())
         .pipe(defineModule('node'))
-        .pipe(gulp.dest('./build/assets/templates/'));
+        .pipe(gulp.dest('./build/assets/templates/')); 
 });
 
 gulp.task('build:css', function () {
