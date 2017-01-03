@@ -11,7 +11,8 @@ let map;
 let layersLoaded = false;
 
 
-export default function(long, lat) {
+
+function draw(long, lat) {
   //document.getElementById("map").style.height = window.innerHeight-70 + "px";
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
@@ -48,8 +49,6 @@ export default function(long, lat) {
     // Get clicked element
     var feature = features[0];
 
-    console.log(feature)
-
     switch(feature.layer.id)
     {
       case "parking":
@@ -74,13 +73,23 @@ export default function(long, lat) {
       goToTarget(feature);
     }
   });
-
   // hide/display layers
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
 }
 
+export function detectLocation() {
+    if("geolocation" in navigator) {
+        return navigator.geolocation.getCurrentPosition(function(position) {
+            draw (position.coords.longitude, position.coords.latitude);
+        });
+    }
+    else {
+        //Salzburg
+        draw(13.375754395073598, 47.49949605823142);
+    }
+}
 
-function goToTarget(feature, string, e){
+export function goToTarget(feature, string, e){
     if(!e && !feature.geometry.coordinates) {
         let text = "Keine Koordinaten für " + feature.properties.name + " vorhanden";
         alert(text);
