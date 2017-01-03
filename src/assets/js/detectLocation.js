@@ -16,6 +16,8 @@ export default function() {
   else {
     return;
   }
+
+  
 }
 
 function DrawMap(long, lat){

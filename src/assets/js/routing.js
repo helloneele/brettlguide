@@ -6,14 +6,15 @@ import areasTpl from '../../../build/assets/templates/areas';
 import notFoundTpl from '../../../build/assets/templates/notFound';
 
 import * as map from './map';
-import getObject from './getObject';
+import getObject from './getObject'; 
 
 
 let dynamicContent = document.getElementById("dynamic-content");
 
 let templates = {
-    index: () => {
+    index: (ctx) => {
         map.detectLocation();
+
         //dynamicContent.innerHTML = mapTpl(); //map handlebar anzeigen
     },
     slopes: (ctx) => {

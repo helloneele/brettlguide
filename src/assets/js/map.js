@@ -96,87 +96,62 @@ export function goToTarget(feature, string, e){
         return;
     }
     if(string === "area" || string === "Skigebiet" ){
-        let div = createPopUpDiv(feature, "Skigebiet");
+        let popUpContent = createPopUpDiv(feature, "Skigebiet")
+        let position = feature.geometry.coordinates
 
-        map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-
-        map.once('moveend', function() {
-            var popup = new mapboxgl.Popup()
-                .setLngLat(feature.geometry.coordinates)
-                .setDOMContent(div)
-                .addTo(map);
-        });
+        map.flyTo({center: position, zoom: 15, pitch: 45});
+        addPopUpToMap(popUpContent, position, 0)
         return;
     }
     else if(string === "slope" || string === "Piste"){
-        let div = createPopUpDiv(feature, "Piste");
-        let coordinate;
+        let popUpContent = createPopUpDiv(feature, "Piste");
+        let position;
 
-        if(string === "slope") {
-            coordinate = e.lngLat;
-        }
-        else{
-            coordinate = feature.geometry.coordinates[0][0];
-        }
-        map.flyTo({center: coordinate, zoom: 15, pitch: 45});
+        if(string === "slope") //click event
+          position = e.lngLat
+        else //page load
+          position = feature.geometry.coordinates[0][0]
 
-        map.once('moveend', function() {
-            var popup = new mapboxgl.Popup()
-                .setLngLat(coordinate)
-                .setDOMContent(div)
-                .addTo(map);
-        });
+        map.flyTo({center: position, zoom: 15, pitch: 45})
+        addPopUpToMap(popUpContent, position, 0)
         return;
     }
     else if(string =="parking") {
-        map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+        let popUpContent = createPopUpDiv(feature, "Parkplatz");
+        let position = feature.geometry.coordinates;
 
-        map.once('moveend', function() {
-            var popup = new mapboxgl.Popup()
-            .setLngLat(feature.geometry.coordinates)
-            .setHTML("Parkplätze: "+ feature.properties.groesse)
-            .addTo(map);
-        });
+        map.flyTo({center: position, zoom: 15, pitch: 45});
+        addPopUpToMap(popUpContent, position)
         return;
     }
     else if(string == "huts" || string =="Hütte") {
-        let div = createPopUpDiv(feature, "Hütte");
+        let popUpContent = createPopUpDiv(feature, "Hütte");
+        let position = feature.geometry.coordinates;
 
-        map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+        map.flyTo({center: position, zoom: 15, pitch: 45});
+        addPopUpToMap(popUpContent, position)
 
-        map.once('moveend', function() {
-            var popup = new mapboxgl.Popup()
-            .setLngLat(feature.geometry.coordinates)
-            .setDOMContent(div)
-            .addTo(map);
-        });
         return;
     }
     else if(string == "lifts" || string =="Lift") {
-        let div = createPopUpDiv(feature, "Lift");
-        let coordinate;
+        let popUpContent = createPopUpDiv(feature, "Lift");
+        let position;
 
-        if(string === "lifts") {
-            coordinate = e.lngLat;
-        }
-        else{
-            coordinate = feature.geometry.coordinates[0];
-        }
-        map.flyTo({center: coordinate, zoom: 15, pitch: 45});
+        if(string === "lifts")
+          position = e.lngLat;
+        else
+          position = feature.geometry.coordinates[0];
 
-        map.once('moveend', function() {
-        var popup = new mapboxgl.Popup()
-            .setLngLat(coordinate)
-            .setDOMContent(div)
-            .addTo(map)
-            });
+        map.flyTo({center: position, zoom: 15, pitch: 45});
+        addPopUpToMap(popUpContent, position, 0)
         return;
     }
 }
 
 function createPopUpDiv(feature, ident) {
     let div = document.createElement("div");
-    let p = document.createElement("p");
+    div.classList.add("popup")
+    let p = document.createElement("h1");
     p.innerHTML = feature.properties.name;
     let a = getDetailLinkElement(feature, ident, "Details");
 
@@ -186,6 +161,18 @@ function createPopUpDiv(feature, ident) {
     return div;
 }
 
+function addPopUpToMap(popUpContent, position, offset){
+  map.once('moveend', function() {
+    let popup
+    let options
+    if(offset != 0) //no offset for slopes
+      options = {offset:[0, -20]}
+    popup = new mapboxgl.Popup(options)
+    .setLngLat(position)
+    .setDOMContent(popUpContent)
+    .addTo(map)
+  });
+}
 
 function setCurrentPos(long, lat){
     map.addSource("points", {

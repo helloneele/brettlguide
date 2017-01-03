@@ -158,6 +158,26 @@ header{
 }
 
 
+button.mapboxgl-popup-close-button{
+  font-size: 25px;
+  color: var(--mediumgray);
+
+  &:hover{
+    background-color: rgba(0,0,0,0);
+    color: var(--sky-blue);
+  }
+}
+
+.popup{
+  padding: 2px;
+
+  h1{
+    font-size: 1rem;
+    padding-right: 20px;
+  }
+}
+
+
 footer {
   lost-utility: clearfix;
   background: var(--dark-blue);
