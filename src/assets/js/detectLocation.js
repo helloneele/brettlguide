@@ -1,7 +1,10 @@
 import map from './map'
 
-export default function() {
-  if ("geolocation" in navigator) {
+export default function(object, ident) {
+  if(object && ident) {
+
+  }
+  else if("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function(position) {
       //alert(position.coords.heading)
     //   window.addEventListener('deviceorientation', function(e) {
@@ -10,10 +13,11 @@ export default function() {
     //                'headingAccuracy: ' + e.webkitCompassAccuracy;
     //  alert(heading);
     //   }, false); 
-      DrawMap(position.coords.longitude, position.coords.latitude)
+      DrawMap(position.coords.longitude, position.coords.latitude);
     });
-  } else {
-    return
+  }
+  else {
+    return;
   }
 }
 

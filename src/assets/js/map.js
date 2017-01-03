@@ -73,8 +73,6 @@ export default function(long, lat) {
       default:
       goToTarget(feature);
     }
-
-
   });
 
   // hide/display layers
@@ -83,101 +81,101 @@ export default function(long, lat) {
 
 
 function goToTarget(feature, string, e){
-  if(string == "search"){
-    //let h = document.getElementById("searchheader");
-    //h.innerHTML = feature.properties.name;
-    map.flyTo({center: feature.geometry.coordinates[0][0], zoom: 15, pitch: 45});
-    map.once('moveend', function() {
-      var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates[0][0])
-        .setHTML(feature.properties.name)
-        .addTo(map)
-    });
-    return
-  }
-  else if(string =="area"){
-    let path = getPath(feature, "Skigebiet");
+    if(!e && !feature.geometry.coordinates) {
+        let text = "Keine Koordinaten für " + feature.properties.name + " vorhanden";
+        alert(text);
+        return;
+    }
+    if(string === "area" || string === "Skigebiet" ){
+        let div = createPopUpDiv(feature, "Skigebiet");
 
-    //let h = document.getElementById("searchheader");
-    //h.innerHTML = feature.Skigebiet;
-     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-      map.once('moveend', function() {
-      var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates)
-        .setHTML(feature.Skigebiet+"<br><a href='../detailansicht'>Details</a>")
-        .addTo(map)
-    });
-    return
-  }
-  else if(string =="slope"|| string =="Piste"){
+        map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
 
-    //let h = document.getElementById("searchheader");
-    //h.innerHTML = feature.Skigebiet;
+        map.once('moveend', function() {
+            var popup = new mapboxgl.Popup()
+                .setLngLat(feature.geometry.coordinates)
+                .setDOMContent(div)
+                .addTo(map);
+        });
+        return;
+    }
+    else if(string === "slope" || string === "Piste"){
+        let div = createPopUpDiv(feature, "Piste");
+        let coordinate;
 
-     map.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
+        if(string === "slope") {
+            coordinate = e.lngLat;
+        }
+        else{
+            coordinate = feature.geometry.coordinates[0][0];
+        }
+        map.flyTo({center: coordinate, zoom: 15, pitch: 45});
 
-      map.once('moveend', function() {
-       var popup = new mapboxgl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(feature.properties.name)
-        .addTo(map)
-    });
-    return
-  }
-  else if(string =="parking")
-  {
-     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-     map.once('moveend', function() {
-       var popup = new mapboxgl.Popup()
-         .setLngLat(feature.geometry.coordinates)
-         .setHTML("Parkplätze: "+feature.properties.groesse)
-         .addTo(map)
-         });
-    return
+        map.once('moveend', function() {
+            var popup = new mapboxgl.Popup()
+                .setLngLat(coordinate)
+                .setDOMContent(div)
+                .addTo(map);
+        });
+        return;
+    }
+    else if(string =="parking") {
+        map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
 
-  }
+        map.once('moveend', function() {
+            var popup = new mapboxgl.Popup()
+            .setLngLat(feature.geometry.coordinates)
+            .setHTML("Parkplätze: "+ feature.properties.groesse)
+            .addTo(map);
+        });
+        return;
+    }
+    else if(string == "huts" || string =="Hütte") {
+        let div = createPopUpDiv(feature, "Hütte");
 
-  else if(string == "huts" || string =="Hütte")
-  {
-    let a = getDetailLinkElement(feature, "Hütte", feature.properties.name);
-    map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-    map.once('moveend', function() {
-      var popup = new mapboxgl.Popup()
-      .setLngLat(feature.geometry.coordinates)
-      .setDOMContent(a)
-      .addTo(map)
-    });
-    return
-  }
+        map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
 
-  else if(string == "lifts" || string =="Lift")
-  {
-      let path = getPath(feature, "Lift");
+        map.once('moveend', function() {
+            var popup = new mapboxgl.Popup()
+            .setLngLat(feature.geometry.coordinates)
+            .setDOMContent(div)
+            .addTo(map);
+        });
+        return;
+    }
+    else if(string == "lifts" || string =="Lift") {
+        let div = createPopUpDiv(feature, "Lift");
 
-    map.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
-     map.once('moveend', function() {
-       var popup = new mapboxgl.Popup()
-         .setLngLat(e.lngLat)
-         .setHTML(feature.properties.name)
-         .addTo(map)
-         });
-    return
+        let coordinate;
 
-  }
-  else{
-    //let h = document.getElementById("searchheader");
-    //h.innerHTML = feature.properties.name;
-    // https://www.mapbox.com/mapbox-gl-js/example/center-on-symbol/
-    this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45})
-    // https://www.mapbox.com/mapbox-gl-js/api/#Popup
-    this.once('moveend', function() {
-      var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates)
-        .setHTML(feature.properties.name)
-        .addTo(map)
-    });
-  }
+        if(string === "lifts") {
+            coordinate = e.lngLat;
+        }
+        else{
+            coordinate = feature.geometry.coordinates[0];
+        }
+        map.flyTo({center: coordinate, zoom: 15, pitch: 45});
 
+        map.once('moveend', function() {
+        var popup = new mapboxgl.Popup()
+            .setLngLat(coordinate)
+            .setDOMContent(div)
+            .addTo(map)
+            });
+        return;
+    }
+}
+
+function createPopUpDiv(feature, ident) {
+    let div = document.createElement("div");
+    let p = document.createElement("p");
+    p.innerHTML = feature.properties.name;
+    let a = getDetailLinkElement(feature, ident, "Details");
+
+    div.appendChild(p);
+    div.appendChild(a);
+
+    return div;
 }
 
 
@@ -324,22 +322,9 @@ function setParkingSpaces(){
     });
 }
 
-
-/* wenn map eigenes ist handlebar funktioniert suche so
-let d = document.getElementById("dynamic-content");
-d.addEventListener("keyup", test);
-
-function test(e) {
-    if(e.target && e.target.matches("#searchfield"))
-    {
-        search(e.target);
-    }
-}*/
-
 let field = document.getElementById("searchfield");
 field.addEventListener("keyup", search);
 field.addEventListener("focus", search);
-
 
 function search() {
   let ul = document.getElementById("suggestions");
@@ -401,11 +386,13 @@ function updateListItems(listItems) {
         let li = document.createElement("li");
         li.setAttribute("class", "suggestion");
 
+        let p = document.createElement("p");
+
         let pName = document.createElement("p");
         pName.innerHTML = key.properties.name;
 
         let span = document.createElement("span");
-        span.innerHTML = "\t//" + val ;
+        span.innerHTML = "//" + val ;
 
         let a = getDetailLinkElement(key, val, "Details");
 
@@ -420,21 +407,16 @@ function updateListItems(listItems) {
                 pArea.addEventListener("click", function () {
                     goToTarget(area, "area")
                 });
-
-                pName.addEventListener("click", function () {
-                    goToTarget(key, val)
-                });
             }
         }
-        else {
-            pName.addEventListener("click", function(){
-                goToTarget(key, "area")
-            });
-        }
 
+        pName.addEventListener("click", function () {
+            goToTarget(key, val)
+        });
 
-        li.appendChild(pName);
-        pName.appendChild(a);
+        li.appendChild(p);
+        p.appendChild(pName);
+        p.appendChild(a);
         li.appendChild(span);
         ul.appendChild(li);
     }
@@ -453,6 +435,7 @@ function getItemArea(key) {
         }
     }
 }
+
 
 function getDetailLinkElement(key, val, text) {
     let a = document.createElement("a");

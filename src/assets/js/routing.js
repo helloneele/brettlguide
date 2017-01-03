@@ -5,13 +5,16 @@ import liftTpl from '../../../build/assets/templates/lifts';
 import areasTpl from '../../../build/assets/templates/areas';
 import notFoundTpl from '../../../build/assets/templates/notFound';
 
+import detectLocation from './detectLocation';
 import getObject from './getObject';
+
 
 let dynamicContent = document.getElementById("dynamic-content");
 
 let templates = {
     index: () => {
-        dynamicContent.innerHTML = mapTpl(); //map handlebar anzeigen
+        detectLocation();
+        //dynamicContent.innerHTML = mapTpl(); //map handlebar anzeigen
     },
     slopes: (ctx) => {
         let slope = getObject.slope(ctx.params.slope);
