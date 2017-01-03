@@ -145,7 +145,6 @@ function goToTarget(feature, string, e){
     }
     else if(string == "lifts" || string =="Lift") {
         let div = createPopUpDiv(feature, "Lift");
-
         let coordinate;
 
         if(string === "lifts") {
