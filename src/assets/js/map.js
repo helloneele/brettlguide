@@ -469,24 +469,6 @@ function deleteAllListItems(ul) {
     }
 }
 
-/*function getItemContent(key) {
-    for (let object of gebietsnr) {
-        if (object.Nr == key.properties.gb_nr) {
-            return key.properties.name + " (" + object.Skigebiet + ")" + "\t";
-        }
-    }
-    return key.properties.name + "\t";
-}*/
-
-function getItemContent(key) {
-    for (let object of skiingAreas.features) {
-        if (object.properties.gb_nr == key.properties.gb_nr) {
-            return key.properties.name + "\t";
-        }
-    }
-    return key.properties.name + "\t";
-}
-
 function getItemArea(key) {
   for (let object of skiingAreas.features) {
         if (object.properties.gb_nr == key.properties.gb_nr) {

@@ -46,7 +46,7 @@ let templates = {
     areas: (ctx) => {
         let area = getObject.area(ctx.params.area);
 
-        if (lift) {
+        if (area) {
             dynamicContent.innerHTML = liftTpl(area);
         }
         else {
