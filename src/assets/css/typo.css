@@ -74,9 +74,8 @@
 body{
   font-family: 'Lato', sans-serif;
   font-size: 100%;
+  line-height: 1.4rem;
 }
-
-
 
 /*
 @styleguide
@@ -117,14 +116,15 @@ Heading 6
 
 */
 
-
+h1, h2, h3, h4, h5{
+  line-height:1.4em;
+}
 
 h1{
   font-size: 2.5rem;
   color: var(--dark-blue);
   text-transform: uppercase;
   font-weight: bold;
-  line-height:1.1em;
   font-style: italic;
 }
 
@@ -243,7 +243,7 @@ p {
 }
 
 ul, ol{
-  margin: 2rem 0;
+  margin: 0 0 2rem;
 }
 
 ul{

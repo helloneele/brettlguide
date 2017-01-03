@@ -12,7 +12,7 @@ let layersLoaded = false;
 
 
 export default function(long, lat) {
-  //document.getElementById("map").style.height = window.innerHeight + "px";
+  //document.getElementById("map").style.height = window.innerHeight-70 + "px";
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
 
@@ -57,7 +57,7 @@ export default function(long, lat) {
       break;
 
       case "lifts":
-      goToTarget(feature, "lifts");
+      goToTarget(feature, "lifts", e);
       break;
 
       case "huts":
@@ -67,7 +67,7 @@ export default function(long, lat) {
       case "slopesBlue":
       case "slopesRed":
       case "slopesBlack":
-      goToTarget(feature, "slope");
+      goToTarget(feature, "slope", e);
       break;
 
       default:
@@ -82,7 +82,7 @@ export default function(long, lat) {
 }
 
 
-function goToTarget(feature, string){
+function goToTarget(feature, string, e){
   if(string == "search"){
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.properties.name;
@@ -100,10 +100,10 @@ function goToTarget(feature, string){
 
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.Skigebiet;
-     map.flyTo({center: feature.Koordinaten, zoom: 15, pitch: 45});
+     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
       map.once('moveend', function() {
       var popup = new mapboxgl.Popup()
-        .setLngLat(feature.Koordinaten)
+        .setLngLat(feature.geometry.coordinates)
         .setHTML(feature.Skigebiet+"<br><a href='../detailansicht'>Details</a>")
         .addTo(map)
     });
@@ -114,11 +114,11 @@ function goToTarget(feature, string){
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.Skigebiet;
 
-     map.flyTo({center: feature.geometry.coordinates[0][7], zoom: 15, pitch: 45});
+     map.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
 
       map.once('moveend', function() {
        var popup = new mapboxgl.Popup()
-        .setLngLat(feature.geometry.coordinates[0][7])
+        .setLngLat(e.lngLat)
         .setHTML(feature.properties.name)
         .addTo(map)
     });
@@ -139,54 +139,31 @@ function goToTarget(feature, string){
 
   else if(string == "huts" || string =="Hütte")
   {
-      let a = getDetailLinkElement(feature, "Hütte", feature.properties.name);
-
+    let a = getDetailLinkElement(feature, "Hütte", feature.properties.name);
     map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-     map.once('moveend', function() {
-       var popup = new mapboxgl.Popup()
-         .setLngLat(feature.geometry.coordinates)
-           .setDOMContent(a)
-         .addTo(map)
-         });
+    map.once('moveend', function() {
+      var popup = new mapboxgl.Popup()
+      .setLngLat(feature.geometry.coordinates)
+      .setDOMContent(a)
+      .addTo(map)
+    });
     return
-
   }
 
   else if(string == "lifts" || string =="Lift")
   {
       let path = getPath(feature, "Lift");
 
-    map.flyTo({center: feature.geometry.coordinates[0], zoom: 15, pitch: 45});
+    map.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
      map.once('moveend', function() {
        var popup = new mapboxgl.Popup()
-         .setLngLat(feature.geometry.coordinates[0])
+         .setLngLat(e.lngLat)
          .setHTML(feature.properties.name)
          .addTo(map)
          });
     return
 
   }
-
-  // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "slopesBlue"){
-  //   this.flyTo({center: e.lngLat, zoom: 15, pitch: 45});
-  //   this.once('moveend', function() {
-  //     var popup = new mapboxgl.Popup()
-  //       .setLngLat(e.lngLat)
-  //       .setHTML(feature.properties.name)
-  //       .setHTML(feature.properties.p_nr)
-  //       .addTo(map)
-  //   });
-  // }
-  // else if (typeof feature.layer.id !== "undefined" && feature.layer.id == "parkplaetze"){
-  //   this.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-  //   this.once('moveend', function() {
-  //     var popup = new mapboxgl.Popup()
-  //       .setLngLat(feature.geometry.coordinates)
-  //       .setHTML(feature.properties.groesse)
-  //       .addTo(map)
-  //   });
-  // }
-
   else{
     //let h = document.getElementById("searchheader");
     //h.innerHTML = feature.properties.name;
@@ -361,23 +338,38 @@ function test(e) {
 
 let field = document.getElementById("searchfield");
 field.addEventListener("keyup", search);
+field.addEventListener("focus", search);
+
 
 function search() {
-    if(this.value.length >= 3) {
-        let regEx = new RegExp(this.value, "i");
-        let matchedHuts = scanFile(huts, regEx, "Hütte");
-        let matchedSlopes = scanFile(slopes, regEx , "Piste");
-        let matchedLifts = scanFile(lifts, regEx, "Lift");
-        //let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
+  let ul = document.getElementById("suggestions");
 
-        let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts]); //...matchtedAreas
+  if(this === document.activeElement){
+    ul.classList.remove("hidden")
+  }
 
-        updateListItems(listItems);
-    }
-    else {
-        let ul = document.getElementById("suggestions");
-        deleteAllListItems(ul);
-    }
+  if(this.value.length >= 3) {
+    let regEx = new RegExp(this.value, "i");
+    let matchedHuts = scanFile(huts, regEx,  "Hütte");
+    let matchedSlopes = scanFile(slopes, regEx , "Piste");
+    let matchedLifts = scanFile(lifts, regEx, "Lift");
+    let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
+
+    let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts, ...matchtedAreas]);
+
+    updateListItems(listItems);
+
+    // closing suggestions if clicked outside
+    document.addEventListener('click', function(event) {
+    let isClickInside = document.getElementById("search").contains(event.target);
+    if (!isClickInside)
+      hideSearchResults()
+    });
+
+  }
+  else {
+      deleteAllListItems(ul)
+  }
 }
 
 
@@ -387,14 +379,17 @@ function scanFile(file, regEx, ident) {
     for(let object of file.features) {
         let name = object.properties.name;
 
-        if(name.match(regEx))
-        {
+        if(name.match(regEx)) {
             suggestions.set(object, ident);
         }
     }
     return suggestions;
 }
 
+function hideSearchResults() {
+  let results = document.getElementById("suggestions")
+  results.classList.add("hidden")
+}
 
 function updateListItems(listItems) {
 
@@ -406,31 +401,42 @@ function updateListItems(listItems) {
         let li = document.createElement("li");
         li.setAttribute("class", "suggestion");
 
-        let p = document.createElement("p");
-        p.innerHTML = getItemContent(key);
-
-        let area = document.createElement("p");
-        let areaName = getItemArea(key);
-        area.innerHTML = "("+areaName.Skigebiet+") \t";
+        let pName = document.createElement("p");
+        pName.innerHTML = key.properties.name;
 
         let span = document.createElement("span");
         span.innerHTML = "\t//" + val ;
 
         let a = getDetailLinkElement(key, val, "Details");
 
-        li.appendChild(area);
-        li.appendChild(p);
-        p.appendChild(a);
+        if(val !== "Skigebiet") {
+            let area = getItemArea(key);
+
+            if(area) {
+                let pArea = document.createElement("p");
+                pArea.innerHTML = "(" + area.properties.name + ")";
+                li.appendChild(pArea);
+
+                pArea.addEventListener("click", function () {
+                    goToTarget(area, "area")
+                });
+
+                pName.addEventListener("click", function () {
+                    goToTarget(key, val)
+                });
+            }
+        }
+        else {
+            pName.addEventListener("click", function(){
+                goToTarget(key, "area")
+            });
+        }
+
+
+        li.appendChild(pName);
+        pName.appendChild(a);
         li.appendChild(span);
         ul.appendChild(li);
-
-        p.addEventListener("click", function(){
-          goToTarget(key, val)
-        });
-
-        area.addEventListener("click", function(){
-          goToTarget(areaName, "area")
-        });
     }
 }
 
@@ -450,8 +456,8 @@ function deleteAllListItems(ul) {
 }*/
 
 function getItemContent(key) {
-    for (let object of skiingAreas) {
-        if (object.Nr == key.properties.gb_nr) {
+    for (let object of skiingAreas.features) {
+        if (object.properties.gb_nr == key.properties.gb_nr) {
             return key.properties.name + "\t";
         }
     }
@@ -459,12 +465,11 @@ function getItemContent(key) {
 }
 
 function getItemArea(key) {
-  for (let object of skiingAreas) {
-        if (object.Nr == key.properties.gb_nr) {
+  for (let object of skiingAreas.features) {
+        if (object.properties.gb_nr == key.properties.gb_nr) {
             return object;
         }
     }
-    return "";
 }
 
 function getDetailLinkElement(key, val, text) {
@@ -475,6 +480,7 @@ function getDetailLinkElement(key, val, text) {
 
     return a;
 }
+
 function getPath(key, val) {
     let path = "*";
 
@@ -494,9 +500,9 @@ function getPath(key, val) {
     {
         path = "/lifts/" + key.properties.s_id;
     }
-    /*else if(val === "Skigebiet")
+    else if(val === "Skigebiet")
     {
         path = "/areas/" + key.properties.gb_nr;
-    }*/
+    }
     return path;
 }
