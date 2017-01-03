@@ -1,9 +1,10 @@
-import detectLocation from './detectLocation';
-import map from './map';
-import routing from './routing'
+//import detectLocation from './detectLocation';
+//import map from './map';
+import routing from './routing';
 import page from 'page';
 
-detectLocation() 
+//detectLocation()
+
 
 //define routes
 page('/', routing.index);
