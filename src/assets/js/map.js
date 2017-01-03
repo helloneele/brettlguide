@@ -27,7 +27,7 @@ function draw(long, lat) {
 
   map.on('load', function() {
     setCurrentPos(long, lat)
-    //TODO LOAD Skigebiete
+    setSkiingAreas()
   });
 
   map.on('zoom', function() {
@@ -216,7 +216,7 @@ function setHuts(){
         "id": "huts",
         "type": "symbol",
         "source": "huts",
-        "minzoom": 13,
+        "minzoom": 12,
         "layout": {
           "icon-image": "rrestaurant-15",
           //"text-field": "{name}",
@@ -241,6 +241,7 @@ function setSlopes(){
         "id": "slopesBlue",
         "type": "fill",
         "source": "slopes",
+        "minzoom": 12,
         "filter": ["==", "schwgrad", 1],
         "layout": {
         },
@@ -255,6 +256,7 @@ function setSlopes(){
         "id": "slopesRed",
         "type": "fill",
         "source": "slopes",
+        "minzoom": 12,
         "filter": ["==", "schwgrad", 2],
         "layout": {
         },
@@ -269,6 +271,7 @@ function setSlopes(){
         "id": "slopesBlack",
         "type": "fill",
         "source": "slopes",
+        "minzoom": 12,
         "filter": ["==", "schwgrad", 3],
         "layout": {
         },
@@ -289,6 +292,7 @@ function setLifts(){
         "id": "lifts",
         "type": "line",
         "source": "lifts",
+        "minzoom": 12,
         "layout": {
             "line-join": "round",
             "line-cap": "square"
@@ -310,9 +314,36 @@ function setParkingSpaces(){
         "id": "parking",
         "type": "symbol",
         "source": "parking",
-        "minzoom": 13,
+        "minzoom": 12,
         "layout": {
           "icon-image": "pparking-15"
+        }
+    });
+}
+
+function setSkiingAreas(){
+  console.log("hiiii");
+    map.addSource("areas", {
+        "type": "geojson",
+        "data": skiingAreas
+    });
+    map.addLayer({
+        "id": "areas",
+        "type": "symbol",
+        "source": "areas",
+        "maxzoom": 12,
+        "layout": {
+          "icon-image": "skiing-15",
+          "text-field": "{name}",
+          "text-font": ["Lato Bold", "Open Sans Semibold", "Arial Unicode MS Bold"],
+          "text-size": 12,
+          "text-offset": [0, 1.5],
+          "text-anchor": "top"
+        },
+        "paint":{
+          "text-color": "#295e72",
+          "text-halo-width": 2,
+          "text-halo-color": "rgba(255,255,255,0.7)"
         }
     });
 }
@@ -330,8 +361,8 @@ function search() {
 
   if(this.value.length >= 3) {
     let regEx = new RegExp(this.value, "i");
-    let matchedHuts = scanFile(huts, regEx,  "Hütte");
-    let matchedSlopes = scanFile(slopes, regEx , "Piste");
+    let matchedHuts = scanFile(huts, regEx, "Hütte");
+    let matchedSlopes = scanFile(slopes, regEx, "Piste");
     let matchedLifts = scanFile(lifts, regEx, "Lift");
     let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
 
