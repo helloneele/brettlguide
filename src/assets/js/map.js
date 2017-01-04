@@ -26,12 +26,11 @@ export default function initMap(long, lat){
 }
 
 function addMapEvents() {
+  let layers
+
   map.on('load', function() {
     setSkiingAreas();
-  });
-
-  map.on('loaded', function() {
-    console.log("fertig");
+    layers = ['areas'];
   });
 
   map.on('zoom', function() {
@@ -41,14 +40,14 @@ function addMapEvents() {
       setLifts();
       setHuts();
       setParkingSpaces();
+      layers = ['huts', 'parking', 'lifts', 'slopesBlue', 'slopesRed', 'slopesBlack', 'areas'];
     }
   });
 
   map.on('click', function (e) {
-      let features = map.queryRenderedFeatures(e.point, {layers: ['huts', 'parking', 'lifts', 'slopesBlue', 'slopesRed', 'slopesBlack', 'areas']});
-
-      if (features.length)
-          detectTargetPosition(features[0], features[0].layer.id, e);
+    let features = map.queryRenderedFeatures(e.point, {layers: layers });
+    if (features.length)
+      detectTargetPosition(features[0], features[0].layer.id, e);
   });
   // hide/display layers
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
