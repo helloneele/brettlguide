@@ -311,7 +311,7 @@ function setSkiingAreas(){
         "source": "areas",
         "maxzoom": 12,
         "layout": {
-          "icon-image": "skiing-15",
+          "icon-image": "mmountain-15",
           "text-field": "{name}",
           "text-font": ["Lato Bold", "Open Sans Semibold", "Arial Unicode MS Bold"],
           "text-size": 13,
