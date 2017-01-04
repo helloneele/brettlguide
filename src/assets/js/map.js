@@ -98,9 +98,10 @@ export function goToTarget(feature, string, e){
     else if(string === "slope" || string === "Piste"){
         let popUpContent = createPopUpDiv(feature, "Piste");
         let position;
+        console.log(e.lngLat)
 
         if(string === "slope") //click event
-          position = e.lngLat
+          position = [e.lngLat.lng, e.lngLat.lat]
         else //page load
           position = feature.geometry.coordinates[0][0]
 
@@ -130,7 +131,7 @@ export function goToTarget(feature, string, e){
         let position;
 
         if(string === "lifts")
-          position = e.lngLat;
+          position = [e.lngLat.lng, e.lngLat.lat]
         else
           position = feature.geometry.coordinates[0];
 

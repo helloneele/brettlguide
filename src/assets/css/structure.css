@@ -34,20 +34,21 @@ header{
     border-top: 3px solid var(--dark-blue);
     width: inherit;
     height: 100%;
-    lost-center: 100%;
+    /*lost-center: 100%;*/
     padding: 14px 0 0 0;
   }
 
-  .header__left{
+  /*.header__left{
     lost-column: 2/16 0;
-  }
+  }*/
   .header__center{
-    lost-column: 12/16 0;
+    width: 90%;
+    margin: 0 auto;
+    /*lost-column: 12/16 0;*/
   }
-
-  .header__right{
+  /*.header__right{
     lost-column: 1/16 0;
-  }
+  }*/
   .header__logo{
     background: url(/assets/img/logo_color.png) no-repeat;
     background-position: center;
@@ -64,6 +65,8 @@ header{
 
 .detailContent{
   padding: 50px 40px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+  position: relative;
 
   /*lost-utility: clearfix;
   padding: 40px 40px;
@@ -195,7 +198,6 @@ footer {
   background: var(--dark-blue);
   color: var(--white);
   padding: 40px 20px;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
   position: relative;
 
   >div {
@@ -217,6 +219,15 @@ footer {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   header{
+
+    .header__content{
+      lost-center: 100%;
+    }
+
+    .header__center{
+      lost-column: 12/16 0;
+    }
+
     .header__left{
       lost-column: 3/16 0;
     }
@@ -226,13 +237,6 @@ footer {
 
     .header__right{
       lost-column: 3/16 0;
-    }
-    .header__logo{
-      background: url(/assets/img/logo_color.png) no-repeat;
-      background-position: center;
-      background-size: auto 100%;
-      text-indent: -10000px;
-
     }
   }
 
