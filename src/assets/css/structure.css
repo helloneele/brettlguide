@@ -136,6 +136,10 @@ header{
     height: auto;
     height: 0;
 
+    .suggestion__icon{
+      width: 40px;
+    }
+
     li{
       border-bottom: 1px solid var(--white);
     }

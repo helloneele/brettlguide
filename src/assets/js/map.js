@@ -388,24 +388,26 @@ function updateListItems(listItems) {
     deleteAllListItems(ul);
 
     for(let [key, val] of listItems) {
-        let li = document.createElement("li");
-        li.setAttribute("class", "suggestion");
+        let li = document.createElement("li")
+        li.setAttribute("class", "suggestion")
 
-        let aName = getDetailLinkElement(key, val, key.properties.name);
+        let aName = getDetailLinkElement(key, val, key.properties.name)
 
-        let p = document.createElement("p");
-        p.innerHTML = "//" + val ;
+        let icon = document.createElement("img")
+        icon.setAttribute("class", "suggestion__icon")
+        icon.setAttribute("src", "/assets/img/icon_"+ val +".svg")
+
+        li.appendChild(icon)
+        li.appendChild(aName)
 
         if(val !== "areas") {
-            let area = getItemArea(key);
+            let area = getItemArea(key)
 
             if(area) {
-                let aArea = getDetailLinkElement(area, "areas", "(" + area.properties.name + ")");
+                let aArea = getDetailLinkElement(area, "areas", area.properties.name)
                 li.appendChild(aArea);
             }
         }
-        li.appendChild(aName);
-        li.appendChild(p);
         ul.appendChild(li);
     }
 }
