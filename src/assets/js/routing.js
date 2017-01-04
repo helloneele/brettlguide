@@ -3,6 +3,7 @@ import slopeTpl from '../../../build/assets/templates/slopes';
 import hutTpl from '../../../build/assets/templates/huts';
 import liftTpl from '../../../build/assets/templates/lifts';
 import areasTpl from '../../../build/assets/templates/areas';
+import imprintTpl from '../../../build/assets/templates/imprint';
 import notFoundTpl from '../../../build/assets/templates/notFound';
 
 import * as map from './map';
@@ -62,6 +63,9 @@ let templates = {
         else {
             templates.notFound();
         }
+    },
+    imprint: () => {
+        dynamicContent.innerHTML = imprintTpl();
     },
     notFound: () => {
         dynamicContent.innerHTML = notFoundTpl();

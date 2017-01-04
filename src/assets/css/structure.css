@@ -1,4 +1,8 @@
 @lost gutter 60px;
+:root {
+    --layout-width: 1200px;
+    --layout-padding: 40px;
+}
 
 .mapboxgl-popup .mapboxgl-popup-content {
   background: #ffffff;
@@ -61,12 +65,26 @@ header{
 .content{
   margin-top: 70px;
   position:relative;
+
+}
+
+#dynamic-content{
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+  position: relative;
 }
 
 .detailContent{
-  padding: 50px 40px;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
-  position: relative;
+  padding: 60px var(--layout-padding) 70px;
+  max-width: var(--layout-width);
+  margin: 0 auto;
+
+  .detailContent__main{
+    lost-column: 66/100;
+  }
+
+  .detailContent__sidebar{
+    lost-column: 34/100;
+  }
 
   /*lost-utility: clearfix;
   padding: 40px 40px;
@@ -194,30 +212,40 @@ button.mapboxgl-popup-close-button{
 
 
 footer {
-  lost-utility: clearfix;
   background: var(--dark-blue);
   color: var(--white);
-  padding: 40px 20px;
   position: relative;
 
-  >div {
-    margin-bottom: 30px;
-    lost-column: 3/3;
-  }
+  .footer__content{
+    lost-utility: clearfix;
+    padding: 50px var(--layout-padding) 30px;
 
-  h3{
-    color: var(--lightgray);
-    border-bottom: 1px solid var(--sky-blue);
-    margin-bottom: 20px;
-  }
+    >div {
+      margin-bottom: 30px;
+      lost-column: 3/3;
+    }
 
-  a{
-    color: var(--lightgray);
+    h2{
+      border-bottom: 1px solid var(--sky-blue);
+      margin-bottom: 20px;
+    }
+
+    a{
+
+      &:hover{
+        color: #bbb;
+      }
+    }
   }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .cols{
+    lost-utility: clearfix;
+
+  }
+
   header{
 
     .header__content{
@@ -245,11 +273,14 @@ footer {
   }
 
   footer {
-    lost-utility: clearfix;
-    padding: 40px 40px;
+
+    .footer__content{
+      max-width: var(--layout-width);
+      margin: 0 auto;
 
     >div {
       lost-column: 1/3;
     }
+  }
   }
 }

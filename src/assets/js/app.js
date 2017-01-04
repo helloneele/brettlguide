@@ -13,6 +13,7 @@ page('/slopes/:slope', routing.slopes);
 page('/huts/:hut', routing.huts);
 page('/lifts/:lift', routing.lifts);
 page('/areas/:area', routing.areas);
+page('/imprint', routing.imprint);
 page('*', routing.notFound);
 page.start();
 
