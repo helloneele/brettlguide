@@ -21,9 +21,9 @@ let templates = {
     },
     slopes: (ctx) => {
         let slope = getObject.slope(ctx.params.slope);
-        console.log(slope)
 
         if (slope) {
+            map.detectTargetPosition(slope, "slopes");
             dynamicContent.innerHTML = slopeTpl(slope);
         }
         else {
@@ -34,9 +34,7 @@ let templates = {
         let hut = getObject.hut(ctx.params.hut)
 
         if (hut) {
-          let long = hut.geometry.coordinates[0]
-          let lat = hut.geometry.coordinates[1]
-          map.moveToTarget(long, lat)
+          map.detectTargetPosition(hut, "huts");
           dynamicContent.innerHTML = hutTpl(hut);
         }
         else {
@@ -47,6 +45,7 @@ let templates = {
         let lift = getObject.lift(ctx.params.lift);
 
         if (lift) {
+            map.detectTargetPosition(lift, "lifts");
             dynamicContent.innerHTML = liftTpl(lift);
         }
         else {
@@ -57,6 +56,7 @@ let templates = {
         let area = getObject.area(ctx.params.area);
 
         if (area) {
+            map.detectTargetPosition(area, "areas");
             dynamicContent.innerHTML = liftTpl(area);
         }
         else {
