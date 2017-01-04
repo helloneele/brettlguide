@@ -391,24 +391,34 @@ function updateListItems(listItems) {
         let li = document.createElement("li")
         li.setAttribute("class", "suggestion")
 
+        let textSpan = document.createElement("span")
+        textSpan.setAttribute("class", "suggestion__text")
+
         let aName = getDetailLinkElement(key, val, key.properties.name)
+        aName.setAttribute("class", "suggestion__name")
 
         let icon = document.createElement("img")
         icon.setAttribute("class", "suggestion__icon")
         icon.setAttribute("src", "/assets/img/icon_"+ val +".svg")
 
         li.appendChild(icon)
-        li.appendChild(aName)
+        textSpan.appendChild(aName)
+
+        let br = document.createElement('br')
+        textSpan.appendChild(br)
 
         if(val !== "areas") {
             let area = getItemArea(key)
 
             if(area) {
                 let aArea = getDetailLinkElement(area, "areas", area.properties.name)
-                li.appendChild(aArea);
+                aArea.setAttribute("class", "suggestion__area")
+                textSpan.appendChild(aArea);
             }
         }
-        ul.appendChild(li);
+
+        li.appendChild(textSpan)
+        ul.appendChild(li)
     }
 }
 
