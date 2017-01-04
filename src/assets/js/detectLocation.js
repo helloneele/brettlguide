@@ -23,7 +23,7 @@ export default function() {
 
 }
 
-// COMPASS NOT WORKING IN CHROME only mobile
+// COMPASS NOT WORKING IN CHROME, only mobile
 //alert(position.coords.heading)
 //   window.addEventListener('deviceorientation', function(e) {
 //  var heading = 'heading: ' + e.webkitCompassHeading +

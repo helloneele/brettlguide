@@ -27,25 +27,25 @@ export default function initMap(long, lat){
 
 function addMapEvents() {
   map.on('load', function() {
-    setSkiingAreas()
+    setSkiingAreas();
   });
 
   map.on('loaded', function() {
-    console.log("fertig")
+    console.log("fertig");
   });
 
   map.on('zoom', function() {
     if(!layersLoaded && map.getZoom() > 12){
-      layersLoaded = true
-      setSlopes()
-      setLifts()
-      setHuts()
-      setParkingSpaces()
+      layersLoaded = true;
+      setSlopes();
+      setLifts();
+      setHuts();
+      setParkingSpaces();
     }
   });
 
   map.on('click', function (e) {
-      let features = map.queryRenderedFeatures(e.point, {layers: ['huts', 'parking', 'lifts', 'slopesBlue', 'slopesRed', 'slopesBlack']});
+      let features = map.queryRenderedFeatures(e.point, {layers: ['huts', 'parking', 'lifts', 'slopesBlue', 'slopesRed', 'slopesBlack', 'areas']});
 
       if (features.length)
           detectTargetPosition(features[0], features[0].layer.id, e);
@@ -54,7 +54,7 @@ function addMapEvents() {
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
 }
 
-function detectTargetPosition(feature, string, e) {
+export function detectTargetPosition(feature, string, e) {
     if(!e && !feature.geometry.coordinates) {
         let text = "Keine Koordinaten für " + feature.properties.name + " vorhanden";
         alert(text);
@@ -67,11 +67,16 @@ function detectTargetPosition(feature, string, e) {
         switch (string) {
             case "huts":
             case "parking":
-            case "areas":
                 popUpContent = createPopUpDiv(feature, string);
                 position = feature.geometry.coordinates;
-                offset = 0;
                 break;
+
+            case "areas":
+              if(e)
+                position = [e.lngLat.lng, e.lngLat.lat];
+              else
+                position = feature.geometry.coordinates;
+              break;
 
             case "slopesBlue":
             case "slopesRed":
@@ -83,6 +88,7 @@ function detectTargetPosition(feature, string, e) {
                     position = feature.geometry.coordinates[0][0];
 
                 popUpContent = createPopUpDiv(feature, "slopes");
+                offset = 0;
                 break;
 
             case "lifts":
@@ -95,7 +101,8 @@ function detectTargetPosition(feature, string, e) {
                 break;
         }
         moveToTarget(position[0], position[1])
-        addPopUpToMap(popUpContent, position, offset);
+        if(popUpContent != null)
+          addPopUpToMap(popUpContent, position, offset);
     }
 
 }
@@ -107,27 +114,34 @@ export function moveToTarget(long, lat){
 
 function createPopUpDiv(feature, ident) {
     let div = document.createElement("div");
-    div.classList.add("popup")
+    div.classList.add("popup");
     let h1 = document.createElement("h1");
-    h1.innerHTML = feature.properties.name;
-    let a = getDetailLinkElement(feature, ident, "Details");
-
-    div.appendChild(h1);
-    div.appendChild(a);
-
+    if(ident !== "parking"){
+        h1.innerHTML = feature.properties.name;
+        let a = getDetailLinkElement(feature, ident, "Details");
+        div.appendChild(h1);
+        div.appendChild(a);
+    }
+    else {
+        h1.innerHTML= "Parkplatz";
+        let p = document.createElement("p");
+        p.innerHTML = "Parkplätze: " + feature.properties.groesse;
+        div.appendChild(h1);
+        div.appendChild(p);
+    }
     return div;
 }
 
 function addPopUpToMap(popUpContent, position, offset){
   map.once('moveend', function() {
-    let popup
-    let options
+    let popup;
+    let options;
     if(offset != 0) //no offset for slopes
-      options = {offset:[0, -20]}
+      options = {offset:[0, -20]};
     popup = new mapboxgl.Popup(options)
     .setLngLat(position)
     .setDOMContent(popUpContent)
-    .addTo(map)
+    .addTo(map);
   });
 }
 
@@ -289,7 +303,6 @@ function setParkingSpaces(){
 }
 
 function setSkiingAreas(){
-  console.log("hiiii");
     map.addSource("areas", {
         "type": "geojson",
         "data": skiingAreas
@@ -380,38 +393,21 @@ function updateListItems(listItems) {
         let li = document.createElement("li");
         li.setAttribute("class", "suggestion");
 
+        let aName = getDetailLinkElement(key, val, key.properties.name);
+
         let p = document.createElement("p");
-
-        let pName = document.createElement("p");
-        pName.innerHTML = key.properties.name;
-
-        let span = document.createElement("span");
-        span.innerHTML = "//" + val ;
-
-        let a = getDetailLinkElement(key, val, "Details");
+        p.innerHTML = "//" + val ;
 
         if(val !== "areas") {
             let area = getItemArea(key);
 
             if(area) {
-                let pArea = document.createElement("p");
-                pArea.innerHTML = "(" + area.properties.name + ")";
-                li.appendChild(pArea);
-
-                pArea.addEventListener("click", function () {
-                    detectTargetPosition(area, "areas");
-                });
+                let aArea = getDetailLinkElement(area, "areas", "(" + area.properties.name + ")");
+                li.appendChild(aArea);
             }
         }
-
-        pName.addEventListener("click", function () {
-            detectTargetPosition(key, val);
-        });
-
+        li.appendChild(aName);
         li.appendChild(p);
-        p.appendChild(pName);
-        p.appendChild(a);
-        li.appendChild(span);
         ul.appendChild(li);
     }
 }
@@ -442,28 +438,23 @@ function getDetailLinkElement(key, val, text) {
 function getPath(key, val) {
     let path = "/" + val + "/";
 
-    if(val === "huts")
-    {
+    if(val === "huts") {
         path += key.properties.h_id;
     }
-    else if(val === "slopes")
-    {
+    else if(val === "slopes") {
         let id = key.properties.gb_nr + "-"
         + key.properties.p_nr + "-"
         + key.properties.a_nr + "-"
         + key.properties.a_name;
         path += id;
     }
-    else if(val === "lifts")
-    {
+    else if(val === "lifts") {
         path += key.properties.s_id;
     }
-    else if(val === "areas")
-    {
+    else if(val === "areas") {
         path += key.properties.gb_nr;
     }
-    else
-    {
+    else {
         return "*";
     }
     return path;
