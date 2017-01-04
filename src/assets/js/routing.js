@@ -17,7 +17,7 @@ let templates = {
         console.log("inside index")
         detectLocation()
         //console.log(ctx.canonicalPath)
-        //dynamicContent.innerHTML = mapTpl(); //map handlebar anzeigen
+        dynamicContent.innerHTML = mapTpl(); //map handlebar anzeigen
     },
     slopes: (ctx) => {
         let slope = getObject.slope(ctx.params.slope);
@@ -32,7 +32,7 @@ let templates = {
     },
     huts: (ctx) => {
         let hut = getObject.hut(ctx.params.hut)
-        
+
         if (hut) {
           let long = hut.geometry.coordinates[0]
           let lat = hut.geometry.coordinates[1]

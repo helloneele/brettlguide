@@ -92,6 +92,10 @@ header{
 
   &.active{
     top:0;
+
+    .search__suggestions{
+      height: auto;
+    }
   }
 
   .search__field{
@@ -108,6 +112,8 @@ header{
     overflow-y:scroll;
     margin: 0;
     display: block;
+    height: auto;
+    height: 0;
 
     li{
       border-bottom: 1px solid var(--white);
@@ -132,16 +138,21 @@ header{
   height: 50px;
   text-align: center;
   padding-top:8px;
-  margin: 0 5px;
+  margin: 0 8px;
   font-size: 28px;
   border-radius: 25px;
   display: inline-block;
   background: var(--white);
   color: var(--dark-blue);
-  box-shadow:0px 0px 5px rgba(0,0,0,0.7);
+  box-shadow:0px 0px 3px rgba(0,0,0,0.3);
   cursor: pointer;
 
   &:hover{
+    color: var(--dark-blue);
+    background: var(--lightgray);
+  }
+
+  &.active{
     color: var(--dark-blue);
     background: var(--lightgray);
   }
@@ -150,8 +161,7 @@ header{
 .searchToggle{
 
   &.active{
-    color: var(--darkgray);
-    background: var(--lightgray);
+    padding-top:10px;
   }
 }
 
@@ -187,6 +197,11 @@ footer {
   padding: 40px 20px;
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
   position: relative;
+
+  >div {
+    margin-bottom: 30px;
+    lost-column: 3/3;
+  }
 
   h3{
     color: var(--lightgray);
@@ -229,7 +244,7 @@ footer {
     lost-utility: clearfix;
     padding: 40px 40px;
 
-    div {
+    >div {
       lost-column: 1/3;
     }
   }

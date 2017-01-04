@@ -81,10 +81,6 @@ function addMapEvents() {
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
 }
 
-export function moveToTarget(long, lat){
-  map.flyTo({center: [long, lat], zoom: 15, pitch: 45});
-}
-
 export function goToTarget(feature, string, e){
     if(!e && !feature.geometry.coordinates) {
         let text = "Keine Koordinaten für " + feature.properties.name + " vorhanden";
@@ -95,7 +91,7 @@ export function goToTarget(feature, string, e){
         let popUpContent = createPopUpDiv(feature, "Skigebiet")
         let position = feature.geometry.coordinates
 
-        map.flyTo({center: position, zoom: 15, pitch: 45});
+        moveToTarget(position[0], position[1])
         addPopUpToMap(popUpContent, position, 0)
         return;
     }
@@ -108,7 +104,7 @@ export function goToTarget(feature, string, e){
         else //page load
           position = feature.geometry.coordinates[0][0]
 
-        map.flyTo({center: position, zoom: 15, pitch: 45})
+        moveToTarget(position[0], position[1])
         addPopUpToMap(popUpContent, position, 0)
         return;
     }
@@ -116,7 +112,7 @@ export function goToTarget(feature, string, e){
         let popUpContent = createPopUpDiv(feature, "Parkplatz");
         let position = feature.geometry.coordinates;
 
-        map.flyTo({center: position, zoom: 15, pitch: 45});
+        moveToTarget(position[0], position[1])
         addPopUpToMap(popUpContent, position)
         return;
     }
@@ -124,7 +120,7 @@ export function goToTarget(feature, string, e){
         let popUpContent = createPopUpDiv(feature, "Hütte");
         let position = feature.geometry.coordinates;
 
-        map.flyTo({center: position, zoom: 15, pitch: 45});
+        moveToTarget(position[0], position[1])
         addPopUpToMap(popUpContent, position)
 
         return;
@@ -138,10 +134,15 @@ export function goToTarget(feature, string, e){
         else
           position = feature.geometry.coordinates[0];
 
-        map.flyTo({center: position, zoom: 15, pitch: 45});
+        moveToTarget(position[0], position[1])
         addPopUpToMap(popUpContent, position, 0)
         return;
     }
+}
+
+//new function for all FLYTO EVENTS -- NEEDS TO STAY
+export function moveToTarget(long, lat){
+  map.flyTo({center: [long, lat], zoom: 15, pitch: 45});
 }
 
 function createPopUpDiv(feature, ident) {
@@ -186,9 +187,6 @@ export function setCurrentPos(long, lat){
               "geometry": {
                 "type": "Point",
                 "coordinates": [long, lat]
-              },
-              "properties": {
-                  "icon": "marker"
               }
           }]
       }
@@ -199,11 +197,18 @@ export function setCurrentPos(long, lat){
         "type": "symbol",
         "source": "currentPos",
         "layout": {
-          "icon-image": "{icon}-15",
-          "text-field": "{title}",
-          "text-font": ["Lato Regular", "Arial Unicode MS Bold"],
-          "text-offset": [0, 0.6],
+          "icon-image": "mmarker-15",
+          "text-field": "Standort",
+          "text-font": ["Lato Bold", "Arial Unicode MS Bold"],
+          "text-offset": [0, 0.8],
+          "text-size": 12,
           "text-anchor": "top"
+        },
+        "paint": {
+          "text-color": "#295e72",
+          "text-halo-width": 2,
+          "text-halo-color": "rgba(255,255,255,0.7)",
+          "text-halo-blur": 0
         }
     });
 }
@@ -301,7 +306,7 @@ function setLifts(){
         },
         "paint": {
           "line-color": "#111",
-          "line-width": 3,
+          "line-width": 2,
           "line-dasharray": [3, 2]
         }
     });
