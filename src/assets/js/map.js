@@ -11,7 +11,8 @@ let map;
 let layersLoaded = false;
 
 
-export default function(long, lat) {
+
+function draw(long, lat) {
   //document.getElementById("map").style.height = window.innerHeight-70 + "px";
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
@@ -26,7 +27,7 @@ export default function(long, lat) {
 
   map.on('load', function() {
     setCurrentPos(long, lat)
-    //TODO LOAD Skigebiete
+    setSkiingAreas()
   });
 
   map.on('zoom', function() {
@@ -47,8 +48,6 @@ export default function(long, lat) {
 
     // Get clicked element
     var feature = features[0];
-
-    console.log(feature)
 
     switch(feature.layer.id)
     {
@@ -74,100 +73,85 @@ export default function(long, lat) {
       goToTarget(feature);
     }
   });
-
   // hide/display layers
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
 }
 
+export function detectLocation() {
+    if("geolocation" in navigator) {
+        return navigator.geolocation.getCurrentPosition(function(position) {
+            draw (position.coords.longitude, position.coords.latitude);
+        });
+    }
+    else {
+        //Salzburg
+        draw(13.375754395073598, 47.49949605823142);
+    }
+}
 
-function goToTarget(feature, string, e){
+export function goToTarget(feature, string, e){
     if(!e && !feature.geometry.coordinates) {
         let text = "Keine Koordinaten für " + feature.properties.name + " vorhanden";
         alert(text);
         return;
     }
     if(string === "area" || string === "Skigebiet" ){
-        let div = createPopUpDiv(feature, "Skigebiet");
+        let popUpContent = createPopUpDiv(feature, "Skigebiet")
+        let position = feature.geometry.coordinates
 
-        map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
-
-        map.once('moveend', function() {
-            var popup = new mapboxgl.Popup()
-                .setLngLat(feature.geometry.coordinates)
-                .setDOMContent(div)
-                .addTo(map);
-        });
+        map.flyTo({center: position, zoom: 15, pitch: 45});
+        addPopUpToMap(popUpContent, position, 0)
         return;
     }
     else if(string === "slope" || string === "Piste"){
-        let div = createPopUpDiv(feature, "Piste");
-        let coordinate;
+        let popUpContent = createPopUpDiv(feature, "Piste");
+        let position;
 
-        if(string === "slope") {
-            coordinate = e.lngLat;
-        }
-        else{
-            coordinate = feature.geometry.coordinates[0][0];
-        }
-        map.flyTo({center: coordinate, zoom: 15, pitch: 45});
+        if(string === "slope") //click event
+          position = e.lngLat
+        else //page load
+          position = feature.geometry.coordinates[0][0]
 
-        map.once('moveend', function() {
-            var popup = new mapboxgl.Popup()
-                .setLngLat(coordinate)
-                .setDOMContent(div)
-                .addTo(map);
-        });
+        map.flyTo({center: position, zoom: 15, pitch: 45})
+        addPopUpToMap(popUpContent, position, 0)
         return;
     }
     else if(string =="parking") {
-        map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+        let popUpContent = createPopUpDiv(feature, "Parkplatz");
+        let position = feature.geometry.coordinates;
 
-        map.once('moveend', function() {
-            var popup = new mapboxgl.Popup()
-            .setLngLat(feature.geometry.coordinates)
-            .setHTML("Parkplätze: "+ feature.properties.groesse)
-            .addTo(map);
-        });
+        map.flyTo({center: position, zoom: 15, pitch: 45});
+        addPopUpToMap(popUpContent, position)
         return;
     }
     else if(string == "huts" || string =="Hütte") {
-        let div = createPopUpDiv(feature, "Hütte");
+        let popUpContent = createPopUpDiv(feature, "Hütte");
+        let position = feature.geometry.coordinates;
 
-        map.flyTo({center: feature.geometry.coordinates, zoom: 15, pitch: 45});
+        map.flyTo({center: position, zoom: 15, pitch: 45});
+        addPopUpToMap(popUpContent, position)
 
-        map.once('moveend', function() {
-            var popup = new mapboxgl.Popup()
-            .setLngLat(feature.geometry.coordinates)
-            .setDOMContent(div)
-            .addTo(map);
-        });
         return;
     }
     else if(string == "lifts" || string =="Lift") {
-        let div = createPopUpDiv(feature, "Lift");
-        let coordinate;
+        let popUpContent = createPopUpDiv(feature, "Lift");
+        let position;
 
-        if(string === "lifts") {
-            coordinate = e.lngLat;
-        }
-        else{
-            coordinate = feature.geometry.coordinates[0];
-        }
-        map.flyTo({center: coordinate, zoom: 15, pitch: 45});
+        if(string === "lifts")
+          position = e.lngLat;
+        else
+          position = feature.geometry.coordinates[0];
 
-        map.once('moveend', function() {
-        var popup = new mapboxgl.Popup()
-            .setLngLat(coordinate)
-            .setDOMContent(div)
-            .addTo(map)
-            });
+        map.flyTo({center: position, zoom: 15, pitch: 45});
+        addPopUpToMap(popUpContent, position, 0)
         return;
     }
 }
 
 function createPopUpDiv(feature, ident) {
     let div = document.createElement("div");
-    let p = document.createElement("p");
+    div.classList.add("popup")
+    let p = document.createElement("h1");
     p.innerHTML = feature.properties.name;
     let a = getDetailLinkElement(feature, ident, "Details");
 
@@ -177,6 +161,18 @@ function createPopUpDiv(feature, ident) {
     return div;
 }
 
+function addPopUpToMap(popUpContent, position, offset){
+  map.once('moveend', function() {
+    let popup
+    let options
+    if(offset != 0) //no offset for slopes
+      options = {offset:[0, -20]}
+    popup = new mapboxgl.Popup(options)
+    .setLngLat(position)
+    .setDOMContent(popUpContent)
+    .addTo(map)
+  });
+}
 
 function setCurrentPos(long, lat){
     map.addSource("points", {
@@ -220,7 +216,7 @@ function setHuts(){
         "id": "huts",
         "type": "symbol",
         "source": "huts",
-        "minzoom": 13,
+        "minzoom": 12,
         "layout": {
           "icon-image": "rrestaurant-15",
           //"text-field": "{name}",
@@ -245,6 +241,7 @@ function setSlopes(){
         "id": "slopesBlue",
         "type": "fill",
         "source": "slopes",
+        "minzoom": 12,
         "filter": ["==", "schwgrad", 1],
         "layout": {
         },
@@ -259,6 +256,7 @@ function setSlopes(){
         "id": "slopesRed",
         "type": "fill",
         "source": "slopes",
+        "minzoom": 12,
         "filter": ["==", "schwgrad", 2],
         "layout": {
         },
@@ -273,6 +271,7 @@ function setSlopes(){
         "id": "slopesBlack",
         "type": "fill",
         "source": "slopes",
+        "minzoom": 12,
         "filter": ["==", "schwgrad", 3],
         "layout": {
         },
@@ -293,6 +292,7 @@ function setLifts(){
         "id": "lifts",
         "type": "line",
         "source": "lifts",
+        "minzoom": 12,
         "layout": {
             "line-join": "round",
             "line-cap": "square"
@@ -314,9 +314,36 @@ function setParkingSpaces(){
         "id": "parking",
         "type": "symbol",
         "source": "parking",
-        "minzoom": 13,
+        "minzoom": 12,
         "layout": {
           "icon-image": "pparking-15"
+        }
+    });
+}
+
+function setSkiingAreas(){
+  console.log("hiiii");
+    map.addSource("areas", {
+        "type": "geojson",
+        "data": skiingAreas
+    });
+    map.addLayer({
+        "id": "areas",
+        "type": "symbol",
+        "source": "areas",
+        "maxzoom": 12,
+        "layout": {
+          "icon-image": "skiing-15",
+          "text-field": "{name}",
+          "text-font": ["Lato Bold", "Open Sans Semibold", "Arial Unicode MS Bold"],
+          "text-size": 12,
+          "text-offset": [0, 1.5],
+          "text-anchor": "top"
+        },
+        "paint":{
+          "text-color": "#295e72",
+          "text-halo-width": 2,
+          "text-halo-color": "rgba(255,255,255,0.7)"
         }
     });
 }
@@ -334,8 +361,8 @@ function search() {
 
   if(this.value.length >= 3) {
     let regEx = new RegExp(this.value, "i");
-    let matchedHuts = scanFile(huts, regEx,  "Hütte");
-    let matchedSlopes = scanFile(slopes, regEx , "Piste");
+    let matchedHuts = scanFile(huts, regEx, "Hütte");
+    let matchedSlopes = scanFile(slopes, regEx, "Piste");
     let matchedLifts = scanFile(lifts, regEx, "Lift");
     let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
 

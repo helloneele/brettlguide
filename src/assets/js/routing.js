@@ -5,15 +5,16 @@ import liftTpl from '../../../build/assets/templates/lifts';
 import areasTpl from '../../../build/assets/templates/areas';
 import notFoundTpl from '../../../build/assets/templates/notFound';
 
-import detectLocation from './detectLocation';
-import getObject from './getObject';
+import * as map from './map';
+import getObject from './getObject'; 
 
 
 let dynamicContent = document.getElementById("dynamic-content");
 
 let templates = {
-    index: () => {
-        detectLocation();
+    index: (ctx) => {
+        map.detectLocation();
+
         //dynamicContent.innerHTML = mapTpl(); //map handlebar anzeigen
     },
     slopes: (ctx) => {
@@ -27,9 +28,12 @@ let templates = {
         }
     },
     huts: (ctx) => {
+        map.detectLocation();
+
         let hut = getObject.hut(ctx.params.hut);
 
         if (hut) {
+            //map.goToTarget(hut, "Hütte");
             dynamicContent.innerHTML = hutTpl(hut);
         }
         else {
