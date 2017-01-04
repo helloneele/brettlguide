@@ -6,19 +6,22 @@ import areasTpl from '../../../build/assets/templates/areas';
 import notFoundTpl from '../../../build/assets/templates/notFound';
 
 import * as map from './map';
-import getObject from './getObject'; 
+import detectLocation from './detectLocation';
+import getObject from './getObject';
 
 
 let dynamicContent = document.getElementById("dynamic-content");
 
 let templates = {
     index: (ctx) => {
-        map.detectLocation();
-
+        console.log("inside index")
+        detectLocation()
+        //console.log(ctx.canonicalPath)
         //dynamicContent.innerHTML = mapTpl(); //map handlebar anzeigen
     },
     slopes: (ctx) => {
         let slope = getObject.slope(ctx.params.slope);
+        console.log(slope)
 
         if (slope) {
             dynamicContent.innerHTML = slopeTpl(slope);
@@ -28,13 +31,13 @@ let templates = {
         }
     },
     huts: (ctx) => {
-        map.detectLocation();
-
-        let hut = getObject.hut(ctx.params.hut);
-
+        let hut = getObject.hut(ctx.params.hut)
+        
         if (hut) {
-            //map.goToTarget(hut, "Hütte");
-            dynamicContent.innerHTML = hutTpl(hut);
+          let long = hut.geometry.coordinates[0]
+          let lat = hut.geometry.coordinates[1]
+          map.moveToTarget(long, lat)
+          dynamicContent.innerHTML = hutTpl(hut);
         }
         else {
             templates.notFound();

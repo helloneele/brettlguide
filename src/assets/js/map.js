@@ -10,24 +10,28 @@ import skiingAreas from '../../../build/data/gebietsnr'
 let map;
 let layersLoaded = false;
 
-
-
-function draw(long, lat) {
-  //document.getElementById("map").style.height = window.innerHeight-70 + "px";
+export default function initMap(long, lat){
+  console.log("init Map");
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
-
   map = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/helloneele/ciw0yc5ft00dh2jo5ml0fklvd', //hosted style id
       center: [long, lat], // starting position
-      zoom: 10, // starting zoom
+      zoom: 8, // starting zoom
       pitch: 60
   });
 
+  addMapEvents();
+}
+
+function addMapEvents() {
   map.on('load', function() {
-    setCurrentPos(long, lat)
     setSkiingAreas()
+  });
+
+  map.on('loaded', function() {
+    console.log("fertig")
   });
 
   map.on('zoom', function() {
@@ -77,16 +81,8 @@ function draw(long, lat) {
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
 }
 
-export function detectLocation() {
-    if("geolocation" in navigator) {
-        return navigator.geolocation.getCurrentPosition(function(position) {
-            draw (position.coords.longitude, position.coords.latitude);
-        });
-    }
-    else {
-        //Salzburg
-        draw(13.375754395073598, 47.49949605823142);
-    }
+export function moveToTarget(long, lat){
+  map.flyTo({center: [long, lat], zoom: 15, pitch: 45});
 }
 
 export function goToTarget(feature, string, e){
@@ -174,28 +170,34 @@ function addPopUpToMap(popUpContent, position, offset){
   });
 }
 
-function setCurrentPos(long, lat){
-    map.addSource("points", {
-        "type": "geojson",
-        "data": {
-            "type": "FeatureCollection",
-            "features": [{
-                "type": "Feature",
-                "geometry": {
-                  "type": "Point",
-                  "coordinates": [long, lat]
-                },
-                "properties": {
-                    "icon": "marker"
-                }
-            }]
-        }
-    });
+export function setCurrentPos(long, lat){
+  // remove layer if initialized before
+  if(map.style._layers.currentPos){
+    map.removeLayer("currentPos");
+    map.removeSource("currentPos");
+  }
+
+  map.addSource("currentPos", {
+      "type": "geojson",
+      "data": {
+          "type": "FeatureCollection",
+          "features": [{
+              "type": "Feature",
+              "geometry": {
+                "type": "Point",
+                "coordinates": [long, lat]
+              },
+              "properties": {
+                  "icon": "marker"
+              }
+          }]
+      }
+  });
 
     map.addLayer({
-        "id": "points",
+        "id": "currentPos",
         "type": "symbol",
-        "source": "points",
+        "source": "currentPos",
         "layout": {
           "icon-image": "{icon}-15",
           "text-field": "{title}",
@@ -336,14 +338,15 @@ function setSkiingAreas(){
           "icon-image": "skiing-15",
           "text-field": "{name}",
           "text-font": ["Lato Bold", "Open Sans Semibold", "Arial Unicode MS Bold"],
-          "text-size": 12,
+          "text-size": 13,
           "text-offset": [0, 1.5],
           "text-anchor": "top"
         },
         "paint":{
           "text-color": "#295e72",
           "text-halo-width": 2,
-          "text-halo-color": "rgba(255,255,255,0.7)"
+          "text-halo-color": "rgba(255,255,255,0.7)",
+          "text-halo-blur": 0
         }
     });
 }
@@ -461,7 +464,6 @@ function getItemArea(key) {
         }
     }
 }
-
 
 function getDetailLinkElement(key, val, text) {
     let a = document.createElement("a");
