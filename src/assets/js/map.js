@@ -45,100 +45,59 @@ function addMapEvents() {
   });
 
   map.on('click', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['huts', 'parking', 'lifts', 'slopesBlue', 'slopesRed', 'slopesBlack'] });
+      let features = map.queryRenderedFeatures(e.point, {layers: ['huts', 'parking', 'lifts', 'slopesBlue', 'slopesRed', 'slopesBlack']});
 
-    if (!features.length)
-      return;
-
-    // Get clicked element
-    var feature = features[0];
-
-    switch(feature.layer.id)
-    {
-      case "parking":
-      goToTarget(feature, "parking");
-      break;
-
-      case "lifts":
-      goToTarget(feature, "lifts", e);
-      break;
-
-      case "huts":
-      goToTarget(feature, "huts");
-      break;
-
-      case "slopesBlue":
-      case "slopesRed":
-      case "slopesBlack":
-      goToTarget(feature, "slope", e);
-      break;
-
-      default:
-      goToTarget(feature);
-    }
+      if (features.length)
+          detectTargetPosition(features[0], features[0].layer.id, e);
   });
   // hide/display layers
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
 }
 
-export function goToTarget(feature, string, e){
+function detectTargetPosition(feature, string, e) {
     if(!e && !feature.geometry.coordinates) {
         let text = "Keine Koordinaten für " + feature.properties.name + " vorhanden";
         alert(text);
         return;
     }
-    if(string === "area" || string === "Skigebiet" ){
-        let popUpContent = createPopUpDiv(feature, "Skigebiet")
-        let position = feature.geometry.coordinates
-
-        moveToTarget(position[0], position[1])
-        addPopUpToMap(popUpContent, position, 0)
-        return;
-    }
-    else if(string === "slope" || string === "Piste"){
-        let popUpContent = createPopUpDiv(feature, "Piste");
+    else {
+        let popUpContent;
         let position;
-        console.log(e.lngLat)
+        let offset;
+        switch (string) {
+            case "huts":
+            case "parking":
+            case "areas":
+                popUpContent = createPopUpDiv(feature, string);
+                position = feature.geometry.coordinates;
+                offset = 0;
+                break;
 
-        if(string === "slope") //click event
-          position = [e.lngLat.lng, e.lngLat.lat]
-        else //page load
-          position = feature.geometry.coordinates[0][0]
+            case "slopesBlue":
+            case "slopesRed":
+            case "slopesBlack":
+            case "slopes":
+                if(e)
+                    position = [e.lngLat.lng, e.lngLat.lat];
+                else
+                    position = feature.geometry.coordinates[0][0];
 
+                popUpContent = createPopUpDiv(feature, "slopes");
+                break;
+
+            case "lifts":
+                if(e)
+                    position = [e.lngLat.lng, e.lngLat.lat];
+                else
+                    position = feature.geometry.coordinates[0];
+
+                popUpContent = createPopUpDiv(feature, string);
+                break;
+        }
         moveToTarget(position[0], position[1])
-        addPopUpToMap(popUpContent, position, 0)
-        return;
+        addPopUpToMap(popUpContent, position, offset);
     }
-    else if(string =="parking") {
-        let popUpContent = createPopUpDiv(feature, "Parkplatz");
-        let position = feature.geometry.coordinates;
 
-        moveToTarget(position[0], position[1])
-        addPopUpToMap(popUpContent, position)
-        return;
-    }
-    else if(string == "huts" || string =="Hütte") {
-        let popUpContent = createPopUpDiv(feature, "Hütte");
-        let position = feature.geometry.coordinates;
-
-        moveToTarget(position[0], position[1])
-        addPopUpToMap(popUpContent, position)
-
-        return;
-    }
-    else if(string == "lifts" || string =="Lift") {
-        let popUpContent = createPopUpDiv(feature, "Lift");
-        let position;
-
-        if(string === "lifts")
-          position = [e.lngLat.lng, e.lngLat.lat]
-        else
-          position = feature.geometry.coordinates[0];
-
-        moveToTarget(position[0], position[1])
-        addPopUpToMap(popUpContent, position, 0)
-        return;
-    }
 }
 
 //new function for all FLYTO EVENTS -- NEEDS TO STAY
@@ -149,11 +108,11 @@ export function moveToTarget(long, lat){
 function createPopUpDiv(feature, ident) {
     let div = document.createElement("div");
     div.classList.add("popup")
-    let p = document.createElement("h1");
-    p.innerHTML = feature.properties.name;
+    let h1 = document.createElement("h1");
+    h1.innerHTML = feature.properties.name;
     let a = getDetailLinkElement(feature, ident, "Details");
 
-    div.appendChild(p);
+    div.appendChild(h1);
     div.appendChild(a);
 
     return div;
@@ -370,10 +329,10 @@ function search() {
 
   if(this.value.length >= 3) {
     let regEx = new RegExp(this.value, "i");
-    let matchedHuts = scanFile(huts, regEx, "Hütte");
-    let matchedSlopes = scanFile(slopes, regEx, "Piste");
-    let matchedLifts = scanFile(lifts, regEx, "Lift");
-    let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
+    let matchedHuts = scanFile(huts, regEx, "huts");
+    let matchedSlopes = scanFile(slopes, regEx, "slopes");
+    let matchedLifts = scanFile(lifts, regEx, "lifts");
+    let matchtedAreas = scanFile(skiingAreas, regEx, "areas");
 
     let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts, ...matchtedAreas]);
 
@@ -431,7 +390,7 @@ function updateListItems(listItems) {
 
         let a = getDetailLinkElement(key, val, "Details");
 
-        if(val !== "Skigebiet") {
+        if(val !== "areas") {
             let area = getItemArea(key);
 
             if(area) {
@@ -440,13 +399,13 @@ function updateListItems(listItems) {
                 li.appendChild(pArea);
 
                 pArea.addEventListener("click", function () {
-                    goToTarget(area, "area")
+                    detectTargetPosition(area, "areas");
                 });
             }
         }
 
         pName.addEventListener("click", function () {
-            goToTarget(key, val)
+            detectTargetPosition(key, val);
         });
 
         li.appendChild(p);
@@ -481,27 +440,31 @@ function getDetailLinkElement(key, val, text) {
 }
 
 function getPath(key, val) {
-    let path = "*";
+    let path = "/" + val + "/";
 
-    if(val === "Hütte")
+    if(val === "huts")
     {
-        path = "/huts/" + key.properties.h_id;
+        path += key.properties.h_id;
     }
-    else if(val === "Piste")
+    else if(val === "slopes")
     {
         let id = key.properties.gb_nr + "-"
         + key.properties.p_nr + "-"
         + key.properties.a_nr + "-"
         + key.properties.a_name;
-        path = "/slopes/" + id;
+        path += id;
     }
-    else if(val === "Lift")
+    else if(val === "lifts")
     {
-        path = "/lifts/" + key.properties.s_id;
+        path += key.properties.s_id;
     }
-    else if(val === "Skigebiet")
+    else if(val === "areas")
     {
-        path = "/areas/" + key.properties.gb_nr;
+        path += key.properties.gb_nr;
+    }
+    else
+    {
+        return "*";
     }
     return path;
 }
