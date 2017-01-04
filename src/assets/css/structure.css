@@ -31,6 +31,7 @@ header{
 
   .header__content{
     background: #fff;
+    border-top: 3px solid var(--dark-blue);
     width: inherit;
     height: 100%;
     lost-center: 100%;
@@ -119,42 +120,43 @@ header{
 }
 
 .mapButtons{
-  display: inline-block;
+  display: flex;
   position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 20px;
-  width: 200px;
 }
 
 .mapButtons__item{
-  width: 40px;
-  height: 40px;
-  background: var(--white);
+  width: 50px;
+  height: 50px;
   text-align: center;
-  border-radius: 20px;
-  font-size: 30px;
+  padding-top:8px;
+  margin: 0 5px;
+  font-size: 28px;
+  border-radius: 25px;
   display: inline-block;
+  background: var(--white);
   color: var(--dark-blue);
   box-shadow:0px 0px 5px rgba(0,0,0,0.7);
+  cursor: pointer;
 
   &:hover{
-    color: var(--sky-blue);
+    color: var(--dark-blue);
+    background: var(--lightgray);
   }
 }
 
 .searchToggle{
-  padding-top:3px;
-  font-size: 25px;
 
   &.active{
-    padding-top: 0;
-    font-size: 30px;
+    color: var(--darkgray);
+    background: var(--lightgray);
   }
 }
 
 .locationToggle{
+  padding-top:10px;
 }
 
 

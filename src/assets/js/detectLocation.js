@@ -1,4 +1,4 @@
-import map from './map'
+import * as map from './map'
 
 export default function() {
  if("geolocation" in navigator) {
@@ -10,16 +10,12 @@ export default function() {
     //                'headingAccuracy: ' + e.webkitCompassAccuracy;
     //  alert(heading);
     //   }, false);
-      DrawMap(position.coords.longitude, position.coords.latitude);
+      map.moveToTarget(position.coords.longitude, position.coords.latitude)
+      map.setCurrentPos(position.coords.longitude, position.coords.latitude)
     });
   }
   else {
-    return;
+    map.moveToTarget(13.375754395073598, 47.49949605823142)
   }
 
-  
-}
-
-function DrawMap(long, lat){
-  map(long, lat)
 }
