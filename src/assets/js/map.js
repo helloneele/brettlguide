@@ -26,11 +26,10 @@ export default function initMap(long, lat){
 }
 
 function addMapEvents() {
-  let layers
+  let layers = ['areas'];
 
   map.on('load', function() {
     setSkiingAreas();
-    layers = ['areas'];
   });
 
   map.on('zoom', function() {
