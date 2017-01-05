@@ -16,7 +16,6 @@ page('/imprint', routing.imprint);
 page('*', routing.notFound);
 page.start();
 
-
 // SEARCH ///////////
 let searchToggleButton = document.getElementById("searchToggle")
 searchToggleButton.addEventListener("click", searchToggle)
