@@ -1,9 +1,9 @@
 import detectLocation from './detectLocation';
 import map from './map';
 import routing from './routing';
+import * as charts from './charts';
 import page from 'page';
 
-//detectLocation()
 map(12.9863903, 47.8027887)
 //map(13.37575, 47.49949)
 
@@ -16,7 +16,6 @@ page('/areas/:area', routing.areas);
 page('/imprint', routing.imprint);
 page('*', routing.notFound);
 page.start();
-
 
 // SEARCH ///////////
 let searchToggleButton = document.getElementById("searchToggle")
@@ -38,6 +37,10 @@ locationToggleButton.addEventListener("click", locationToggle)
 function locationToggle(e){
   detectLocation();
 }
+
+charts.auslastung();
+charts.schwierigkeit();
+charts.schnee();
 
 
 //TODO
