@@ -78,13 +78,7 @@ header{
   max-width: var(--layout-width);
   margin: 0 auto;
 
-  .detailContent__main{
-    lost-column: 66/100;
-  }
 
-  .detailContent__sidebar{
-    lost-column: 34/100;
-  }
 
   /*lost-utility: clearfix;
   padding: 40px 40px;
@@ -303,6 +297,18 @@ footer {
     .header__right{
       lost-column: 3/16 0;
     }
+  }
+
+  .detailContent{
+
+    .detailContent__main{
+      lost-column: 66/100;
+    }
+
+    .detailContent__sidebar{
+      lost-column: 34/100;
+    }
+
   }
 
   .search{
