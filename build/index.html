@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/assets/css/app.min.css">
     <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -15,8 +16,45 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="/assets/js/charts.js" charset="utf-8"></script>
+
   </head>
   <body>
+  <style>
+   rect {
+        cursor: pointer;                                              
+        stroke-width: 2;
+      }
+      rect.disabled {                                                 
+        fill: transparent !important;                                 
+      }                                                               
+      h1 {                                                            
+        font-size: 14px;                                              
+        text-align: center;                                           
+      }                    
+
+    #chart {                                                          
+        height: 360px;                                                
+        position: relative;  
+        margin: 0 auto;                                              
+        width: 360px;                                                
+      }                                                                
+      .tooltip {                                                       
+        background: #eee;                                               
+        box-shadow: 0 0 5px #999999;                                   
+        color: #333;                                                    
+        display: none;                                                 
+        font-size: 12px;                                               
+        left: 130px;                                                    
+        padding: 10px;                                                 
+        position: absolute;                                            
+        text-align: center;                                             
+        top: 95px;                                                      
+        width: 80px;                                                   
+        z-index: 10;                                                    
+      }   
+</style>:
 
     <header class="header--shadow">
       <div class="header__content">
@@ -45,7 +83,8 @@
           </div>
       </div>
 
-      <div id="dynamic-content"></div>
+      <div id="dynamic-content"> </div>
+      
     </div>
     <footer class="footer--shadow">
       <div class="footerLeft">
@@ -73,5 +112,13 @@
 
     <script src="/assets/js/app.js" charset="utf-8"></script>
 
-  </body>
+    <script data-require="d3@*" data-semver="4.0.0" src="https://d3js.org/d3.v4.min.js"></script>
+ 
+  <script>
+
+    </script>
+  
+
+  
+ </body>
 </html>
