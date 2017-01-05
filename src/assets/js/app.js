@@ -3,7 +3,6 @@ import map from './map';
 import routing from './routing';
 import page from 'page';
 
-//detectLocation()
 map(12.9863903, 47.8027887)
 //map(13.37575, 47.49949)
 

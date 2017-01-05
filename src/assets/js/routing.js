@@ -15,10 +15,8 @@ let dynamicContent = document.getElementById("dynamic-content");
 
 let templates = {
     index: (ctx) => {
-        console.log("inside index")
         detectLocation()
-        //console.log(ctx.canonicalPath)
-        dynamicContent.innerHTML = mapTpl(); //map handlebar anzeigen
+        dynamicContent.innerHTML = mapTpl();
     },
     slopes: (ctx) => {
         let slope = getObject.slope(ctx.params.slope);

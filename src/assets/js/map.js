@@ -9,10 +9,9 @@ import skiingAreas from '../../../build/data/gebietsnr'
 
 let map;
 let layersLoaded = false;
+let popup;
 
 export default function initMap(long, lat){
-  console.log("init Map");
-
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
   map = new mapboxgl.Map({
       container: 'map', // container id
@@ -114,11 +113,20 @@ function createPopUpDiv(feature, ident) {
     let div = document.createElement("div");
     div.classList.add("popup");
     let h1 = document.createElement("h1");
+
     if(ident !== "parking"){
-        h1.innerHTML = feature.properties.name;
+        if(feature.properties.name.length > 1)
+            h1.innerHTML = feature.properties.name;
+        else
+            h1.innerHTML = "Kein Name verfügbar";
+
         let a = getDetailLinkElement(feature, ident, "Details");
         div.appendChild(h1);
         div.appendChild(a);
+
+        a.addEventListener("click", function () {
+            popup.remove();
+        });
     }
     else {
         h1.innerHTML= "Parkplatz";
@@ -132,7 +140,7 @@ function createPopUpDiv(feature, ident) {
 
 function addPopUpToMap(popUpContent, position, offset){
   map.once('moveend', function() {
-    let popup;
+    //let popup;
     let options;
     if(offset != 0) //no offset for slopes
       options = {offset:[0, -20]};
@@ -311,7 +319,7 @@ function setSkiingAreas(){
         "source": "areas",
         "maxzoom": 12,
         "layout": {
-          "icon-image": "skiing-15",
+          "icon-image": "mmountain-15",
           "text-field": "{name}",
           "text-font": ["Lato Bold", "Open Sans Semibold", "Arial Unicode MS Bold"],
           "text-size": 13,
@@ -343,9 +351,9 @@ function search() {
     let matchedHuts = scanFile(huts, regEx, "huts");
     let matchedSlopes = scanFile(slopes, regEx, "slopes");
     let matchedLifts = scanFile(lifts, regEx, "lifts");
-    let matchtedAreas = scanFile(skiingAreas, regEx, "areas");
+    let matchedAreas = scanFile(skiingAreas, regEx, "areas");
 
-    let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts, ...matchtedAreas]);
+    let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts, ...matchedAreas]);
 
     updateListItems(listItems);
 
@@ -355,13 +363,11 @@ function search() {
     if (!isClickInside)
       hideSearchResults()
     });
-
   }
   else {
       deleteAllListItems(ul)
   }
 }
-
 
 function scanFile(file, regEx, ident) {
     let suggestions = new Map();
@@ -391,24 +397,33 @@ function updateListItems(listItems) {
         let li = document.createElement("li")
         li.setAttribute("class", "suggestion")
 
+        let textSpan = document.createElement("span")
+        textSpan.setAttribute("class", "suggestion__text")
+
         let aName = getDetailLinkElement(key, val, key.properties.name)
+        aName.setAttribute("class", "suggestion__name")
 
         let icon = document.createElement("img")
         icon.setAttribute("class", "suggestion__icon")
         icon.setAttribute("src", "/assets/img/icon_"+ val +".svg")
 
         li.appendChild(icon)
-        li.appendChild(aName)
+        textSpan.appendChild(aName)
+
+        let br = document.createElement('br')
+        textSpan.appendChild(br)
 
         if(val !== "areas") {
             let area = getItemArea(key)
 
             if(area) {
                 let aArea = getDetailLinkElement(area, "areas", area.properties.name)
-                li.appendChild(aArea);
+                aArea.setAttribute("class", "suggestion__area")
+                textSpan.appendChild(aArea);
             }
         }
-        ul.appendChild(li);
+        li.appendChild(textSpan)
+        ul.appendChild(li)
     }
 }
 
@@ -444,8 +459,7 @@ function getPath(key, val) {
     else if(val === "slopes") {
         let id = key.properties.gb_nr + "-"
         + key.properties.p_nr + "-"
-        + key.properties.a_nr + "-"
-        + key.properties.a_name;
+        + key.properties.a_nr;
         path += id;
     }
     else if(val === "lifts") {
