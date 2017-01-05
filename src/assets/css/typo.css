@@ -117,7 +117,8 @@ Heading 6
 */
 
 h1, h2, h3, h4, h5{
-  line-height:1.4em;
+  line-height:1em;
+
 }
 
 h1{
@@ -126,6 +127,7 @@ h1{
   text-transform: uppercase;
   font-weight: bold;
   font-style: italic;
+  margin-bottom: 0.8em;
 }
 
 h2{
@@ -133,11 +135,13 @@ h2{
   color: var(--sky-blue);
   font-weight: bold;
   font-style: italic;
+  margin-bottom: 0.5em;
 }
 
 h3{
   font-size: 1.75rem;
   color: var(--gray);
+  margin-bottom: 0.5em;
 }
 
 h4{
@@ -234,7 +238,7 @@ Use class `list-plain` to get a list without _padding_, _margin_ and _list-style
 */
 
 p {
-
+  margin-bottom: 20px;
 
 }
 

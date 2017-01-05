@@ -26,147 +26,120 @@ export default function initMap(long, lat){
 }
 
 function addMapEvents() {
-  map.on('load', function() {
-    setSkiingAreas()
-  });
+  let layers = ['areas'];
 
-  map.on('loaded', function() {
-    console.log("fertig")
+  map.on('load', function() {
+    setSkiingAreas();
   });
 
   map.on('zoom', function() {
     if(!layersLoaded && map.getZoom() > 12){
-      layersLoaded = true
-      setSlopes()
-      setLifts()
-      setHuts()
-      setParkingSpaces()
+      layersLoaded = true;
+      setSlopes();
+      setLifts();
+      setHuts();
+      setParkingSpaces();
+      layers = ['huts', 'parking', 'lifts', 'slopesBlue', 'slopesRed', 'slopesBlack', 'areas'];
     }
   });
 
   map.on('click', function (e) {
-    var features = map.queryRenderedFeatures(e.point, { layers: ['huts', 'parking', 'lifts', 'slopesBlue', 'slopesRed', 'slopesBlack'] });
-
-    if (!features.length)
-      return;
-
-    // Get clicked element
-    var feature = features[0];
-
-    switch(feature.layer.id)
-    {
-      case "parking":
-      goToTarget(feature, "parking");
-      break;
-
-      case "lifts":
-      goToTarget(feature, "lifts", e);
-      break;
-
-      case "huts":
-      goToTarget(feature, "huts");
-      break;
-
-      case "slopesBlue":
-      case "slopesRed":
-      case "slopesBlack":
-      goToTarget(feature, "slope", e);
-      break;
-
-      default:
-      goToTarget(feature);
-    }
+    let features = map.queryRenderedFeatures(e.point, {layers: layers });
+    if (features.length)
+      detectTargetPosition(features[0], features[0].layer.id, e);
   });
   // hide/display layers
   // map.setLayoutProperty('my-layer', 'visibility', 'none');
 }
 
-export function moveToTarget(long, lat){
-  map.flyTo({center: [long, lat], zoom: 15, pitch: 45});
-}
-
-export function goToTarget(feature, string, e){
+export function detectTargetPosition(feature, string, e) {
     if(!e && !feature.geometry.coordinates) {
         let text = "Keine Koordinaten für " + feature.properties.name + " vorhanden";
         alert(text);
         return;
     }
-    if(string === "area" || string === "Skigebiet" ){
-        let popUpContent = createPopUpDiv(feature, "Skigebiet")
-        let position = feature.geometry.coordinates
-
-        map.flyTo({center: position, zoom: 15, pitch: 45});
-        addPopUpToMap(popUpContent, position, 0)
-        return;
-    }
-    else if(string === "slope" || string === "Piste"){
-        let popUpContent = createPopUpDiv(feature, "Piste");
+    else {
+        let popUpContent;
         let position;
+        let offset;
+        switch (string) {
+            case "huts":
+            case "parking":
+                popUpContent = createPopUpDiv(feature, string);
+                position = feature.geometry.coordinates;
+                break;
 
-        if(string === "slope") //click event
-          position = e.lngLat
-        else //page load
-          position = feature.geometry.coordinates[0][0]
+            case "areas":
+              if(e)
+                position = [e.lngLat.lng, e.lngLat.lat];
+              else
+                position = feature.geometry.coordinates;
+              break;
 
-        map.flyTo({center: position, zoom: 15, pitch: 45})
-        addPopUpToMap(popUpContent, position, 0)
-        return;
+            case "slopesBlue":
+            case "slopesRed":
+            case "slopesBlack":
+            case "slopes":
+                if(e)
+                    position = [e.lngLat.lng, e.lngLat.lat];
+                else
+                    position = feature.geometry.coordinates[0][0];
+
+                popUpContent = createPopUpDiv(feature, "slopes");
+                offset = 0;
+                break;
+
+            case "lifts":
+                if(e)
+                    position = [e.lngLat.lng, e.lngLat.lat];
+                else
+                    position = feature.geometry.coordinates[0];
+
+                popUpContent = createPopUpDiv(feature, string);
+                break;
+        }
+        moveToTarget(position[0], position[1])
+        if(popUpContent != null)
+          addPopUpToMap(popUpContent, position, offset);
     }
-    else if(string =="parking") {
-        let popUpContent = createPopUpDiv(feature, "Parkplatz");
-        let position = feature.geometry.coordinates;
 
-        map.flyTo({center: position, zoom: 15, pitch: 45});
-        addPopUpToMap(popUpContent, position)
-        return;
-    }
-    else if(string == "huts" || string =="Hütte") {
-        let popUpContent = createPopUpDiv(feature, "Hütte");
-        let position = feature.geometry.coordinates;
+}
 
-        map.flyTo({center: position, zoom: 15, pitch: 45});
-        addPopUpToMap(popUpContent, position)
-
-        return;
-    }
-    else if(string == "lifts" || string =="Lift") {
-        let popUpContent = createPopUpDiv(feature, "Lift");
-        let position;
-
-        if(string === "lifts")
-          position = e.lngLat;
-        else
-          position = feature.geometry.coordinates[0];
-
-        map.flyTo({center: position, zoom: 15, pitch: 45});
-        addPopUpToMap(popUpContent, position, 0)
-        return;
-    }
+//new function for all FLYTO EVENTS -- NEEDS TO STAY
+export function moveToTarget(long, lat){
+  map.flyTo({center: [long, lat], zoom: 15, pitch: 45});
 }
 
 function createPopUpDiv(feature, ident) {
     let div = document.createElement("div");
-    div.classList.add("popup")
-    let p = document.createElement("h1");
-    p.innerHTML = feature.properties.name;
-    let a = getDetailLinkElement(feature, ident, "Details");
-
-    div.appendChild(p);
-    div.appendChild(a);
-
+    div.classList.add("popup");
+    let h1 = document.createElement("h1");
+    if(ident !== "parking"){
+        h1.innerHTML = feature.properties.name;
+        let a = getDetailLinkElement(feature, ident, "Details");
+        div.appendChild(h1);
+        div.appendChild(a);
+    }
+    else {
+        h1.innerHTML= "Parkplatz";
+        let p = document.createElement("p");
+        p.innerHTML = "Parkplätze: " + feature.properties.groesse;
+        div.appendChild(h1);
+        div.appendChild(p);
+    }
     return div;
 }
 
 function addPopUpToMap(popUpContent, position, offset){
   map.once('moveend', function() {
-    let popup
-    let options
+    let popup;
+    let options;
     if(offset != 0) //no offset for slopes
-      options = {offset:[0, -20]}
+      options = {offset:[0, -20]};
     popup = new mapboxgl.Popup(options)
     .setLngLat(position)
     .setDOMContent(popUpContent)
-    .addTo(map)
+    .addTo(map);
   });
 }
 
@@ -186,9 +159,6 @@ export function setCurrentPos(long, lat){
               "geometry": {
                 "type": "Point",
                 "coordinates": [long, lat]
-              },
-              "properties": {
-                  "icon": "marker"
               }
           }]
       }
@@ -199,11 +169,18 @@ export function setCurrentPos(long, lat){
         "type": "symbol",
         "source": "currentPos",
         "layout": {
-          "icon-image": "{icon}-15",
-          "text-field": "{title}",
-          "text-font": ["Lato Regular", "Arial Unicode MS Bold"],
-          "text-offset": [0, 0.6],
+          "icon-image": "mmarker-15",
+          "text-field": "Standort",
+          "text-font": ["Lato Bold", "Arial Unicode MS Bold"],
+          "text-offset": [0, 0.8],
+          "text-size": 12,
           "text-anchor": "top"
+        },
+        "paint": {
+          "text-color": "#295e72",
+          "text-halo-width": 2,
+          "text-halo-color": "rgba(255,255,255,0.7)",
+          "text-halo-blur": 0
         }
     });
 }
@@ -301,7 +278,7 @@ function setLifts(){
         },
         "paint": {
           "line-color": "#111",
-          "line-width": 3,
+          "line-width": 2,
           "line-dasharray": [3, 2]
         }
     });
@@ -324,7 +301,6 @@ function setParkingSpaces(){
 }
 
 function setSkiingAreas(){
-  console.log("hiiii");
     map.addSource("areas", {
         "type": "geojson",
         "data": skiingAreas
@@ -335,7 +311,7 @@ function setSkiingAreas(){
         "source": "areas",
         "maxzoom": 12,
         "layout": {
-          "icon-image": "skiing-15",
+          "icon-image": "mmountain-15",
           "text-field": "{name}",
           "text-font": ["Lato Bold", "Open Sans Semibold", "Arial Unicode MS Bold"],
           "text-size": 13,
@@ -364,10 +340,10 @@ function search() {
 
   if(this.value.length >= 3) {
     let regEx = new RegExp(this.value, "i");
-    let matchedHuts = scanFile(huts, regEx, "Hütte");
-    let matchedSlopes = scanFile(slopes, regEx, "Piste");
-    let matchedLifts = scanFile(lifts, regEx, "Lift");
-    let matchtedAreas = scanFile(skiingAreas, regEx, "Skigebiet")
+    let matchedHuts = scanFile(huts, regEx, "huts");
+    let matchedSlopes = scanFile(slopes, regEx, "slopes");
+    let matchedLifts = scanFile(lifts, regEx, "lifts");
+    let matchtedAreas = scanFile(skiingAreas, regEx, "areas");
 
     let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts, ...matchtedAreas]);
 
@@ -412,42 +388,37 @@ function updateListItems(listItems) {
     deleteAllListItems(ul);
 
     for(let [key, val] of listItems) {
-        let li = document.createElement("li");
-        li.setAttribute("class", "suggestion");
+        let li = document.createElement("li")
+        li.setAttribute("class", "suggestion")
 
-        let p = document.createElement("p");
+        let textSpan = document.createElement("span")
+        textSpan.setAttribute("class", "suggestion__text")
 
-        let pName = document.createElement("p");
-        pName.innerHTML = key.properties.name;
+        let aName = getDetailLinkElement(key, val, key.properties.name)
+        aName.setAttribute("class", "suggestion__name")
 
-        let span = document.createElement("span");
-        span.innerHTML = "//" + val ;
+        let icon = document.createElement("img")
+        icon.setAttribute("class", "suggestion__icon")
+        icon.setAttribute("src", "/assets/img/icon_"+ val +".svg")
 
-        let a = getDetailLinkElement(key, val, "Details");
+        li.appendChild(icon)
+        textSpan.appendChild(aName)
 
-        if(val !== "Skigebiet") {
-            let area = getItemArea(key);
+        let br = document.createElement('br')
+        textSpan.appendChild(br)
+
+        if(val !== "areas") {
+            let area = getItemArea(key)
 
             if(area) {
-                let pArea = document.createElement("p");
-                pArea.innerHTML = "(" + area.properties.name + ")";
-                li.appendChild(pArea);
-
-                pArea.addEventListener("click", function () {
-                    goToTarget(area, "area")
-                });
+                let aArea = getDetailLinkElement(area, "areas", area.properties.name)
+                aArea.setAttribute("class", "suggestion__area")
+                textSpan.appendChild(aArea);
             }
         }
 
-        pName.addEventListener("click", function () {
-            goToTarget(key, val)
-        });
-
-        li.appendChild(p);
-        p.appendChild(pName);
-        p.appendChild(a);
-        li.appendChild(span);
-        ul.appendChild(li);
+        li.appendChild(textSpan)
+        ul.appendChild(li)
     }
 }
 
@@ -475,27 +446,26 @@ function getDetailLinkElement(key, val, text) {
 }
 
 function getPath(key, val) {
-    let path = "*";
+    let path = "/" + val + "/";
 
-    if(val === "Hütte")
-    {
-        path = "/huts/" + key.properties.h_id;
+    if(val === "huts") {
+        path += key.properties.h_id;
     }
-    else if(val === "Piste")
-    {
+    else if(val === "slopes") {
         let id = key.properties.gb_nr + "-"
         + key.properties.p_nr + "-"
         + key.properties.a_nr + "-"
         + key.properties.a_name;
-        path = "/slopes/" + id;
+        path += id;
     }
-    else if(val === "Lift")
-    {
-        path = "/lifts/" + key.properties.s_id;
+    else if(val === "lifts") {
+        path += key.properties.s_id;
     }
-    else if(val === "Skigebiet")
-    {
-        path = "/areas/" + key.properties.gb_nr;
+    else if(val === "areas") {
+        path += key.properties.gb_nr;
+    }
+    else {
+        return "*";
     }
     return path;
 }
