@@ -9,7 +9,6 @@ import skiingAreas from '../../../build/data/gebietsnr'
 
 let map;
 let layersLoaded = false;
-let popup;
 
 export default function initMap(long, lat){
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'
@@ -123,10 +122,6 @@ function createPopUpDiv(feature, ident) {
         let a = getDetailLinkElement(feature, ident, "Details");
         div.appendChild(h1);
         div.appendChild(a);
-
-        a.addEventListener("click", function () {
-            popup.remove();
-        });
     }
     else {
         h1.innerHTML= "Parkplatz";
@@ -140,7 +135,7 @@ function createPopUpDiv(feature, ident) {
 
 function addPopUpToMap(popUpContent, position, offset){
   map.once('moveend', function() {
-    //let popup;
+    let popup;
     let options;
     if(offset != 0) //no offset for slopes
       options = {offset:[0, -20]};
@@ -148,6 +143,10 @@ function addPopUpToMap(popUpContent, position, offset){
     .setLngLat(position)
     .setDOMContent(popUpContent)
     .addTo(map);
+
+    popUpContent.lastChild.addEventListener("click", function () {
+      popup.remove();
+      });
   });
 }
 
@@ -433,7 +432,7 @@ function deleteAllListItems(ul) {
     }
 }
 
-function getItemArea(key) {
+export function getItemArea(key) {
   for (let object of skiingAreas.features) {
         if (object.properties.gb_nr == key.properties.gb_nr) {
             return object;
