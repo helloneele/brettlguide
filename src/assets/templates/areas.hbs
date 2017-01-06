@@ -8,13 +8,13 @@
 <h2>Hütten ({{huts.length}})</h2>
 <ol>
     {{#each huts}}
-        <li>{{this.properties.name}}</li>
+        <li>{{link this "huts"}}</li>
     {{/each}}
 </ol>
 <h2>Lifte ({{lifts.length}})</h2>
 <ol>
     {{#each lifts}}
-        <li>{{this.properties.name}}</li>
+        <li>{{link this "lifts"}}</li>
     {{/each}}
 </ol>
 <h2>Parkplatz ({{parking.length}})</h2>
