@@ -1,17 +1,27 @@
 <h1>{{area.properties.name}}</h1>
-<ul>
+<h2>Pisten ({{slopes.length}})</h2>
+<ol>
     {{#each slopes}}
-        <li>{{this.properties.name}}</li>
+        <li>{{link this "slopes"}}</li>
     {{/each}}
+</ol>
+<h2>Hütten ({{huts.length}})</h2>
+<ol>
     {{#each huts}}
         <li>{{this.properties.name}}</li>
     {{/each}}
+</ol>
+<h2>Lifte ({{lifts.length}})</h2>
+<ol>
     {{#each lifts}}
         <li>{{this.properties.name}}</li>
     {{/each}}
+</ol>
+<h2>Parkplatz ({{parking.length}})</h2>
+<ol>
     {{#each parking}}
-        <li>{{this.properties.groesse}}</li>
+        <li>Parkplatzgröße: {{this.properties.groesse}}</li>
     {{/each}}
-</ul>
+</ol>
 <div class="auslastung"></div>
 <div class="schnee"></div>

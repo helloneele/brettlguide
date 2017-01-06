@@ -16,6 +16,9 @@ import * as map from './map';
 import detectLocation from './detectLocation';
 import getObject from './getObject';
 
+function assl() {
+    console.log("assl");
+}
 
 let dynamicContent = document.getElementById("dynamic-content");
 

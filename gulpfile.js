@@ -29,7 +29,11 @@ gulp.task('copy', function() {
 gulp.task('templates', function(){
     gulp.src(['./src/assets/templates/*.hbs'])
         .pipe(handlebars())
-        .pipe(defineModule('node'))
+        .pipe(defineModule('node',{
+            require: {
+                Handlebars: '../../../src/assets/js/handlebarHelpers'
+            }
+        }))
         .pipe(gulp.dest('./build/assets/templates/'));
 });
 
