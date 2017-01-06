@@ -10,7 +10,7 @@ gulp.task('default', ['watch', 'templates', 'scripts', 'copyfonts', 'copy']);
 gulp.task('copyfonts', function() {
    var brettlFonts = gulp.src('./src/assets/fonts/**/*.{ttf,woff,eof,svg}')
    .pipe(gulp.dest('./build/assets/fonts'));
-   var fontAwsmFonts = gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
+   var fontAwsmFonts = gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg,woff2,otf}')
    .pipe(gulp.dest('./build/assets/fonts'));
 
    return merge(brettlFonts, fontAwsmFonts);
@@ -30,7 +30,7 @@ gulp.task('templates', function(){
     gulp.src(['./src/assets/templates/*.hbs'])
         .pipe(handlebars())
         .pipe(defineModule('node'))
-        .pipe(gulp.dest('./build/assets/templates/')); 
+        .pipe(gulp.dest('./build/assets/templates/'));
 });
 
 gulp.task('build:css', function () {

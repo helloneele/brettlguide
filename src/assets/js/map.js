@@ -81,8 +81,7 @@ export function detectTargetPosition(feature, string, e) {
                 if(e)
                     position = [e.lngLat.lng, e.lngLat.lat];
                 else
-                    position = feature.geometry.coordinates[0][0];
-
+                    position = feature.geometry.coordinates[0][Math.floor(feature.geometry.coordinates[0].length / 2)];
                 popUpContent = createPopUpDiv(feature, "slopes");
                 offset = 0;
                 break;
@@ -91,7 +90,7 @@ export function detectTargetPosition(feature, string, e) {
                 if(e)
                     position = [e.lngLat.lng, e.lngLat.lat];
                 else
-                    position = feature.geometry.coordinates[0];
+                    position = feature.geometry.coordinates[Math.floor(feature.geometry.coordinates.length / 2)];
 
                 popUpContent = createPopUpDiv(feature, string);
                 break;
