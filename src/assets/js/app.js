@@ -38,10 +38,5 @@ function locationToggle(e){
   detectLocation();
 }
 
-charts.auslastung();
-charts.schwierigkeit();
-charts.schnee();
-
-
 //TODO
 // cache manifest https://developer.mozilla.org/de/docs/Web/HTML/Using_the_application_cache
