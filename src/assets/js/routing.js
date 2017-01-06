@@ -15,6 +15,7 @@ import skiingAreas from '../../../build/data/gebietsnr';
 import * as map from './map';
 import detectLocation from './detectLocation';
 import getObject from './getObject';
+import * as charts from './charts';
 
 function assl() {
     console.log("assl");
@@ -80,6 +81,9 @@ let templates = {
                 lifts: areaLifts,
                 parking: areaParkingSpaces
             });
+            charts.auslastung();
+            charts.schwierigkeit();
+            charts.schnee();
         }
         else {
             templates.notFound();

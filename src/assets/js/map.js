@@ -4,6 +4,7 @@ import lifts from '../../../build/data/skilifte';
 import parkingSpaces from '../../../build/data/parkplaetze';
 import skiingAreas from '../../../build/data/gebietsnr';
 
+import mapboxgl from 'mapbox-gl';
 
 // use map.loaded true/false for preloader image
 

@@ -37,37 +37,51 @@ gulp.task('templates', function(){
         .pipe(gulp.dest('./build/assets/templates/'));
 });
 
-gulp.task('build:css', function () {
+gulp.task('precompile:css', function (){
+  var fs = require("fs")
+  var atImport = require("postcss-import")
+  var sourcemaps = require('gulp-sourcemaps')
   var concat = require('gulp-concat')
   var postcss = require('gulp-postcss')
-  var sourcemaps = require('gulp-sourcemaps')
   var autoprefixer = require('autoprefixer')
   var lost = require('lost')
   var customProperties = require('postcss-custom-properties')
-  var Import = require('postcss-import')
   var styleGuide = require('postcss-style-guide')
   var nano = require('cssnano')
   var nested = require('postcss-nested')
 
-  return gulp.src(['./src/assets/css/app.css'])
-    .pipe(sourcemaps.init())
-    .pipe(postcss([
-        Import,
-        nested,
-        customProperties({ preserve: true }),
-        lost(),
-        autoprefixer,
-        styleGuide({
-          project: 'brettlguide.at',
-          dest: 'build/styleguide/index.html',
-          showCode: false,
-          themePath: './src/assets/styleguide'
-        }),
-        // nano
-    ]))
-    .pipe(sourcemaps.write('./'))
-    .pipe(concat('app.min.css'))
-    .pipe(gulp.dest('./build/assets/css'))
+  var processors = [
+    atImport({}),
+    nested,
+    customProperties({ preserve: true }),
+    lost(),
+    autoprefixer,
+    styleGuide({
+      project: 'brettlguide.at',
+      dest: 'build/styleguide/index.html',
+      showCode: false,
+      themePath: './src/assets/styleguide'
+    }),
+    nano
+  ]
+
+
+  return gulp
+  .src(['./src/assets/css/app.css'])
+  .pipe(sourcemaps.init())
+  .pipe(postcss(processors))
+  .pipe(sourcemaps.write())
+  .pipe(concat('app.min.css'))
+  .pipe(gulp.dest('./build/assets/css'))
+})
+
+gulp.task('build:css', ['precompile:css'], function (){
+  var concat = require('gulp-concat')
+
+  return gulp
+  .src(['./build/assets/css/app.min.css', './node_modules/mapbox-gl/dist/mapbox-gl.css'])
+  .pipe(concat('app.min.css'))
+  .pipe(gulp.dest('./build/assets/css'))
 })
 
 
