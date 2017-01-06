@@ -1,27 +1,65 @@
-<h1>{{area.properties.name}}</h1>
-<h2>Pisten ({{slopes.length}})</h2>
-<ol>
-    {{#each slopes}}
-        <li>{{link this "slopes"}}</li>
-    {{/each}}
-</ol>
-<h2>Hütten ({{huts.length}})</h2>
-<ol>
-    {{#each huts}}
-        <li>{{link this "huts"}}</li>
-    {{/each}}
-</ol>
-<h2>Lifte ({{lifts.length}})</h2>
-<ol>
-    {{#each lifts}}
-        <li>{{link this "lifts"}}</li>
-    {{/each}}
-</ol>
-<h2>Parkplatz ({{parking.length}})</h2>
-<ol>
-    {{#each parking}}
-        <li>Parkplatzgröße: {{this.properties.groesse}}</li>
-    {{/each}}
-</ol>
-<div class="auslastung"></div>
-<div class="schnee"></div>
+<div class="detailContent"><h1>Skigebiet {{area.properties.name}}</h1>
+  <h2>{{area.properties.skiregion}}{{#if area.properties.skiverbund}} – {{area.properties.skiverbund}}{{/if}}</h2>
+
+  <div class="statistic__overview cols">
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{slopes.length}}</span>
+        <span class="title">Pisten</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{lifts.length}}</span>
+        <span class="title">Lifte</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{huts.length}}</span>
+        <span class="title">Hütten</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{parking.length}}</span>
+        <span class="title">Parkplätze</span>
+      </div>
+    </div>
+  </div>
+  <div class="areasSlopes">
+    <h3>Pisten</h3>
+    <ul class="listSlopes textCol list-plain">
+        {{#each slopes}}
+            <li>{{link this "slopes"}}</li>
+        {{/each}}
+    </ul>
+  </div>
+  <div class="areasLifts">
+    <h3>Lifte</h3>
+    <ul class="listSlopes textCol list-plain">
+        {{#each lifts}}
+            <li>{{link this "lifts"}}</li>
+        {{/each}}
+    </ul>
+  </div>
+  <div class="areasHuts">
+    <h3>Hütten</h3>
+    <ul class="listSlopes textCol list-plain">
+        {{#each huts}}
+            <li>{{link this "huts"}}</li>
+        {{/each}}
+    </ul> 
+  </div>
+  <div class="areasParking">
+    <h3>Parkplatz</h3>
+    <ul class="listSlopes textCol list-plain">
+        {{#each parking}}
+            <li>Parkplatzgröße: {{this.properties.groesse}}</li>
+        {{/each}}
+    </ul>
+  </div>
+  <div class="auslastung"></div>
+  <div class="schnee"></div>
+  <div class="pisten"></div>
+</div>

@@ -224,11 +224,12 @@ export function schwierigkeit() {
 }
 
 export function schnee() {
-  d3.select(".schnee").append("h5").text("Derzeitige Schneemenge (cm)");
+  d3.select(".schnee").append("h3").text("Derzeitige Schneemenge (cm)");
   // set the dimensions and margins of the graph
-  var margin = {top: 20, right: 20, bottom: 30, left: 50},
-  width = 960 - margin.left - margin.right,
-  height = 500 - margin.top - margin.bottom;
+  console.log(window.innerWidth)
+  var margin = {top: 20, right: 20, bottom: 30, left: 20},
+  width = 400,
+  height = 200; 
 
   // parse the date / time
   var parseTime = d3.timeParse("%d-%b-%y");

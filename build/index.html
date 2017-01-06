@@ -15,72 +15,14 @@
 
   </head>
   <body>
-    <style>
-     rect {
-      cursor: pointer;
-      stroke-width: 2;
-    }
-    rect.disabled {
-      fill: transparent !important;
-    }
-
-    .line {
-      fill: none;
-      stroke: #4bb4ca;
-      stroke-width: 2px;
-    }
-
-    .area {
-      fill: #4bb4ca;
-      opacity: 0.5;
-    }
-
-
-
-
-
-    .tooltip {
-      background: #eee;
-      box-shadow: 0 0 5px #999999;
-      color: #333;
-      display: none;
-      font-size: 12px;
-      left: 130px;
-      padding: 10px;
-      position: absolute;
-      text-align: center;
-      top: 95px;
-      width: 80px;
-      z-index: 10;
-    }
-
-    .progress-meter text {
-      font-family: Lato, Helvetica, Arial, sans-serif;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .auslastung {
-      margin-left: 60px;
-      width: 260px;
-      height: 260px;
-      margin-bottom: 40px;
-    }
-
-    .auslastung h5 {
-      text-align: center;
-    }
-  </style>
 
   <header class="header--shadow">
     <div class="header__content">
-      <!-- <div class="header__left">&nbsp;</div> -->
       <div class="header__center">
         <a href="/"><h1 class="header__logo">BRETTLGUIDE</h1></a>
       </div>
-          <!-- <div class="header__right">&nbsp;</div>
-        </div> -->
-      </header>
+    </div>
+    </header>
       <div class="content">
         <div class="mapWrapper">
           <div id="map"></div>
@@ -88,7 +30,6 @@
             <input id="searchfield" class="search__field" placeholder="Suchbegriff eingeben" type="text" autofocus>
             <ul id="suggestions" class="search__suggestions"></ul>
           </div>
-
           <div class="mapButtons">
             <div id="searchToggle" class="mapButtons__item searchToggle">
               <i id="icon" class="searchToggle--icon fa fa-search" aria-hidden="true"></i>
@@ -99,10 +40,7 @@
           </div>
         </div>
 
-
         <div id="dynamic-content"> </div>
-
-
       </div>
       <footer class="footer--shadow">
         <div class="footer__content">
@@ -110,7 +48,6 @@
             <h2>About</h2>
             <p>brettlguide.at ist ein Semesterprojekt des Studiengangs MMT an der <a href="http://fh-salzburg.ac.at">Fachochschule Salzburg</a> im Wintersemester 16/17.</p>
             <p>Vielen Dank an das <a href="">Land Salzburg</a> für die Bereitstellung der Daten.</p>
-
           </div>
           <div class="footerCenter">
             <h2>Contact</h2>
@@ -129,7 +66,6 @@
           </div>
         </div>
       </footer>
-
       <script src="/assets/js/app.js" charset="utf-8"></script>
    </body>
    </html>

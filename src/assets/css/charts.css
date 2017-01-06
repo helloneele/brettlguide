@@ -1,0 +1,50 @@
+rect {
+ cursor: pointer;
+ stroke-width: 2;
+}
+rect.disabled {
+ fill: transparent !important;
+}
+
+.line {
+ fill: none;
+ stroke: #4bb4ca;
+ stroke-width: 2px;
+}
+
+.area {
+ fill: #4bb4ca;
+ opacity: 0.5;
+}
+
+.tooltip {
+ background: #eee;
+ box-shadow: 0 0 5px #999999;
+ color: #333;
+ display: none;
+ font-size: 12px;
+ left: 130px;
+ padding: 10px;
+ position: absolute;
+ text-align: center;
+ top: 95px;
+ width: 80px;
+ z-index: 10;
+}
+
+.progress-meter text {
+ font-family: Lato, Helvetica, Arial, sans-serif;
+ font-size: 24px;
+ font-weight: bold;
+}
+
+.auslastung {
+ margin-left: 60px;
+ width: 260px;
+ height: 260px;
+ margin-bottom: 40px;
+}
+
+.auslastung h5 {
+ text-align: center;
+}
