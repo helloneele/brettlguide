@@ -6,6 +6,12 @@ import areasTpl from '../../../build/assets/templates/areas';
 import imprintTpl from '../../../build/assets/templates/imprint';
 import notFoundTpl from '../../../build/assets/templates/notFound';
 
+import huts from '../../../build/data/skihuetten';
+import slopes from '../../../build/data/skipisten';
+import lifts from '../../../build/data/skilifte';
+import parkingSpaces from '../../../build/data/parkplaetze';
+import skiingAreas from '../../../build/data/gebietsnr';
+
 import * as map from './map';
 import detectLocation from './detectLocation';
 import getObject from './getObject';
@@ -19,44 +25,58 @@ let templates = {
         dynamicContent.innerHTML = mapTpl();
     },
     slopes: (ctx) => {
-        let slope = getObject.slope(ctx.params.slope);
+        let slope = getObject.slope(ctx.params.slope, slopes);
 
         if (slope) {
             map.detectTargetPosition(slope, "slopes");
-            dynamicContent.innerHTML = slopeTpl(slope);
+            let area = map.getItemArea(slope);
+            dynamicContent.innerHTML = slopeTpl({slope: slope, area: area});
         }
         else {
             templates.notFound();
         }
     },
     huts: (ctx) => {
-        let hut = getObject.hut(ctx.params.hut)
+        let hut = getObject.hut(ctx.params.hut, huts)
 
         if (hut) {
-          map.detectTargetPosition(hut, "huts");
-          dynamicContent.innerHTML = hutTpl(hut);
+            map.detectTargetPosition(hut, "huts");
+            let area = map.getItemArea(hut);
+            dynamicContent.innerHTML = hutTpl({hut: hut, area: area});
         }
         else {
             templates.notFound();
         }
     },
     lifts: (ctx) => {
-        let lift = getObject.lift(ctx.params.lift);
+        let lift = getObject.lift(ctx.params.lift, lifts);
 
         if (lift) {
             map.detectTargetPosition(lift, "lifts");
-            dynamicContent.innerHTML = liftTpl(lift);
+            let area = map.getItemArea(lift);
+            dynamicContent.innerHTML = liftTpl({lift: lift, area: area});
         }
         else {
             templates.notFound();
         }
     },
     areas: (ctx) => {
-        let area = getObject.area(ctx.params.area);
+        let area = getObject.area(ctx.params.area, skiingAreas);
 
         if (area) {
+            let areaSlopes = getObject.allOfArea(area.properties.gb_nr, slopes);
+            let areaHuts = getObject.allOfArea(area.properties.gb_nr, huts);
+            let areaLifts = getObject.allOfArea(area.properties.gb_nr, lifts);
+            let areaParkingSpaces = getObject.allOfArea(area.properties.gb_nr, parkingSpaces);
+
             map.detectTargetPosition(area, "areas");
-            dynamicContent.innerHTML = liftTpl(area);
+            dynamicContent.innerHTML = areasTpl({
+                area: area,
+                slopes: areaSlopes,
+                huts: areaHuts,
+                lifts: areaLifts,
+                parking: areaParkingSpaces
+            });
         }
         else {
             templates.notFound();

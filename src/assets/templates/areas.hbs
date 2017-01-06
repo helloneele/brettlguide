@@ -1,3 +1,17 @@
-<h1>{{properties.name}}</h1>
+<h1>{{area.properties.name}}</h1>
+<ul>
+    {{#each slopes}}
+        <li>{{this.properties.name}}</li>
+    {{/each}}
+    {{#each huts}}
+        <li>{{this.properties.name}}</li>
+    {{/each}}
+    {{#each lifts}}
+        <li>{{this.properties.name}}</li>
+    {{/each}}
+    {{#each parking}}
+        <li>{{this.properties.groesse}}</li>
+    {{/each}}
+</ul>
 <div class="auslastung"></div>
 <div class="schnee"></div>

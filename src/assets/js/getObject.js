@@ -1,12 +1,7 @@
-import huts from '../../../build/data/skihuetten';
-import slopes from '../../../build/data/skipisten';
-import lifts from '../../../build/data/skilifte';
-import parkingSpaces from '../../../build/data/parkplaetze';
-import skiingAreas from '../../../build/data/gebietsnr';
 
 export default {
-    slope: (param) => {
-        for(let object of slopes.features) {
+    slope: (param, file) => {
+        for(let object of file.features) {
             let id = object.properties.gb_nr + "-"
                 + object.properties.p_nr + "-"
                 + object.properties.a_nr;
@@ -16,27 +11,36 @@ export default {
             }
         }
     },
-    hut: (param) => {
-        for(let object of huts.features) {
+    hut: (param, file) => {
+        for(let object of file.features) {
             if(object.properties.h_id === param) {
                 return object;
             }
         }
     },
-    lift: (param) => {
-        for(let object of lifts.features) {
+    lift: (param, file) => {
+        for(let object of file.features) {
             if(object.properties.s_id == param) //id ist number
             {
                 return object;
             }
         }
     },
-    area: (param) => {
-        for(let object of skiingAreas.features) {
+    area: (param, file) => {
+        for(let object of file.features) {
             if(object.properties.gb_nr == param) //gb_nr ist number
             {
                 return object;
             }
         }
+    },
+    allOfArea: (gb_nr, file) => {
+        let arr = new Array();
+        for(let object of file.features) {
+            if(gb_nr == object.properties.gb_nr) {
+                arr.push(object);
+            }
+        }
+        return arr;
     }
 };
