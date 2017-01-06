@@ -1,13 +1,14 @@
-import huts from '../../../build/data/skihuetten'
-import slopes from '../../../build/data/skipisten'
-import lifts from '../../../build/data/skilifte'
-import parkingSpaces from '../../../build/data/parkplaetze'
-import skiingAreas from '../../../build/data/gebietsnr'
+import huts from '../../../build/data/skihuetten';
+import slopes from '../../../build/data/skipisten';
+import lifts from '../../../build/data/skilifte';
+import parkingSpaces from '../../../build/data/parkplaetze';
+import skiingAreas from '../../../build/data/gebietsnr';
 
 
 // use map.loaded true/false for preloader image
 
 let map;
+let actObject;
 let layersLoaded = false;
 
 export default function initMap(long, lat){
@@ -51,6 +52,12 @@ function addMapEvents() {
 }
 
 export function detectTargetPosition(feature, string, e) {
+
+    if(!checkIfNewTarget(feature, e)) {
+        return;
+    }
+    actObject = feature;
+
     if(!e && !feature.geometry.coordinates) {
         let text = "Keine Koordinaten für " + feature.properties.name + " vorhanden";
         alert(text);
@@ -113,10 +120,7 @@ function createPopUpDiv(feature, ident) {
     let h1 = document.createElement("h1");
 
     if(ident !== "parking"){
-        if(feature.properties.name.length > 1)
-            h1.innerHTML = feature.properties.name;
-        else
-            h1.innerHTML = "Kein Name verfügbar";
+        h1.innerHTML = feature.properties.name;
 
         let a = getDetailLinkElement(feature, ident, "Details");
         div.appendChild(h1);
@@ -142,11 +146,14 @@ function addPopUpToMap(popUpContent, position, offset){
     .setLngLat(position)
     .setDOMContent(popUpContent)
     .addTo(map);
-
-    popUpContent.lastChild.addEventListener("click", function () {
-      popup.remove();
-      });
   });
+}
+
+function checkIfNewTarget(feature, e) {
+    if(actObject && !e && JSON.stringify(feature.properties) === JSON.stringify(actObject.properties)) {
+        return false;
+    }
+    return true;
 }
 
 export function setCurrentPos(long, lat){
@@ -341,7 +348,7 @@ function search() {
   let ul = document.getElementById("suggestions");
 
   if(this === document.activeElement){
-    ul.classList.remove("hidden")
+    ul.classList.remove("hidden");
   }
 
   if(this.value.length >= 3) {
@@ -448,7 +455,7 @@ function getDetailLinkElement(key, val, text) {
     return a;
 }
 
-function getPath(key, val) {
+export function getPath(key, val) {
     let path = "/" + val + "/";
 
     if(val === "huts") {
