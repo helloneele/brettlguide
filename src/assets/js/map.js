@@ -4,7 +4,12 @@ import lifts from '../data/skilifte';
 import parkingSpaces from '../data/parkplaetze';
 import skiingAreas from '../data/gebietsnr';
 
+import page from 'page'
 import mapboxgl from 'mapbox-gl';
+
+import detectLocation from './detectLocation';
+
+
 
 // use map.loaded true/false for preloader image
 
@@ -78,13 +83,15 @@ export function detectTargetPosition(feature, string, e) {
                 break;
 
             case "areas":
-              if(e)
-                position = [e.lngLat.lng, e.lngLat.lat];
-              else
-                position = feature.geometry.coordinates;
+                if(e) {
+                    position = [e.lngLat.lng, e.lngLat.lat];
+                    page.redirect(getPath(feature,string));
+                }
+                else
+                    position = feature.geometry.coordinates;
 
                 zoom = 11;
-              break;
+                break;
 
             case "slopesBlue":
             case "slopesRed":
@@ -94,6 +101,7 @@ export function detectTargetPosition(feature, string, e) {
                     position = [e.lngLat.lng, e.lngLat.lat];
                 else
                     position = feature.geometry.coordinates[0][Math.floor(feature.geometry.coordinates[0].length / 2)];
+
                 popUpContent = createPopUpDiv(feature, "slopes");
                 offset = 0;
                 break;
@@ -347,39 +355,71 @@ function setSkiingAreas(){
     });
 }
 
+// SEARCH ///////////
+let searchToggleButton = document.getElementById("searchToggle")
+searchToggleButton.addEventListener("click", searchToggle)
+
+
+document.addEventListener('click', closeSearch);
+
+function closeSearch(event) {
+    let search = document.getElementById("search"),
+        searchIsActive = search.classList.contains('active'),
+        searchIsClickInside = search.contains(event.target),
+        searchButtonIsClickInside = searchToggleButton.contains(event.target),
+        searchResultIsClicked = event.target.classList.contains("suggestion__name") ||
+            event.target.classList.contains("suggestion__area");
+
+    if ((!searchIsClickInside || searchResultIsClicked)  && !searchButtonIsClickInside && searchIsActive) {
+        searchToggle();
+    }
+}
+
+function searchToggle(e){
+    searchToggleButton.classList.toggle("active")
+    document.getElementById("search").classList.toggle("active")
+
+    let icon = document.getElementById("icon")
+    icon.classList.toggle("fa-search", !searchToggleButton.classList.contains('active'))
+    icon.classList.toggle("fa-close", searchToggleButton.classList.contains('active'))
+}
+
 let field = document.getElementById("searchfield");
 field.addEventListener("keyup", search);
 field.addEventListener("focus", search);
 
 function search() {
-  let ul = document.getElementById("suggestions");
+    let ul = document.getElementById("suggestions");
 
-  if(this === document.activeElement){
-    ul.classList.remove("hidden");
-  }
+    if(this === document.activeElement){
+        ul.classList.remove("hidden");
+    }
 
-  if(this.value.length >= 3) {
-    let regEx = new RegExp(this.value, "i");
-    let matchedHuts = scanFile(huts, regEx, "huts");
-    let matchedSlopes = scanFile(slopes, regEx, "slopes");
-    let matchedLifts = scanFile(lifts, regEx, "lifts");
-    let matchedAreas = scanFile(skiingAreas, regEx, "areas");
+    if(this.value.length >= 3) {
+        let regEx = new RegExp(this.value, "i");
+        let matchedHuts = scanFile(huts, regEx, "huts");
+        let matchedSlopes = scanFile(slopes, regEx, "slopes");
+        let matchedLifts = scanFile(lifts, regEx, "lifts");
+        let matchedAreas = scanFile(skiingAreas, regEx, "areas");
 
-    let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts, ...matchedAreas]);
+        let listItems = new Map([ ...matchedHuts, ...matchedSlopes, ...matchedLifts, ...matchedAreas]);
 
-    updateListItems(listItems);
-
-    // closing suggestions if clicked outside
-    document.addEventListener('click', function(event) {
-    let isClickInside = document.getElementById("search").contains(event.target);
-    if (!isClickInside)
-      hideSearchResults()
-    });
-  }
-  else {
-      deleteAllListItems(ul)
-  }
+        updateListItems(listItems);
+    }
+    else {
+        deleteAllListItems(ul)
+    }
 }
+
+// FINDLOCATION ///////////
+let locationToggleButton = document.getElementById("locationToggle")
+locationToggleButton.addEventListener("click", locationToggle)
+
+function locationToggle(e){
+    detectLocation();
+}
+
+
 
 function scanFile(file, regEx, ident) {
     let suggestions = new Map();
@@ -394,48 +434,50 @@ function scanFile(file, regEx, ident) {
     return suggestions;
 }
 
+/*
 function hideSearchResults() {
   let results = document.getElementById("suggestions")
   results.classList.add("hidden")
-}
+}*/
 
 function updateListItems(listItems) {
-
     let ul = document.getElementById("suggestions");
 
     deleteAllListItems(ul);
 
     for(let [key, val] of listItems) {
-        let li = document.createElement("li")
-        li.setAttribute("class", "suggestion")
+        let li = document.createElement("li");
+        li.setAttribute("class", "suggestion");
 
-        let textSpan = document.createElement("span")
-        textSpan.setAttribute("class", "suggestion__text")
+        let textSpan = document.createElement("span");
+        textSpan.setAttribute("class", "suggestion__text");
 
-        let aName = getDetailLinkElement(key, val, key.properties.name)
-        aName.setAttribute("class", "suggestion__name")
+        let aName = getDetailLinkElement(key, val, key.properties.name);
+        aName.setAttribute("class", "suggestion__name");
+        aName.addEventListener("click", closeSearch);
 
-        let icon = document.createElement("img")
-        icon.setAttribute("class", "suggestion__icon")
-        icon.setAttribute("src", "/assets/img/icon_"+ val +".svg")
+        let icon = document.createElement("img");
+        icon.setAttribute("class", "suggestion__icon");
+        icon.setAttribute("src", "/assets/img/icon_"+ val +".svg");
 
-        li.appendChild(icon)
-        textSpan.appendChild(aName)
+        li.appendChild(icon);
+        textSpan.appendChild(aName);
 
-        let br = document.createElement('br')
-        textSpan.appendChild(br)
+        let br = document.createElement('br');
+        textSpan.appendChild(br);
 
         if(val !== "areas") {
-            let area = getItemArea(key)
+            let area = getItemArea(key);
 
             if(area) {
-                let aArea = getDetailLinkElement(area, "areas", area.properties.name)
-                aArea.setAttribute("class", "suggestion__area")
+                let aArea = getDetailLinkElement(area, "areas", area.properties.name);
+                aArea.setAttribute("class", "suggestion__area");
+                aArea.addEventListener("click", closeSearch)
                 textSpan.appendChild(aArea);
             }
         }
-        li.appendChild(textSpan)
-        ul.appendChild(li)
+        li.appendChild(textSpan);
+        ul.appendChild(li);
     }
 }
 
