@@ -20,10 +20,8 @@ gulp.task('copyfonts', function() {
 gulp.task('copy', function() {
    var images = gulp.src('./src/assets/img/**/*.{png,jpg,gif,eps,svg}')
    .pipe(gulp.dest('./build/assets/img'));
-   var fontAwesomeCSS = gulp.src('./node_modules/font-awesome/css/font-awesome.min.css')
-   .pipe(gulp.dest('./build/assets/css'));
 
-   return merge(images, fontAwesomeCSS);
+   return merge(images);
 });
 
 gulp.task('templates', function(){
@@ -79,7 +77,7 @@ gulp.task('build:css', ['precompile:css'], function (){
   var concat = require('gulp-concat')
 
   return gulp
-  .src(['./build/assets/css/app.min.css', './node_modules/mapbox-gl/dist/mapbox-gl.css'])
+  .src(['./build/assets/css/app.min.css', './node_modules/mapbox-gl/dist/mapbox-gl.css', './node_modules/font-awesome/css/font-awesome.min.css'])
   .pipe(concat('app.min.css'))
   .pipe(gulp.dest('./build/assets/css'))
 })
