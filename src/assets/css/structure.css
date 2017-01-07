@@ -1,4 +1,4 @@
-@lost gutter 60px;
+@lost gutter 50px;
 :root {
     --layout-width: 1200px;
     --layout-padding: 40px;
@@ -85,6 +85,54 @@ header{
 
   div {
     lost-column: 1/3;*/
+}
+
+.textCol{
+  columns: 3;
+  column-fill: balance;
+  column-gap: 40px;
+  border-bottom: 2px solid var(--lightgray);
+  padding: 0 0 40px;
+}
+
+.statistic__overview{
+  /*border-top: 2px solid var(--mediumgray);*/
+  border-bottom: 2px solid var(--lightgray);
+  padding: 10px 0 40px;
+  margin: 40px 0;
+  /*background: #fcfcfc;*/
+
+  .statistic__overview__item{
+    text-align: center;
+
+
+    &:not(:last-child){
+      border-right: 2px dashed var(--sky-blue);
+    }
+
+    .statistic__overview__item__content{
+      padding: 20px 10px;
+
+      span{
+        display: block;
+        color: var(--dark-blue);
+
+        &.number{
+          font-size: 4em;
+          line-height: 1em;
+          color: var(--mediumgray);
+          font-weight: bold;
+        }
+
+        &.title{
+          font-size: 2em;
+          line-height: 1em;
+
+        }
+
+      }
+    }
+  }
 }
 
 .mapWrapper{
@@ -331,6 +379,12 @@ footer {
 
   }
 
+  .statistic__overview{
+    .statistic__overview__item{
+      lost-column: 1/4 4 0px;
+    }
+  }
+
   .search{
     padding: 20px 40px 0;
   }
@@ -343,6 +397,7 @@ footer {
 
       >div {
         lost-column: 1/3;
+
       }
     }
   }

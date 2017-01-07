@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     jsonminify = require('gulp-jsonminify');
 
 // define the default task and add the watch task to it
-gulp.task('default', ['watch', 'templates', 'scripts', 'copyfonts', 'copy']);
+gulp.task('default', ['watch', 'scripts', 'copyfonts', 'copy']);
 
 gulp.task('copyfonts', function() {
    var brettlFonts = gulp.src('./src/assets/fonts/**/*.{ttf,woff,eof,svg}')
@@ -86,7 +86,7 @@ gulp.task('build:css', ['precompile:css'], function (){
 })
 
 
-gulp.task('scripts', () => {
+gulp.task('scripts', ['templates'], function() {
   var babelify = require('babelify')
   var browserify = require('browserify')
   var source = require('vinyl-source-stream')
@@ -125,5 +125,5 @@ gulp.task('minify', function () {
 gulp.task('watch', function() {
   gulp.watch('./src/assets/**/*.css', ['build:css']);
   gulp.watch('./src/assets/**/*.js', ['scripts']);
-  gulp.watch('./src/assets/**/*.hbs', ['templates'])
+  gulp.watch('./src/assets/**/*.hbs', ['scripts'])
 });
