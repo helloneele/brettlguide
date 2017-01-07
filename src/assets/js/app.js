@@ -27,7 +27,7 @@ function searchToggle(e){
 
   let icon = document.getElementById("icon")
   icon.classList.toggle("fa-search", !this.classList.contains('active'))
-  icon.classList.toggle("fa-close", this.classList.contains('active'))
+  icon.classList.toggle("fa-close", this.classList.contains('active')) 
 }
 
 // FINDLOCATION ///////////
@@ -38,5 +38,31 @@ function locationToggle(e){
   detectLocation();
 }
 
-//TODO
-// cache manifest https://developer.mozilla.org/de/docs/Web/HTML/Using_the_application_cache
+// SCROLLTOP ///////////
+console.log("hello")
+let scrollTopButton = document.getElementsByClassName("scrollTop")[0]
+console.log(scrollTopButton)
+scrollTopButton.addEventListener("click", scrollContentTop)
+
+function scrollContentTop(){
+  console.log("click")
+  let height = window.innerHeight - 80
+
+  var scroll = 0.1;  // initial opacity
+  var timer = setInterval(function () {
+      if (scroll >= height){
+          clearInterval(timer);
+      }
+      window.scrollTo(0, scroll);
+      scroll += scroll * 0.6;
+        if(scroll > height){
+          clearInterval(timer);
+          window.scrollTo(0, height);
+        }
+  }, 70);
+}
+
+
+function fadeIn(height) {
+
+}
