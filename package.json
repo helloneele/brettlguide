@@ -19,6 +19,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-define-module": "^0.1.5",
     "gulp-handlebars": "^4.0.0",
+    "gulp-jsonminify": "^1.0.0",
     "gulp-postcss": "^6.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.9.1",

@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     handlebars = require('gulp-handlebars'),
     defineModule = require('gulp-define-module'),
-    merge = require('merge-stream');
+    merge = require('merge-stream'),
+    jsonminify = require('gulp-jsonminify');
 
 // define the default task and add the watch task to it
 gulp.task('default', ['watch', 'templates', 'scripts', 'copyfonts', 'copy']);
@@ -38,17 +39,17 @@ gulp.task('templates', function(){
 });
 
 gulp.task('precompile:css', function (){
-  var fs = require("fs")
-  var atImport = require("postcss-import")
-  var sourcemaps = require('gulp-sourcemaps')
-  var concat = require('gulp-concat')
-  var postcss = require('gulp-postcss')
-  var autoprefixer = require('autoprefixer')
-  var lost = require('lost')
-  var customProperties = require('postcss-custom-properties')
-  var styleGuide = require('postcss-style-guide')
-  var nano = require('cssnano')
-  var nested = require('postcss-nested')
+  var fs = require("fs");
+  var atImport = require("postcss-import");
+  var sourcemaps = require('gulp-sourcemaps');
+  var concat = require('gulp-concat');
+  var postcss = require('gulp-postcss');
+  var autoprefixer = require('autoprefixer');
+  var lost = require('lost');
+  var customProperties = require('postcss-custom-properties');
+  var styleGuide = require('postcss-style-guide');
+  var nano = require('cssnano');
+  var nested = require('postcss-nested');
 
   var processors = [
     atImport({}),
@@ -97,6 +98,13 @@ gulp.task('scripts', () => {
   .pipe(source('app.js'))
   .pipe(gulp.dest('build/assets/js'))
   .pipe(buffer())
+});
+
+
+gulp.task('minify', function () {
+    return gulp.src(['./src/assets/data_uncompressed/skihuetten.json'])
+        .pipe(jsonminify())
+        .pipe(gulp.dest('./src/assets/data'));
 });
 
 

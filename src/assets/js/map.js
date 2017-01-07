@@ -1,8 +1,8 @@
-import huts from '../../../build/data/skihuetten';
-import slopes from '../../../build/data/skipisten';
-import lifts from '../../../build/data/skilifte';
-import parkingSpaces from '../../../build/data/parkplaetze';
-import skiingAreas from '../../../build/data/gebietsnr';
+import huts from '../data/skihuetten';
+import slopes from '../data/skipisten';
+import lifts from '../data/skilifte';
+import parkingSpaces from '../data/parkplaetze';
+import skiingAreas from '../data/gebietsnr';
 
 import mapboxgl from 'mapbox-gl';
 
@@ -65,9 +65,11 @@ export function detectTargetPosition(feature, string, e) {
         return;
     }
     else {
-        let popUpContent;
-        let position;
-        let offset;
+        let popUpContent,
+            position,
+            offset,
+            zoom;
+
         switch (string) {
             case "huts":
             case "parking":
@@ -80,6 +82,8 @@ export function detectTargetPosition(feature, string, e) {
                 position = [e.lngLat.lng, e.lngLat.lat];
               else
                 position = feature.geometry.coordinates;
+
+                zoom = 11;
               break;
 
             case "slopesBlue":
@@ -103,7 +107,7 @@ export function detectTargetPosition(feature, string, e) {
                 popUpContent = createPopUpDiv(feature, string);
                 break;
         }
-        moveToTarget(position[0], position[1])
+        moveToTarget(position[0], position[1], zoom)
         if(popUpContent != null)
           addPopUpToMap(popUpContent, position, offset);
     }
@@ -111,8 +115,10 @@ export function detectTargetPosition(feature, string, e) {
 }
 
 //new function for all FLYTO EVENTS -- NEEDS TO STAY
-export function moveToTarget(long, lat){
-  map.flyTo({center: [long, lat], zoom: 15, pitch: 45});
+export function moveToTarget(long, lat, zoom){
+    if(!zoom)
+        zoom = 15
+  map.flyTo({center: [long, lat], zoom: zoom, pitch: 45});
 }
 
 function createPopUpDiv(feature, ident) {

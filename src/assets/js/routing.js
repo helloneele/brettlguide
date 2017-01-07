@@ -6,20 +6,16 @@ import areasTpl from '../../../build/assets/templates/areas';
 import imprintTpl from '../../../build/assets/templates/imprint';
 import notFoundTpl from '../../../build/assets/templates/notFound';
 
-import huts from '../../../build/data/skihuetten';
-import slopes from '../../../build/data/skipisten';
-import lifts from '../../../build/data/skilifte';
-import parkingSpaces from '../../../build/data/parkplaetze';
-import skiingAreas from '../../../build/data/gebietsnr';
+import huts from '../data/skihuetten';
+import slopes from '../data/skipisten';
+import lifts from '../data/skilifte';
+import parkingSpaces from '../data/parkplaetze';
+import skiingAreas from '../data/gebietsnr';
 
 import * as map from './map';
 import detectLocation from './detectLocation';
 import getObject from './getObject';
 import * as charts from './charts';
-
-function assl() {
-    console.log("assl");
-}
 
 let dynamicContent = document.getElementById("dynamic-content");
 
