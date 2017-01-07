@@ -2,8 +2,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     handlebars = require('gulp-handlebars'),
     defineModule = require('gulp-define-module'),
-    merge = require('merge-stream'),
-    jsonminify = require('gulp-jsonminify');
+    merge = require('merge-stream');
 
 // define the default task and add the watch task to it
 gulp.task('default', ['watch', 'scripts', 'copyfonts', 'copy']);
@@ -102,9 +101,21 @@ gulp.task('scripts', ['templates'], function() {
 
 
 gulp.task('minify', function () {
-    return gulp.src(['./src/assets/data_uncompressed/skihuetten.json'])
-        .pipe(jsonminify())
-        .pipe(gulp.dest('./src/assets/data'));
+  var gp = require('geojson-precision');
+  var change = require('gulp-change');
+
+  function performChange(content) {
+    var top = JSON.parse(content)
+    for(let object in top.features) {
+      top.features[object] = gp.parse(top.features[object], 6)
+    }
+    top = JSON.stringify(top)
+    return content.replace(content, top);
+  }
+
+    return gulp.src(['./src/assets/data_uncompressed/*.json'])
+      .pipe(change(performChange))
+      .pipe(gulp.dest('./src/assets/data'));
 });
 
 

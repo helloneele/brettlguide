@@ -30,7 +30,7 @@
   <div class="areasSlopes">
     <h3>Pisten</h3>
     <ul class="listSlopes textCol list-plain">
-        {{#each slopes}}
+        {{#each slopes }}
             <li>{{link this "slopes"}}</li>
         {{/each}}
     </ul>
@@ -49,13 +49,13 @@
         {{#each huts}}
             <li>{{link this "huts"}}</li>
         {{/each}}
-    </ul> 
+    </ul>
   </div>
   <div class="areasParking">
     <h3>Parkplatz</h3>
     <ul class="listSlopes textCol list-plain">
         {{#each parking}}
-            <li>Parkplatzgröße: {{this.properties.groesse}}</li>
+            <li>P{{@index}}: {{this.properties.groesse}} Plätze</li>
         {{/each}}
     </ul>
   </div>
