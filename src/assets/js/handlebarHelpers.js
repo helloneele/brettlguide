@@ -11,4 +11,14 @@ handlebars.registerHelper('link', function(feature, string){
     );
 });
 
+handlebars.registerHelper('sortArr', function(arr, key){
+
+    return arr.sort(function(a, b) {
+        let x = a.properties[key],
+            y = b.properties[key];
+
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+});
+
 module.exports = handlebars;

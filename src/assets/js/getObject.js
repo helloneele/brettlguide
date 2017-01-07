@@ -13,7 +13,9 @@ export default {
     },
     hut: (param, file) => {
         for(let object of file.features) {
-            if(object.properties.h_id === param) {
+            let id = object.properties.h_id + "-"
+            + object.properties.name;
+            if(id === param) {
                 return object;
             }
         }

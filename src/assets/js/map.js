@@ -466,7 +466,8 @@ export function getPath(key, val) {
     let path = "/" + val + "/";
 
     if(val === "huts") {
-        path += key.properties.h_id;
+        path += (key.properties.h_id + "-"
+        + key.properties.name);
     }
     else if(val === "slopes") {
         let id = key.properties.gb_nr + "-"

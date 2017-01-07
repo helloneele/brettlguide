@@ -32,7 +32,7 @@
   <div class="areasSlopes">
     <h3>Pisten</h3>
     <ul class="listSlopes textCol list-plain">
-        {{#each slopes }}
+        {{#each (sortArr slopes "name")}}
             <li>{{link this "slopes"}}</li>
         {{/each}}
     </ul>
@@ -40,7 +40,7 @@
   <div class="areasLifts">
     <h3>Lifte</h3>
     <ul class="listSlopes textCol list-plain">
-        {{#each lifts}}
+        {{#each (sortArr lifts "name")}}
             <li>{{link this "lifts"}}</li>
         {{/each}}
     </ul>
@@ -48,7 +48,7 @@
   <div class="areasHuts">
     <h3>Hütten</h3>
     <ul class="listSlopes textCol list-plain">
-        {{#each huts}}
+        {{#each (sortArr huts "name")}}
             <li>{{link this "huts"}}</li>
         {{/each}}
     </ul>
