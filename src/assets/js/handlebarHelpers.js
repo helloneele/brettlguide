@@ -21,4 +21,15 @@ handlebars.registerHelper('sortArr', function(arr, key){
     });
 });
 
+handlebars.registerHelper('hasValue', function(key, value){
+  if(key == value)
+    return true
+});
+
+handlebars.registerHelper('emptyBemerkung', function(key){
+  if(key === " " || key === "")
+    return false
+});
+
+
 module.exports = handlebars;

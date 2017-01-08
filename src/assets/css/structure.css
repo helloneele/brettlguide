@@ -71,10 +71,8 @@ header{
 #dynamic-content{
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
   position: relative;
-  margin-top: calc(100vh - 40px);
+  margin-top: calc(100vh - 170px);
   background: var(--white);
-
-
 }
 
 .detailContent{
@@ -110,9 +108,9 @@ header{
 }
 
 .textCol{
-  columns: 3;
+  columns: 2;
   column-fill: balance;
-  column-gap: 40px;
+  column-gap: 20px;
   border-bottom: 2px solid var(--lightgray);
   padding: 0 0 40px;
 }
@@ -129,7 +127,7 @@ header{
 
 
     &:not(:last-child){
-      border-right: 2px dashed var(--sky-blue);
+      border-bottom: 2px dashed var(--sky-blue);
     }
 
     .statistic__overview__item__content{
@@ -161,7 +159,7 @@ header{
   position: fixed;
   top:70px;
   width: 100%;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 240px);
 }
 
 #map{
@@ -306,11 +304,14 @@ button.mapboxgl-popup-close-button{
 }
 
 .popup{
-  padding: 2px;
+  padding: 2px 20px 0 5px;
 
   h1{
     font-size: 1rem;
-    padding-right: 20px;
+  }
+
+  p{
+    margin: 0;
   }
 }
 
@@ -367,7 +368,6 @@ footer {
 @media (min-width: 992px) {
   .cols{
     lost-utility: clearfix;
-
   }
 
   header{
@@ -404,11 +404,23 @@ footer {
 
   }
 
+  .textCol{
+    columns: 3;
+    column-fill: balance;
+    column-gap: 40px;
+  }
+
   .statistic__overview{
     .statistic__overview__item{
       lost-column: 1/4 4 0px;
+
+      &:not(:last-child){
+        border-bottom: none;
+        border-right: 2px dashed var(--sky-blue);
+      }
     }
   }
+
 
   .search{
     padding: 20px 40px 0;

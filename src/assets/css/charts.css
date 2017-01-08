@@ -38,21 +38,36 @@ rect.disabled {
  font-weight: bold;
 }
 
+.chartsWrapper{
+  border-bottom: 2px solid var(--lightgray);
+  margin: 40px 0;
+  padding: 10px 0 40px;
+}
+
+.auslastung{
+  padding: 10px 0 40px;
+}
 
 .pistenWrapper{
-  lost-column: 3/9;
-  }
+  margin-bottom: 50px;
+}
 
-  .chartsWrapper{
-    border-bottom: 2px solid var(--lightgray);
-    margin: 40px 0;
-    padding: 10px 0 40px;
+@media (min-width: 992px) {
+  .pistenWrapper{
+    lost-column: 3/9;
+    margin-bottom: 0;
   }
 
   .schneeWrapper{
-  lost-column: 6/9;
+    lost-column: 6/9;
 
-  &.schnee{
-    margin-top: 30px;
+    &.schnee{
+      margin-top: 35px;
+    }
   }
+
+  .auslastungWrapper{
+    lost-column: 1/3;
+  }
+
 }

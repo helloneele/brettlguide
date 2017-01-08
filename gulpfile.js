@@ -21,7 +21,10 @@ gulp.task('copy', function() {
    var images = gulp.src('./src/assets/img/**/*.{png,jpg,gif,eps,svg}')
    .pipe(gulp.dest('./build/assets/img'));
 
-   return merge(images);
+   var csvData = gulp.src('./src/assets/data_uncompressed/slopes.csv')
+   .pipe(gulp.dest('./build/assets/data'));
+
+   return merge(images, csvData);
 });
 
 gulp.task('templates', function(){

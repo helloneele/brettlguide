@@ -47,6 +47,7 @@ let templates = {
             let area = map.getItemArea(hut);
             dynamicContent.innerHTML = hutTpl({hut: hut, area: area});
             scrollButton();
+            charts.auslastung();
         }
         else {
             templates.notFound();
@@ -60,6 +61,7 @@ let templates = {
             let area = map.getItemArea(lift);
             dynamicContent.innerHTML = liftTpl({lift: lift, area: area});
             scrollButton();
+            charts.auslastung();
         }
         else {
             templates.notFound();
@@ -84,7 +86,6 @@ let templates = {
             });
             scrollButton();
 
-            charts.auslastung();
             charts.schwierigkeit();
             charts.schnee();
         }

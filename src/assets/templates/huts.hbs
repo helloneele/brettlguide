@@ -1,17 +1,70 @@
 <div class="detailContent">
   <div class="scrollTop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
   <h1>{{hut.properties.name}}</h1>
-  <h1>{{area.properties.name}}</h1>
-  <p><em>Halter:</em> {{hut.properties.halter}}</p>
-  <p><em>Plätze:</em> {{hut.properties.plaetze}}</p>
-  <p><em>Adresse:</em> {{hut.properties.adresse}}</p>
-  <p><em>Zufahrt:</em> {{hut.properties.zufahrt}}</p>
-  <p><em>Unterkunft:</em> {{hut.properties.unterkunft}}</p>
-  <p><em>Betten:</em> {{hut.properties.betten}}</p>
-  <p><em>Bemerkung:</em> {{hut.properties.bemerkung}}</p>
+  <h2>{{area.properties.name}}</h2>
 
-  <p><em>Koordinaten:</em> {{hut.geometry.coordinates}}</p>
+  <div class="statistic__overview cols">
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{hut.properties.plaetze}}</span>
+        <span class="title">Plätze</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{#if (hasValue hut.properties.unterkunft "ja")}}<i class="fa fa-check" aria-hidden="true"></i>{{else}}<i class="fa fa-times" aria-hidden="true"></i>{{/if}}</span>
+        <span class="title">Unterkunft</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{hut.properties.betten}}</span>
+        <span class="title">Betten</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{#if (hasValue hut.properties.zufahrt "ja")}}<i class="fa fa-check" aria-hidden="true"></i>{{else}}<i class="fa fa-times" aria-hidden="true"></i>{{/if}}</span>
+        <span class="title">Zufahrt</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div class="auslastungWrapper">
+      <h3>Aktuelle Auslastung</h3>
+      <div class="auslastung"></div>
+    </div>
+    <div class="furtherDetails">
+      <h3>Halter</h3>
+      <p>{{hut.properties.halter}}</p>
+      <h3>Adresse</h3>
+      <p>{{hut.properties.adresse}}</p>
+
+      <h3>Öffnungszeiten</h3>
+      <p>
+        {{# if (hasValue hut.properties.saison "W")}}
+          Winterbetrieb
+        {{else if (hasValue hut.properties.saison "S")}}
+          Sommerbetrieb
+        {{ else }}
+          Ganzjahresbetrieb
+        {{/if}}
+      </p>
+
+      {{#if (emptyBemerkung hut.properties.bemerkung)}}
+        <h3>Weitere Informationen</h3>
+        <p>{{hut.properties.bemerkung}}</p>
+      {{/if}}
+      <h3>Koordinaten</h3>
+      <p>
+        <strong>LAT</strong> {{hut.geometry.coordinates.[1] }}<br>
+        <strong>LNG</strong> {{hut.geometry.coordinates.[0] }}
+      </p>
+
+    </div>
+  </div>
+
+
 
 </div>
-
-<div class="auslastung"></div>

@@ -139,9 +139,11 @@ h2{
 }
 
 h3{
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   color: var(--gray);
   margin-bottom: 0.5em;
+  font-weight: bold;
+  font-style: italic;
 }
 
 h4{

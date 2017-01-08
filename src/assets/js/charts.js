@@ -10,11 +10,11 @@ export function auslastung() {
 
   var color = colors.darkblue;
 
-  var radius = document.getElementsByClassName("schnee")[0].parentElement.offsetWidth/2;
+  var radius = document.getElementsByClassName("auslastung")[0].parentElement.offsetWidth/2;
   var border = 10;
   var padding = 0;
   var startPercent = 0;
-  var endPercent = auslastung/100;
+  var endPercent = auslastung/100; 
 
 
   var twoPi = Math.PI * 2;
@@ -33,8 +33,8 @@ export function auslastung() {
   var parent = d3.select('.auslastung');
 
   var svg = parent.append('svg')
-  svg.attr('width', document.getElementsByClassName("schnee")[0].parentElement.offsetWidth)
-  svg.attr('height', document.getElementsByClassName("schnee")[0].parentElement.offsetWidth);
+  svg.attr('width', document.getElementsByClassName("auslastung")[0].parentElement.offsetWidth)
+  svg.attr('height', document.getElementsByClassName("auslastung")[0].parentElement.offsetWidth);
 
   var defs = svg.append('defs');
 
