@@ -288,4 +288,5 @@ export function schnee() {
     .call(d3.axisLeft(y));
 
   });
+      
 }
