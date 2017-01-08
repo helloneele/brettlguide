@@ -222,12 +222,10 @@ export function schwierigkeit() {
 }
 
 export function schnee() {
-
   // set the dimensions and margins of the graph
   var margin = {top: 20, right: 20, bottom: 30, left: 20},
   width = document.getElementsByClassName("schnee")[0].parentElement.offsetWidth - margin.right - margin.left,
   height = 200;
-
 
   // parse the date / time
   var parseTime = d3.timeParse("%d-%b-%y");
@@ -259,35 +257,36 @@ export function schnee() {
     if (error) throw error;
 
     // format the data
-  data.forEach(function(d) {
+    data.forEach(function(d) {
       d.date = parseTime(d.date);
       d.close = +d.close;
     });
 
-  // scale the range of the data
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-  y.domain([0, d3.max(data, function(d) { return d.close; })]);
+    // scale the range of the data
+    x.domain(d3.extent(data, function(d) { return d.date; }));
+    y.domain([0, d3.max(data, function(d) { return d.close; })]);
 
-  // add the area
-  svg.append("path")
-  .data([data])
-  .attr("class", "area")
-  .attr("d", area);
+    // add the area
+    svg.append("path")
+    .data([data])
+    .attr("class", "area")
+    .attr("d", area);
 
     // add the valueline path.
-  svg.append("path")
-  .data([data])
-  .attr("class", "line")
-  .attr("d", valueline);
+    svg.append("path")
+    .data([data])
+    .attr("class", "line")
+    .attr("d", valueline);
 
     // add the X Axis
-  svg.append("g")
-  .attr("transform", "translate(0," + height + ")")
-  .call(d3.axisBottom(x));
+    svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
 
-  // add the Y Axis
-  svg.append("g")
-  .call(d3.axisLeft(y));
+    // add the Y Axis
+    svg.append("g")
+    .call(d3.axisLeft(y));
 
-});
+  });
+      
 }
