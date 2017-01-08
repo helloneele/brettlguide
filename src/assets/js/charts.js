@@ -1,7 +1,6 @@
 import * as d3 from "d3";
 
 export function auslastung() {
-  d3.select(".auslastung").append("h5").text("Derzeitige Auslastung");
   var auslastung = Math.floor((Math.random() * 95) + 5);
 
   var colors = {
@@ -11,16 +10,16 @@ export function auslastung() {
 
   var color = colors.darkblue;
 
-  var radius = 100;
+  var radius = document.getElementsByClassName("schnee")[0].parentElement.offsetWidth/2;
   var border = 10;
-  var padding = 30;
+  var padding = 0;
   var startPercent = 0;
   var endPercent = auslastung/100;
 
 
   var twoPi = Math.PI * 2;
   var formatPercent = d3.format('.0%');
-  var boxSize = (radius + padding) * 2;
+  var boxSize = radius * 2;
 
 
   var count = Math.abs((endPercent - startPercent) / 0.01);
@@ -34,8 +33,8 @@ export function auslastung() {
   var parent = d3.select('.auslastung');
 
   var svg = parent.append('svg')
-  .attr('width', boxSize)
-  .attr('height', boxSize);
+  svg.attr('width', document.getElementsByClassName("schnee")[0].parentElement.offsetWidth)
+  svg.attr('height', document.getElementsByClassName("schnee")[0].parentElement.offsetWidth);
 
   var defs = svg.append('defs');
 
@@ -93,15 +92,14 @@ export function auslastung() {
 
 //Schwierigkeitsstufen
 export function schwierigkeit() {
-  d3.select(".pisten").append("h5").text("Schwierigkeitsstufen der Pisten");
   var dataset = [
   { label: 'Blau', count: 7 },
   { label: 'Rot', count: 4 },
   { label: 'Schwarz', count: 2 }
   ];
 
-  var width = 360;
-  var height = 360;
+  var width = document.getElementsByClassName("pisten")[0].parentElement.offsetWidth;
+  var height = document.getElementsByClassName("pisten")[0].parentElement.offsetWidth;
   var radius = Math.min(width, height) / 2;
   var donutWidth = 75;
   var legendRectSize = 18;
@@ -224,12 +222,19 @@ export function schwierigkeit() {
 }
 
 export function schnee() {
+<<<<<<< HEAD
 
   d3.select(".schnee").append("h5").text("Schneemenge (cm)");
   // set the dimensions and margins of the graph
   var margin = {top: 20, right: 20, bottom: 30, left: 50},
   width = 500- margin.left - margin.right,
   height = 200 - margin.top - margin.bottom;
+=======
+  // set the dimensions and margins of the graph
+  var margin = {top: 20, right: 20, bottom: 30, left: 20},
+  width = document.getElementsByClassName("schnee")[0].parentElement.offsetWidth - margin.right - margin.left,
+  height = 200;
+>>>>>>> 13e084ca4c7f2c745e89ed390aebf75049b8089d
 
   // parse the date / time
   var parseTime = d3.timeParse("%d-%b-%y");
@@ -257,7 +262,7 @@ export function schnee() {
     "translate(" + margin.left + "," + margin.top + ")");
 
   // get the data
-  d3.csv("/data/slopes.csv", function(error, data) {
+  d3.csv("/assets/data/slopes.csv", function(error, data) {
     if (error) throw error;
 
     // format the data
