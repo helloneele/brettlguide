@@ -82,8 +82,7 @@ export function detectTargetPosition(feature, string, e) {
                 position = [e.lngLat.lng, e.lngLat.lat];
               else
                 position = feature.geometry.coordinates;
-
-                zoom = 11;
+                zoom = 12.1;
               break;
 
             case "slopesBlue":
@@ -117,7 +116,7 @@ export function detectTargetPosition(feature, string, e) {
 //new function for all FLYTO EVENTS -- NEEDS TO STAY
 export function moveToTarget(long, lat, zoom){
     if(!zoom)
-        zoom = 15
+        zoom = 14
   map.flyTo({center: [long, lat], zoom: zoom, pitch: 45});
 }
 

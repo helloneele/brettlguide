@@ -38,13 +38,21 @@ rect.disabled {
  font-weight: bold;
 }
 
-.auslastung {
- margin-left: 60px;
- width: 260px;
- height: 260px;
- margin-bottom: 40px;
-}
 
-.auslastung h5 {
- text-align: center;
+.pistenWrapper{
+  lost-column: 3/9;
+  }
+
+  .chartsWrapper{
+    border-bottom: 2px solid var(--lightgray);
+    margin: 40px 0;
+    padding: 10px 0 40px;
+  }
+
+  .schneeWrapper{
+  lost-column: 6/9;
+
+  &.schnee{
+    margin-top: 30px;
+  }
 }
