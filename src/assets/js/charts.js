@@ -222,19 +222,12 @@ export function schwierigkeit() {
 }
 
 export function schnee() {
-<<<<<<< HEAD
 
-  d3.select(".schnee").append("h5").text("Schneemenge (cm)");
-  // set the dimensions and margins of the graph
-  var margin = {top: 20, right: 20, bottom: 30, left: 50},
-  width = 500- margin.left - margin.right,
-  height = 200 - margin.top - margin.bottom;
-=======
   // set the dimensions and margins of the graph
   var margin = {top: 20, right: 20, bottom: 30, left: 20},
   width = document.getElementsByClassName("schnee")[0].parentElement.offsetWidth - margin.right - margin.left,
   height = 200;
->>>>>>> 13e084ca4c7f2c745e89ed390aebf75049b8089d
+
 
   // parse the date / time
   var parseTime = d3.timeParse("%d-%b-%y");
