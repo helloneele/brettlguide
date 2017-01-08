@@ -21,7 +21,7 @@ gulp.task('copy', function() {
    var images = gulp.src('./src/assets/img/**/*.{png,jpg,gif,eps,svg}')
    .pipe(gulp.dest('./build/assets/img'));
 
-   var csvData = gulp.src('./src/assets/data_uncompressed/slopes.csv')
+   var csvData = gulp.src('./src/assets/data_uncompressed/*.csv')
    .pipe(gulp.dest('./build/assets/data'));
 
    return merge(images, csvData);

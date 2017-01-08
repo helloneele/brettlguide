@@ -14,7 +14,7 @@ export function auslastung() {
   var border = 10;
   var padding = 0;
   var startPercent = 0;
-  var endPercent = auslastung/100; 
+  var endPercent = auslastung/100;
 
 
   var twoPi = Math.PI * 2;
@@ -253,7 +253,7 @@ export function schnee() {
     "translate(" + margin.left + "," + margin.top + ")");
 
   // get the data
-  d3.csv("/assets/data/slopes.csv", function(error, data) {
+  d3.csv("/assets/data/snow.csv", function(error, data) {
     if (error) throw error;
 
     // format the data
@@ -288,5 +288,5 @@ export function schnee() {
     .call(d3.axisLeft(y));
 
   });
-      
+
 }
