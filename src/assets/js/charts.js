@@ -23,7 +23,7 @@ export function auslastung() {
 
 
   var count = Math.abs((endPercent - startPercent) / 0.01);
-  var step = endPercent < startPercent ? -0.01 : 0.01;
+  var step = endPercent < startPercent ? -0.01 : 0.01; 
 
   var arc = d3.arc()
   .startAngle(0)

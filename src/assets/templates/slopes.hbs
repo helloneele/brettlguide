@@ -1,8 +1,68 @@
 <div class="detailContent">
   <div class="scrollTop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
   <h1>{{slope.properties.name}}</h1>
-  <h2>{{area.properties.name}}</h2>
-  <div class="auslastungWrapper">
-    <div class="auslastung"></div>
+  <h2><a href="/areas/{{ slope.properties.gb_nr }}">{{area.properties.name}}</a></h2>
+
+  <div class="statistic__overview cols">
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{#if (hasValue slope.properties.exists 1)}}<i class="fa fa-check" aria-hidden="true"></i>{{else}}<i class="fa fa-times" aria-hidden="true"></i>{{/if}}</span>
+        <span class="title">Geöffnet</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">
+          {{# if (hasValue slope.properties.schwgrad 1)}}
+            <div class="piste__schwierigkeit blau">
+          {{ else if (hasValue slope.properties.schwgrad 2)}}
+            <div class="piste__schwierigkeit rot">
+          {{ else if (hasValue slope.properties.schwgrad 3)}}
+            <div class="piste__schwierigkeit schwarz">
+          {{ else }}
+            <div class="piste__schwierigkeit braun">
+          {{/if}}
+            <i class="fa fa-circle" aria-hidden="true"></i>
+          </div>
+        </span>
+        <span class="title">Schwierigkeit</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{#if (hasValue slope.properties.lights 1)}}<i class="fa fa-check" aria-hidden="true"></i>{{else}}<i class="fa fa-times" aria-hidden="true"></i>{{/if}}</span>
+        <span class="title">Beleuchtet</span>
+      </div>
+    </div>
+
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{#if (hasValue slope.properties.artificial_snow 1)}}<i class="fa fa-check" aria-hidden="true"></i>{{else}}<i class="fa fa-times" aria-hidden="true"></i>{{/if}}</span>
+        <span class="title">Beschneit</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div class="auslastungWrapper">
+      <h3>Aktuelle Auslastung</h3>
+      <div class="auslastung"></div>
+    </div>
+    <div class="furtherDetails">
+      <h3>Pistennummer</h3>
+      <p>{{slope.properties.p_nr}}</p>
+      <h3>Pistenabschnitt</h3>
+      <p>
+        {{slope.properties.a_nr}}
+        {{#if (emptyBemerkung slope.properties.a_name)}}
+          – {{slope.properties.a_name}}
+        {{/if}}
+      </p>
+
+      {{#if (emptyBemerkung slope.properties.bemerkung)}}
+        <h3>Weitere Informationen</h3>
+        <p>{{slope.properties.bemerkung}}</p>
+      {{/if}}
+    </div>
   </div>
 </div>

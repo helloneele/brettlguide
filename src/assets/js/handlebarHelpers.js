@@ -27,8 +27,15 @@ handlebars.registerHelper('hasValue', function(key, value){
 });
 
 handlebars.registerHelper('emptyBemerkung', function(key){
-  if(key === " " || key === "")
+  if(key === " " || key === ""){
     return false
+  }
+  return true
+});
+
+handlebars.registerHelper('calcLength', function(length){
+  length = length/1000
+  return length.toFixed(2)
 });
 
 

@@ -34,6 +34,7 @@ let templates = {
             let area = map.getItemArea(slope);
             dynamicContent.innerHTML = slopeTpl({slope: slope, area: area});
             scrollButton();
+            charts.auslastung(); 
         }
         else {
             templates.notFound();

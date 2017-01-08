@@ -2,8 +2,52 @@
   <div class="scrollTop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
 
   <h1>{{lift.properties.name}}</h1>
-  <h1>{{area.properties.name}}</h1>
-  <p><em>Art:</em> {{lift.properties.fahrbetrieb}}</p>
-  <p><em>Länge:</em> {{lift.properties.length}} m</p>
-  <p><em>Betreiber:</em> {{lift.properties.operator}}</p>
+  <h2><a href="/areas/{{ lift.properties.gb_nr }}">{{area.properties.name}}</a></h2>
+
+  <div class="statistic__overview cols">
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{ calcLength lift.properties.length }}<span class="unit"> km</span></span>
+        <span class="title">Länge</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{lift.properties.startAtt}}<span class="unit"> m</span></span>
+        <span class="title">Starthöhe</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{lift.properties.endAtt}}<span class="unit"> m</span></span>
+        <span class="title">Endhöhe</span>
+      </div>
+    </div>
+    <div class="statistic__overview__item">
+      <div class="statistic__overview__item__content">
+        <span class="number">{{lift.properties.speed}}<span class="unit"> km/h</span></span>
+        <span class="title">Geschwindigkeit</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div class="auslastungWrapper">
+      <h3>Aktuelle Auslastung</h3>
+      <div class="auslastung"></div>
+    </div>
+    <div class="furtherDetails">
+      <h3>Fahrbetrieb / Art</h3>
+      <p>
+        {{lift.properties.art}}<br>
+        {{lift.properties.fahrbetrieb}}
+      </p>
+      <h3>Saison</h3>
+      <p>{{lift.properties.saison}}</p>
+      <h3>Maximale Steigung</h3>
+      <p>{{lift.properties.maxGradient}} Grad</p>
+      <h3>Betreiber</h3>
+      <p>{{lift.properties.operator}}</p>
+    </div>
+  </div>
 </div>

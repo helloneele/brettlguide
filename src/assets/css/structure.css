@@ -46,19 +46,26 @@ header{
     lost-column: 2/16 0;
   }*/
   .header__center{
-    width: 90%;
-    margin: 0 auto;
     /*lost-column: 12/16 0;*/
   }
   /*.header__right{
     lost-column: 1/16 0;
   }*/
   .header__logo{
+    max-width: 350px;
     background: url(/assets/img/logo_color.png) no-repeat;
     background-position: center;
     background-size: auto 100%;
-    text-indent: -10000px;
+    /*text-indent: -10000px;*/
     line-height: 1.2em;
+    margin: 0 auto;
+    min-height: 48px;
+
+    a{
+      width: 100%;
+      display: inline-block;
+      color: transparent;
+    }
   }
 }
 
@@ -71,7 +78,7 @@ header{
 #dynamic-content{
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
   position: relative;
-  margin-top: calc(100vh - 170px);
+  margin-top: calc(100vh - 130px);
   background: var(--white);
 }
 
@@ -134,17 +141,22 @@ header{
       padding: 20px 10px;
 
       span{
-        display: block;
-        color: var(--dark-blue);
 
         &.number{
           font-size: 4em;
           line-height: 1em;
-          color: var(--mediumgray);
+          color: var(--dark-blue);
           font-weight: bold;
+
+          .unit{
+            font-size: 0.5em;
+            display: inline;
+          }
         }
 
         &.title{
+          color: var(--mediumgray);
+          display: block;
           font-size: 2em;
           line-height: 1em;
 
@@ -159,7 +171,7 @@ header{
   position: fixed;
   top:70px;
   width: 100%;
-  height: calc(100vh - 240px);
+  height: calc(100vh - 200px);
 }
 
 #map{
@@ -221,12 +233,12 @@ header{
 
         .suggestion__name{
           display: inherit;
-          font-size: 1.3rem;
+          font-size: 1.2em;
           color: var(--sky-blue)
         }
         .suggestion__area{
           display: inherit;
-          font-size: 0.8rem;
+          font-size: 0.8em;
         }
 
         a{
@@ -245,6 +257,21 @@ header{
     &.hidden{
       display:none;
     }
+  }
+}
+
+.piste__schwierigkeit{
+  &.blau{
+    color: #295e72;
+  }
+  &.rot{
+    color: #722929;
+  }
+  &.schwarz{
+    color: #333;
+  }
+  &.braun{
+    color: #8d6e53;
   }
 }
 
@@ -376,20 +403,7 @@ footer {
       lost-center: 100%;
     }
 
-    .header__center{
-      lost-column: 12/16 0;
-    }
 
-    .header__left{
-      lost-column: 3/16 0;
-    }
-    .header__center{
-      lost-column: 10/16 0;
-    }
-
-    .header__right{
-      lost-column: 3/16 0;
-    }
   }
 
   .detailContent{
@@ -403,6 +417,17 @@ footer {
     }
 
   }
+
+
+  #dynamic-content{
+    margin-top: calc(100vh - 170px);
+  }
+
+  .mapWrapper{
+    height: calc(100vh - 240px);
+  }
+
+
 
   .textCol{
     columns: 3;
