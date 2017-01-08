@@ -16,6 +16,7 @@ import * as map from './map';
 import detectLocation from './detectLocation';
 import getObject from './getObject';
 import * as charts from './charts';
+import scrollButton from './scrollButton';
 
 let dynamicContent = document.getElementById("dynamic-content");
 
@@ -23,6 +24,7 @@ let templates = {
     index: (ctx) => {
         detectLocation()
         dynamicContent.innerHTML = mapTpl();
+        scrollButton();
     },
     slopes: (ctx) => {
         let slope = getObject.slope(ctx.params.slope, slopes);
@@ -31,6 +33,7 @@ let templates = {
             map.detectTargetPosition(slope, "slopes");
             let area = map.getItemArea(slope);
             dynamicContent.innerHTML = slopeTpl({slope: slope, area: area});
+            scrollButton();
         }
         else {
             templates.notFound();
@@ -43,6 +46,7 @@ let templates = {
             map.detectTargetPosition(hut, "huts");
             let area = map.getItemArea(hut);
             dynamicContent.innerHTML = hutTpl({hut: hut, area: area});
+            scrollButton();
         }
         else {
             templates.notFound();
@@ -55,6 +59,7 @@ let templates = {
             map.detectTargetPosition(lift, "lifts");
             let area = map.getItemArea(lift);
             dynamicContent.innerHTML = liftTpl({lift: lift, area: area});
+            scrollButton();
         }
         else {
             templates.notFound();
@@ -77,6 +82,8 @@ let templates = {
                 lifts: areaLifts,
                 parking: areaParkingSpaces
             });
+            scrollButton();
+
             charts.auslastung();
             charts.schwierigkeit();
             charts.schnee();
