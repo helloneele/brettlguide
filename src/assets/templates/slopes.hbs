@@ -54,12 +54,12 @@
       <h3>Pistenabschnitt</h3>
       <p>
         {{slope.properties.a_nr}}
-        {{#if (emptyBemerkung slope.properties.a_name)}}
+        {{#if (emptyString slope.properties.a_name)}}
           – {{slope.properties.a_name}}
         {{/if}}
       </p>
 
-      {{#if (emptyBemerkung slope.properties.bemerkung)}}
+      {{#if (emptyString slope.properties.bemerkung)}}
         <h3>Weitere Informationen</h3>
         <p>{{slope.properties.bemerkung}}</p>
       {{/if}}

@@ -113,6 +113,7 @@ export function detectTargetPosition(feature, string, e) {
                     position = feature.geometry.coordinates[Math.floor(feature.geometry.coordinates.length / 2)];
 
                 popUpContent = createPopUpDiv(feature, string);
+                offset = 0;
                 break;
         }
         moveToTarget(position[0], position[1], zoom)
@@ -124,8 +125,14 @@ export function detectTargetPosition(feature, string, e) {
 
 //new function for all FLYTO EVENTS -- NEEDS TO STAY
 export function moveToTarget(long, lat, zoom){
-    if(!zoom)
+    if(!zoom){
+      if(map.getZoom() >= 14){
+          zoom = map.getZoom()
+      }
+      else{
         zoom = 14
+      }
+    }
   map.flyTo({center: [long, lat], zoom: zoom, pitch: 45});
 }
 

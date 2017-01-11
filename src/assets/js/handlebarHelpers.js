@@ -26,7 +26,7 @@ handlebars.registerHelper('hasValue', function(key, value){
     return true
 });
 
-handlebars.registerHelper('emptyBemerkung', function(key){
+handlebars.registerHelper('emptyString', function(key){
   if(key === " " || key === ""){
     return false
   }

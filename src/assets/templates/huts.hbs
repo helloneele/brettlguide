@@ -52,7 +52,7 @@
         {{/if}}
       </p>
 
-      {{#if (emptyBemerkung hut.properties.bemerkung)}}
+      {{#if (emptyString hut.properties.bemerkung)}}
         <h3>Weitere Informationen</h3>
         <p>{{hut.properties.bemerkung}}</p>
       {{/if}}
