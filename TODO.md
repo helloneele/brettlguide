@@ -1,78 +1,82 @@
 # TODO
 
 ## Dev Setup
-
-* **npm script `start` hinzufügen als Alias für `gulp`, damit ist nur lokale gulp Version notwendig (`node_modules/.bin/`)**
+* **npm script `start` hinzufügen als Alias für `gulp`, damit ist nur lokale gulp Version notwendig (`node_modules/.bin/`)**  
 🏂 *ist angepasst*
 
-* lokal starten wäre toll 🚀
+* **lokal starten wäre toll** 🚀
 
-# Stylesheets
-
+## Stylesheets
 **Gute Strukturierung, gute Dokumentation
 Eigene Files -> Übersichtlich
-BEM sauber umgesetzt**
+BEM sauber umgesetzt**  
 🏂 *danke :)*
 
-# Templates
+## Templates
 
-Templates sind strukturiert
+**Templates sind strukturiert**
 
-**Manche Tags werden nicht geschlossen, Beispiel slopes.hbs, 27**
+**Manche Tags werden nicht geschlossen, Beispiel slopes.hbs, 27**  
 🏂 *werde schon geschlossen, dort ist ein if um das div, weil sich je nach piste die klasse des div's ändert* 😊
 
-# JavaScript
+## JavaScript
 
-## app.js
+### app.js
 
-**Nicht benutzter Import**
+**Nicht benutzter Import**  
 🏂 *ist gelöscht*
 
-map() mit konstanten Koordinaten, wo liegen die genau?
+**map() mit konstanten Koordinaten, wo liegen die genau?**  
 🏂 *Stadt Salzburg, bis eigene Koordinaten ermittelt wurden*
 *--> map wird von anfang an geladen und nicht erst, wenn durch geolocation die position ermittelt wurde*
 
-## chart.js
+### chart.js
 
 **Klasse Schnee, Methode Schwierigkeit, Methode auslastung
--> Mischung Deutsch und Englisch nicht logisch**
+-> Mischung Deutsch und Englisch nicht logisch**  
 🏂 *ist angepasst*
 
-**let und var - konsistente Benennung**
+**let und var - konsistente Benennung**  
 🏂 *ist angepasst*
 
-## detectLocation.js
+### detectLocation.js
 
-Passt gut.
+**Passt gut.**
 
-## getObject.js
 
-Wir waren uns nicht sicher welches Objekt das sein soll. Erzeugt das die IDs für Slopes, Huts, ...?
+### getObject.js
 
-## handlebarHelpers.js
+**Wir waren uns nicht sicher welches Objekt das sein soll. Erzeugt das die IDs für Slopes, Huts, ...?**
 
-**Helper: emptyBemerkung ^^**
+
+### handlebarHelpers.js
+
+**Helper: emptyBemerkung ^^**  
 🏂 *schon umbenannt*
 
-Sonst sehr gut
+**Sonst sehr gut**
 
-## map.js
 
-**Müssen alle Layer beim Zoom neu geladen werden? Was verändert sich dabei?**
+### map.js
+
+**Müssen alle Layer beim Zoom neu geladen werden? Was verändert sich dabei?**  
 🏂 *Layer werden beim Zoom nicht neu geladen. Zu Anfang wird nur der Skigebiete-Layer geladen um die Ladezeit zu verbessern, die restlichen Layer werden EINMALIG geladen, wenn der Zoom einen bestimmten Wert überschreitet*
 
-Gute Variablen- und Methodenbenennung
+**Gute Variablen- und Methodenbenennung**
 
-## routing.js
 
-Alle Templates in einem Objekt, gefällt uns sehr gut
+### routing.js
 
-## scrollButtons.js
+**Alle Templates in einem Objekt, gefällt uns sehr gut**
 
-**let und var - konsistente Benennung**
+
+### scrollButtons.js
+
+**let und var - konsistente Benennung**  
 🏂 *ist angepasst*
 
-# Allgemein
 
-**Alle Bemängelungen sind Kleinigkeiten, sonst fühlt sich das Projekt gut an -> A+ :D**
+## Allgemein
+
+**Alle Bemängelungen sind Kleinigkeiten, sonst fühlt sich das Projekt gut an -> A+ :D**  
 🏂 *danke :)*
