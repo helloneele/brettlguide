@@ -4,7 +4,8 @@
   "description": "Brettlguide is your guide to find your way on ski slopes.",
   "main": "index.html",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "gulp"
   },
   "author": "Neele Barthel, Tobias Gann, Anna Ronacher",
   "license": "ISC",

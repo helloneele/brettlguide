@@ -1,21 +1,19 @@
-import huts from '../data/skihuetten';
-import slopes from '../data/skipisten';
-import lifts from '../data/skilifte';
-import parkingSpaces from '../data/parkplaetze';
-import skiingAreas from '../data/gebietsnr';
+import huts from '../data/skihuetten'
+import slopes from '../data/skipisten'
+import lifts from '../data/skilifte'
+import parkingSpaces from '../data/parkplaetze'
+import skiingAreas from '../data/gebietsnr'
 
 import page from 'page'
-import mapboxgl from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl'
 
-import detectLocation from './detectLocation';
-
-
+import detectLocation from './detectLocation'
 
 // use map.loaded true/false for preloader image
 
-let map;
-let actObject;
-let layersLoaded = false;
+let map
+let actObject
+let layersLoaded = false
 
 export default function initMap(long, lat){
   mapboxgl.accessToken = 'pk.eyJ1IjoiaGVsbG9uZWVsZSIsImEiOiJjaXVlamJoYjEwMDFmMnZxbGk1ZDBzMXdwIn0.i3Sy5G_gVjDLOJ9VcORhcQ'

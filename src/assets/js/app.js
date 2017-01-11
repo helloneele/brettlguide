@@ -1,10 +1,8 @@
 import map from './map';
 import routing from './routing';
-import * as charts from './charts';
 import page from 'page';
 
 map(12.9863903, 47.8027887)
-//map(13.37575, 47.49949)
 
 //define routes
 page('/', routing.index);
