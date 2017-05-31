@@ -17,7 +17,7 @@ BEM sauber umgesetzt**
 **Templates sind strukturiert**
 
 **Manche Tags werden nicht geschlossen, Beispiel slopes.hbs, 27**  
-🏂 *werde schon geschlossen, dort ist ein if um das div, weil sich je nach piste die klasse des div's ändert* 😊
+🏂 *werden schon geschlossen, dort ist ein if um das div, weil sich je nach piste die klasse des div's ändert* 😊
 
 ## JavaScript
 
